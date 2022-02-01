@@ -2,5 +2,7 @@
   "name": "ambient-strings",
   "version": "3.0.0",
   "private": true,
-  "author": "Krzysztof Matuszak"
+  "author": "Krzysztof Matuszak",
+  "license": "MIT",
+  "description": "🧵 String files used by Ambient projects"
 }
