@@ -1,0 +1,6 @@
+# IntelliJ IDEA
+/.idea/
+/*.iml
+
+# Dependencies
+/node_modules/
