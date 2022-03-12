@@ -1,3 +1,3 @@
-## Ambient Strings
+## 🧵 Ambient Strings
 
-🧵 String files used by Ambient projects
+String files used by Ambient projects
