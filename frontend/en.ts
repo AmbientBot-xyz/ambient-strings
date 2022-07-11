@@ -1,6 +1,9 @@
 const language = {
   global: {
-    switchLanguage: "Przełącz na język polski",
+    switchLanguage: "Switch language / Zmień język",
+    en: "English / angielski",
+    pl: "Polish / polski",
+    currentlyChoosen: "Currently choosen / Obecnie wybrany",
     updateAvailable: "An update is available",
     updateAvailableMore: "The page will be reloaded in a moment",
     discord: "Discord Server",
