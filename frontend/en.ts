@@ -42,6 +42,19 @@ const language = {
     verifySuccessMore: "Checking data...",
     registerSuccess: "Successfully registered!",
     registerSuccessMore: "We have sent a message to the e-mail address provided with a link to activate your account.",
+    emailAlreadyExists: "The e-mail address provided is already assigned to the account!",
+    emailAlreadyExistsMore: "Use the option to reset your password or resend the activation e-mail.",
+    unknownError: "An unknown error has occurred, please try again later.",
+    unknownErrorMore: "If the error persists, notify us on the Discord server. Error code: {{ 0 }}",
+    passwordValidation: {
+      min: "Password must be at least 12 characters long.",
+      digits: "Password must contain at least 2 digits.",
+      letters: "Password must contain at least 6 letters.",
+      lowercase: "Password must contain at least 3 lowercase letters.",
+      uppercase: "Password must contain at least 1 uppercase letter.",
+      symbols: "Password must contain at least 1 special character.",
+      spaces: "Password cannot contain spaces.",
+    },
   },
 };
 

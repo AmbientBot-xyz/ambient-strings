@@ -42,6 +42,19 @@ const language = {
     verifySuccessMore: "Sprawdzamy dane...",
     registerSuccess: "Rejestracja przebiegła pomyślnie!",
     registerSuccessMore: "Na podany adres e-mail wysłaliśmy wiadomość z linkiem do aktywacji Twojego konta.",
+    emailAlreadyExists: "Podany adres e-mail jest już przypisany do konta!",
+    emailAlreadyExistsMore: "Skorzystaj z opcji resetu hasła lub ponownej wysyłki maila aktywacyjnego.",
+    unknownError: "Wystąpił nieznany błąd, spróbuj ponownie później.",
+    unknownErrorMore: "Jeśli błąd będzie się powtarzał, powiadom nas na serwerze Discord. Kod błędu: {{ 0 }}",
+    passwordValidation: {
+      min: "Hasło musi składać się z co najmniej 12 znaków.",
+      digits: "Hasło musi zawierać co najmniej 2 cyfry.",
+      letters: "Hasło musi zawierać co najmniej 6 liter.",
+      lowercase: "Hasło musi zawierać co najmniej 3 małe litery.",
+      uppercase: "Hasło musi zawierać co najmniej 1 wielką literę.",
+      symbols: "Hasło musi zawierać co najmniej 1 znak specjalny.",
+      spaces: "Hasło nie może zawierać spacji.",
+    },
   },
 };
 
