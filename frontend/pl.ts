@@ -126,8 +126,7 @@ const language = {
     accountState: "Stan konta",
     botState: "Stan bota",
     start: "Uruchom",
-    startHint: "Po uruchomieniu bota, w każdej chwili będziesz mógł go zatrzymać.",
-    stopped: "Zatrzymany",
+    stop: "Zatrzymaj",
     invalidState: "Nieprawidłowy stan!",
     invalidStateMore: "Wybrany bot znajduje się obecnie w stanie niepozwalającym na łączenie go z kontem.",
     connectionStarted: "Rozpoczęliśmy próbę połączenia bota z kontem!",
@@ -139,19 +138,43 @@ const language = {
     passwordTooShort: "Podane hasło jest zbyt krótkie!",
     codeTooShort: "Podany kod logowania dwuetapowego jest zbyt krótki!",
     connectConfirmButton: "Połącz bota z kontem",
+    importantCardCheckbox: "Rozumiem",
+    understandNotChecked: "Zapoznaj się z ważnymi informacjami!",
     importantCardTitle: "Ważne! Przeczytaj przed połączeniem:",
+    importantCardContents: [
+      "Konto może zostać zablokowane przez Facebooka, dlatego nie wykorzystuj swojego głównego konta do łączenia go z botem.",
+      "Lepiej użyć konta, które zostało założone jakiś czas temu i było używane w normalny sposób, niż zakładać nowe konto i od razu używać go do łączenia z botem.",
+      "Najlepiej sprawdzi się konto założone z użyciem prawdziwych danych i ustawionym prawdziwym zdjęciem profilowym, gdyż będzie możliwa weryfikacja tożsamości, kiedy Facebook tego zażąda.",
+      "Zalecamy włączenie logowania dwuetapowego z użyciem kodu 2FA w ustawieniach konta, zwiększy to szansę na pomyślne połączenie bota z kontem i zmniejszy szansę na zablokowanie konta z powodu podejrzanej aktywności.",
+      "Nie przechowujemy danych logowania, które podasz. Zostaną one użyte jedynie do zalogowania się na konto przez zautomatyzowane oprogramowanie, w celu próby uzyskania sesji użytkownika, która umożliwi połączenie konta z botem, następnie są one zapominane.",
+      "Połączenie bota z kontem zajmie kilkanaście sekund, jeśli napotkamy jakiś problem, otrzymasz dostęp do zrzutu ekranu z etapu logowania, na którym ten wystąpił, możesz wtedy zapoznać się z nim, rozwiązać ewentualny problem z kontem i spróbować ponownie.",
+      "Podczas logowania na konto, możesz otrzymać powiadomienie o logowaniu z nowej lokalizacji w przeglądarce Chrome na urządzeniu Xiaomi Redmi Note 8 Pro, pochodzi ono z naszego systemu i należy je zignorować.",
+      "Możliwe, że podczas próby zalogowania pojawi się prośba o zatwierdzenie go, i podanie na przykład daty urodzenia podanej przy zakładaniu konta, należy wtedy zalogować się na konto w normalny sposób, odpowiedzieć na pytania zadane przez Facebooka, a następnie spróbować połączyć bota z kontem ponownie.",
+    ],
     credentialsCardTitle: "Podaj dane logowania do konta na Facebooku:",
-    states: {
+    connConditions: {
       notConnected: "Niepołączone",
       connecting: "Trwa łączenie...",
       connected: "Połączone",
     },
-    statesMore: {
+    connConditionsMore: {
       notConnected: "Aby uruchomić bota, najpierw musisz połączyć go z kontem na Facebooku.",
       connecting: "Próbujemy połączyć bota z kontem na Facebooku przy użyciu podanych przez Ciebie danych logowania, może to potrwać kilkanaście sekund.",
       connected: "Udało nam się połączyć bota z kontem na Facebooku przy użyciu podanych przez Ciebie danych logowania, możesz go teraz uruchomić.",
     },
-    reasons: {
+    powerConditions: {
+      starting: "Uruchamianie...",
+      running: "Uruchomiony",
+      stopping: "Zatrzymywanie...",
+      stopped: "Zatrzymany",
+    },
+    powerConditionsMore: {
+      starting: "Uruchamiamy Twojego bota, może to potrwać kilka minut.",
+      running: "Twój bot jest uruchomiony i działa prawidłowo.",
+      stopping: "Zatrzymujemy Twojego bota, może to potrwać kilka minut.",
+      stopped: "Twój bot jest obecnie zatrzymany. Jeśli konto jest połączone, możesz go uruchomić.",
+    },
+    connFailedReasons: {
       badRequest: "Nieprawidłowe żądanie",
       badCredentials: "Nieprawidłowe dane",
       unexpectedPage: "Nieoczekiwana strona",
@@ -160,7 +183,7 @@ const language = {
       badTwoFactorAuthCode: "Nieprawidłowy kod",
       unknownError: "Nieznany błąd",
     },
-    reasonsMore: {
+    connFailedReasonsMore: {
       badRequest: "Wysłane żądanie połączenia jest nieprawidłowe, spróbuj ponownie później, a jeśli błąd będzie się powtarzał powiadom nas na serwerze Discord.",
       badCredentials: "Podane dane logowania są nieprawidłowe, popraw je i spróbuj ponownie.",
       unexpectedPage:

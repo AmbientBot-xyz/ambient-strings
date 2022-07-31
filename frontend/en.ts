@@ -126,8 +126,7 @@ const language = {
     accountState: "Account state",
     botState: "Bot state",
     start: "Start",
-    startHint: "After starting the bot, you will be able to stop it at any time.",
-    stopped: "Stopped",
+    stop: "Stop",
     invalidState: "Invalid state!",
     invalidStateMore: "The selected bot is currently in a state that does not allow it to connect it with the account.",
     connectionStarted: "We have started an attempt to connect the bot with the account!",
@@ -139,19 +138,43 @@ const language = {
     passwordTooShort: "The given password is too short!",
     codeTooShort: "The given two factor auth code is too short!",
     connectConfirmButton: "Connect bot with account",
+    importantCardCheckbox: "I understand",
+    understandNotChecked: "Read important tips!",
     importantCardTitle: "Important! Read before connecting:",
+    importantCardContents: [
+      "The account may be blocked by Facebook, so do not use your main account to connect it with the bot.",
+      "It is better to use an account that was created some time ago and was used normally than to create a new account and use it to connect to the bot right away.",
+      "An account created with real data and with a real profile photo set will work best, as it will be possible to verify your identity when Facebook requests it.",
+      "We recommend that you enable two-factor login using the 2FA code in your account settings, it will increase the chance of successfully connecting the bot to your account and reduce the chance of your account being blocked due to suspicious activity.",
+      "We do not store the login details you provide. They will only be used to log into the account by automated software in order to try to obtain a user session to connect the account with the bot, then they are forgotten.",
+      "Connecting the bot with the account will take several seconds, if we encounter a problem, you will get access to the screenshot from the login stage where this occurred, you can then review it, solve any problem with the account and try again.",
+      "When logging into your account, you may receive a login notification from a new location in the Chrome browser on Xiaomi Redmi Note 8 Pro device, it comes from our system and should be ignored.",
+      "It is possible that when you try to log in, you will be asked to approve it, and enter, for example, the date of birth provided when creating the account, then log in to the account as normal, answer the questions asked by Facebook, and then try to connect the bot to the account again.",
+    ],
     credentialsCardTitle: "Enter Facebook account login details:",
-    states: {
+    connConditions: {
       notConnected: "Not connected",
       connecting: "Connecting...",
       connected: "Connected",
     },
-    statesMore: {
+    connConditionsMore: {
       notConnected: "To start a bot, you first need to connect it to your Facebook account.",
       connecting: "We are trying to connect the bot with the Facebook account using the login details provided by you, it may take several seconds.",
       connected: "We have successfully connected the bot to your Facebook account using the login credentials you provided, you can now start it.",
     },
-    reasons: {
+    powerConditions: {
+      starting: "Starting...",
+      running: "Running",
+      stopping: "Stopping...",
+      stopped: "Stopped",
+    },
+    powerConditionsMore: {
+      starting: "We're starting your bot, it may take a few minutes.",
+      running: "Your bot is up and running.",
+      stopping: "We're stopping your bot, this may take a few minutes.",
+      stopped: "Your bot is currently stopped. If the account is connected, you can start it.",
+    },
+    connFailedReasons: {
       badRequest: "Bad request",
       badCredentials: "Invalid credentials",
       unexpectedPage: "Unexpected page",
@@ -160,7 +183,7 @@ const language = {
       badTwoFactorAuthCode: "Invalid code",
       unknownError: "Unknown error",
     },
-    reasonsMore: {
+    connFailedReasonsMore: {
       badRequest: "Connection request sent is incorrect, please try again later and notify us on the Discord server if the error persists.",
       badCredentials: "The credentials provided are incorrect, please correct them and try again.",
       unexpectedPage:
