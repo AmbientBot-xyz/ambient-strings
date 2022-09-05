@@ -21,6 +21,7 @@ const language = {
     notFound: "404",
     profile: "Your profile",
     premium: "Premium",
+    forgot: "Passwordless login",
   },
   subheaders: {
     page: "Page",
@@ -37,6 +38,14 @@ const language = {
     yourEmail: "Your e-mail address:",
     goNow: "Go now",
   },
+  forgot: {
+    inProgress: "Logging in to your account...",
+    success: "Successfully logged into your account!",
+    successMore: "You will be redirected to the Ambient management panel in a moment.",
+    failed: "Passwordless login failed!",
+    failedExpired: "Passwordless login time has expired.",
+    failedError: "An unknown error has occurred, please try again later. If the error persists, notify us on the Discord server.",
+  },
   auth: {
     loginCardTitle: "Already using Ambient? Sign in:",
     email: "E-mail",
@@ -52,6 +61,7 @@ const language = {
     activationMailModalHint: "Enter the e-mail address provided during registration to receive a link to activate your account again.",
     checkMailbox: "Check your inbox",
     activationMailError: "Account does not exist, activation time has expired, or it has already been activated!",
+    forgotMailError: "Account does not exist or it has not been activated!",
     cancel: "Cancel",
     send: "Send",
     invalidEmail: "The e-mail address provided is not valid!",
@@ -67,6 +77,7 @@ const language = {
     verifySuccessMore: "Checking data...",
     registerSuccess: "Successfully registered!",
     registerSuccessMore: "We have sent a message to the e-mail address provided with a link to activate your account.",
+    forgotSuccessMore: "We have sent a message to the e-mail address provided with a link to sign in without password.",
     registrationDisabled: "Registration is currently disabled!",
     registrationDisabledMore: "Join our Discord server for more information.",
     emailAlreadyExists: "The e-mail address provided is already assigned to the account!",
@@ -95,6 +106,12 @@ const language = {
   profile: {
     infoCardTitle: "Account information",
     accountCreationDate: "Account creation date",
+    changePassword: "Change password",
+    changePasswordModalHint: "Enter a new password and then re-enter it for verification.",
+    newPassword: "New password",
+    newPasswordRepeat: "Repeat new password",
+    changedSuccessfully: "Password changed successfully!",
+    changedSuccessfullyMore: "To log in you must use the new password.",
   },
   bots: {
     createBot: "Create new bot",

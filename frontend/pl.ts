@@ -21,6 +21,7 @@ const language = {
     notFound: "404",
     profile: "Twój profil",
     premium: "Premium",
+    forgot: "Logowanie bez hasła",
   },
   subheaders: {
     page: "Strona",
@@ -37,6 +38,14 @@ const language = {
     yourEmail: "Twój adres e-mail:",
     goNow: "Przejdź teraz",
   },
+  forgot: {
+    inProgress: "Trwa logowanie na Twoje konto...",
+    success: "Pomyślnie zalogowano na Twoje konto!",
+    successMore: "Za chwilę nastąpi przekierowanie do panelu zarządzania Ambientem.",
+    failed: "Logowanie bez hasła nie powiodło się!",
+    failedExpired: "Link do logowania bez hasła stracił ważność.",
+    failedError: "Wystąpił nieznany błąd, spróbuj ponownie później. Jeśli błąd będzie się powtarzał, powiadom nas na serwerze Discord.",
+  },
   auth: {
     loginCardTitle: "Korzystasz już z Ambienta? Zaloguj się:",
     email: "Adres e-mail",
@@ -52,6 +61,7 @@ const language = {
     activationMailModalHint: "Podaj adres e-mail podany przy rejestracji, aby ponownie otrzymać link do aktywacji Twojego konta.",
     checkMailbox: "Sprawdź skrzynkę odbiorczą",
     activationMailError: "Konto nie istnieje, upłynął czas na aktywację, lub zostało już aktywowane!",
+    forgotMailError: "Konto nie istnieje lub nie zostało aktywowane!",
     cancel: "Anuluj",
     send: "Wyślij",
     invalidEmail: "Podany adres e-mail jest nieprawidłowy!",
@@ -67,6 +77,7 @@ const language = {
     verifySuccessMore: "Sprawdzamy dane...",
     registerSuccess: "Rejestracja przebiegła pomyślnie!",
     registerSuccessMore: "Na podany adres e-mail wysłaliśmy wiadomość z linkiem do aktywacji Twojego konta.",
+    forgotSuccessMore: "Na podany adres e-mail wysłaliśmy wiadomość z linkiem do logowania bez hasła.",
     registrationDisabled: "Rejestracja jest obecnie wyłączona!",
     registrationDisabledMore: "Dołącz na nasz serwer Discord aby uzyskać więcej informacji.",
     emailAlreadyExists: "Podany adres e-mail jest już przypisany do konta!",
@@ -95,6 +106,12 @@ const language = {
   profile: {
     infoCardTitle: "Informacje o koncie",
     accountCreationDate: "Data utworzenia konta",
+    changePassword: "Zmień hasło",
+    changePasswordModalHint: "Podaj nowe hasło, a następnie wprowadź je ponownie w celu weryfikacji.",
+    newPassword: "Nowe hasło",
+    newPasswordRepeat: "Powtórz nowe hasło",
+    changedSuccessfully: "Hasło zostało pomyślnie zmienione!",
+    changedSuccessfullyMore: "Aby się zalogować musisz skorzystać z nowego hasła.",
   },
   bots: {
     createBot: "Utwórz nowego bota",
