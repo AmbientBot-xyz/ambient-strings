@@ -29,6 +29,7 @@ export default {
     ],
     welcome: "👋🏻 Welcome, <c>{0}</c>!",
     commandNotFound: "❌ Command not found! Type <c>{0}</c> for a list of available commands.",
+    unexpectedArgs: "❌ This command takes no arguments!",
   },
   commands: {
     tvp: {
@@ -53,8 +54,16 @@ export default {
       "🤗 Discord: {21}",
     ],
     help: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:",
+        "\n✨ <c>{1} <command name (optionally)></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1}</c>",
+        "⭐ <c>{1} {2}</c>",
+        "⭐ <c>{1} {3}</c>",
+      ],
       list: [
-        "{0} List of available commands (<c>{1}</c>):\n", //
+        "{0} List of available commands (<c>{1}</c>):\n",
         "😆 Fun: {2}\n",
         "ℹ Info: {3}\n",
         "🎶 Music: {4}\n",
@@ -69,6 +78,15 @@ export default {
       ],
     },
     spotify: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:", //
+        "\n🔌 <c>{1} connect</c> {2} Allows you to connect Ambient with your Spotify account",
+        "\n🔥 <c>{1} disconnect</c> {2} Allows you to disconnect Ambient from your Spotify account",
+        "\n😀 <c>{1} profile <@user (optionally)></c> {2} Allows you to check info about your or the mentioned user Spotify profile",
+        "\n🎧 <c>{1} nowplaying <@user (optionally)></c> {2} Allows you to check what are you or the user mentioned listening to now",
+        "\n🕰 <c>{1} recent <@user (optionally)></c> {2} Allows you to check what you or the user mentioned have been listening to recently",
+        "\n💿 <c>{1} play <song or @user></c> {2} Allows you to play on your Spotify account the selected song or the one that the user mentioned is listening to",
+      ],
       alreadyConnected: "❌ You must disconnect your current account before connecting a new one!",
       urlSent: "✅ We sent you a link to connect your Spotify account with Ambient in a private message, also check the <c>others</c> folder.",
       unableToSend: "🔌 We haven't been able to send you a private message, so we need to do it here. Here is the link to connect your Spotify account to Ambient: {0}",
@@ -84,8 +102,15 @@ export default {
       listeningLocal: "❌ <c>{0}</c> is currently listening to a local track, you cannot play it on your Spotify account.",
       unableToPlay: "❌ We couldn't play the song on your Spotify account.",
       playbackStarted: "💿 Starting playback of <c>{0}</c> {1} <c>{2}</c> from album <c>{3}</c> on device <c>{4} {5}</c>...",
+      profile: [
+        "🤠 Info about Spotify profile of <c>{0}</c>:\n",
+        "🆎 User name: <c>{1}</c>",
+        "🌍 Country: <c>{2}</c>",
+        "👀 Followers count: <c>{3}</c>",
+        "💎 Spotify Premium: <c>{4}</c>",
+      ],
       nowListening: [
-        "🎶 <c>{0}</c> {1} <c>Now listening</c>", //
+        "🎶 <c>{0}</c> {1} <c>Now listening</c>",
         "\n💿 <c>{2}</c> {1} <c>{3}</c>\n",
         "⏸️ {4}",
         "\n💽 Album: <c>{5}</c>",
