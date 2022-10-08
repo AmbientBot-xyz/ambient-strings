@@ -32,9 +32,15 @@ export default {
     commandNotFound: "❌ Command not found! Type <c>{0}</c> for a list of available commands.",
     unexpectedArgs: "❌ This command takes no arguments!",
     groupOnly: "❌ This command can only be used in group conversations!",
+    adminOnly: "❌ This command can only be used by group administrators!",
     goodNight: "🥱 Good night, <c>{0}</c>! 😴",
+    unavailable: "❌ This command is currently unavailable.",
   },
   commands: {
+    alpaca: {
+      searching: "⏳ Searching for a picture of the alpaca...",
+      done: "{0} Here is a random photo of the alpaca by <c>{1}</c> from <c>{2}</c>:",
+    },
     cat: {
       searching: "⏳ Searching for a picture of a cat...",
       done: "{0} Here is a random cat photo:",
@@ -47,9 +53,21 @@ export default {
       searching: "⏳ Searching for a picture of a fox...",
       done: "{0} Here is a random fox photo:",
     },
+    frog: {
+      searching: "⏳ Searching for a picture of a frog...",
+      done: "{0} Here is a random photo of a frog by <c>{1}</c> from <c>{2}</c>:",
+    },
+    pigeon: {
+      searching: "⏳ Searching for a picture of a pigeon...",
+      done: "{0} Here is a random photo of a pigeon by <c>{1}</c> from <c>{2}</c>:",
+    },
     shiba: {
       searching: "⏳ Searching for a picture of Shiba Inu...",
       done: "{0} Here is a random Shiba Inu photo:",
+    },
+    turtle: {
+      searching: "⏳ Searching for a picture of a turtle...",
+      done: "{0} Here is a random photo of a turtle by <c>{1}</c> from <c>{2}</c>:",
     },
     heart: {
       empty: "❌ You must enter the text of the heart! (max. <c>{0}</c> characters)",
@@ -90,7 +108,7 @@ export default {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
         "\n✨ <c>{1} <command name (optionally)></c>\n",
-        "💡 Przykłady:",
+        "💡 Examples:",
         "⭐ <c>{1}</c>",
         "⭐ <c>{1} {2}</c>",
         "⭐ <c>{1} {3}</c>",
@@ -101,15 +119,49 @@ export default {
         "⚙️ Configuration: {3}\n",
         "😆 Fun: {4}\n",
         "ℹ Info: {5}\n",
-        "🫡 Social: {7}\n",
-        "🛠️ Tools: {8}\n",
-        "✨ To see detailed information on the selected command, type <c>{9} <command name></c>, e.g. <c>{9} {10}</c>.",
+        "🫡 Social: {6}\n",
+        "🛠️ Tools: {7}\n",
+        "✨ To see detailed information on the selected command, type <c>{8} <command name></c>, e.g. <c>{8} {9}</c>.",
       ],
       about: [
         "{0} Info about command <c>{1}</c>:\n", //
         "✏ Description: <c>{2}</c>",
         "🗃 Category: <c>{3}</c>",
         "⚓ Other names: {4}",
+      ],
+    },
+    weather: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:",
+        "\n✨ <c>{1} <location or @user (optionally)></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1}</c>",
+        "⭐ <c>{1} Leszno</c>",
+        "⭐ <c>{1} Zielona Góra, PL</c>",
+        "⭐ <c>{1} Chicago, US</c>",
+      ],
+      notSetMentioned: "❌ <c>{0}</c> did not provide location!",
+      notFound: [
+        "❌ The given location was not found!\n",
+        "{0} Correct usage of command <c>{1}</c>:",
+        "\n✨ <c>{1} <location or @user (optionally)></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1}</c>",
+        "⭐ <c>{1} Leszno</c>",
+        "⭐ <c>{1} Zielona Góra, PL</c>",
+        "⭐ <c>{1} Chicago, US</c>",
+      ],
+      done: [
+        "{0} Current weather in <c>{1}</c>:\n",
+        "🌡️ Temperature: <c>{2}°C</c> {3}",
+        "✋🏻 Feels like: <c>{4}°C</c> {5}",
+        "🌃 Sky: <c>{6}</c> {7}",
+        "🎈 Pressure: <c>{8} hPa</c>",
+        "💨 Wind speed: <c>{9} km/h</c>",
+        "💧 Humidity: <c>{10}%</c>",
+        "☁️ Cloudiness: <c>{11}%</c>",
+        "🌅 Sunrise: <c>{12}</c>",
+        "🌇 Sunset: <c>{13}</c>",
       ],
     },
     instagram: {
@@ -169,6 +221,7 @@ export default {
         "\n🪄 Send only the number corresponding to the selected item, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first item.",
       ],
       playbackStarted: "💿 Starting playback of <c>{0}</c> {1} <c>{2}</c> from album <c>{3}</c> on device <c>{4} {5}</c>...",
+      nobodyConnected: "❌ No group member has connected their Spotify account to Ambient!",
       group: [
         "🧐 What are currently members of <c>{0}</c> group listening to?\n", //
         "{1}",
@@ -231,6 +284,7 @@ export default {
         "💾 Downloads: <c>{14}</c>",
       ],
     },
+    everyone: "{0} Successfully mentioned {1} users!",
     name: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:", //

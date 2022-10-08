@@ -32,9 +32,15 @@ export default {
     commandNotFound: "❌ Nie odnaleziono komendy! Wpisz <c>{0}</c> aby uzyskać listę dostępnych komend.",
     unexpectedArgs: "❌ Ta komenda nie przyjmuje żadnych argumentów!",
     groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych!",
+    adminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
+    unavailable: "❌ Ta komenda jest obecnie niedostępna.",
   },
   commands: {
+    alpaca: {
+      searching: "⏳ Szukam zdjęcia alpaki...",
+      done: "{0} Oto losowe zdjęcie alpaki autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     cat: {
       searching: "⏳ Szukam zdjęcia kotka...",
       done: "{0} Oto losowe zdjęcie kotka:",
@@ -47,9 +53,21 @@ export default {
       searching: "⏳ Szukam zdjęcia liska...",
       done: "{0} Oto losowe zdjęcie liska:",
     },
+    frog: {
+      searching: "⏳ Szukam zdjęcia żaby...",
+      done: "{0} Oto losowe zdjęcie żaby autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    pigeon: {
+      searching: "⏳ Szukam zdjęcia gołębia...",
+      done: "{0} Oto losowe zdjęcie gołębia autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     shiba: {
       searching: "⏳ Szukam zdjęcia Shiba Inu...",
       done: "{0} Oto losowe zdjęcie Shiba Inu:",
+    },
+    turtle: {
+      searching: "⏳ Szukam zdjęcia żółwia...",
+      done: "{0} Oto losowe zdjęcie żółwia autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     heart: {
       empty: "❌ Musisz podać treść serca! (max. <c>{0}</c> znaków)",
@@ -101,15 +119,49 @@ export default {
         "⚙️ Konfiguracja: {3}\n",
         "😆 Zabawa: {4}\n",
         "ℹ Informacje: {5}\n",
-        "🫡 Społecznościowe: {7}\n",
-        "🛠️ Narzędzia: {8}\n",
-        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{9} <nazwa komendy></c>, np. <c>{9} {10}</c>.",
+        "🫡 Społecznościowe: {6}\n",
+        "🛠️ Narzędzia: {7}\n",
+        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{8} <nazwa komendy></c>, np. <c>{8} {9}</c>.",
       ],
       about: [
         "{0} Informacje o komendzie <c>{1}</c>:\n", //
         "✏ Opis: <c>{2}</c>",
         "🗃 Kategoria: <c>{3}</c>",
         "⚓ Inne nazwy: {4}",
+      ],
+    },
+    weather: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n✨ <c>{1} <lokalizacja lub @użytkownik (opcjonalnie)></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1}</c>",
+        "⭐ <c>{1} Leszno</c>",
+        "⭐ <c>{1} Zielona Góra, PL</c>",
+        "⭐ <c>{1} Chicago, US</c>",
+      ],
+      notSetMentioned: "❌ <c>{0}</c> nie podał{1} swojej lokalizacji!",
+      notFound: [
+        "❌ Podana lokalizacja nie została odnaleziona!\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n✨ <c>{1} <lokalizacja lub @użytkownik (opcjonalnie)></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1}</c>",
+        "⭐ <c>{1} Leszno</c>",
+        "⭐ <c>{1} Zielona Góra, PL</c>",
+        "⭐ <c>{1} Chicago, US</c>",
+      ],
+      done: [
+        "{0} Aktualna pogoda w lokalizacji <c>{1}</c>:\n",
+        "🌡️ Temperatura: <c>{2}°C</c> {3}",
+        "✋🏻 Odczuwalna: <c>{4}°C</c> {5}",
+        "🌃 Niebo: <c>{6}</c> {7}",
+        "🎈 Ciśnienie: <c>{8} hPa</c>",
+        "💨 Prędkość wiatru: <c>{9} km/h</c>",
+        "💧 Wilgotność: <c>{10}%</c>",
+        "☁️ Pochmurność: <c>{11}%</c>",
+        "🌅 Wschód słońca: <c>{12}</c>",
+        "🌇 Zachód słońca: <c>{13}</c>",
       ],
     },
     instagram: {
@@ -169,6 +221,7 @@ export default {
         "\n🪄 Napisz tylko liczbę odpowiadającą wybranej pozycji, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwszą pozycję.",
       ],
       playbackStarted: "💿 Rozpoczynam odtwarzanie <c>{0}</c> {1} <c>{2}</c> z albumu <c>{3}</c> na urządzeniu <c>{4} {5}</c>...",
+      nobodyConnected: "❌ Żaden członek grupy nie połączył swojego konta Spotify z Ambientem!",
       group: [
         "🧐 Czego aktualnie słuchają członkowie grupy <c>{0}</c>?\n", //
         "{1}",
@@ -231,6 +284,7 @@ export default {
         "💾 Pobrania: <c>{14}</c>",
       ],
     },
+    everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
     name: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
