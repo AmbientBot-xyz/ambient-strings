@@ -7,6 +7,7 @@ const language = {
     updateAvailable: "Dostępna jest aktualizacja",
     updateAvailableMore: "Za chwilę nastąpi przeładowanie strony",
     discord: "Serwer Discord",
+    status: "Stan usług",
   },
   pages: {
     activate: "Aktywacja konta",

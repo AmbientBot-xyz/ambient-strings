@@ -69,6 +69,14 @@ export default {
       searching: "⏳ Searching for a picture of a turtle...",
       done: "{0} Here is a random photo of a turtle by <c>{1}</c> from <c>{2}</c>:",
     },
+    interactions: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:", //
+        "\n✨ <c>{1} <on/off></c>\n",
+      ],
+      disabled: "🤐 Successfully disabled interactions in this group, Ambient will not respond to any messages except for commands starting with <c>{0}</c>.",
+      enabled: "👉🏻 Successfully enabled interactions in this group, Ambient will respond to some messages in addition to commands starting with <c>{0}</c>.",
+    },
     heart: {
       empty: "❌ You must enter the text of the heart! (max. <c>{0}</c> characters)",
       mentions: "❌ The content of the heart must not contain any mentions!",
@@ -168,6 +176,10 @@ export default {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:", //
         "\n✨ <c>{1} <username></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1} existencefornoreason</c>",
+        "⭐ <c>{1} kmatuszak04</c>",
+        "⭐ <c>{1} maciekkarecki</c>",
       ],
       notFound: "❌ The given username was not found!",
       collecting: "⏳ Collecting info about user <c>@{0}</c>...",

@@ -69,6 +69,14 @@ export default {
       searching: "⏳ Szukam zdjęcia żółwia...",
       done: "{0} Oto losowe zdjęcie żółwia autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
+    interactions: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
+        "\n✨ <c>{1} <on/off></c>\n",
+      ],
+      disabled: "🤐 Pomyślnie wyłączono interakcje w tej grupie, Ambient nie będzie reagował na żadne wiadomości poza komendami rozpoczynającymi się znakiem <c>{0}</c>.",
+      enabled: "👉🏻 Pomyślnie włączono interakcje w tej grupie, Ambient będzie reagował na niektóre wiadomości poza komendami rozpoczynającymi się znakiem <c>{0}</c>.",
+    },
     heart: {
       empty: "❌ Musisz podać treść serca! (max. <c>{0}</c> znaków)",
       mentions: "❌ Treść serca nie może zawierać wzmianek!",
@@ -168,6 +176,10 @@ export default {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
         "\n✨ <c>{1} <nazwa użytkownika></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} existencefornoreason</c>",
+        "⭐ <c>{1} kmatuszak04</c>",
+        "⭐ <c>{1} maciekkarecki</c>",
       ],
       notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",
       collecting: "⏳ Zbieram informacje o użytkowniku <c>@{0}</c>...",
