@@ -105,7 +105,7 @@ const language = {
     },
   },
   profile: {
-    infoCardTitle: "Informacje o koncie",
+    infoCardTitle: "Konto",
     accountCreationDate: "Data utworzenia konta",
     changePassword: "Zmień hasło",
     changePasswordModalHint: "Podaj nowe hasło, a następnie wprowadź je ponownie w celu weryfikacji.",
@@ -113,6 +113,11 @@ const language = {
     newPasswordRepeat: "Powtórz nowe hasło",
     changedSuccessfully: "Hasło zostało pomyślnie zmienione!",
     changedSuccessfullyMore: "Aby się zalogować musisz skorzystać z nowego hasła.",
+    premium: "Premium",
+    premiumId: "Identyfikator Premium",
+    copyToClipboard: "Skopiuj do schowka",
+    copiedSuccessfully: "Pomyślnie skopiowano identyfikator Premium!",
+    copiedSuccessfullyMore: "Dziękujemy za wspieranie Ambienta.",
     address: "Adres IP",
     browser: "Przeglądarka",
     logDescriptions: {

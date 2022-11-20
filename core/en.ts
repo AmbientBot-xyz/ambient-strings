@@ -107,10 +107,11 @@ export default {
       "✨ Core: <c>v{10}+{11}/{12}</c>",
       "📦 Instance: <c>{13}</c>",
       "🪁 Environment: <c>v{14}+{15}/{16}</c>",
-      "🆙 Update date: <c>{17}</c> {3} <c>{18}</c>",
-      "🍒 Creation date: <c>{19}</c>",
-      "😼 Author: <c>{20}</c>",
-      "🤗 Discord: {21}",
+      "🏷 TypeScript: <c>v{17}</c>",
+      "🆙 Update date: <c>{18}</c> {3} <c>{19}</c>",
+      "🍒 Creation date: <c>{20}</c>",
+      "😼 Author: <c>{21}</c>",
+      "🤗 Discord: {22}",
     ],
     help: {
       usage: [

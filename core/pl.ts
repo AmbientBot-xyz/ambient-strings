@@ -107,10 +107,11 @@ export default {
       "✨ Jądro: <c>v{10}+{11}/{12}</c>",
       "📦 Instancja: <c>{13}</c>",
       "🪁 Środowisko: <c>v{14}+{15}/{16}</c>",
-      "🆙 Data aktualizacji: <c>{17}</c> {3} <c>{18}</c>",
-      "🍒 Data powstania: <c>{19}</c>",
-      "😼 Autor: <c>{20}</c>",
-      "🤗 Discord: {21}",
+      "🏷 TypeScript: <c>v{17}</c>",
+      "🆙 Data aktualizacji: <c>{18}</c> {3} <c>{19}</c>",
+      "🍒 Data powstania: <c>{20}</c>",
+      "😼 Autor: <c>{21}</c>",
+      "🤗 Discord: {22}",
     ],
     help: {
       usage: [
