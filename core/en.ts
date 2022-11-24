@@ -38,6 +38,7 @@ export default {
     goodNight: "🥱 Good night, <c>{0}</c>! 😴",
     unavailable: "❌ This command is currently unavailable.",
     outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c>, <c>{1}</c> selected)",
+    botAdminRequired: "❌ Bot must be a group admin to use this command.",
   },
   commands: {
     alpaca: {
@@ -55,6 +56,10 @@ export default {
     dog: {
       searching: "⏳ Searching for a picture of a dog...",
       done: "{0} Here is a random dog photo:",
+    },
+    duck: {
+      searching: "⏳ Searching for a picture of the duck...",
+      done: "{0} Here is a random photo of the duck by <c>{1}</c> from <c>{2}</c>:",
     },
     fox: {
       searching: "⏳ Searching for a picture of a fox...",
@@ -115,6 +120,16 @@ export default {
       generating: "⏳ Generating achievement...",
       done: "{0} Here is the generated achievement:",
     },
+    disco: {
+      jailed: "❌ Wait until current party ends!",
+      starting: "{0} Starting party...",
+      done: "🥂 The party is over!",
+    },
+    coinflip: {
+      heads: "🦅 Heads",
+      tails: "🪙 Tails",
+    },
+    diceroll: "{0} Result of the dice roll: <c>{1}</c>",
     heart: {
       empty: "❌ You must enter the text of the heart! (max. <c>{0}</c> characters)",
       mentions: "❌ The content of the heart must not contain any mentions!",
@@ -338,6 +353,13 @@ export default {
       done: "{0} Here is the list of attachments from the selected message:\n\n{1}",
     },
     everyone: "{0} Successfully mentioned {1} users!",
+    kick: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <@user></c>",
+      ],
+      done: "{0} Successfully kicked <c>{1}</c> out of the group!",
+    },
     name: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -345,6 +367,17 @@ export default {
       ],
       doneSet: "{0} Successfully set group name to <c>{1}</c>!",
       doneChanged: "{0} Successfully changed group name from <c>{1}</c> to <c>{2}</c>!",
+    },
+    nick: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <@user (optionally)> <new nickname></c>",
+      ],
+      tooLong: "❌ The given nickname is too long!",
+      doneSetOwn: "{0} Your nickname has been successfully set to <c>{1}</c>!",
+      doneSetOther: "{0} Nickname of <c>{1}</c> has been successfully set to <c>{2}</c>!",
+      doneChangedOwn: "{0} Your nickname has been successfully changed from <c>{1}</c> to <c>{2}</c>!",
+      doneChangedOther: "{0} Nickname of <c>{1}</c> has been successfully changed from <c>{2}</c> to <c>{3}</c>!",
     },
     shorten: {
       usage: [
@@ -366,6 +399,8 @@ export default {
         "\n🧐 <c>{1} group</c> {2} Allows you to check the number of warnings of individual group users",
       ],
       reasonMentions: "❌ Reason for the warning must not contain mentions!",
+      maxWarningsReached: "❌ <c>{0}</c> already has the maximum number of warnings (<c>{1}</c>)!",
+      reasonTooLong: "❌ The given reason is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
       added: "{0} Administrator <c>{1}</c> gave a warning to <c>{2}</c> because of <c>{3}</c>, it is h{4} <c>{5}</c> warning.",
       noWarnings: "❌ You don't have any warnings yet!",
       noWarningsMentioned: "❌ <c>{0}</c> doesn't have any warnings yet!",

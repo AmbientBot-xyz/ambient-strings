@@ -38,6 +38,7 @@ export default {
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
     unavailable: "❌ Ta komenda jest obecnie niedostępna.",
     outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
+    botAdminRequired: "❌ Bot musi być administratorem grupy aby skorzystać z tej komendy.",
   },
   commands: {
     alpaca: {
@@ -55,6 +56,10 @@ export default {
     dog: {
       searching: "⏳ Szukam zdjęcia pieska...",
       done: "{0} Oto losowe zdjęcie pieska:",
+    },
+    duck: {
+      searching: "⏳ Szukam zdjęcia kaczki...",
+      done: "{0} Oto losowe zdjęcie kaczki autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     fox: {
       searching: "⏳ Szukam zdjęcia liska...",
@@ -115,6 +120,16 @@ export default {
       generating: "⏳ Trwa generowanie osgiągnięcia...",
       done: "{0} Oto wygenerowane osgiągnięcie:",
     },
+    disco: {
+      jailed: "❌ Poczekaj aż obecna impreza zakończy się!",
+      starting: "{0} Rozkręcam imprezę...",
+      done: "🥂 Impreza zakończona!",
+    },
+    coinflip: {
+      heads: "🦅 Orzeł",
+      tails: "🪙 Reszka",
+    },
+    diceroll: "{0} Wynik rzutu kostką: <c>{1}</c>",
     heart: {
       empty: "❌ Musisz podać treść serca! (max. <c>{0}</c> znaków)",
       mentions: "❌ Treść serca nie może zawierać wzmianek!",
@@ -338,6 +353,13 @@ export default {
       done: "{0} Oto lista załączników z wybranej wiadomości:\n\n{1}",
     },
     everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
+    kick: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <@użytkownik></c>",
+      ],
+      done: "{0} Pomyślnie wyrzucono <c>{1}</c> z grupy!",
+    },
     name: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -345,6 +367,17 @@ export default {
       ],
       doneSet: "{0} Pomyślnie nadano grupie nazwę <c>{1}</c>!",
       doneChanged: "{0} Pomyślnie zmieniono nazwę grupy z <c>{1}</c> na <c>{2}</c>!",
+    },
+    nick: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <@użytkownik (opcjonalnie)> <nowy nick></c>",
+      ],
+      tooLong: "❌ Podany nick jest zbyt długi!",
+      doneSetOwn: "{0} Twój nick został pomyślnie ustawiony na <c>{1}</c>!",
+      doneSetOther: "{0} Nick <c>{1}</c> został pomyślnie ustawiony na <c>{2}</c>!",
+      doneChangedOwn: "{0} Twój nick został pomyślnie zmieniony z <c>{1}</c> na <c>{2}</c>!",
+      doneChangedOther: "{0} Nick <c>{1}</c> został pomyślnie zmieniony z <c>{2}</c> na <c>{3}</c>!",
     },
     shorten: {
       usage: [
@@ -366,6 +399,8 @@ export default {
         "\n🧐 <c>{1} grupa</c> {2} Pozwala sprawdzić liczbę ostrzeżeń poszczególnych członków grupy",
       ],
       reasonMentions: "❌ Powód ostrzeżenia nie może zawierać wzmianek!",
+      maxWarningsReached: "❌ <c>{0}</c> posiada już maksymalną liczbę ostrzeżeń (<c>{1}</c>)!",
+      reasonTooLong: "❌ Podany powód jest zbyt długi! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
       added: "{0} Administrator <c>{1}</c> nadał ostrzeżenie <c>{2}</c> z powodu <c>{3}</c>, jest to je{4} <c>{5}</c> ostrzeżenie.",
       noWarnings: "❌ Nie posiadasz jeszcze żadnych ostrzeżeń!",
       noWarningsMentioned: "❌ <c>{0}</c> nie posiada jeszcze żadnych ostrzeżeń!",
