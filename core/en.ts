@@ -29,17 +29,24 @@ export default {
     ],
     welcome:
       "👋🏻 Hi, <c>{0}</c>! My name is <c>Ambient</c>, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the <c>{1}</c> command.\n\n🤗 Do you have questions or need help? You will find it on our <c>Discord server</c>, where you will also learn about news related to Ambient: {2}",
+    mentionedNotUser: "❌ Mentioned user has never used Ambient.",
     commandNotFound: "❌ Command not found! Type <c>{0}</c> for a list of available commands.",
     unexpectedArgs: "❌ This command takes no arguments!",
     groupOnly: "❌ This command can only be used in group conversations!",
-    adminOnly: "❌ This command can only be used by group administrators!",
+    groupAdminOnly: "❌ This command can only be used by group administrators!",
+    globalAdminOnly: "❌ You don't have permission to use this command!",
     goodNight: "🥱 Good night, <c>{0}</c>! 😴",
     unavailable: "❌ This command is currently unavailable.",
+    outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c>, <c>{1}</c> selected)",
   },
   commands: {
     alpaca: {
       searching: "⏳ Searching for a picture of the alpaca...",
       done: "{0} Here is a random photo of the alpaca by <c>{1}</c> from <c>{2}</c>:",
+    },
+    capybara: {
+      searching: "⏳ Searching for a picture of the capybara...",
+      done: "{0} Here is a random photo of the capybara by <c>{1}</c> from <c>{2}</c>:",
     },
     cat: {
       searching: "⏳ Searching for a picture of a cat...",
@@ -61,6 +68,10 @@ export default {
       searching: "⏳ Searching for a picture of a pigeon...",
       done: "{0} Here is a random photo of a pigeon by <c>{1}</c> from <c>{2}</c>:",
     },
+    racoon: {
+      searching: "⏳ Searching for a picture of the racoon...",
+      done: "{0} Here is a random photo of the racoon by <c>{1}</c> from <c>{2}</c>:",
+    },
     shiba: {
       searching: "⏳ Searching for a picture of Shiba Inu...",
       done: "{0} Here is a random Shiba Inu photo:",
@@ -71,11 +82,38 @@ export default {
     },
     interactions: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:", //
-        "\n✨ <c>{1} <on/off></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <on/off></c>",
       ],
       disabled: "🤐 Successfully disabled interactions in this group, Ambient will not respond to any messages except for commands starting with <c>{0}</c>.",
       enabled: "👉🏻 Successfully enabled interactions in this group, Ambient will respond to some messages in addition to commands starting with <c>{0}</c>.",
+    },
+    variables: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} list</c>",
+        "✨ <c>{1} set <name> <content></c>",
+        "✨ <c>{1} del <name></c>",
+        "✨ <c>{1} get <name></c>",
+      ],
+      list: "{0} List of currently set variables: <c>{1}</c>",
+      set: "✅ Successfully updated variable <c>{0}</c>!",
+      notFound: "❌ Variable <c>{0}</c> does not exist!",
+      deleted: "🗑 Successfully deleted variable <c>{0}</c>!",
+      about: [
+        "{0} Info about variable:\n", //
+        "🔖 Name: <c>{1}</c>",
+        "📖 Content: <c>{2}</c>",
+        "🗓 Last updated: <c>{4}</c> {3} <c>{5}</c>",
+        "🤡 Last updated by: <c>{6}</c>",
+      ],
+    },
+    achievement: {
+      empty: "❌ You must enter the text of the achievement! (max. <c>{0}</c> characters)",
+      mentions: "❌ The content of the achievement must not contain any mentions!",
+      tooLong: "❌ The content of the achievement is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      generating: "⏳ Generating achievement...",
+      done: "{0} Here is the generated achievement:",
     },
     heart: {
       empty: "❌ You must enter the text of the heart! (max. <c>{0}</c> characters)",
@@ -221,11 +259,9 @@ export default {
       mustReconnectMentioned: "❌ <c>{0}</c> must reconnect Ambient to the Spotify account!",
       notListening: "❌ You're not listening to anything at the moment.",
       notListeningMentioned: "❌ <c>{0}</c> is not currently listening to anything.",
-      mentionedNotUser: "❌ Mentioned user has never used Ambient.",
       listeningLocal: "❌ <c>{0}</c> is currently listening to a local track, you cannot play it on your Spotify account.",
       unableToPlay: "❌ We couldn't play the song on your Spotify account.",
       premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires 💎 Spotify Premium account!",
-      outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c> znaków, <c>{1}</c> selected)",
       emptyResults: "❌ No track matching your query found!",
       selectionTimeout: "❌ No item was selected within <c>{0}</c> seconds! Try again.",
       trackSelectionList: [
@@ -277,8 +313,8 @@ export default {
     },
     tiktok: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:", //
-        "\n✨ <c>{1} <link to TikTok></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <link to TikTok></c>",
       ],
       invalidUrl: "❌ TikTok link provided is invalid!",
       preparing: "⏳ Preparing TikTok: <c>{0}</c> {1} <c>{2}</c>",
@@ -297,14 +333,55 @@ export default {
         "💾 Downloads: <c>{14}</c>",
       ],
     },
+    attachments: {
+      mustReplyToAttachments: "❌ You must reply to a message that contains attachments!",
+      done: "{0} Here is the list of attachments from the selected message:\n\n{1}",
+    },
     everyone: "{0} Successfully mentioned {1} users!",
     name: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:", //
-        "\n✨ <c>{1} <new group name></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <new group name></c>",
       ],
       doneSet: "{0} Successfully set group name to <c>{1}</c>!",
       doneChanged: "{0} Successfully changed group name from <c>{1}</c> to <c>{2}</c>!",
+    },
+    shorten: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:",
+        "\n✨ <c>{1} <link to shorten></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
+        "⭐ <c>{1} https://reddit.com/r/linux</c>",
+      ],
+      done: "{0} Here is your shortened link: {1}",
+    },
+    warning: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:",
+        "\n👮🏼‍♂️ <c>{1} add <@user> <reason></c> {2} Allows you to give the user a warning with a selected reason",
+        "\n🗑 <c>{1} remove <@user> <number></c> {2} Allows you to remove the user's warning with the selected number",
+        "\n📜 <c>{1} list <@user (optionally)></c> {2} Allows you to check a list of your or the mentioned user's warnings",
+        "\n🧐 <c>{1} group</c> {2} Allows you to check the number of warnings of individual group users",
+      ],
+      reasonMentions: "❌ Reason for the warning must not contain mentions!",
+      added: "{0} Administrator <c>{1}</c> gave a warning to <c>{2}</c> because of <c>{3}</c>, it is h{4} <c>{5}</c> warning.",
+      noWarnings: "❌ You don't have any warnings yet!",
+      noWarningsMentioned: "❌ <c>{0}</c> doesn't have any warnings yet!",
+      noWarningsGroup: "❌ No group member has any warnings yet!",
+      list: "📜 Warning list of <c>{0}</c> (<c>{1}</c>):\n\n{2}",
+      group: [
+        "🧐 How many warnings do members of <c>{0}</c> group have?\n", //
+        "{1}",
+        "\n🧮 <c>{2}</c> out of <c>{3}</c> members of this group have warnings, they have <c>{4}</c> in total.",
+      ],
+      groupNoName: [
+        "🧐 How many warnings do members of this group have?\n", //
+        "{1}",
+        "\n🧮 <c>{2}</c> out of <c>{3}</c> members of this group have warnings, they have <c>{4}</c> in total.",
+      ],
+      deleted: "🗑 Administrator <c>{0}</c> removed warning number <c>{2}</c> from <c>{1}</c>, now {3}he has <c>{4}</c> warnings left.",
     },
   },
 };

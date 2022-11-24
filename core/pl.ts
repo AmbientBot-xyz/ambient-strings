@@ -29,17 +29,24 @@ export default {
     ],
     welcome:
       "👋🏻 Cześć, <c>{0}</c>! Nazywam się <c>Ambient</c>, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy <c>{1}</c>.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym <c>serwerze Discord</c>, gdzie również dowiesz się o nowościach związanych z Ambientem: {2}",
+    mentionedNotUser: "❌ Oznaczony użytkownik nigdy nie skorzystał z Ambienta.",
     commandNotFound: "❌ Nie odnaleziono komendy! Wpisz <c>{0}</c> aby uzyskać listę dostępnych komend.",
     unexpectedArgs: "❌ Ta komenda nie przyjmuje żadnych argumentów!",
     groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych!",
-    adminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
+    groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
+    globalAdminOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
     unavailable: "❌ Ta komenda jest obecnie niedostępna.",
+    outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
   },
   commands: {
     alpaca: {
       searching: "⏳ Szukam zdjęcia alpaki...",
       done: "{0} Oto losowe zdjęcie alpaki autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    capybara: {
+      searching: "⏳ Szukam zdjęcia kapibary...",
+      done: "{0} Oto losowe zdjęcie kapibary autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     cat: {
       searching: "⏳ Szukam zdjęcia kotka...",
@@ -61,6 +68,10 @@ export default {
       searching: "⏳ Szukam zdjęcia gołębia...",
       done: "{0} Oto losowe zdjęcie gołębia autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
+    racoon: {
+      searching: "⏳ Szukam zdjęcia szopa...",
+      done: "{0} Oto losowe zdjęcie szopa autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     shiba: {
       searching: "⏳ Szukam zdjęcia Shiba Inu...",
       done: "{0} Oto losowe zdjęcie Shiba Inu:",
@@ -71,11 +82,38 @@ export default {
     },
     interactions: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n✨ <c>{1} <on/off></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <on/off></c>",
       ],
       disabled: "🤐 Pomyślnie wyłączono interakcje w tej grupie, Ambient nie będzie reagował na żadne wiadomości poza komendami rozpoczynającymi się znakiem <c>{0}</c>.",
       enabled: "👉🏻 Pomyślnie włączono interakcje w tej grupie, Ambient będzie reagował na niektóre wiadomości poza komendami rozpoczynającymi się znakiem <c>{0}</c>.",
+    },
+    variables: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} list</c>",
+        "✨ <c>{1} set <nazwa> <zawartość></c>",
+        "✨ <c>{1} del <nazwa></c>",
+        "✨ <c>{1} get <nazwa></c>",
+      ],
+      list: "{0} Lista aktualnie ustawionych zmiennych: <c>{1}</c>",
+      set: "✅ Pomyślnie zaktualizowano zmienną <c>{0}</c>!",
+      notFound: "❌ Zmienna <c>{0}</c> nie istnieje!",
+      deleted: "🗑 Pomyślnie usunięto zmienną <c>{0}</c>!",
+      about: [
+        "{0} Informacje o zmiennej:\n", //
+        "🔖 Nazwa: <c>{1}</c>",
+        "📖 Zawartość: <c>{2}</c>",
+        "🗓 Ostatnia aktualizacja: <c>{4}</c> {3} <c>{5}</c>",
+        "🤡 Zaktualizowano przez: <c>{6}</c>",
+      ],
+    },
+    achievement: {
+      empty: "❌ Musisz podać treść osgiągnięcia! (max. <c>{0}</c> znaki)",
+      mentions: "❌ Treść osgiągnięcia nie może zawierać wzmianek!",
+      tooLong: "❌ Treść osgiągnięcia jest zbyt długa! (max. <c>{0}</c> znaki, podano <c>{1}</c>)",
+      generating: "⏳ Trwa generowanie osgiągnięcia...",
+      done: "{0} Oto wygenerowane osgiągnięcie:",
     },
     heart: {
       empty: "❌ Musisz podać treść serca! (max. <c>{0}</c> znaków)",
@@ -221,11 +259,9 @@ export default {
       mustReconnectMentioned: "❌ <c>{0}</c> musi ponownie połączyć Ambienta z kontem Spotify!",
       notListening: "❌ Niczego aktualnie nie słuchasz.",
       notListeningMentioned: "❌ <c>{0}</c> niczego aktualnie nie słucha.",
-      mentionedNotUser: "❌ Oznaczony użytkownik nigdy nie skorzystał z Ambienta.",
       listeningLocal: "❌ <c>{0}</c> słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",
       unableToPlay: "❌ Nie udało nam się odtworzyć utworu na Twoim koncie Spotify.",
       premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta 💎 Spotify Premium!",
-      outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c> znaków, wybrano <c>{1}</c>)",
       emptyResults: "❌ Nie znaleziono żadnego utworu pasującego do Twojego zapytania!",
       selectionTimeout: "❌ Nie wybrano żadnej pozycji w ciągu <c>{0}</c> sekund! Spróbuj ponownie.",
       trackSelectionList: [
@@ -277,8 +313,8 @@ export default {
     },
     tiktok: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n✨ <c>{1} <link do TikToka></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <link do TikToka></c>",
       ],
       invalidUrl: "❌ Podany link do TikToka jest nieprawidłowy!",
       preparing: "⏳ Przygotowuję TikToka: <c>{0}</c> {1} <c>{2}</c>",
@@ -297,14 +333,55 @@ export default {
         "💾 Pobrania: <c>{14}</c>",
       ],
     },
+    attachments: {
+      mustReplyToAttachments: "❌ Musisz odpowiedzieć na wiadomość zawierającą załączniki!",
+      done: "{0} Oto lista załączników z wybranej wiadomości:\n\n{1}",
+    },
     everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
     name: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n✨ <c>{1} <nowa nazwa grupy></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <nowa nazwa grupy></c>",
       ],
       doneSet: "{0} Pomyślnie nadano grupie nazwę <c>{1}</c>!",
       doneChanged: "{0} Pomyślnie zmieniono nazwę grupy z <c>{1}</c> na <c>{2}</c>!",
+    },
+    shorten: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n✨ <c>{1} <link do skrócenia></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
+        "⭐ <c>{1} https://reddit.com/r/linux</c>",
+      ],
+      done: "{0} Oto Twój skrócony link: {1}",
+    },
+    warning: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n👮🏼‍♂️ <c>{1} dodaj <@użytkownik> <powód></c> {2} Pozwala nadać użytkownikowi ostrzeżenie z wybranym powodem",
+        "\n🗑 <c>{1} usuń <@użytkownik> <numer></c> {2} Pozwala usunąć użytkownikowi ostrzeżenie o wybranym numerze",
+        "\n📜 <c>{1} lista <@użytkownik (opcjonalnie)></c> {2} Pozwala sprawdzić listę Twoich lub oznaczonego użytkownika ostrzeżeń",
+        "\n🧐 <c>{1} grupa</c> {2} Pozwala sprawdzić liczbę ostrzeżeń poszczególnych członków grupy",
+      ],
+      reasonMentions: "❌ Powód ostrzeżenia nie może zawierać wzmianek!",
+      added: "{0} Administrator <c>{1}</c> nadał ostrzeżenie <c>{2}</c> z powodu <c>{3}</c>, jest to je{4} <c>{5}</c> ostrzeżenie.",
+      noWarnings: "❌ Nie posiadasz jeszcze żadnych ostrzeżeń!",
+      noWarningsMentioned: "❌ <c>{0}</c> nie posiada jeszcze żadnych ostrzeżeń!",
+      noWarningsGroup: "❌ Żaden członek grupy nie posiada jeszcze ostrzeżeń!",
+      list: "📜 Lista ostrzeżeń <c>{0}</c> (<c>{1}</c>):\n\n{2}",
+      group: [
+        "🧐 Ile ostrzeżeń mają członkowie grupy <c>{0}</c>?\n", //
+        "{1}",
+        "\n🧮 <c>{2}</c> z <c>{3}</c> członków tej grupy posiada ostrzeżenia, mają ich razem <c>{4}</c>.",
+      ],
+      groupNoName: [
+        "🧐 Ile ostrzeżeń mają członkowie tej grupy?\n", //
+        "{1}",
+        "\n🧮 <c>{2}</c> z <c>{3}</c> członków tej grupy posiada ostrzeżenia, mają ich razem <c>{4}</c>.",
+      ],
+      deleted: "🗑 Administrator <c>{0}</c> usunął <c>{1}</c> ostrzeżenie o numerze <c>{2}</c>, pozostało {3} teraz <c>{4}</c> ostrzeżeń.",
     },
   },
 };
