@@ -18,14 +18,16 @@ export default {
     threadJailed: "⏳ W tej grupie są obecnie wykonywane operacje uniemożliwiające przetworzenie Twojej wiadomości.",
     userJailed: "⏳ Na Twoim koncie są obecnie wykonywane operacje uniemożliwiające przetworzenie Twojej wiadomości.",
     eventError: [
-      "💀 Wystąpił nieznany błąd podczas próby przetworzenia Twojej wiadomości. Spróbuj ponownie później, a jeśli błąd będzie się powtarzał, powiadom nas na serwerze Discord: {0}\n",
-      "📜 Szczegółowe informacje:",
-      "{1}",
+      "💀 Ambient napotkał nieznany błąd podczas próby przetworzenia Twojej wiadomości, spróbuj ponownie później. Zgłoszenie zostało automatycznie wysłane na nasz serwer Discord: {0}\n",
+      "⚠️ Nazwa: <c>{1}</c>",
+      "📜 Opis: <c>{2}</c>",
+      "📎 Szczegóły: {3}",
     ],
     execError: [
-      "💀 Wystąpił nieznany błąd podczas próby wykonania komendy. Spróbuj ponownie później, a jeśli błąd będzie się powtarzał, powiadom nas na serwerze Discord: {0}\n",
-      "📜 Szczegółowe informacje:",
-      "{1}",
+      "💀 Ambient napotkał nieznany błąd podczas próby wykonania komendy, spróbuj ponownie później. Zgłoszenie zostało automatycznie wysłane na nasz serwer Discord: {0}\n",
+      "⚠️ Nazwa: <c>{1}</c>",
+      "📜 Opis: <c>{2}</c>",
+      "📎 Szczegóły: {3}",
     ],
     welcome:
       "👋🏻 Cześć, <c>{0}</c>! Nazywam się <c>Ambient</c>, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy <c>{1}</c>.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym <c>serwerze Discord</c>, gdzie również dowiesz się o nowościach związanych z Ambientem: {2}",
@@ -122,6 +124,7 @@ export default {
     },
     disco: {
       jailed: "❌ Poczekaj aż obecna impreza zakończy się!",
+      unavailable: "❌ Nie można rozpocząć imprezy, ponieważ przywrócenie obecnego motywu nie będzie możliwe. Zmień motyw na inny przed rozpoczęciem imprezy.",
       starting: "{0} Rozkręcam imprezę...",
       done: "🥂 Impreza zakończona!",
     },
@@ -250,6 +253,13 @@ export default {
         "🚪 Link zewnętrzny: {9}",
       ],
     },
+    play: {
+      searching: "🔎 Szukam <c>{0}</c>...",
+      unavailable: "❌ Wybrany utwór jest niedostępny!",
+      tooBig: "❌ Rozmiar wybranego utworu jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
+      preparing: "⏳ Przygotowuję <c>{0}</c>... (<c>{1}</c>, <c>{2}</c>)",
+      done: "{0} {1}",
+    },
     spotify: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:",
@@ -262,6 +272,7 @@ export default {
         "\n🤩 <c>{1} topartyści <@użytkownik (opcjonalnie)></c> {2} Pozwala sprawdzić Twoich najczęściej słuchanych artystów lub oznaczonego użytkownika",
         "\n🕰 <c>{1} ostatnie <@użytkownik (opcjonalnie)></c> {2} Pozwala sprawdzić czego ostatnio słuchał{3}ś Ty lub oznaczony użytkownik",
         "\n💿 <c>{1} play <utwór lub @użytkownik></c> {2} Pozwala odtworzyć na Twoim koncie Spotify wybrany utwór lub ten, którego słucha oznaczony użytkownik",
+        "\n🎶 <c>{1} youtube <@użytkownik (opcjonalnie)></c> {2} Wysyła utwór którego słuchasz Ty lub oznaczony użytkownik z YouTube",
       ],
       alreadyConnected: "❌ Musisz odłączyć obecne konto przed połączeniem nowego!",
       urlSent: "✅ Wysłaliśmy do Ciebie link do połączenia konta Spotify z Ambientem w wiadomości prywatnej, sprawdź również folder <c>inne</c>.",

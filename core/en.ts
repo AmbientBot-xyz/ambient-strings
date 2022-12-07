@@ -18,14 +18,16 @@ export default {
     threadJailed: "⏳ Operations are currently being performed in this group that prevent your message from being processed.",
     userJailed: "⏳ Operations are currently being performed on your account preventing the processing of your message.",
     eventError: [
-      "💀 An unknown error occurred while trying to process your message. Please try again later and if the error persists, notify us on the Discord server: {0}\n",
-      "📜 Detailed info:",
-      "{1}",
+      "💀 Ambient encountered an unknown error while trying to process your message, please try again later. It has been automatically reported to our Discord server: {0}\n",
+      "⚠️ Name: <c>{1}</c>",
+      "📜 Description: <c>{2}</c>",
+      "📎 Details: {3}",
     ],
     execError: [
-      "💀 An unknown error occurred while trying to execute command. Please try again later and if the error persists, notify us on the Discord server: {0}\n",
-      "📜 Detailed info:",
-      "{1}",
+      "💀 Ambient encountered an unknown error while trying to execute command, please try again later. It has been automatically reported to our Discord server: {0}\n",
+      "⚠️ Name: <c>{1}</c>",
+      "📜 Description: <c>{2}</c>",
+      "📎 Details: {3}",
     ],
     welcome:
       "👋🏻 Hi, <c>{0}</c>! My name is <c>Ambient</c>, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the <c>{1}</c> command.\n\n🤗 Do you have questions or need help? You will find it on our <c>Discord server</c>, where you will also learn about news related to Ambient: {2}",
@@ -122,6 +124,7 @@ export default {
     },
     disco: {
       jailed: "❌ Wait until current party ends!",
+      unavailable: "❌ The party cannot be started because it will not be possible to restore the current theme. Switch to a different theme before starting the party.",
       starting: "{0} Starting party...",
       done: "🥂 The party is over!",
     },
@@ -250,6 +253,13 @@ export default {
         "🚪 External link: {9}",
       ],
     },
+    play: {
+      searching: "🔎 Searching <c>{0}</c>...",
+      unavailable: "❌ The selected track is not available!",
+      tooBig: "❌ Size of the selected track is too large! (<c>{0}</c>, max. <c>{1}</c>)",
+      preparing: "⏳ Preparing <c>{0}</c>... (<c>{1}</c>, <c>{2}</c>)",
+      done: "{0} {1}",
+    },
     spotify: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
@@ -262,6 +272,7 @@ export default {
         "\n🤩 <c>{1} topartists <@user (optionally)></c> {2} Allows you to check what are your or the user mentioned most listened artists",
         "\n🕰 <c>{1} recent <@user (optionally)></c> {2} Allows you to check what you or the user mentioned have been listening to recently",
         "\n💿 <c>{1} play <song or @user></c> {2} Allows you to play on your Spotify account the selected song or the one that the user mentioned is listening to",
+        "\n🎶 <c>{1} youtube <@user (optionally)></c> {2} Sends the track you or the user mentioned are listening to from YouTube",
       ],
       alreadyConnected: "❌ You must disconnect your current account before connecting a new one!",
       urlSent: "✅ We sent you a link to connect your Spotify account with Ambient in a private message, also check the <c>others</c> folder.",

@@ -6,8 +6,9 @@ const language = {
     currentlyChoosen: "Obecnie wybrany / Currently choosen",
     updateAvailable: "Dostępna jest aktualizacja",
     updateAvailableMore: "Za chwilę nastąpi przeładowanie strony",
-    discord: "Serwer Discord",
     status: "Stan usług",
+    github: "GitHub",
+    discord: "Discord",
   },
   pages: {
     activate: "Aktywacja konta",
