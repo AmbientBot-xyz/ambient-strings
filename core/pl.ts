@@ -31,6 +31,8 @@ export default {
     ],
     welcome:
       "👋🏻 Cześć, <c>{0}</c>! Nazywam się <c>Ambient</c>, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy <c>{1}</c>.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym <c>serwerze Discord</c>, gdzie również dowiesz się o nowościach związanych z Ambientem: {2}",
+    mentionedItself: "🤯",
+    mentionedNotMember: "❌ Oznaczony użytkownik nie jest członkiem tej grupy!",
     mentionedNotUser: "❌ Oznaczony użytkownik nigdy nie skorzystał z Ambienta.",
     commandNotFound: "❌ Nie odnaleziono komendy! Wpisz <c>{0}</c> aby uzyskać listę dostępnych komend.",
     unexpectedArgs: "❌ Ta komenda nie przyjmuje żadnych argumentów!",
@@ -41,6 +43,7 @@ export default {
     unavailable: "❌ Ta komenda jest obecnie niedostępna.",
     outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
     botAdminRequired: "❌ Bot musi być administratorem grupy aby skorzystać z tej komendy.",
+    nsfwNotAllowed: "❌ Treści NSFW nie są dostępne w tej grupie, sprawdź komendę <c>{0}</c>.",
   },
   commands: {
     alpaca: {
@@ -95,6 +98,14 @@ export default {
       disabled: "🤐 Pomyślnie wyłączono interakcje w tej grupie, Ambient nie będzie reagował na żadne wiadomości poza komendami rozpoczynającymi się znakiem <c>{0}</c>.",
       enabled: "👉🏻 Pomyślnie włączono interakcje w tej grupie, Ambient będzie reagował na niektóre wiadomości poza komendami rozpoczynającymi się znakiem <c>{0}</c>.",
     },
+    nsfw: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <on/off></c>",
+      ],
+      disabled: "😌 Pomyślnie wyłączono komendy NSFW w tej grupie!",
+      enabled: "♨ Pomyślnie włączono komendy NSFW w tej grupie!",
+    },
     variables: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -131,6 +142,10 @@ export default {
     coinflip: {
       heads: "🦅 Orzeł",
       tails: "🪙 Reszka",
+    },
+    couple: {
+      tooFewUsers: "❌ W grupie znajduje się zbyt mało członków którzy skorzystali z Ambienta!",
+      done: "{0} Para najlepiej pasujących do siebie osób w tej grupie to <c>{1}</c> i <c>{2}</c> (<c>{3}%</c>) 💍",
     },
     diceroll: "{0} Wynik rzutu kostką: <c>{1}</c>",
     heart: {
@@ -180,13 +195,14 @@ export default {
       ],
       list: [
         "{0} Lista dostępnych komend (<c>{1}</c>):\n",
-        "🦊 Zwierzęta: {2}\n",
-        "⚙️ Konfiguracja: {3}\n",
-        "😆 Zabawa: {4}\n",
-        "ℹ Informacje: {5}\n",
-        "🫡 Społecznościowe: {6}\n",
-        "🛠️ Narzędzia: {7}\n",
-        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{8} <nazwa komendy></c>, np. <c>{8} {9}</c>.",
+        "🦊 Zwierzęta (<c>{2}</c>): {3}\n",
+        "⚙️ Konfiguracja (<c>{4}</c>): {5}\n",
+        "😆 Zabawa (<c>{6}</c>): {7}\n",
+        "ℹ Informacje (<c>{8}</c>): {9}\n",
+        "🔞 NSFW (<c>{10}</c>): {11}\n",
+        "🫡 Społecznościowe (<c>{12}</c>): {13}\n",
+        "🛠️ Narzędzia (<c>{14}</c>): {15}\n",
+        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{16} <nazwa komendy></c>, np. <c>{16} {17}</c>.",
       ],
       about: [
         "{0} Informacje o komendzie <c>{1}</c>:\n", //
@@ -198,24 +214,15 @@ export default {
     weather: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:",
-        "\n✨ <c>{1} <lokalizacja lub @użytkownik (opcjonalnie)></c>\n",
+        "\n✨ <c>{1} <lokalizacja lub @użytkownik (opcjonalne jeśli lokalizacja jest zapisana)></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1}</c>",
         "⭐ <c>{1} Leszno</c>",
         "⭐ <c>{1} Zielona Góra, PL</c>",
-        "⭐ <c>{1} Chicago, US</c>",
+        "⭐ <c>{1} @użytkownik</c>",
       ],
       notSetMentioned: "❌ <c>{0}</c> nie podał{1} swojej lokalizacji!",
-      notFound: [
-        "❌ Podana lokalizacja nie została odnaleziona!\n",
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
-        "\n✨ <c>{1} <lokalizacja lub @użytkownik (opcjonalnie)></c>\n",
-        "💡 Przykłady:",
-        "⭐ <c>{1}</c>",
-        "⭐ <c>{1} Leszno</c>",
-        "⭐ <c>{1} Zielona Góra, PL</c>",
-        "⭐ <c>{1} Chicago, US</c>",
-      ],
+      notFound: "❌ Podana lokalizacja nie została odnaleziona!",
       done: [
         "{0} Aktualna pogoda w lokalizacji <c>{1}</c>:\n",
         "🌡️ Temperatura: <c>{2}°C</c> {3}",
@@ -254,6 +261,15 @@ export default {
       ],
     },
     play: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n✨ <c>{1} <tytuł lub link do piosenki></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} kukon ostatni bal</c>",
+        "⭐ <c>{1} youtu.be/-g9O5GDV33k</c>",
+        "⭐ <c>{1} on.soundcloud.com/oZBMU</c>",
+        "⭐ <c>{1} open.spotify.com/track/3WqlO1SqWksaYDyUKZw4Kn</c>",
+      ],
       searching: "🔎 Szukam <c>{0}</c>...",
       unavailable: "❌ Wybrany utwór jest niedostępny!",
       tooBig: "❌ Rozmiar wybranego utworu jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
@@ -390,6 +406,13 @@ export default {
       doneChangedOwn: "{0} Twój nick został pomyślnie zmieniony z <c>{1}</c> na <c>{2}</c>!",
       doneChangedOther: "{0} Nick <c>{1}</c> został pomyślnie zmieniony z <c>{2}</c> na <c>{3}</c>!",
     },
+    paste: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
+        "\n✨ <c>{1} <tekst></c>\n",
+      ],
+      done: "{0} Oto Twoja wklejka: {1}",
+    },
     shorten: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:",
@@ -400,6 +423,21 @@ export default {
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
       done: "{0} Oto Twój skrócony link: {1}",
+    },
+    translate: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
+        "\n✨ <c>{1} <język docelowy> <tekst do przetłumaczenia></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} en Ambient jest najlepszy</c>",
+      ],
+      done: [
+        "{0} Oto wynik tłumaczenia:\n", //
+        "🚰 Język źródłowy: <c>{1}</c>",
+        "🎯 Język docelowy: <c>{2}</c>",
+        "📖 Liczba zdań: <c>{3}</c>",
+        "🗣 Wynik: <c>{4}</c>",
+      ],
     },
     warning: {
       usage: [

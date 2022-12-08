@@ -6,7 +6,7 @@ const language = {
     currentlyChoosen: "Currently choosen / Obecnie wybrany",
     updateAvailable: "An update is available",
     updateAvailableMore: "The page will be reloaded in a moment",
-    status: "Services health",
+    status: "Health",
     github: "GitHub",
     discord: "Discord",
   },

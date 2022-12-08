@@ -31,6 +31,8 @@ export default {
     ],
     welcome:
       "👋🏻 Hi, <c>{0}</c>! My name is <c>Ambient</c>, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the <c>{1}</c> command.\n\n🤗 Do you have questions or need help? You will find it on our <c>Discord server</c>, where you will also learn about news related to Ambient: {2}",
+    mentionedItself: "🤯",
+    mentionedNotMember: "❌ Mentioned user is not a member of this group!",
     mentionedNotUser: "❌ Mentioned user has never used Ambient.",
     commandNotFound: "❌ Command not found! Type <c>{0}</c> for a list of available commands.",
     unexpectedArgs: "❌ This command takes no arguments!",
@@ -41,6 +43,7 @@ export default {
     unavailable: "❌ This command is currently unavailable.",
     outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c>, <c>{1}</c> selected)",
     botAdminRequired: "❌ Bot must be a group admin to use this command.",
+    nsfwNotAllowed: "❌ NSFW content is not available in this group, check <c>{0}</c> command.",
   },
   commands: {
     alpaca: {
@@ -95,6 +98,14 @@ export default {
       disabled: "🤐 Successfully disabled interactions in this group, Ambient will not respond to any messages except for commands starting with <c>{0}</c>.",
       enabled: "👉🏻 Successfully enabled interactions in this group, Ambient will respond to some messages in addition to commands starting with <c>{0}</c>.",
     },
+    nsfw: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <on/off></c>",
+      ],
+      disabled: "😌 Successfully disabled NSFW commands in this group!",
+      enabled: "♨ Successfully enabled NSFW commands in this group!",
+    },
     variables: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -131,6 +142,10 @@ export default {
     coinflip: {
       heads: "🦅 Heads",
       tails: "🪙 Tails",
+    },
+    couple: {
+      tooFewUsers: "❌ There are too few members in the group who have used Ambient!",
+      done: "{0} The pair of people who are best suited for each other in this group are <c>{1}</c> and <c>{2}</c> (<c>{3}%</c>) 💍",
     },
     diceroll: "{0} Result of the dice roll: <c>{1}</c>",
     heart: {
@@ -180,13 +195,14 @@ export default {
       ],
       list: [
         "{0} List of available commands (<c>{1}</c>):\n",
-        "🦊 Animals: {2}\n",
-        "⚙️ Configuration: {3}\n",
-        "😆 Fun: {4}\n",
-        "ℹ Info: {5}\n",
-        "🫡 Social: {6}\n",
-        "🛠️ Tools: {7}\n",
-        "✨ To see detailed information on the selected command, type <c>{8} <command name></c>, e.g. <c>{8} {9}</c>.",
+        "🦊 Animals (<c>{2}</c>): {3}\n",
+        "⚙️ Configuration (<c>{4}</c>): {5}\n",
+        "😆 Fun (<c>{6}</c>): {7}\n",
+        "ℹ Info (<c>{8}</c>): {9}\n",
+        "🔞 NSFW (<c>{10}</c>): {11}\n",
+        "🫡 Social (<c>{12}</c>): {13}\n",
+        "🛠️ Tools (<c>{14}</c>): {15}\n",
+        "✨ To see detailed information on the selected command, type <c>{16} <command name></c>, e.g. <c>{16} {17}</c>.",
       ],
       about: [
         "{0} Info about command <c>{1}</c>:\n", //
@@ -198,24 +214,15 @@ export default {
     weather: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
-        "\n✨ <c>{1} <location or @user (optionally)></c>\n",
+        "\n✨ <c>{1} <location or @user (optional if the location is saved)></c>\n",
         "💡 Examples:",
         "⭐ <c>{1}</c>",
         "⭐ <c>{1} Leszno</c>",
         "⭐ <c>{1} Zielona Góra, PL</c>",
-        "⭐ <c>{1} Chicago, US</c>",
+        "⭐ <c>{1} @user</c>",
       ],
       notSetMentioned: "❌ <c>{0}</c> did not provide location!",
-      notFound: [
-        "❌ The given location was not found!\n",
-        "{0} Correct usage of command <c>{1}</c>:",
-        "\n✨ <c>{1} <location or @user (optionally)></c>\n",
-        "💡 Examples:",
-        "⭐ <c>{1}</c>",
-        "⭐ <c>{1} Leszno</c>",
-        "⭐ <c>{1} Zielona Góra, PL</c>",
-        "⭐ <c>{1} Chicago, US</c>",
-      ],
+      notFound: "❌ The given location was not found!",
       done: [
         "{0} Current weather in <c>{1}</c>:\n",
         "🌡️ Temperature: <c>{2}°C</c> {3}",
@@ -254,9 +261,18 @@ export default {
       ],
     },
     play: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:",
+        "\n✨ <c>{1} <track title or link></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1} kukon ostatni bal</c>",
+        "⭐ <c>{1} youtu.be/-g9O5GDV33k</c>",
+        "⭐ <c>{1} on.soundcloud.com/oZBMU</c>",
+        "⭐ <c>{1} open.spotify.com/track/3WqlO1SqWksaYDyUKZw4Kn</c>",
+      ],
       searching: "🔎 Searching <c>{0}</c>...",
       unavailable: "❌ The selected track is not available!",
-      tooBig: "❌ Size of the selected track is too large! (<c>{0}</c>, max. <c>{1}</c>)",
+      tooBig: "❌ Size of the selected track is too big! (<c>{0}</c>, max. <c>{1}</c>)",
       preparing: "⏳ Preparing <c>{0}</c>... (<c>{1}</c>, <c>{2}</c>)",
       done: "{0} {1}",
     },
@@ -390,6 +406,13 @@ export default {
       doneChangedOwn: "{0} Your nickname has been successfully changed from <c>{1}</c> to <c>{2}</c>!",
       doneChangedOther: "{0} Nickname of <c>{1}</c> has been successfully changed from <c>{2}</c> to <c>{3}</c>!",
     },
+    paste: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "\n✨ <c>{1} <text></c>\n",
+      ],
+      done: "{0} Here is your paste: {1}",
+    },
     shorten: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
@@ -400,6 +423,21 @@ export default {
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
       done: "{0} Here is your shortened link: {1}",
+    },
+    translate: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:", //
+        "\n✨ <c>{1} <target language> <text to translate></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1} pl Ambient is the best</c>",
+      ],
+      done: [
+        "{0} Here is translation result:\n", //
+        "🚰 Source language: <c>{1}</c>",
+        "🎯 Target language: <c>{2}</c>",
+        "📖 Sentences count: <c>{3}</c>",
+        "🗣 Result: <c>{4}</c>",
+      ],
     },
     warning: {
       usage: [
