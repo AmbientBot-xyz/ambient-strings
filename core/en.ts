@@ -47,47 +47,47 @@ export default {
   },
   commands: {
     alpaca: {
-      searching: "⏳ Searching for a picture of the alpaca...",
+      searching: "⏳ Searching for a photo of the alpaca...",
       done: "{0} Here is a random photo of the alpaca by <c>{1}</c> from <c>{2}</c>:",
     },
     capybara: {
-      searching: "⏳ Searching for a picture of the capybara...",
+      searching: "⏳ Searching for a photo of the capybara...",
       done: "{0} Here is a random photo of the capybara by <c>{1}</c> from <c>{2}</c>:",
     },
     cat: {
-      searching: "⏳ Searching for a picture of a cat...",
+      searching: "⏳ Searching for a photo of a cat...",
       done: "{0} Here is a random cat photo:",
     },
     dog: {
-      searching: "⏳ Searching for a picture of a dog...",
+      searching: "⏳ Searching for a photo of a dog...",
       done: "{0} Here is a random dog photo:",
     },
     duck: {
-      searching: "⏳ Searching for a picture of the duck...",
+      searching: "⏳ Searching for a photo of the duck...",
       done: "{0} Here is a random photo of the duck by <c>{1}</c> from <c>{2}</c>:",
     },
     fox: {
-      searching: "⏳ Searching for a picture of a fox...",
+      searching: "⏳ Searching for a photo of a fox...",
       done: "{0} Here is a random fox photo:",
     },
     frog: {
-      searching: "⏳ Searching for a picture of a frog...",
+      searching: "⏳ Searching for a photo of a frog...",
       done: "{0} Here is a random photo of a frog by <c>{1}</c> from <c>{2}</c>:",
     },
     pigeon: {
-      searching: "⏳ Searching for a picture of a pigeon...",
+      searching: "⏳ Searching for a photo of a pigeon...",
       done: "{0} Here is a random photo of a pigeon by <c>{1}</c> from <c>{2}</c>:",
     },
     racoon: {
-      searching: "⏳ Searching for a picture of the racoon...",
+      searching: "⏳ Searching for a photo of the racoon...",
       done: "{0} Here is a random photo of the racoon by <c>{1}</c> from <c>{2}</c>:",
     },
     shiba: {
-      searching: "⏳ Searching for a picture of Shiba Inu...",
+      searching: "⏳ Searching for a photo of Shiba Inu...",
       done: "{0} Here is a random Shiba Inu photo:",
     },
     turtle: {
-      searching: "⏳ Searching for a picture of a turtle...",
+      searching: "⏳ Searching for a photo of a turtle...",
       done: "{0} Here is a random photo of a turtle by <c>{1}</c> from <c>{2}</c>:",
     },
     interactions: {
@@ -169,20 +169,26 @@ export default {
       generating: "⏳ Generating bar...",
       done: "{0} Here is the generated bar:",
     },
+    apod: {
+      searching: "⏳ Searching an Astronomy Picture of the Day...",
+      doneVideo: "{0} Here is an Astronomy Video of the Day named <c>{1}</c>: {2}",
+      done: "{0} Here is an Astronomy Picture of the Day named <c>{1}</c>:",
+    },
     bot: [
       "{0} Ambient info:\n",
       "☯ RAM: <c>{1}/{2} GiB</c> {3} <c>{4}%</c>",
       "💾 Disk: <c>{5}/{6} GiB</c> {3} <c>{7}%</c>",
       "⏳ Uptime: <c>{8}</c>",
-      "🤖 Running bots: <c>{9}</c>",
-      "✨ Core: <c>v{10}+{11}/{12}</c>",
-      "📦 Instance: <c>{13}</c>",
-      "🪁 Environment: <c>v{14}+{15}/{16}</c>",
-      "🏷 TypeScript: <c>v{17}</c>",
-      "🆙 Update date: <c>{18}</c> {3} <c>{19}</c>",
-      "🍒 Creation date: <c>{20}</c>",
-      "😼 Author: <c>{21}</c>",
-      "🤗 Discord: {22}",
+      "🏓 Ping: <c>{9} ms</c>",
+      "🤖 Running bots: <c>{10}</c>",
+      "✨ Core: <c>v{11}+{12}/{13}</c>",
+      "📦 Instance: <c>{14}</c>",
+      "🪁 Environment: <c>v{15}+{16}/{17}</c>",
+      "🏷 TypeScript: <c>v{18}</c>",
+      "🆙 Update date: <c>{19}</c> {3} <c>{20}</c>",
+      "🍒 Creation date: <c>{21}</c>",
+      "😼 Author: <c>{22}</c>",
+      "🤗 Discord: {23}",
     ],
     help: {
       usage: [
@@ -235,6 +241,14 @@ export default {
         "🌅 Sunrise: <c>{12}</c>",
         "🌇 Sunset: <c>{13}</c>",
       ],
+    },
+    rule34: {
+      empty: "❌ You must provide tags! (max. <c>{0}</c> characters)",
+      mentions: "❌ Tags cannot contain mentions!",
+      tooLong: "❌ Tags are too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      searching: "⏳ Searching for a photo matching the given tags...",
+      notFound: "❌ No photo found matching the given tags!",
+      done: "{0} Here is a random photo by <c>{1}</c> with tags <c>{2}</c>:",
     },
     instagram: {
       usage: [
@@ -412,6 +426,18 @@ export default {
         "\n✨ <c>{1} <text></c>\n",
       ],
       done: "{0} Here is your paste: {1}",
+    },
+    screenshot: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:",
+        "\n✨ <c>{1} <link to webpage></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
+        "⭐ <c>{1} https://reddit.com/r/linux</c>",
+      ],
+      taking: "⏳ Taking a screenshot...",
+      done: "{0} Here is a screenshot of the given website:",
     },
     shorten: {
       usage: [

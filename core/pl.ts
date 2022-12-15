@@ -169,20 +169,26 @@ export default {
       generating: "⏳ Trwa generowanie paska...",
       done: "{0} Oto wygenerowany pasek:",
     },
+    apod: {
+      searching: "⏳ Szukam astronomicznego zdjęcia dnia...",
+      doneVideo: "{0} Oto astronomiczny filmik dnia pod tytułem <c>{1}</c>: {2}",
+      done: "{0} Oto astronomiczne zdjęcie dnia pod tytułem <c>{1}</c>:",
+    },
     bot: [
       "{0} Informacje o Ambiencie:\n",
       "☯ RAM: <c>{1}/{2} GiB</c> {3} <c>{4}%</c>",
       "💾 Dysk: <c>{5}/{6} GiB</c> {3} <c>{7}%</c>",
       "⏳ Czas działania: <c>{8}</c>",
-      "🤖 Uruchomione boty: <c>{9}</c>",
-      "✨ Jądro: <c>v{10}+{11}/{12}</c>",
-      "📦 Instancja: <c>{13}</c>",
-      "🪁 Środowisko: <c>v{14}+{15}/{16}</c>",
-      "🏷 TypeScript: <c>v{17}</c>",
-      "🆙 Data aktualizacji: <c>{18}</c> {3} <c>{19}</c>",
-      "🍒 Data powstania: <c>{20}</c>",
-      "😼 Autor: <c>{21}</c>",
-      "🤗 Discord: {22}",
+      "🏓 Ping: <c>{9} ms</c>",
+      "🤖 Uruchomione boty: <c>{10}</c>",
+      "✨ Jądro: <c>v{11}+{12}/{13}</c>",
+      "📦 Instancja: <c>{14}</c>",
+      "🪁 Środowisko: <c>v{15}+{16}/{17}</c>",
+      "🏷 TypeScript: <c>v{18}</c>",
+      "🆙 Data aktualizacji: <c>{19}</c> {3} <c>{20}</c>",
+      "🍒 Data powstania: <c>{21}</c>",
+      "😼 Autor: <c>{22}</c>",
+      "🤗 Discord: {23}",
     ],
     help: {
       usage: [
@@ -235,6 +241,14 @@ export default {
         "🌅 Wschód słońca: <c>{12}</c>",
         "🌇 Zachód słońca: <c>{13}</c>",
       ],
+    },
+    rule34: {
+      empty: "❌ Musisz podać tagi! (max. <c>{0}</c> znaki)",
+      mentions: "❌ Tagi nie mogą zawierać wzmianek!",
+      tooLong: "❌ Tagi są zbyt długie! (max. <c>{0}</c> znaki, podano <c>{1}</c>)",
+      searching: "⏳ Szukam zdjęcia pasującego do podanych tagów...",
+      notFound: "❌ Nie odnaleziono zdjęcia pasującego do podanych tagów!",
+      done: "{0} Oto losowe zdjęcie autorstwa <c>{1}</c> z tagami <c>{2}</c>:",
     },
     instagram: {
       usage: [
@@ -412,6 +426,18 @@ export default {
         "\n✨ <c>{1} <tekst></c>\n",
       ],
       done: "{0} Oto Twoja wklejka: {1}",
+    },
+    screenshot: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n✨ <c>{1} <link do strony></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
+        "⭐ <c>{1} https://reddit.com/r/linux</c>",
+      ],
+      taking: "⏳ Wykonuję zrzut ekranu...",
+      done: "{0} Oto zrzut ekranu podanej strony internetowej:",
     },
     shorten: {
       usage: [
