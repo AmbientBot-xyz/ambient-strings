@@ -289,6 +289,32 @@ export default {
       preparing: "⏳ Przygotowuję <c>{0}</c>... (<c>{1}</c>, <c>{2}</c>)",
       done: "{0} {1}",
     },
+    profile: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <@użytkownik (opcjonalnie)></c>",
+      ],
+      collecting: "⏳ Zbieram informacje o <c>{0}</c>...",
+      done: [
+        "{0} Informacje o profilu Facebook <c>{1}</c>:\n",
+        "📛 Alternatywna nazwa: <c>{2}</c>",
+        "🆎 Nazwa użytkownika: <c>{3}</c>",
+        "🆔 ID konta: <c>{4}</c>",
+        "👗 Płeć: <c>{5}</c>",
+        "🔗 Profil: {6}",
+        "🥰 Ma bota w znajomych: <c>{7}</c>",
+        "👮🏻‍♂️ Administrator grupy: <c>{8}</c>",
+        "🎂 Obchodzi dziś urodziny: <c>{9}</c>",
+        "🌍 Lokalizacja: <c>{10}</c>",
+        "🤓 Korzysta z Ambienta od: <c>{12}</c> {11} <c>{13}</c>",
+        "🤖 Jest botem: <c>{14}</c>",
+        "👅 Język w Ambiencie: <c>{15}</c>",
+        "🎛️ Połączone Spotify: <c>{16}</c>",
+        "✉ Wysłane wiadomości: <c>{17}</c> (<c>{18}</c> w tej grupie)",
+        "🪄 Wykonane komendy: <c>{19}</c> (<c>{20}</c> w tej grupie)",
+        "🔄 Zaktualizowano dane: <c>{21}</c> {11} <c>{22}</c>",
+      ],
+    },
     spotify: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:",
@@ -341,7 +367,7 @@ export default {
         "🆎 Nazwa: <c>{1}</c>",
         "🌍 Kraj: <c>{2}</c>",
         "👀 Liczba obserwujących: <c>{3}</c>",
-        "🔗 Link: {4}",
+        "🔗 Profil: {4}",
         "💎 Spotify Premium: <c>{5}</c>",
       ],
       nowListening: [
