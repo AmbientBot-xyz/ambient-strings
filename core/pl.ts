@@ -40,6 +40,7 @@ export default {
     groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
     globalAdminOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
+    happyBirthday: "🎂 Wszystkiego najlepszego, <c>{0}</c>! 🥳",
     outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
     botAdminRequired: "❌ Bot musi być administratorem grupy aby skorzystać z tej komendy.",
     nsfwNotAllowed: "❌ Treści NSFW nie są dostępne w tej grupie, sprawdź komendę <c>{0}</c>.",
@@ -154,6 +155,10 @@ export default {
       generating: "⏳ Trwa generowanie serca...",
       done: "{0} Oto wygenerowane serce:",
     },
+    meme: {
+      searching: "⏳ Szukam losowego mema...",
+      done: "{0} Oto losowy mem autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     rip: {
       empty: "❌ Musisz podać treść nagrobka! (max. <c>{0}</c> znaków)",
       mentions: "❌ Treść nagrobka nie może zawierać wzmianek!",
@@ -191,8 +196,8 @@ export default {
     ],
     help: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
-        "\n✨ <c>{1} <nazwa komendy (opcjonalnie)></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
+        "✨ <c>{1} <nazwa komendy (opcjonalnie)></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1}</c>",
         "⭐ <c>{1} {2}</c>",
@@ -202,10 +207,10 @@ export default {
         "{0} Lista dostępnych komend (<c>{1}</c>):\n",
         "🦊 Zwierzęta (<c>{2}</c>): {3}\n",
         "⚙️ Konfiguracja (<c>{4}</c>): {5}\n",
-        "😆 Zabawa (<c>{6}</c>): {7}\n",
+        "👾 Zabawa (<c>{6}</c>): {7}\n",
         "ℹ Informacje (<c>{8}</c>): {9}\n",
         "🔞 NSFW (<c>{10}</c>): {11}\n",
-        "🫡 Społecznościowe (<c>{12}</c>): {13}\n",
+        "📸 Społecznościowe (<c>{12}</c>): {13}\n",
         "🛠️ Narzędzia (<c>{14}</c>): {15}\n",
         "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{16} <nazwa komendy></c>, np. <c>{16} {17}</c>.",
       ],
@@ -216,10 +221,35 @@ export default {
         "⚓ Inne nazwy: {4}",
       ],
     },
+    top: {
+      jailed: "❌ Poczekaj aż obecne obliczenia zakończą się!",
+      counting: "⏳ Liczę wiadomości, może to potrwać kilkanaście sekund w przypadku dużych grup...",
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
+        "\n🤝🏻 <c>{1} konto</c> {2} Pokazuje top 10 użytkowników, którzy mają najstarsze konto w tej grupie",
+        "\n✉ <c>{1} wiadomości</c> {2} Pokazuje top 10 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie",
+        "\n🪄 <c>{1} komendy</c> {2} Pokazuje top 10 użytkowników, którzy wykonali najwięcej komend w tej grupie",
+      ],
+      account: [
+        "🤝🏻 Top 10 użytkowników, którzy mają najstarsze konto w tej grupie:", //
+        "\n{0}\n",
+        "🧮 Jesteś <c>#{1}</c> w rankingu.",
+      ],
+      messages: [
+        "✉ Top 10 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie:", //
+        "\n{0}\n",
+        "🧮 Jesteś <c>#{1}</c> w rankingu.",
+      ],
+      commands: [
+        "🪄 Top 10 użytkowników, którzy wykonali najwięcej komend w tej grupie:", //
+        "\n{0}\n",
+        "🧮 Jesteś <c>#{1}</c> w rankingu.",
+      ],
+    },
     weather: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
-        "\n✨ <c>{1} <lokalizacja lub @użytkownik (opcjonalne jeśli lokalizacja jest zapisana)></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
+        "✨ <c>{1} <lokalizacja lub @użytkownik (opcjonalne jeśli lokalizacja jest zapisana)></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1}</c>",
         "⭐ <c>{1} Leszno</c>",
@@ -241,6 +271,15 @@ export default {
         "🌇 Zachód słońca: <c>{13}</c>",
       ],
     },
+    reddit: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <subreddit 1> <subreddit 2 (opcjonalnie)> ...</c>",
+      ],
+      notFound: "❌ Nie odnaleziono zdjęcia w podanych subredditach!",
+      searching: "⏳ Szukam zdjęcia w podanych subredditach...",
+      done: "{0} Oto losowe zdjęcie autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     rule34: {
       empty: "❌ Musisz podać tagi! (max. <c>{0}</c> znaki)",
       mentions: "❌ Tagi nie mogą zawierać wzmianek!",
@@ -251,8 +290,8 @@ export default {
     },
     instagram: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n✨ <c>{1} <nazwa użytkownika></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <nazwa użytkownika></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1} existencefornoreason</c>",
         "⭐ <c>{1} kmatuszak04</c>",
@@ -269,14 +308,14 @@ export default {
         "🤩 Obserwujących: <c>{6}</c>",
         "👀 Obserwowanych: <c>{7}</c>",
         "📰 Liczba postów: <c>{8}</c>",
-        "🔗 Profil: https://instagram.com/{1}",
-        "🚪 Link zewnętrzny: {9}",
+        "🔗 Profil: {9}",
+        "🚪 Link zewnętrzny: {10}",
       ],
     },
     play: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
-        "\n✨ <c>{1} <tytuł lub link do piosenki></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
+        "✨ <c>{1} <tytuł lub link do piosenki></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1} kukon ostatni bal</c>",
         "⭐ <c>{1} youtu.be/-g9O5GDV33k</c>",
@@ -302,18 +341,28 @@ export default {
         "🆔 ID konta: <c>{4}</c>",
         "👗 Płeć: <c>{5}</c>",
         "🔗 Profil: {6}",
-        "🥰 Ma bota w znajomych: <c>{7}</c>",
-        "👮🏻‍♂️ Administrator grupy: <c>{8}</c>",
-        "🎂 Obchodzi dziś urodziny: <c>{9}</c>",
-        "🌍 Lokalizacja: <c>{10}</c>",
-        "🤓 Korzysta z Ambienta od: <c>{12}</c> {11} <c>{13}</c>",
-        "🤖 Jest botem: <c>{14}</c>",
-        "👅 Język w Ambiencie: <c>{15}</c>",
-        "🎛️ Połączone Spotify: <c>{16}</c>",
-        "✉ Wysłane wiadomości: <c>{17}</c> (<c>{18}</c> w tej grupie)",
-        "🪄 Wykonane komendy: <c>{19}</c> (<c>{20}</c> w tej grupie)",
-        "🔄 Zaktualizowano dane: <c>{21}</c> {11} <c>{22}</c>",
+        "🏷 Nick w grupie: <c>{7}</c>",
+        "🥰 Ma bota w znajomych: <c>{8}</c>",
+        "👮🏻‍♂️ Administrator grupy: <c>{9}</c>",
+        "🎂 Obchodzi dziś urodziny: <c>{10}</c>",
+        "🌍 Lokalizacja: <c>{11}</c>",
+        "🤓 Korzysta z Ambienta od: <c>{13}</c> {12} <c>{14}</c>",
+        "🤖 Jest botem: <c>{15}</c>",
+        "👅 Język w Ambiencie: <c>{16}</c>",
+        "🎛️ Połączone Spotify: <c>{17}</c>",
+        "✉ Wysłane wiadomości: <c>{18}</c> (w grupie: <c>{19}</c>)",
+        "🪄 Wykonane komendy: <c>{20}</c> (w grupie: <c>{21}</c>)",
+        "🔄 Zaktualizowano dane: <c>{22}</c> {12} <c>{23}</c>",
       ],
+    },
+    skin: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <nick gracza></c>",
+      ],
+      notFound: "❌ Gracz o podanym nicku nie istnieje!",
+      searching: "⏳ Szukam skina gracza <c>{0}</c>...",
+      done: "{0} Oto skin gracza <c>{1}</c>:",
     },
     spotify: {
       usage: [
@@ -392,6 +441,27 @@ export default {
         "\n{1}",
       ],
     },
+    tellonym: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <nazwa użytkownika> <wiadomość (opcjonalnie)></c>",
+      ],
+      notFound: "❌ Podany użytkownik nie został odnaleziony!",
+      sent: "{0} Anonimowa wiadomość została pomyślnie wysłana do użytkownika <c>@{1}</c>!",
+      about: [
+        "{0} Informacje o użytkowniku <c>@{1}</c>:\n",
+        "🫡 Pełna nazwa: <c>{2}</c>",
+        "🆎 Biografia: <c>{3}</c>",
+        "🤩 Obserwujących: <c>{4}</c>",
+        "🕵🏻‍♂️ Anonimowych obserwujących: <c>{5}</c>",
+        "👀 Obserwowanych: <c>{6}</c>",
+        "✉ Wiadomości: <c>{7}</c>",
+        "🌍 Kraj: <c>{8}</c>",
+        "📱 Aktywny/a: <c>{9}</c>",
+        "🔗 Profil: {10}",
+        "\n{11}",
+      ],
+    },
     tiktok: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -435,7 +505,7 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
         "✨ <c>{1} <@użytkownik (opcjonalnie)> <nowy nick></c>",
       ],
-      tooLong: "❌ Podany nick jest zbyt długi!",
+      tooLong: "❌ Podany nick jest zbyt długi! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
       doneSetOwn: "{0} Twój nick został pomyślnie ustawiony na <c>{1}</c>!",
       doneSetOther: "{0} Nick <c>{1}</c> został pomyślnie ustawiony na <c>{2}</c>!",
       doneChangedOwn: "{0} Twój nick został pomyślnie zmieniony z <c>{1}</c> na <c>{2}</c>!",
@@ -443,15 +513,15 @@ export default {
     },
     paste: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n✨ <c>{1} <tekst></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <tekst></c>",
       ],
       done: "{0} Oto Twoja wklejka: {1}",
     },
     screenshot: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
-        "\n✨ <c>{1} <link do strony></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
+        "✨ <c>{1} <link do strony></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
@@ -462,8 +532,8 @@ export default {
     },
     shorten: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
-        "\n✨ <c>{1} <link do skrócenia></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
+        "✨ <c>{1} <link do skrócenia></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
@@ -473,8 +543,8 @@ export default {
     },
     translate: {
       usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n✨ <c>{1} <język docelowy> <tekst do przetłumaczenia></c>\n",
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <język docelowy> <tekst do przetłumaczenia></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1} en Ambient jest najlepszy</c>",
       ],

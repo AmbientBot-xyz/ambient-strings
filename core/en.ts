@@ -40,6 +40,7 @@ export default {
     groupAdminOnly: "❌ This command can only be used by group administrators!",
     globalAdminOnly: "❌ You don't have permission to use this command!",
     goodNight: "🥱 Good night, <c>{0}</c>! 😴",
+    happyBirthday: "🎂 Happy birthday, <c>{0}</c>! 🥳",
     outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c>, <c>{1}</c> selected)",
     botAdminRequired: "❌ Bot must be a group admin to use this command.",
     nsfwNotAllowed: "❌ NSFW content is not available in this group, check <c>{0}</c> command.",
@@ -154,6 +155,10 @@ export default {
       generating: "⏳ Generating heart...",
       done: "{0} Here is the generated heart:",
     },
+    meme: {
+      searching: "⏳ Searching a random meme...",
+      done: "{0} Here is a random meme by <c>{1}</c> from <c>{2}</c>:",
+    },
     rip: {
       empty: "❌ You must enter the text of the tombstone! (max. <c>{0}</c> characters)",
       mentions: "❌ The content of the tombstone must not contain any mentions!",
@@ -191,8 +196,8 @@ export default {
     ],
     help: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:",
-        "\n✨ <c>{1} <command name (optionally)></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n",
+        "✨ <c>{1} <command name (optionally)></c>\n",
         "💡 Examples:",
         "⭐ <c>{1}</c>",
         "⭐ <c>{1} {2}</c>",
@@ -202,10 +207,10 @@ export default {
         "{0} List of available commands (<c>{1}</c>):\n",
         "🦊 Animals (<c>{2}</c>): {3}\n",
         "⚙️ Configuration (<c>{4}</c>): {5}\n",
-        "😆 Fun (<c>{6}</c>): {7}\n",
+        "👾 Fun (<c>{6}</c>): {7}\n",
         "ℹ Info (<c>{8}</c>): {9}\n",
         "🔞 NSFW (<c>{10}</c>): {11}\n",
-        "🫡 Social (<c>{12}</c>): {13}\n",
+        "📸 Social (<c>{12}</c>): {13}\n",
         "🛠️ Tools (<c>{14}</c>): {15}\n",
         "✨ To see detailed information on the selected command, type <c>{16} <command name></c>, e.g. <c>{16} {17}</c>.",
       ],
@@ -216,10 +221,35 @@ export default {
         "⚓ Other names: {4}",
       ],
     },
-    weather: {
+    top: {
+      jailed: "❌ Wait until the current calculations are finished!",
+      counting: "⏳ Counting messages, it may take several seconds for large groups...",
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
-        "\n✨ <c>{1} <location or @user (optional if the location is saved)></c>\n",
+        "\n🤝🏻 <c>{1} account</c> {2} Shows the top 10 users who have the oldest account in this group",
+        "\n✉ <c>{1} messages</c> {2} Shows the top 10 users who sent the most messages in this group",
+        "\n🪄 <c>{1} commands</c> {2} Shows the top 10 users who executed the most commands in this group",
+      ],
+      account: [
+        "🤝🏻 Top 10 users who have the oldest account in this group:", //
+        "\n{0}\n",
+        "🧮 You're <c>#{1}</c> in the ranking.",
+      ],
+      messages: [
+        "✉ Top 10 users who sent the most messages in this group:", //
+        "\n{0}\n",
+        "🧮 You're <c>#{1}</c> in the ranking.",
+      ],
+      commands: [
+        "🪄 Top 10 users who executed the most commands in this group:", //
+        "\n{0}\n",
+        "🧮 You're <c>#{1}</c> in the ranking.",
+      ],
+    },
+    weather: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n",
+        "✨ <c>{1} <location or @user (optional if the location is saved)></c>\n",
         "💡 Examples:",
         "⭐ <c>{1}</c>",
         "⭐ <c>{1} Leszno</c>",
@@ -241,6 +271,15 @@ export default {
         "🌇 Sunset: <c>{13}</c>",
       ],
     },
+    reddit: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <subreddit 1> <subreddit 2 (optionally)> ...</c>",
+      ],
+      notFound: "❌ No photo found in the given subreddits!",
+      searching: "⏳ Searching for a photo in the given subreddits...",
+      done: "{0} Here is a random photo by <c>{1}</c> from <c>{2}</c>:",
+    },
     rule34: {
       empty: "❌ You must provide tags! (max. <c>{0}</c> characters)",
       mentions: "❌ Tags cannot contain mentions!",
@@ -251,8 +290,8 @@ export default {
     },
     instagram: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:", //
-        "\n✨ <c>{1} <username></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <username></c>\n",
         "💡 Examples:",
         "⭐ <c>{1} existencefornoreason</c>",
         "⭐ <c>{1} kmatuszak04</c>",
@@ -269,14 +308,14 @@ export default {
         "🤩 Followers: <c>{6}</c>",
         "👀 Following: <c>{7}</c>",
         "📰 Posts count: <c>{8}</c>",
-        "🔗 Profile: https://instagram.com/{1}",
-        "🚪 External link: {9}",
+        "🔗 Profile: {9}",
+        "🚪 External link: {10}",
       ],
     },
     play: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:",
-        "\n✨ <c>{1} <track title or link></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n",
+        "✨ <c>{1} <track title or link></c>\n",
         "💡 Examples:",
         "⭐ <c>{1} kukon ostatni bal</c>",
         "⭐ <c>{1} youtu.be/-g9O5GDV33k</c>",
@@ -292,28 +331,38 @@ export default {
     profile: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
-        "✨ <c>{1} <@user (optionally)>></c>",
+        "✨ <c>{1} <@user (optionally)></c>",
       ],
       collecting: "⏳ Collecting info about <c>{0}</c>...",
       done: [
         "{0} Info about Facebook profile of <c>{1}</c>:\n",
-        "📛 Alternative name: <c>{2}</c>",
+        "📛 Alternate name: <c>{2}</c>",
         "🆎 Username: <c>{3}</c>",
         "🆔 Account ID: <c>{4}</c>",
         "👗 Sex: <c>{5}</c>",
         "🔗 Profile: {6}",
-        "🥰 Has bot in friends: <c>{7}</c>",
-        "👮🏻‍♂️ Group administrator: <c>{8}</c>",
-        "🎂 Celebrating a birthday today: <c>{9}</c>",
-        "🌍 Location: <c>{10}</c>",
-        "🤓 Uses Ambient since: <c>{12}</c> {11} <c>{13}</c>",
-        "🤖 Is bot: <c>{14}</c>",
-        "👅 Language in Ambient: <c>{15}</c>",
-        "🎛️ Spotify connected: <c>{16}</c>",
-        "✉ Messages sent: <c>{17}</c> (<c>{18}</c> in this group)",
-        "🪄 Commands executed: <c>{19}</c> (<c>{20}</c> in this group)",
-        "🔄 Data updated: <c>{21}</c> {11} <c>{22}</c>",
+        "🏷 Nickname in group: <c>{7}</c>",
+        "🥰 Has bot in friends: <c>{8}</c>",
+        "👮🏻‍♂️ Group administrator: <c>{9}</c>",
+        "🎂 Celebrating a birthday today: <c>{10}</c>",
+        "🌍 Location: <c>{11}</c>",
+        "🤓 Uses Ambient since: <c>{13}</c> {12} <c>{14}</c>",
+        "🤖 Is bot: <c>{15}</c>",
+        "👅 Language in Ambient: <c>{16}</c>",
+        "🎛️ Spotify connected: <c>{17}</c>",
+        "✉ Messages sent: <c>{18}</c> (in group: <c>{19}</c>)",
+        "🪄 Commands executed: <c>{20}</c> (in group: <c>{21}</c>)",
+        "🔄 Data updated: <c>{22}</c> {12} <c>{23}</c>",
       ],
+    },
+    skin: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <player name></c>",
+      ],
+      notFound: "❌ The player with the given nickname does not exist!",
+      searching: "⏳ Searching for a skin of player <c>{0}</c>...",
+      done: "{0} Here is the skin of player <c>{1}</c>:",
     },
     spotify: {
       usage: [
@@ -392,6 +441,27 @@ export default {
         "\n{1}",
       ],
     },
+    tellonym: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <username> <message (optionally)></c>",
+      ],
+      notFound: "❌ The given user was not found!",
+      sent: "{0} Anonymous message has been successfully sent to <c>@{1}</c>!",
+      about: [
+        "{0} Info about user <c>@{1}</c>:\n",
+        "🫡 Full name: <c>{2}</c>",
+        "🆎 Biography: <c>{3}</c>",
+        "🤩 Followers: <c>{4}</c>",
+        "🕵🏻‍♂️ Anonymous followers: <c>{5}</c>",
+        "👀 Following: <c>{6}</c>",
+        "✉ Messages: <c>{7}</c>",
+        "🌍 Country: <c>{8}</c>",
+        "📱 Active: <c>{9}</c>",
+        "🔗 Profile: {10}",
+        "\n{11}",
+      ],
+    },
     tiktok: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -435,7 +505,7 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n", //
         "✨ <c>{1} <@user (optionally)> <new nickname></c>",
       ],
-      tooLong: "❌ The given nickname is too long!",
+      tooLong: "❌ The given nickname is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
       doneSetOwn: "{0} Your nickname has been successfully set to <c>{1}</c>!",
       doneSetOther: "{0} Nickname of <c>{1}</c> has been successfully set to <c>{2}</c>!",
       doneChangedOwn: "{0} Your nickname has been successfully changed from <c>{1}</c> to <c>{2}</c>!",
@@ -444,14 +514,14 @@ export default {
     paste: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
-        "\n✨ <c>{1} <text></c>\n",
+        "✨ <c>{1} <text></c>",
       ],
       done: "{0} Here is your paste: {1}",
     },
     screenshot: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:",
-        "\n✨ <c>{1} <link to webpage></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n",
+        "✨ <c>{1} <link to webpage></c>\n",
         "💡 Examples:",
         "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
@@ -462,8 +532,8 @@ export default {
     },
     shorten: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:",
-        "\n✨ <c>{1} <link to shorten></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n",
+        "✨ <c>{1} <link to shorten></c>\n",
         "💡 Examples:",
         "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
@@ -473,8 +543,8 @@ export default {
     },
     translate: {
       usage: [
-        "{0} Correct usage of command <c>{1}</c>:", //
-        "\n✨ <c>{1} <target language> <text to translate></c>\n",
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <target language> <text to translate></c>\n",
         "💡 Examples:",
         "⭐ <c>{1} pl Ambient is the best</c>",
       ],
