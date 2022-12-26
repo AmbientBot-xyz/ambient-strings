@@ -7,8 +7,8 @@ export default {
       "🤖 Bot name: <c>{0}</c>",
       "🪪 Account: <c>{1}</c>",
     ],
-    wrongBotMentioned: [
-      "It looks like you are trying to use the wrong bot. Information about the bot enabled on this group:\n",
+    wrongBot: [
+      "It looks like you are trying to use the wrong bot. Information about the bot enabled on this group:\n", //
       "🤖 Bot name: <c>{0}</c>",
       "🪪 Account: <c>{1}</c>",
     ],
@@ -31,6 +31,8 @@ export default {
     ],
     welcome:
       "👋🏻 Hi, <c>{0}</c>! My name is <c>Ambient</c>, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the <c>{1}</c> command.\n\n🤗 Do you have questions or need help? You will find it on our <c>Discord server</c>, where you will also learn about news related to Ambient: {2}",
+    welcomeGroup:
+      "👋🏻 Hi! My name is <c>Ambient</c>, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the <c>{1}</c> command.\n\n🤗 Do you have questions or need help? You will find it on our <c>Discord server</c>, where you will also learn about news related to Ambient: {2}",
     mentionedItself: "🤯",
     mentionedNotMember: "❌ Mentioned user is not a member of this group!",
     mentionedNotUser: "❌ Mentioned user has never used Ambient.",
@@ -185,14 +187,15 @@ export default {
       "⏳ Uptime: <c>{8}</c>",
       "🏓 Ping: <c>{9} ms</c>",
       "🤖 Running bots: <c>{10}</c>",
-      "✨ Core: <c>v{11}+{12}/{13}</c>",
-      "📦 Instance: <c>{14}</c>",
-      "🪁 Environment: <c>v{15}+{16}/{17}</c>",
-      "🏷 TypeScript: <c>v{18}</c>",
-      "🆙 Update date: <c>{19}</c> {3} <c>{20}</c>",
-      "🍒 Creation date: <c>{21}</c>",
-      "😼 Author: <c>{22}</c>",
-      "🤗 Discord: {23}",
+      "💎 Premium: {11}",
+      "✨ Core: <c>v{12}+{13}/{14}</c>",
+      "📦 Instance: <c>{15}</c>",
+      "🪁 Environment: <c>v{16}+{17}/{18}</c>",
+      "🏷 TypeScript: <c>v{19}</c>",
+      "🆙 Update date: <c>{20}</c> {3} <c>{21}</c>",
+      "🍒 Creation date: <c>{22}</c>",
+      "😼 Author: <c>{23}</c>",
+      "🤗 Discord: {24}",
     ],
     help: {
       usage: [
@@ -210,9 +213,10 @@ export default {
         "👾 Fun (<c>{6}</c>): {7}\n",
         "ℹ Info (<c>{8}</c>): {9}\n",
         "🔞 NSFW (<c>{10}</c>): {11}\n",
-        "📸 Social (<c>{12}</c>): {13}\n",
-        "🛠️ Tools (<c>{14}</c>): {15}\n",
-        "✨ To see detailed information on the selected command, type <c>{16} <command name></c>, e.g. <c>{16} {17}</c>.",
+        "💎 Premium (<c>{12}</c>): {13}\n",
+        "📸 Social (<c>{14}</c>): {15}\n",
+        "🛠️ Tools (<c>{16}</c>): {17}\n",
+        "✨ To see detailed information on the selected command, type <c>{18} <command name></c>, e.g. <c>{18} {19}</c>.",
       ],
       about: [
         "{0} Info about command <c>{1}</c>:\n", //
@@ -288,6 +292,59 @@ export default {
       notFound: "❌ No photo found matching the given tags!",
       done: "{0} Here is a random photo by <c>{1}</c> with tags <c>{2}</c>:",
     },
+    restoration: {
+      status: [
+        "{0} Restoration of deleted messages feature configuration:\n", //
+        "🛡 Enabled: <c>{1}</c>",
+        "👮🏻‍♂️ Restore administrator messages: <c>{2}</c>",
+        "📎 Attachments as links: <c>{3}</c>",
+        "🔒 Restore in private messages to administrators: <c>{4}</c>",
+        "\n⚠ Warning! This feature is only available in <c>💎 Ambient Premium</c>!",
+        "\n⚙ To change settings, type <c>{5} change</c>.",
+      ],
+      firstSettingQuestion: [
+        "🛡 Do you want to enable the restoration of deleted messages feature ?\n",
+        "1. <c>❌ no</c>",
+        "2. <c>✅ yes</c>",
+        "\n🪄 Send only the number corresponding to the selected setting, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first setting.",
+      ],
+      secondSettingQuestion: [
+        "👮🏻‍♂️ Should messages sent by group administrators be restored as well?\n",
+        "1. <c>❌ no</c>",
+        "2. <c>✅ yes</c>",
+        "\n🪄 Send only the number corresponding to the selected setting, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first setting.",
+      ],
+      thirdSettingQuestion: [
+        "📎 Should attachments from deleted messages be restored as links?\n",
+        "1. <c>❌ no</c> - attachments from deleted messages will be sent in their original form",
+        "2. <c>✅ yes</c> - attachments from deleted messages will be sent in the form of links to them",
+        "\n🪄 Send only the number corresponding to the selected setting, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first setting.",
+      ],
+      fourthSettingQuestion: [
+        "🔒 Should messages be restored in private messages to group administrators?\n",
+        "1. <c>❌ no</c> - restored messages will be sent to the group where they were deleted",
+        "2. <c>✅ yes</c> - restored messages will be sent in private messages to group administrators",
+        "\n🪄 Send only the number corresponding to the selected setting, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first setting.",
+      ],
+      disabled: "📴 Restoration of deleted messages feature has been successfully disabled!",
+      saved: "✅ Restoration of deleted messages feature settings has been successfully saved!",
+      premiumMissing: "⚠ Warning! Restoration of deleted messages feature will not work as it requires <c>💎 Ambient Premium</c>!",
+      privateError:
+        "⚠ <c:{0}>{1}</c>, we were unable to send you information about the deletion of the message in a private message, try sending a message to the bot to solve this problem.",
+      restored: [
+        "👀 <c>{0}</c> deleted a message!\n", //
+        "📨 Sent on: <c>{3}</c> {2} <c>{4}</c>",
+        "📮 Deleted on: <c>{5}</c> {2} <c>{6}</c>",
+        "📜 Message content: <c>{7}</c>",
+      ],
+      restoredAttachments: [
+        "👀 <c>{0}</c> deleted a message!\n", //
+        "📨 Sent on: <c>{3}</c> {2} <c>{4}</c>",
+        "📮 Deleted on: <c>{5}</c> {2} <c>{6}</c>",
+        "📜 Message content: <c>{7}</c>",
+        "\n📎 Attachments:\n{8}",
+      ],
+    },
     instagram: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -350,8 +407,8 @@ export default {
         "🤖 Is bot: <c>{15}</c>",
         "👅 Language in Ambient: <c>{16}</c>",
         "🎛️ Spotify connected: <c>{17}</c>",
-        "✉ Messages sent: <c>{18}</c> (in group: <c>{19}</c>)",
-        "🪄 Commands executed: <c>{20}</c> (in group: <c>{21}</c>)",
+        "✉ Messages sent: <c>{18}</c> (in this group: <c>{19}</c>)",
+        "🪄 Commands executed: <c>{20}</c> (in this group: <c>{21}</c>)",
         "🔄 Data updated: <c>{22}</c> {12} <c>{23}</c>",
       ],
     },
@@ -391,7 +448,7 @@ export default {
       notListeningMentioned: "❌ <c>{0}</c> is not currently listening to anything.",
       listeningLocal: "❌ <c>{0}</c> is currently listening to a local track, you cannot play it on your Spotify account.",
       unableToPlay: "❌ We couldn't play the song on your Spotify account.",
-      premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires 💎 Spotify Premium account!",
+      premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires <c>💎 Spotify Premium</c> account!",
       emptyResults: "❌ No track matching your query found!",
       selectionTimeout: "❌ No item was selected within <c>{0}</c> seconds! Try again.",
       trackSelectionList: [
@@ -447,6 +504,7 @@ export default {
         "✨ <c>{1} <username> <message (optionally)></c>",
       ],
       notFound: "❌ The given user was not found!",
+      tooFast: "❌ You send messages too fast, wait a while before sending the next one.",
       sent: "{0} Anonymous message has been successfully sent to <c>@{1}</c>!",
       about: [
         "{0} Info about user <c>@{1}</c>:\n",

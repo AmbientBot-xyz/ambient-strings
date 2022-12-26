@@ -7,8 +7,8 @@ export default {
       "🤖 Nazwa bota: <c>{0}</c>",
       "🪪 Konto: <c>{1}</c>",
     ],
-    wrongBotMentioned: [
-      "Wygląda na to, że próbujesz skorzystać z niewłaściwego bota. Informacje o bocie włączonym na tej grupie:\n",
+    wrongBot: [
+      "Wygląda na to, że próbujesz skorzystać z niewłaściwego bota. Informacje o bocie włączonym na tej grupie:\n", //
       "🤖 Nazwa bota: <c>{0}</c>",
       "🪪 Konto: <c>{1}</c>",
     ],
@@ -31,6 +31,8 @@ export default {
     ],
     welcome:
       "👋🏻 Cześć, <c>{0}</c>! Nazywam się <c>Ambient</c>, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy <c>{1}</c>.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym <c>serwerze Discord</c>, gdzie również dowiesz się o nowościach związanych z Ambientem: {2}",
+    welcomeGroup:
+      "👋🏻 Cześć! Nazywam się <c>Ambient</c>, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy <c>{0}</c>.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym <c>serwerze Discord</c>, gdzie również dowiesz się o nowościach związanych z Ambientem: {1}",
     mentionedItself: "🤯",
     mentionedNotMember: "❌ Oznaczony użytkownik nie jest członkiem tej grupy!",
     mentionedNotUser: "❌ Oznaczony użytkownik nigdy nie skorzystał z Ambienta.",
@@ -185,14 +187,15 @@ export default {
       "⏳ Czas działania: <c>{8}</c>",
       "🏓 Ping: <c>{9} ms</c>",
       "🤖 Uruchomione boty: <c>{10}</c>",
-      "✨ Jądro: <c>v{11}+{12}/{13}</c>",
-      "📦 Instancja: <c>{14}</c>",
-      "🪁 Środowisko: <c>v{15}+{16}/{17}</c>",
-      "🏷 TypeScript: <c>v{18}</c>",
-      "🆙 Data aktualizacji: <c>{19}</c> {3} <c>{20}</c>",
-      "🍒 Data powstania: <c>{21}</c>",
-      "😼 Autor: <c>{22}</c>",
-      "🤗 Discord: {23}",
+      "💎 Premium: {11}",
+      "✨ Jądro: <c>v{12}+{13}/{14}</c>",
+      "📦 Instancja: <c>{15}</c>",
+      "🪁 Środowisko: <c>v{16}+{17}/{18}</c>",
+      "🏷 TypeScript: <c>v{19}</c>",
+      "🆙 Data aktualizacji: <c>{20}</c> {3} <c>{21}</c>",
+      "🍒 Data powstania: <c>{22}</c>",
+      "😼 Autor: <c>{23}</c>",
+      "🤗 Discord: {24}",
     ],
     help: {
       usage: [
@@ -210,9 +213,10 @@ export default {
         "👾 Zabawa (<c>{6}</c>): {7}\n",
         "ℹ Informacje (<c>{8}</c>): {9}\n",
         "🔞 NSFW (<c>{10}</c>): {11}\n",
-        "📸 Społecznościowe (<c>{12}</c>): {13}\n",
-        "🛠️ Narzędzia (<c>{14}</c>): {15}\n",
-        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{16} <nazwa komendy></c>, np. <c>{16} {17}</c>.",
+        "💎 Premium (<c>{12}</c>): {13}\n",
+        "📸 Społecznościowe (<c>{14}</c>): {15}\n",
+        "🛠️ Narzędzia (<c>{16}</c>): {17}\n",
+        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{18} <nazwa komendy></c>, np. <c>{18} {19}</c>.",
       ],
       about: [
         "{0} Informacje o komendzie <c>{1}</c>:\n", //
@@ -288,6 +292,59 @@ export default {
       notFound: "❌ Nie odnaleziono zdjęcia pasującego do podanych tagów!",
       done: "{0} Oto losowe zdjęcie autorstwa <c>{1}</c> z tagami <c>{2}</c>:",
     },
+    restoration: {
+      status: [
+        "{0} Konfiguracja funkcji przywracania usuniętych wiadomości:\n", //
+        "🛡 Włączone: <c>{1}</c>",
+        "👮🏻‍♂️ Przywracanie wiadomości administracji: <c>{2}</c>",
+        "📎 Załączniki jako linki: <c>{3}</c>",
+        "🔒 Przywracanie w wiadomościach prywatnych do administracji: <c>{4}</c>",
+        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
+        "\n⚙ Aby zmienić ustawienia, wpisz <c>{5} zmień</c>.",
+      ],
+      firstSettingQuestion: [
+        "🛡 Czy chcesz włączyć funkcję przywracania usuniętych wiadomości?\n",
+        "1. <c>❌ nie</c>",
+        "2. <c>✅ tak</c>",
+        "\n🪄 Napisz tylko liczbę odpowiadającą wybranemu ustawieniu, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwsze ustawienie.",
+      ],
+      secondSettingQuestion: [
+        "👮🏻‍♂️ Czy wiadomości wysłane przez administratorów grupy również mają być przywracane?\n",
+        "1. <c>❌ nie</c>",
+        "2. <c>✅ tak</c>",
+        "\n🪄 Napisz tylko liczbę odpowiadającą wybranemu ustawieniu, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwsze ustawienie.",
+      ],
+      thirdSettingQuestion: [
+        "📎 Czy załączniki z usuniętych wiadomości mają być przywracane w formie linków?\n",
+        "1. <c>❌ nie</c> - załączniki z usuniętych wiadomości będą wysyłane w oryginalnej formie",
+        "2. <c>✅ tak</c> - załączniki z usuniętych wiadomości będą wysyłane w formie linków do nich",
+        "\n🪄 Napisz tylko liczbę odpowiadającą wybranemu ustawieniu, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwsze ustawienie.",
+      ],
+      fourthSettingQuestion: [
+        "🔒 Czy wiadomości mają być przywracane w prywatnych wiadomościach do administratorów grupy?\n",
+        "1. <c>❌ nie</c> - przywrócone wiadomości będą wysyłane na grupie w której zostały usunięte",
+        "2. <c>✅ tak</c> - przywrócone wiadomości będą wysyłane w wiadomościach prywatnych do administratorów grupy",
+        "\n🪄 Napisz tylko liczbę odpowiadającą wybranemu ustawieniu, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwsze ustawienie.",
+      ],
+      disabled: "📴 Funkcja przywracania usuniętych wiadomości została pomyślnie wyłączona!",
+      saved: "✅ Ustawienia funkcji przywracania usuniętych wiadomości zostały pomyślnie zapisane!",
+      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambiencie Premium</c>!",
+      privateError:
+        "⚠ <c:{0}>{1}</c>, nie udało nam się wysłać do Ciebie informacji o usunięciu wiadomości w wiadomości prywatnej, spróbuj wysłać wiadomość do bota aby rozwiązać ten problem.",
+      restored: [
+        "👀 <c>{0}</c> usun{1} wiadomość!\n", //
+        "📨 Data wysłania: <c>{3}</c> {2} <c>{4}</c>",
+        "📮 Data usunięcia: <c>{5}</c> {2} <c>{6}</c>",
+        "📜 Treść wiadomości: <c>{7}</c>",
+      ],
+      restoredAttachments: [
+        "👀 <c>{0}</c> usun{1} wiadomość!\n", //
+        "📨 Data wysłania: <c>{3}</c> {2} <c>{4}</c>",
+        "📮 Data usunięcia: <c>{5}</c> {2} <c>{6}</c>",
+        "📜 Treść wiadomości: <c>{7}</c>",
+        "\n📎 Załączniki:\n{8}",
+      ],
+    },
     instagram: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -350,8 +407,8 @@ export default {
         "🤖 Jest botem: <c>{15}</c>",
         "👅 Język w Ambiencie: <c>{16}</c>",
         "🎛️ Połączone Spotify: <c>{17}</c>",
-        "✉ Wysłane wiadomości: <c>{18}</c> (w grupie: <c>{19}</c>)",
-        "🪄 Wykonane komendy: <c>{20}</c> (w grupie: <c>{21}</c>)",
+        "✉ Wysłane wiadomości: <c>{18}</c> (w tej grupie: <c>{19}</c>)",
+        "🪄 Wykonane komendy: <c>{20}</c> (w tej grupie: <c>{21}</c>)",
         "🔄 Zaktualizowano dane: <c>{22}</c> {12} <c>{23}</c>",
       ],
     },
@@ -391,7 +448,7 @@ export default {
       notListeningMentioned: "❌ <c>{0}</c> niczego aktualnie nie słucha.",
       listeningLocal: "❌ <c>{0}</c> słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",
       unableToPlay: "❌ Nie udało nam się odtworzyć utworu na Twoim koncie Spotify.",
-      premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta 💎 Spotify Premium!",
+      premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta <c>💎 Spotify Premium</c>",
       emptyResults: "❌ Nie znaleziono żadnego utworu pasującego do Twojego zapytania!",
       selectionTimeout: "❌ Nie wybrano żadnej pozycji w ciągu <c>{0}</c> sekund! Spróbuj ponownie.",
       trackSelectionList: [
@@ -447,6 +504,7 @@ export default {
         "✨ <c>{1} <nazwa użytkownika> <wiadomość (opcjonalnie)></c>",
       ],
       notFound: "❌ Podany użytkownik nie został odnaleziony!",
+      tooFast: "❌ Wysyłasz wiadomości zbyt szybko, odczekaj chwilę przed wysłaniem kolejnej.",
       sent: "{0} Anonimowa wiadomość została pomyślnie wysłana do użytkownika <c>@{1}</c>!",
       about: [
         "{0} Informacje o użytkowniku <c>@{1}</c>:\n",
