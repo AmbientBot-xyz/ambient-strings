@@ -41,6 +41,7 @@ export default {
     groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych!",
     groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
     globalAdminOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
+    premiumOnly: "❌ Ta komenda dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
     happyBirthday: "🎂 Wszystkiego najlepszego, <c>{0}</c>! 🥳",
     outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
@@ -332,17 +333,21 @@ export default {
       privateError:
         "⚠ <c:{0}>{1}</c>, nie udało nam się wysłać do Ciebie informacji o usunięciu wiadomości w wiadomości prywatnej, spróbuj wysłać wiadomość do bota aby rozwiązać ten problem.",
       restored: [
-        "👀 <c>{0}</c> usun{1} wiadomość!\n", //
-        "📨 Data wysłania: <c>{3}</c> {2} <c>{4}</c>",
-        "📮 Data usunięcia: <c>{5}</c> {2} <c>{6}</c>",
-        "📜 Treść wiadomości: <c>{7}</c>",
+        "👀 <c>{0}</c> usun{1} wiadomość!", //
+        "\n💡 Użyj komendy <c>{2}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
+        "📨 Data wysłania: <c>{4}</c> {3} <c>{5}</c>",
+        "📮 Data usunięcia: <c>{6}</c> {3} <c>{7}</c>",
+        "🕰 Usunięto po {8}",
+        "📜 Treść wiadomości: <c>{9}</c>",
       ],
       restoredAttachments: [
-        "👀 <c>{0}</c> usun{1} wiadomość!\n", //
-        "📨 Data wysłania: <c>{3}</c> {2} <c>{4}</c>",
-        "📮 Data usunięcia: <c>{5}</c> {2} <c>{6}</c>",
-        "📜 Treść wiadomości: <c>{7}</c>",
-        "\n📎 Załączniki:\n{8}",
+        "👀 <c>{0}</c> usun{1} wiadomość!", //
+        "\n💡 Użyj komendy <c>{2}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
+        "📨 Data wysłania: <c>{4}</c> {3} <c>{5}</c>",
+        "📮 Data usunięcia: <c>{6}</c> {3} <c>{7}</c>",
+        "🕰 Usunięto po {8}",
+        "📜 Treść wiadomości: <c>{9}</c>",
+        "\n📎 Załączniki:\n{10}",
       ],
     },
     instagram: {
@@ -372,7 +377,7 @@ export default {
     play: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
-        "✨ <c>{1} <tytuł lub link do piosenki></c>\n",
+        "✨ <c>{1} <tytuł lub link></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1} kukon ostatni bal</c>",
         "⭐ <c>{1} youtu.be/-g9O5GDV33k</c>",
@@ -380,8 +385,8 @@ export default {
         "⭐ <c>{1} open.spotify.com/track/3WqlO1SqWksaYDyUKZw4Kn</c>",
       ],
       searching: "🔎 Szukam <c>{0}</c>...",
-      unavailable: "❌ Wybrany utwór jest niedostępny!",
-      tooBig: "❌ Rozmiar wybranego utworu jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
+      unavailable: "❌ Wybrany pozycja jest niedostępna!",
+      tooBig: "❌ Rozmiar wybranej pozycji jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
       preparing: "⏳ Przygotowuję <c>{0}</c>... (<c>{1}</c>, <c>{2}</c>)",
       done: "{0} {1}",
     },
@@ -449,10 +454,10 @@ export default {
       listeningLocal: "❌ <c>{0}</c> słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",
       unableToPlay: "❌ Nie udało nam się odtworzyć utworu na Twoim koncie Spotify.",
       premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta <c>💎 Spotify Premium</c>",
-      emptyResults: "❌ Nie znaleziono żadnego utworu pasującego do Twojego zapytania!",
+      emptyResults: "❌ Nie znaleziono żadnych pozycji pasujących do Twojego zapytania!",
       selectionTimeout: "❌ Nie wybrano żadnej pozycji w ciągu <c>{0}</c> sekund! Spróbuj ponownie.",
       trackSelectionList: [
-        "🕵🏽‍♂️ Wybierz utwór, który chcesz odtworzyć:\n",
+        "🕵🏽‍♂️ Wybierz pozycję, którą chcesz odtworzyć:\n",
         "{0}",
         "\n🪄 Napisz tylko liczbę odpowiadającą wybranej pozycji, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwszą pozycję.",
       ],

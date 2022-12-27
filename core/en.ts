@@ -41,6 +41,7 @@ export default {
     groupOnly: "❌ This command can only be used in group conversations!",
     groupAdminOnly: "❌ This command can only be used by group administrators!",
     globalAdminOnly: "❌ You don't have permission to use this command!",
+    premiumOnly: "❌ This command is only available in <c>💎 Ambient Premium</c>!",
     goodNight: "🥱 Good night, <c>{0}</c>! 😴",
     happyBirthday: "🎂 Happy birthday, <c>{0}</c>! 🥳",
     outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c>, <c>{1}</c> selected)",
@@ -332,17 +333,21 @@ export default {
       privateError:
         "⚠ <c:{0}>{1}</c>, we were unable to send you information about the deletion of the message in a private message, try sending a message to the bot to solve this problem.",
       restored: [
-        "👀 <c>{0}</c> deleted a message!\n", //
-        "📨 Sent on: <c>{3}</c> {2} <c>{4}</c>",
-        "📮 Deleted on: <c>{5}</c> {2} <c>{6}</c>",
-        "📜 Message content: <c>{7}</c>",
+        "👀 User <c>{0}</c> deleted a message!", //
+        "\n💡 Use <c>{2}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
+        "📨 Sent on: <c>{4}</c> {3} <c>{5}</c>",
+        "📮 Deleted on: <c>{6}</c> {3} <c>{7}</c>",
+        "🕰 Deleted after {8}",
+        "📜 Message content: <c>{9}</c>",
       ],
       restoredAttachments: [
-        "👀 <c>{0}</c> deleted a message!\n", //
-        "📨 Sent on: <c>{3}</c> {2} <c>{4}</c>",
-        "📮 Deleted on: <c>{5}</c> {2} <c>{6}</c>",
-        "📜 Message content: <c>{7}</c>",
-        "\n📎 Attachments:\n{8}",
+        "👀 User <c>{0}</c> deleted a message!", //
+        "\n💡 Use <c>{2}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
+        "📨 Sent on: <c>{4}</c> {3} <c>{5}</c>",
+        "📮 Deleted on: <c>{6}</c> {3} <c>{7}</c>",
+        "🕰 Deleted after {8}",
+        "📜 Message content: <c>{9}</c>",
+        "\n📎 Attachments:\n{10}",
       ],
     },
     instagram: {
@@ -372,7 +377,7 @@ export default {
     play: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n",
-        "✨ <c>{1} <track title or link></c>\n",
+        "✨ <c>{1} <title or link></c>\n",
         "💡 Examples:",
         "⭐ <c>{1} kukon ostatni bal</c>",
         "⭐ <c>{1} youtu.be/-g9O5GDV33k</c>",
@@ -380,8 +385,8 @@ export default {
         "⭐ <c>{1} open.spotify.com/track/3WqlO1SqWksaYDyUKZw4Kn</c>",
       ],
       searching: "🔎 Searching <c>{0}</c>...",
-      unavailable: "❌ The selected track is not available!",
-      tooBig: "❌ Size of the selected track is too big! (<c>{0}</c>, max. <c>{1}</c>)",
+      unavailable: "❌ The selected item is not available!",
+      tooBig: "❌ Size of the selected item is too big! (<c>{0}</c>, max. <c>{1}</c>)",
       preparing: "⏳ Preparing <c>{0}</c>... (<c>{1}</c>, <c>{2}</c>)",
       done: "{0} {1}",
     },
@@ -449,10 +454,10 @@ export default {
       listeningLocal: "❌ <c>{0}</c> is currently listening to a local track, you cannot play it on your Spotify account.",
       unableToPlay: "❌ We couldn't play the song on your Spotify account.",
       premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires <c>💎 Spotify Premium</c> account!",
-      emptyResults: "❌ No track matching your query found!",
+      emptyResults: "❌ No items matching your query found!",
       selectionTimeout: "❌ No item was selected within <c>{0}</c> seconds! Try again.",
       trackSelectionList: [
-        "🕵🏽‍♂️ Choose the track you wish to play:\n",
+        "🕵🏽‍♂️ Choose the item you wish to play:\n",
         "{0}",
         "\n🪄 Send only the number corresponding to the selected item, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first item.",
       ],
