@@ -15,8 +15,6 @@ export default {
     disabledManual: "♿ Bot <c>{0}</c> został wyłączony na tej grupie przez administratora!",
     disabledAuto: "💡 Bot <c>{0}</c> został wyłączony na tej grupie, ponieważ została ona dodana do dozwolonych grup w innym bocie.",
     enabled: "🔘 Bot <c>{0}</c> został włączony na tej grupie, wszyscy członkowie grupy mogą z niego teraz korzystać.",
-    threadJailed: "⏳ W tej grupie są obecnie wykonywane operacje uniemożliwiające przetworzenie Twojej wiadomości.",
-    userJailed: "⏳ Na Twoim koncie są obecnie wykonywane operacje uniemożliwiające przetworzenie Twojej wiadomości.",
     eventError: [
       "💀 Ambient napotkał nieznany błąd podczas próby przetworzenia Twojej wiadomości, spróbuj ponownie później. Zgłoszenie zostało automatycznie wysłane na nasz serwer Discord: {0}\n",
       "⚠️ Nazwa: <c>{1}</c>",
@@ -33,7 +31,6 @@ export default {
       "👋🏻 Cześć, <c>{0}</c>! Nazywam się <c>Ambient</c>, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy <c>{1}</c>.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym <c>serwerze Discord</c>, gdzie również dowiesz się o nowościach związanych z Ambientem: {2}",
     welcomeGroup:
       "👋🏻 Cześć! Nazywam się <c>Ambient</c>, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy <c>{0}</c>.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym <c>serwerze Discord</c>, gdzie również dowiesz się o nowościach związanych z Ambientem: {1}",
-    mentionedItself: "🤯",
     mentionedNotMember: "❌ Oznaczony użytkownik nie jest członkiem tej grupy!",
     mentionedNotUser: "❌ Oznaczony użytkownik nigdy nie skorzystał z Ambienta.",
     commandNotFound: "❌ Nie odnaleziono komendy! Wpisz <c>{0}</c> aby uzyskać listę dostępnych komend.",
@@ -199,6 +196,28 @@ export default {
       "😼 Autor: <c>{24}</c>",
       "🤗 Discord: {25}",
     ],
+    group: [
+      "{0} Informacje o grupie <c>{1}</c>:\n",
+      "🆔 ID: <c>{2}</c>",
+      "👥 Członkowie: <c>{3}</c>",
+      "👮🏻‍♂️ Administratorzy: <c>{4}</c>",
+      "♂️ Mężczyźni: <c>{5}</c>",
+      "♀️ Kobiety: <c>{6}</c>",
+      "🤗 Użytkownicy Ambienta: <c>{7}</c>",
+      "🎨 Nazwa motywu: <c>{8}</c>",
+      "💅🏻 Motyw dostępny: <c>{9}</c>",
+      "🗂 Widoczne wiadomości: <c>{10}</c>",
+      "🗃 Przetworzone wiadomości: <c>{11}</c>",
+      "🤖 Wykonane komendy: <c>{12}</c>",
+      "🐒 Liczba oznaczeń: <c>{13}</c>",
+      "⚠ Liczba ostrzeżeń: <c>{14}</c>",
+      "🧐 Zatwierdzanie członków: <c>{15}</c>",
+      "⏳ Członkowie w kolejce: <c>{16}</c>",
+      "🔞 NSFW: <c>{17}</c>",
+      "🤐 Interakcje: <c>{18}</c>",
+      "👀 Przywracanie wiadomości: <c>{19}</c>",
+      "🤓 Pierwsze użycie Ambienta: <c>{21}</c> {20} <c>{22}</c>",
+    ],
     help: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
@@ -298,6 +317,34 @@ export default {
       notFound: "❌ Nie odnaleziono zdjęcia pasującego do podanych tagów!",
       done: "{0} Oto losowe zdjęcie autorstwa <c>{1}</c> z tagami <c>{2}</c>:",
     },
+    invitation: {
+      status: [
+        "{0} Konfiguracja linku do zaproszenia do grupy:\n", //
+        "🔗 Aktualny link: {1}",
+        "🧮 Liczba użyć: <c>{2}</c>",
+        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
+        "\n🆔 Aby włączyć lub zmienić link do zaproszenia do grupy, wpisz <c>{3} <nowe ID zaproszenia></c>.",
+        "\n🚪 Aby wyłączyć link do zaproszenia do grupy, wpisz <c>{3} off</c>.",
+      ],
+      tooShort: "❌ Podane ID zaproszenia jest zbyt krótkie! (min. <c>{0}</c> znaki, podano <c>{1}</c>)",
+      tooLong: "❌ Podane ID zaproszenia jest zbyt długie! (max. <c>{0}</c> znaki, podano <c>{1}</c>)",
+      illegalCharacters: "❌ Podane ID zaproszenia zawiera niedozwolone znaki, możesz użyć tylko małych i dużych liter oraz cyfr.",
+      alreadyUsed: "❌ Podane ID zaproszenia jest już zajęte!",
+      saved: "✅ ID zaproszenia do grupy zostało pomyślnie ustawione na <c>{0}</c>! Aktualny link do dołączenia do grupy to {1}",
+      disabled: "🚪 Funkcja zaproszeń do grupy została pomyślnie wyłączona!",
+      groupAdminOnly: "❌ Ustawienia dotyczące zaproszenia do grupy mogą zostać zmienione tylko przez administratorów grupy!",
+      premiumMissing: "⚠ Uwaga! Funkcja zaproszeń do grupy nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
+      joinRequested: "🚪 <c>{0}</c> chce dołączyć do tej grupy korzystając z linku zaproszenia, sprawdź oczekujące prośby.",
+      joined: "👋🏻 <c>{0}</c> dołączył{1} do tej grupy korzystając z linku zaproszenia.",
+    },
+    premium: [
+      "{0} Możesz wesprzeć <c>Ambienta</c> dowolną kwotą wysyłając przelew pod numer telefonu <c>{1}</c> korzystając z BLIKa. Jeśli chcesz, aby ten bot w nagrodę za wsparcie uzyskał dostęp do wyjątkowych funkcji dostępnych tylko dla użytkowników wersji Premium, wyślij jednorazowo co najmniej <c>{2}</c> podając w tytule identyfikator Premium <c>{3}</c>.\n",
+      "⚠ Uwaga! Ważność Premium sumuje się - każde <c>{2}</c> to dodatkowe <c>{4}</c>. Premium zostanie nadane w ciągu <c>15 minut</c> od otrzymania przelewu, w razie pytań lub problemów dołącz na <c>nasz serwer Discord</c>: {5}\n",
+      "💝 Obecny stan Premium: {6}\n",
+      "👑 Obecne konta Premium: <c>{7}</c>\n",
+      "✨ Potrzebne dane zostały wysłane poniżej w <c>oddzielnych wiadomościach</c> w celu łatwiejszego skopiowania ich.\n",
+      "🥰 Dziękujemy za wspieranie <c>Ambienta</c>!",
+    ],
     restoration: {
       status: [
         "{0} Konfiguracja funkcji przywracania usuniętych wiadomości:\n", //
@@ -334,7 +381,7 @@ export default {
       ],
       disabled: "📴 Funkcja przywracania usuniętych wiadomości została pomyślnie wyłączona!",
       saved: "✅ Ustawienia funkcji przywracania usuniętych wiadomości zostały pomyślnie zapisane!",
-      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambiencie Premium</c>!",
+      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
       privateError:
         "⚠ <c:{0}>{1}</c>, nie udało nam się wysłać do Ciebie informacji o usunięciu wiadomości w wiadomości prywatnej, spróbuj wysłać wiadomość do bota aby rozwiązać ten problem.",
       restored: [
@@ -472,11 +519,6 @@ export default {
       nobodyConnected: "❌ Żaden członek grupy nie połączył swojego konta Spotify z Ambientem!",
       group: [
         "🧐 Czego aktualnie słuchają członkowie grupy <c>{0}</c>?\n", //
-        "{1}",
-        "\n🧮 <c>{2}</c> z <c>{3}</c> członków tej grupy połączyło swoje konto Spotify z Ambientem, <c>{4}</c> z nich aktualnie słucha muzyki.",
-      ],
-      groupNoName: [
-        "🧐 Czego aktualnie słuchają członkowie tej grupy?\n", //
         "{1}",
         "\n🧮 <c>{2}</c> z <c>{3}</c> członków tej grupy połączyło swoje konto Spotify z Ambientem, <c>{4}</c> z nich aktualnie słucha muzyki.",
       ],
@@ -644,11 +686,6 @@ export default {
       list: "📜 Lista ostrzeżeń <c>{0}</c> (<c>{1}</c>):\n\n{2}",
       group: [
         "🧐 Ile ostrzeżeń mają członkowie grupy <c>{0}</c>?\n", //
-        "{1}",
-        "\n🧮 <c>{2}</c> z <c>{3}</c> członków tej grupy posiada ostrzeżenia, mają ich razem <c>{4}</c>.",
-      ],
-      groupNoName: [
-        "🧐 Ile ostrzeżeń mają członkowie tej grupy?\n", //
         "{1}",
         "\n🧮 <c>{2}</c> z <c>{3}</c> członków tej grupy posiada ostrzeżenia, mają ich razem <c>{4}</c>.",
       ],

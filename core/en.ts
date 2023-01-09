@@ -15,8 +15,6 @@ export default {
     disabledManual: "♿ Bot <c>{0}</c> has been disabled on this group by the administrator!",
     disabledAuto: "💡 Bot <c>{0}</c> has been disabled on this group because it has been added to allowed groups in another bot.",
     enabled: "🔘 Bot <c>{0}</c> has been enabled on this group, all members of the group can now use it.",
-    threadJailed: "⏳ Operations are currently being performed in this group that prevent your message from being processed.",
-    userJailed: "⏳ Operations are currently being performed on your account preventing the processing of your message.",
     eventError: [
       "💀 Ambient encountered an unknown error while trying to process your message, please try again later. It has been automatically reported to our Discord server: {0}\n",
       "⚠️ Name: <c>{1}</c>",
@@ -33,7 +31,6 @@ export default {
       "👋🏻 Hi, <c>{0}</c>! My name is <c>Ambient</c>, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the <c>{1}</c> command.\n\n🤗 Do you have questions or need help? You will find it on our <c>Discord server</c>, where you will also learn about news related to Ambient: {2}",
     welcomeGroup:
       "👋🏻 Hi! My name is <c>Ambient</c>, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the <c>{1}</c> command.\n\n🤗 Do you have questions or need help? You will find it on our <c>Discord server</c>, where you will also learn about news related to Ambient: {2}",
-    mentionedItself: "🤯",
     mentionedNotMember: "❌ Mentioned user is not a member of this group!",
     mentionedNotUser: "❌ Mentioned user has never used Ambient.",
     commandNotFound: "❌ Command not found! Type <c>{0}</c> for a list of available commands.",
@@ -199,6 +196,28 @@ export default {
       "😼 Author: <c>{24}</c>",
       "🤗 Discord: {25}",
     ],
+    group: [
+      "{0} Info about group <c>{1}</c>:\n",
+      "🆔 ID: <c>{2}</c>",
+      "👥 Participants: <c>{3}</c>",
+      "👮🏻‍♂️ Administrators: <c>{4}</c>",
+      "♂️ Males: <c>{5}</c>",
+      "♀️ Females: <c>{6}</c>",
+      "🤗 Ambient users: <c>{7}</c>",
+      "🎨 Theme name: <c>{8}</c>",
+      "💅🏻 Theme available: <c>{9}</c>",
+      "🗂 Visible messages: <c>{10}</c>",
+      "🗃 Processed messages: <c>{11}</c>",
+      "🤖 Executed commands: <c>{12}</c>",
+      "🐒 Mentions count: <c>{13}</c>",
+      "⚠ Warnings count: <c>{14}</c>",
+      "🧐 Members approval: <c>{15}</c>",
+      "⏳ Members in queue: <c>{16}</c>",
+      "🔞 NSFW: <c>{17}</c>",
+      "🤐 Interactions: <c>{18}</c>",
+      "👀 Messages restoration: <c>{19}</c>",
+      "🤓 First Ambient usage: <c>{21}</c> {20} <c>{22}</c>",
+    ],
     help: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n",
@@ -298,6 +317,34 @@ export default {
       notFound: "❌ No photo found matching the given tags!",
       done: "{0} Here is a random photo by <c>{1}</c> with tags <c>{2}</c>:",
     },
+    invitation: {
+      status: [
+        "{0} Configuration of the group invitation link:\n", //
+        "🔗 Current link: {1}",
+        "🧮 Usages count: <c>{2}</c>",
+        "\n⚠ Warning! This feature is only available in <c>💎 Ambient Premium</c>!",
+        "\n🆔 To enable or change the group invitation link, type <c>{3} <new invitation ID></c>.",
+        "\n🚪 To disable the group invitation link, type <c>{3} off</c>.",
+      ],
+      tooShort: "❌ The given invitation ID is too short! (min. <c>{0}</c> characters, <c>{1}</c> entered)",
+      tooLong: "❌ The given invitation ID is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      illegalCharacters: "❌ The specified invitation ID contains illegal characters, you can only use lowercase and uppercase letters and numbers.",
+      alreadyUsed: "❌ The invitation ID you entered is already taken!",
+      saved: "✅ The group invitation ID has been successfully set to <c>{0}</c>! The current link to join the group is {1}",
+      disabled: "🚪 The group invitation link feature has been successfully disabled!",
+      groupAdminOnly: "❌ Group invitation link settings can only be changed by group administrators!",
+      premiumMissing: "⚠ Warning! Group invitation link feature will not work as it requires <c>💎 Ambient Premium</c>!",
+      joinRequested: "🚪 <c>{0}</c> wants to join this group using the invitation link, check pending requests.",
+      joined: "👋🏻 <c>{0}</c> joined this group using the invitation link.",
+    },
+    premium: [
+      "{0} You can support <c>Ambient</c> by sending a transfer to the phone number <c>{1}</c> using BLIK. If you want this bot to be rewarded with access to exclusive features available only to Premium users, send at least <c>{2}</c> at a time with the Premium ID <c>{3}</c> in the title.\n",
+      "⚠ Attention! Premium validity is cumulative - each <c>{2}</c> is an additional <c>{4}</c>. You will receive premium within <c>15 minutes</c> from receiving the transfer, if you have any questions or problems, join <c>our Discord server</c>: {5}\n",
+      "💝 Current Premium state: {6}\n",
+      "👑 Current Premium accounts: <c>{7}</c>\n",
+      "✨ The necessary data has been sent below in <c>separate messages</c> for easier copying.\n",
+      "🥰 Thank you for supporting <c>Ambient</c>!",
+    ],
     restoration: {
       status: [
         "{0} Restoration of deleted messages feature configuration:\n", //
@@ -475,11 +522,6 @@ export default {
         "{1}",
         "\n🧮 <c>{2}</c> out of <c>{3}</c> members of this group connected Spotify accounts with Ambient, <c>{4}</c> of them are currently listening.",
       ],
-      groupNoName: [
-        "🧐 What are currently members of this group listening to?\n", //
-        "{1}",
-        "\n🧮 <c>{2}</c> out of <c>{3}</c> members of this group connected Spotify accounts with Ambient, <c>{4}</c> of them are currently listening.",
-      ],
       profile: [
         "🤠 Info about Spotify profile of <c>{0}</c>:\n",
         "🆎 Name: <c>{1}</c>",
@@ -644,11 +686,6 @@ export default {
       list: "📜 Warning list of <c>{0}</c> (<c>{1}</c>):\n\n{2}",
       group: [
         "🧐 How many warnings do members of <c>{0}</c> group have?\n", //
-        "{1}",
-        "\n🧮 <c>{2}</c> out of <c>{3}</c> members of this group have warnings, they have <c>{4}</c> in total.",
-      ],
-      groupNoName: [
-        "🧐 How many warnings do members of this group have?\n", //
         "{1}",
         "\n🧮 <c>{2}</c> out of <c>{3}</c> members of this group have warnings, they have <c>{4}</c> in total.",
       ],
