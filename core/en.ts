@@ -196,28 +196,32 @@ export default {
       "😼 Author: <c>{24}</c>",
       "🤗 Discord: {25}",
     ],
-    group: [
-      "{0} Info about group <c>{1}</c>:\n",
-      "🆔 ID: <c>{2}</c>",
-      "👥 Participants: <c>{3}</c>",
-      "👮🏻‍♂️ Administrators: <c>{4}</c>",
-      "♂️ Males: <c>{5}</c>",
-      "♀️ Females: <c>{6}</c>",
-      "🤗 Ambient users: <c>{7}</c>",
-      "🎨 Theme name: <c>{8}</c>",
-      "💅🏻 Theme available: <c>{9}</c>",
-      "🗂 Visible messages: <c>{10}</c>",
-      "🗃 Processed messages: <c>{11}</c>",
-      "🤖 Executed commands: <c>{12}</c>",
-      "🐒 Mentions count: <c>{13}</c>",
-      "⚠ Warnings count: <c>{14}</c>",
-      "🧐 Members approval: <c>{15}</c>",
-      "⏳ Members in queue: <c>{16}</c>",
-      "🔞 NSFW: <c>{17}</c>",
-      "🤐 Interactions: <c>{18}</c>",
-      "👀 Messages restoration: <c>{19}</c>",
-      "🤓 First Ambient usage: <c>{21}</c> {20} <c>{22}</c>",
-    ],
+    group: {
+      collecting: "⏳ Collecting info about group...",
+      done: [
+        "{0} Info about group <c>{1}</c>:\n",
+        "🆔 ID: <c>{2}</c>",
+        "👥 Participants: <c>{3}</c>",
+        "👮🏻‍♂️ Administrators: <c>{4}</c>",
+        "♂️ Males: <c>{5}</c>",
+        "♀️ Females: <c>{6}</c>",
+        "🤗 Ambient users: <c>{7}</c>",
+        "🎨 Theme name: <c>{8}</c>",
+        "💅🏻 Theme available: <c>{9}</c>",
+        "🗂 Visible messages: <c>{10}</c>",
+        "🗃 Processed messages: <c>{11}</c>",
+        "🤖 Executed commands: <c>{12}</c>",
+        "🐒 Mentions count: <c>{13}</c>",
+        "⚠ Warnings count: <c>{14}</c>",
+        "🧐 Members approval: <c>{15}</c>",
+        "⏳ Members in queue: <c>{16}</c>",
+        "🔞 NSFW: <c>{17}</c>",
+        "🤐 Interactions: <c>{18}</c>",
+        "👀 Messages restoration: <c>{19}</c>",
+        "🔗 Invitation link: {20}",
+        "🤓 First Ambient usage: <c>{22}</c> {21} <c>{23}</c>",
+      ],
+    },
     help: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n",
@@ -249,28 +253,28 @@ export default {
     top: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
-        "\n🤝🏻 <c>{1} account</c> {2} Shows the top 10 users who have the oldest account in this group",
-        "\n🐒 <c>{1} mentions</c> {2} Shows the top 10 users who have been mentioned the most in this group",
-        "\n✉ <c>{1} messages</c> {2} Shows the top 10 users who sent the most messages in this group",
-        "\n🪄 <c>{1} commands</c> {2} Shows the top 10 users who executed the most commands in this group",
+        "\n🤝🏻 <c>{1} account</c> {2} Shows the top 15 users who have the oldest account in this group",
+        "\n🐒 <c>{1} mentions</c> {2} Shows the top 15 users who have been mentioned the most in this group",
+        "\n✉ <c>{1} messages</c> {2} Shows the top 15 users who sent the most messages in this group",
+        "\n🪄 <c>{1} commands</c> {2} Shows the top 15 users who executed the most commands in this group",
       ],
       account: [
-        "🤝🏻 Top 10 users who have the oldest account in this group:", //
+        "🤝🏻 Top 15 users who have the oldest account in this group:", //
         "\n{0}\n",
         "🧮 You're <c>#{1}</c> in the ranking.",
       ],
       mentions: [
-        "🐒 Top 10 users who have been mentioned the most in this group:", //
+        "🐒 Top 15 users who have been mentioned the most in this group:", //
         "\n{0}\n",
         "🧮 You're <c>#{1}</c> in the ranking.",
       ],
       messages: [
-        "✉ Top 10 users who sent the most messages in this group:", //
+        "✉ Top 15 users who sent the most messages in this group:", //
         "\n{0}\n",
         "🧮 You're <c>#{1}</c> in the ranking.",
       ],
       commands: [
-        "🪄 Top 10 users who executed the most commands in this group:", //
+        "🪄 Top 15 users who executed the most commands in this group:", //
         "\n{0}\n",
         "🧮 You're <c>#{1}</c> in the ranking.",
       ],
@@ -338,7 +342,7 @@ export default {
       joined: "👋🏻 <c>{0}</c> joined this group using the invitation link.",
     },
     premium: [
-      "{0} You can support <c>Ambient</c> by sending a transfer to the phone number <c>{1}</c> using BLIK. If you want this bot to be rewarded with access to exclusive features available only to Premium users, send at least <c>{2}</c> at a time with the Premium ID <c>{3}</c> in the title.\n",
+      "{0} You can support <c>Ambient</c> by sending a transfer to the phone number <c>{1}</c> using BLIK. If you want this bot to be rewarded with access to exclusive features available only to Premium users, send at least <c>{2}</c> at a time with the Premium ID <c>{3}</c> in the title or receiver field.\n",
       "⚠ Attention! Premium validity is cumulative - each <c>{2}</c> is an additional <c>{4}</c>. You will receive premium within <c>15 minutes</c> from receiving the transfer, if you have any questions or problems, join <c>our Discord server</c>: {5}\n",
       "💝 Current Premium state: {6}\n",
       "👑 Current Premium accounts: <c>{7}</c>\n",
@@ -382,8 +386,6 @@ export default {
       disabled: "📴 Restoration of deleted messages feature has been successfully disabled!",
       saved: "✅ Restoration of deleted messages feature settings has been successfully saved!",
       premiumMissing: "⚠ Warning! Restoration of deleted messages feature will not work as it requires <c>💎 Ambient Premium</c>!",
-      privateError:
-        "⚠ <c:{0}>{1}</c>, we were unable to send you information about the deletion of the message in a private message, try sending a message to the bot to solve this problem.",
       restored: [
         "👀 User <c>{0}</c> deleted a message!", //
         "\n💡 Use <c>{2}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
@@ -401,6 +403,13 @@ export default {
         "📜 Message content: <c>{9}</c>",
         "\n📎 Attachments:\n{10}",
       ],
+    },
+    tts: {
+      empty: "❌ You must enter the text to say! (max. <c>{0}</c> characters)",
+      mentions: "❌ The text to say must not contain any mentions!",
+      tooLong: "❌ The text to say is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      generating: "⏳ Generating a voice message...",
+      done: "{0} Here is the generated voice message:",
     },
     instagram: {
       usage: [
@@ -597,6 +606,11 @@ export default {
       done: "{0} Here is the list of attachments from the selected message:\n\n{1}",
     },
     everyone: "{0} Successfully mentioned {1} users!",
+    improve: {
+      mustReplyToPhoto: "❌ You must reply to the message containing the photo!",
+      improving: "⏳ Improving the quality of a face in a selected photo...",
+      done: "{0} Here's a photo with improved face quality:",
+    },
     kick: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -667,6 +681,12 @@ export default {
         "📖 Sentences count: <c>{3}</c>",
         "🗣 Result: <c>{4}</c>",
       ],
+    },
+    verify: {
+      mustReplyToMessage: "❌ You must reply to the message you want to verify!",
+      success: "{0} This message was sent by Ambient!",
+      failed:
+        "❓ This message was not sent by Ambient!\n\nℹ️ If this message was sent from an account that is used by Ambient, it most likely means that the owner of that account sent the message manually, or it was sent by other software.",
     },
     warning: {
       usage: [

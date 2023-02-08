@@ -196,28 +196,32 @@ export default {
       "😼 Autor: <c>{24}</c>",
       "🤗 Discord: {25}",
     ],
-    group: [
-      "{0} Informacje o grupie <c>{1}</c>:\n",
-      "🆔 ID: <c>{2}</c>",
-      "👥 Członkowie: <c>{3}</c>",
-      "👮🏻‍♂️ Administratorzy: <c>{4}</c>",
-      "♂️ Mężczyźni: <c>{5}</c>",
-      "♀️ Kobiety: <c>{6}</c>",
-      "🤗 Użytkownicy Ambienta: <c>{7}</c>",
-      "🎨 Nazwa motywu: <c>{8}</c>",
-      "💅🏻 Motyw dostępny: <c>{9}</c>",
-      "🗂 Widoczne wiadomości: <c>{10}</c>",
-      "🗃 Przetworzone wiadomości: <c>{11}</c>",
-      "🤖 Wykonane komendy: <c>{12}</c>",
-      "🐒 Liczba oznaczeń: <c>{13}</c>",
-      "⚠ Liczba ostrzeżeń: <c>{14}</c>",
-      "🧐 Zatwierdzanie członków: <c>{15}</c>",
-      "⏳ Członkowie w kolejce: <c>{16}</c>",
-      "🔞 NSFW: <c>{17}</c>",
-      "🤐 Interakcje: <c>{18}</c>",
-      "👀 Przywracanie wiadomości: <c>{19}</c>",
-      "🤓 Pierwsze użycie Ambienta: <c>{21}</c> {20} <c>{22}</c>",
-    ],
+    group: {
+      collecting: "⏳ Zbieram informacje o grupie...",
+      done: [
+        "{0} Informacje o grupie <c>{1}</c>:\n",
+        "🆔 ID: <c>{2}</c>",
+        "👥 Członkowie: <c>{3}</c>",
+        "👮🏻‍♂️ Administratorzy: <c>{4}</c>",
+        "♂️ Mężczyźni: <c>{5}</c>",
+        "♀️ Kobiety: <c>{6}</c>",
+        "🤗 Użytkownicy Ambienta: <c>{7}</c>",
+        "🎨 Nazwa motywu: <c>{8}</c>",
+        "💅🏻 Motyw dostępny: <c>{9}</c>",
+        "🗂 Widoczne wiadomości: <c>{10}</c>",
+        "🗃 Przetworzone wiadomości: <c>{11}</c>",
+        "🤖 Wykonane komendy: <c>{12}</c>",
+        "🐒 Liczba oznaczeń: <c>{13}</c>",
+        "⚠ Liczba ostrzeżeń: <c>{14}</c>",
+        "🧐 Zatwierdzanie członków: <c>{15}</c>",
+        "⏳ Członkowie w kolejce: <c>{16}</c>",
+        "🔞 NSFW: <c>{17}</c>",
+        "🤐 Interakcje: <c>{18}</c>",
+        "👀 Przywracanie wiadomości: <c>{19}</c>",
+        "🔗 Link do zaproszenia: {20}",
+        "🤓 Pierwsze użycie Ambienta: <c>{22}</c> {21} <c>{23}</c>",
+      ],
+    },
     help: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
@@ -249,28 +253,28 @@ export default {
     top: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n🤝🏻 <c>{1} konto</c> {2} Pokazuje top 10 użytkowników, którzy mają najstarsze konto w tej grupie",
-        "\n🐒 <c>{1} oznaczenia</c> {2} Pokazuje top 10 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie",
-        "\n✉ <c>{1} wiadomości</c> {2} Pokazuje top 10 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie",
-        "\n🪄 <c>{1} komendy</c> {2} Pokazuje top 10 użytkowników, którzy wykonali najwięcej komend w tej grupie",
+        "\n🤝🏻 <c>{1} konto</c> {2} Pokazuje top 15 użytkowników, którzy mają najstarsze konto w tej grupie",
+        "\n🐒 <c>{1} oznaczenia</c> {2} Pokazuje top 15 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie",
+        "\n✉ <c>{1} wiadomości</c> {2} Pokazuje top 15 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie",
+        "\n🪄 <c>{1} komendy</c> {2} Pokazuje top 15 użytkowników, którzy wykonali najwięcej komend w tej grupie",
       ],
       account: [
-        "🤝🏻 Top 10 użytkowników, którzy mają najstarsze konto w tej grupie:", //
+        "🤝🏻 Top 15 użytkowników, którzy mają najstarsze konto w tej grupie:", //
         "\n{0}\n",
         "🧮 Jesteś <c>#{1}</c> w rankingu.",
       ],
       mentions: [
-        "🐒 Top 10 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
+        "🐒 Top 15 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
         "\n{0}\n",
         "🧮 Jesteś <c>#{1}</c> w rankingu.",
       ],
       messages: [
-        "✉ Top 10 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie:", //
+        "✉ Top 15 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie:", //
         "\n{0}\n",
         "🧮 Jesteś <c>#{1}</c> w rankingu.",
       ],
       commands: [
-        "🪄 Top 10 użytkowników, którzy wykonali najwięcej komend w tej grupie:", //
+        "🪄 Top 15 użytkowników, którzy wykonali najwięcej komend w tej grupie:", //
         "\n{0}\n",
         "🧮 Jesteś <c>#{1}</c> w rankingu.",
       ],
@@ -338,7 +342,7 @@ export default {
       joined: "👋🏻 <c>{0}</c> dołączył{1} do tej grupy korzystając z linku zaproszenia.",
     },
     premium: [
-      "{0} Możesz wesprzeć <c>Ambienta</c> dowolną kwotą wysyłając przelew pod numer telefonu <c>{1}</c> korzystając z BLIKa. Jeśli chcesz, aby ten bot w nagrodę za wsparcie uzyskał dostęp do wyjątkowych funkcji dostępnych tylko dla użytkowników wersji Premium, wyślij jednorazowo co najmniej <c>{2}</c> podając w tytule identyfikator Premium <c>{3}</c>.\n",
+      "{0} Możesz wesprzeć <c>Ambienta</c> dowolną kwotą wysyłając przelew pod numer telefonu <c>{1}</c> korzystając z BLIKa. Jeśli chcesz, aby ten bot w nagrodę za wsparcie uzyskał dostęp do wyjątkowych funkcji dostępnych tylko dla użytkowników wersji Premium, wyślij jednorazowo co najmniej <c>{2}</c> podając w tytule lub odbiorcy identyfikator Premium <c>{3}</c>.\n",
       "⚠ Uwaga! Ważność Premium sumuje się - każde <c>{2}</c> to dodatkowe <c>{4}</c>. Premium zostanie nadane w ciągu <c>15 minut</c> od otrzymania przelewu, w razie pytań lub problemów dołącz na <c>nasz serwer Discord</c>: {5}\n",
       "💝 Obecny stan Premium: {6}\n",
       "👑 Obecne konta Premium: <c>{7}</c>\n",
@@ -382,8 +386,6 @@ export default {
       disabled: "📴 Funkcja przywracania usuniętych wiadomości została pomyślnie wyłączona!",
       saved: "✅ Ustawienia funkcji przywracania usuniętych wiadomości zostały pomyślnie zapisane!",
       premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
-      privateError:
-        "⚠ <c:{0}>{1}</c>, nie udało nam się wysłać do Ciebie informacji o usunięciu wiadomości w wiadomości prywatnej, spróbuj wysłać wiadomość do bota aby rozwiązać ten problem.",
       restored: [
         "👀 <c>{0}</c> usun{1} wiadomość!", //
         "\n💡 Użyj komendy <c>{2}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
@@ -401,6 +403,13 @@ export default {
         "📜 Treść wiadomości: <c>{9}</c>",
         "\n📎 Załączniki:\n{10}",
       ],
+    },
+    tts: {
+      empty: "❌ Musisz podać treść nagrania głosowego! (max. <c>{0}</c> znaków)",
+      mentions: "❌ Treść nagrania głosowego nie może zawierać wzmianek!",
+      tooLong: "❌ Treść nagrania głosowego jest zbyt długa! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
+      generating: "⏳ Trwa generowanie nagrania głosowego...",
+      done: "{0} Oto wygenerowane nagranie głosowe:",
     },
     instagram: {
       usage: [
@@ -437,7 +446,7 @@ export default {
         "⭐ <c>{1} open.spotify.com/track/3WqlO1SqWksaYDyUKZw4Kn</c>",
       ],
       searching: "🔎 Szukam <c>{0}</c>...",
-      unavailable: "❌ Wybrany pozycja jest niedostępna!",
+      unavailable: "❌ Wybrana pozycja jest niedostępna!",
       tooBig: "❌ Rozmiar wybranej pozycji jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
       preparing: "⏳ Przygotowuję <c>{0}</c>... (<c>{1}</c>, <c>{2}</c>)",
       done: "{0} {1}",
@@ -597,6 +606,11 @@ export default {
       done: "{0} Oto lista załączników z wybranej wiadomości:\n\n{1}",
     },
     everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
+    improve: {
+      mustReplyToPhoto: "❌ Musisz odpowiedzieć na wiadomość zawierającą zdjęcie!",
+      improving: "⏳ Trwa poprawianie jakości twarzy na wybranym zdjęciu...",
+      done: "{0} Oto zdjęcie z poprawioną jakością twarzy:",
+    },
     kick: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -667,6 +681,12 @@ export default {
         "📖 Liczba zdań: <c>{3}</c>",
         "🗣 Wynik: <c>{4}</c>",
       ],
+    },
+    verify: {
+      mustReplyToMessage: "❌ Musisz odpowiedzieć na wiadomość którą chcesz zweryfikować!",
+      success: "{0} Ta wiadomość została wysłana przez Ambienta!",
+      failed:
+        "❓ Ta wiadomość nie została wysłana przez Ambienta!\n\nℹ️ Jeśli ta wiadomość została wysłana z konta które jest używane przez Ambienta, najprawdopodobniej oznacza to, że właściciel tego konta sam wysłał tą wiadomość ręcznie, lub została ona wysłana przez inne oprogramowanie.",
     },
     warning: {
       usage: [
