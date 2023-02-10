@@ -601,6 +601,20 @@ export default {
         "💿 Dźwięk: <c>{12}</c> {13} <c>{14}</c>",
       ],
     },
+    adduser: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <link do profilu, nazwa użytkownika lub ID></c>",
+      ],
+      invalidBatch: "❌ Podane namiary na użytkownika są nieprawidłowe!",
+      notFound: "❌ Podany użytkownik nie został odnaleziony!",
+      alreadyMember: "❌ Podany użytkownik jest już członkiem tej grupy!",
+      inQueue: "❌ Podany użytkownik znajduje się już w kolejce członków do dodania!",
+      groupFull: "❌ Grupa posiada już maksymalną liczbę członków!",
+      unableToAdd: "❌ Ustawienia prywatności podanego użytkownika nie pozwalają na dodanie go do grupy!",
+      queued: "🚪 <c>{0}</c> został{1} dodan{2} do kolejki, prośba o dołączenie musi zostać zaakceptowana przez administratora grupy.",
+      added: "👋🏻 <c>{0}</c> został{1} pomyślnie dodan{2} do grupy!",
+    },
     attachments: {
       mustReplyToAttachments: "❌ Musisz odpowiedzieć na wiadomość zawierającą załączniki!",
       done: "{0} Oto lista załączników z wybranej wiadomości:\n\n{1}",

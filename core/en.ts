@@ -601,6 +601,20 @@ export default {
         "💿 Sound: <c>{12}</c> {13} <c>{14}</c>",
       ],
     },
+    adduser: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <profile link, username or ID></c>",
+      ],
+      invalidBatch: "❌ The given user batch is invalid!",
+      notFound: "❌ The specified user was not found!",
+      alreadyMember: "❌ The specified user is already a member of this group!",
+      inQueue: "❌ The specified user is already in the queue of members to be added!",
+      groupFull: "❌ The group already has the maximum number of members!",
+      unableToAdd: "❌ The specified user's privacy settings do not allow him to be added to the group!",
+      queued: "🚪 <c>{0}</c> has been added to the queue, the request to join must be approved by the group administrator.",
+      added: "👋🏻 <c>{0}</c> has been successfully added to the group!",
+    },
     attachments: {
       mustReplyToAttachments: "❌ You must reply to a message that contains attachments!",
       done: "{0} Here is the list of attachments from the selected message:\n\n{1}",
