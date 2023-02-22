@@ -38,7 +38,7 @@ export default {
     groupOnly: "❌ This command can only be used in group conversations!",
     groupAdminOnly: "❌ This command can only be used by group administrators!",
     globalAdminOnly: "❌ You don't have permission to use this command!",
-    premiumOnly: "❌ This command is only available in <c>💎 Ambient Premium</c>!",
+    premiumOnly: "❌ This command is only available in <c>💝 Ambient Premium</c>!",
     goodNight: "🥱 Good night, <c>{0}</c>! 😴",
     happyBirthday: "🎂 Happy birthday, <c>{0}</c>! 🥳",
     outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c>, <c>{1}</c> selected)",
@@ -185,7 +185,7 @@ export default {
       "⏳ Uptime: <c>{8}</c>",
       "🏓 Ping: <c>{9} ms</c>",
       "👑 Premium accounts: <c>{10}</c>",
-      "💎 Premium state: {11}",
+      "💝 Premium state: {11}",
       "🤖 Running bots: <c>{12}</c>",
       "✨ Core: <c>v{13}+{14}/{15}</c>",
       "📦 Instance: <c>{16}</c>",
@@ -238,7 +238,7 @@ export default {
         "👾 Fun (<c>{6}</c>): {7}\n",
         "ℹ Info (<c>{8}</c>): {9}\n",
         "🔞 NSFW (<c>{10}</c>): {11}\n",
-        "💎 Premium (<c>{12}</c>): {13}\n",
+        "💝 Premium (<c>{12}</c>): {13}\n",
         "📸 Social (<c>{14}</c>): {15}\n",
         "🛠️ Tools (<c>{16}</c>): {17}\n",
         "✨ To see detailed information on the selected command, type <c>{18} <command name></c>, e.g. <c>{18} {19}</c>.",
@@ -326,7 +326,7 @@ export default {
         "{0} Configuration of the group invitation link:\n", //
         "🔗 Current link: {1}",
         "🧮 Usages count: <c>{2}</c>",
-        "\n⚠ Warning! This feature is only available in <c>💎 Ambient Premium</c>!",
+        "\n⚠ Warning! This feature is only available in <c>💝 Ambient Premium</c>!",
         "\n🆔 To enable or change the group invitation link, type <c>{3} <new invitation ID></c>.",
         "\n🚪 To disable the group invitation link, type <c>{3} off</c>.",
       ],
@@ -337,14 +337,28 @@ export default {
       saved: "✅ The group invitation ID has been successfully set to <c>{0}</c>! The current link to join the group is {1}",
       disabled: "🚪 The group invitation link feature has been successfully disabled!",
       groupAdminOnly: "❌ Group invitation link settings can only be changed by group administrators!",
-      premiumMissing: "⚠ Warning! Group invitation link feature will not work as it requires <c>💎 Ambient Premium</c>!",
-      joinRequested: "🚪 <c>{0}</c> wants to join this group using the invitation link, check pending requests.",
-      joined: "👋🏻 <c>{0}</c> joined this group using the invitation link.",
+      premiumMissing: "⚠ Warning! Group invitation link feature will not work as it requires <c>💝 Ambient Premium</c>!",
+      joinRequestedUser: [
+        "🚪 <c>{0}</c> wants to join this group using the invitation link, check pending requests.\n", //
+        "🤗 This user uses Ambient since <c>{3}</c> {2} <c>{4}</c>.",
+      ],
+      joinedUser: [
+        "👋🏻 <c>{0}</c> joined this group using the invitation link.\n", //
+        "🤗 This user uses Ambient since <c>{3}</c> {2} <c>{4}</c>.",
+      ],
+      joinRequestedNotUser: [
+        "🚪 <c>{0}</c> wants to join this group using the invitation link, check pending requests.\n", //
+        "🧐 This user is not using Ambient.",
+      ],
+      joinedNotUser: [
+        "👋🏻 <c>{0}</c> joined this group using the invitation link.\n", //
+        "🧐 This user is not using Ambient.",
+      ],
     },
     premium: [
       "{0} You can support <c>Ambient</c> by sending a transfer to the phone number <c>{1}</c> using BLIK. If you want this bot to be rewarded with access to exclusive features available only to Premium users, send at least <c>{2}</c> at a time with the Premium ID <c>{3}</c> in the title or receiver field.\n",
       "⚠ Attention! Premium validity is cumulative - each <c>{2}</c> is an additional <c>{4}</c>. You will receive premium within <c>15 minutes</c> from receiving the transfer, if you have any questions or problems, join <c>our Discord server</c>: {5}\n",
-      "💝 Current Premium state: {6}\n",
+      "💓 Current Premium state: {6}\n",
       "👑 Current Premium accounts: <c>{7}</c>\n",
       "✨ The necessary data has been sent below in <c>separate messages</c> for easier copying.\n",
       "🥰 Thank you for supporting <c>Ambient</c>!",
@@ -356,7 +370,7 @@ export default {
         "👮🏻‍♂️ Restore administrator messages: <c>{2}</c>",
         "📎 Attachments as links: <c>{3}</c>",
         "🔒 Restore in private messages to administrators: <c>{4}</c>",
-        "\n⚠ Warning! This feature is only available in <c>💎 Ambient Premium</c>!",
+        "\n⚠ Warning! This feature is only available in <c>💝 Ambient Premium</c>!",
         "\n⚙ To change settings, type <c>{5} change</c>.",
       ],
       firstSettingQuestion: [
@@ -385,7 +399,7 @@ export default {
       ],
       disabled: "📴 Restoration of deleted messages feature has been successfully disabled!",
       saved: "✅ Restoration of deleted messages feature settings has been successfully saved!",
-      premiumMissing: "⚠ Warning! Restoration of deleted messages feature will not work as it requires <c>💎 Ambient Premium</c>!",
+      premiumMissing: "⚠ Warning! Restoration of deleted messages feature will not work as it requires <c>💝 Ambient Premium</c>!",
       restored: [
         "👀 User <c>{0}</c> deleted a message!", //
         "\n💡 Use <c>{2}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
@@ -516,7 +530,7 @@ export default {
       notListeningMentioned: "❌ <c>{0}</c> is not currently listening to anything.",
       listeningLocal: "❌ <c>{0}</c> is currently listening to a local track, you cannot play it on your Spotify account.",
       unableToPlay: "❌ We couldn't play the song on your Spotify account.",
-      premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires <c>💎 Spotify Premium</c> account!",
+      premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires <c>💝 Spotify Premium</c> account!",
       emptyResults: "❌ No items matching your query found!",
       selectionTimeout: "❌ No item was selected within <c>{0}</c> seconds! Try again.",
       trackSelectionList: [
@@ -537,7 +551,7 @@ export default {
         "🌍 Country: <c>{2}</c>",
         "👀 Followers count: <c>{3}</c>",
         "🔗 Profile: {4}",
-        "💎 Spotify Premium: <c>{5}</c>",
+        "💝 Spotify Premium: <c>{5}</c>",
       ],
       nowListening: [
         "🎧 <c>{0}</c> {1} <c>Now listening</c>",
@@ -611,9 +625,24 @@ export default {
       alreadyMember: "❌ The specified user is already a member of this group!",
       inQueue: "❌ The specified user is already in the queue of members to be added!",
       groupFull: "❌ The group already has the maximum number of members!",
+      queueFull: "❌ The queue of users to join is already full!",
       unableToAdd: "❌ The specified user's privacy settings do not allow him to be added to the group!",
-      queued: "🚪 <c>{0}</c> has been added to the queue, the request to join must be approved by the group administrator.",
-      added: "👋🏻 <c>{0}</c> has been successfully added to the group!",
+      queuedUser: [
+        "🚪 <c>{0}</c> has been added to the queue, the request to join must be approved by the group administrator.\n", //
+        "🤗 This user uses Ambient since <c>{4}</c> {3} <c>{5}</c>.",
+      ],
+      addedUser: [
+        "👋🏻 <c>{0}</c> has been successfully added to the group!\n", //
+        "🤗 This user uses Ambient since <c>{4}</c> {3} <c>{5}</c>.",
+      ],
+      queuedNotUser: [
+        "🚪 <c>{0}</c> has been added to the queue, the request to join must be approved by the group administrator.\n", //
+        "🧐 This user is not using Ambient.",
+      ],
+      addedNotUser: [
+        "👋🏻 <c>{0}</c> has been successfully added to the group!\n", //
+        "🧐 This user is not using Ambient.",
+      ],
     },
     attachments: {
       mustReplyToAttachments: "❌ You must reply to a message that contains attachments!",

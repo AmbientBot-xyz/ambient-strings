@@ -38,7 +38,7 @@ export default {
     groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych!",
     groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
     globalAdminOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
-    premiumOnly: "❌ Ta komenda dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
+    premiumOnly: "❌ Ta komenda dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
     happyBirthday: "🎂 Wszystkiego najlepszego, <c>{0}</c>! 🥳",
     outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
@@ -185,7 +185,7 @@ export default {
       "⏳ Czas działania: <c>{8}</c>",
       "🏓 Ping: <c>{9} ms</c>",
       "👑 Konta Premium: <c>{10}</c>",
-      "💎 Stan Premium: {11}",
+      "💝 Stan Premium: {11}",
       "🤖 Uruchomione boty: <c>{12}</c>",
       "✨ Jądro: <c>v{13}+{14}/{15}</c>",
       "📦 Instancja: <c>{16}</c>",
@@ -238,7 +238,7 @@ export default {
         "👾 Zabawa (<c>{6}</c>): {7}\n",
         "ℹ Informacje (<c>{8}</c>): {9}\n",
         "🔞 NSFW (<c>{10}</c>): {11}\n",
-        "💎 Premium (<c>{12}</c>): {13}\n",
+        "💝 Premium (<c>{12}</c>): {13}\n",
         "📸 Społecznościowe (<c>{14}</c>): {15}\n",
         "🛠️ Narzędzia (<c>{16}</c>): {17}\n",
         "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{18} <nazwa komendy></c>, np. <c>{18} {19}</c>.",
@@ -326,7 +326,7 @@ export default {
         "{0} Konfiguracja linku do zaproszenia do grupy:\n", //
         "🔗 Aktualny link: {1}",
         "🧮 Liczba użyć: <c>{2}</c>",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
+        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
         "\n🆔 Aby włączyć lub zmienić link do zaproszenia do grupy, wpisz <c>{3} <nowe ID zaproszenia></c>.",
         "\n🚪 Aby wyłączyć link do zaproszenia do grupy, wpisz <c>{3} off</c>.",
       ],
@@ -337,14 +337,28 @@ export default {
       saved: "✅ ID zaproszenia do grupy zostało pomyślnie ustawione na <c>{0}</c>! Aktualny link do dołączenia do grupy to {1}",
       disabled: "🚪 Funkcja zaproszeń do grupy została pomyślnie wyłączona!",
       groupAdminOnly: "❌ Ustawienia dotyczące zaproszenia do grupy mogą zostać zmienione tylko przez administratorów grupy!",
-      premiumMissing: "⚠ Uwaga! Funkcja zaproszeń do grupy nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
-      joinRequested: "🚪 <c>{0}</c> chce dołączyć do tej grupy korzystając z linku zaproszenia, sprawdź oczekujące prośby.",
-      joined: "👋🏻 <c>{0}</c> dołączył{1} do tej grupy korzystając z linku zaproszenia.",
+      premiumMissing: "⚠ Uwaga! Funkcja zaproszeń do grupy nie będzie działała, ponieważ wymaga ona posiadania <c>💝 Ambienta Premium</c>!",
+      joinRequestedUser: [
+        "🚪 <c>{0}</c> chce dołączyć do tej grupy korzystając z linku zaproszenia, sprawdź oczekujące prośby.\n", //
+        "🤗 Ten użytkownik korzysta z Ambienta od <c>{3}</c> {2} <c>{4}</c>.",
+      ],
+      joinedUser: [
+        "👋🏻 <c>{0}</c> dołączył{1} do tej grupy korzystając z linku zaproszenia.\n", //
+        "🤗 Ten użytkownik korzysta z Ambienta od <c>{3}</c> {2} <c>{4}</c>.",
+      ],
+      joinRequestedNotUser: [
+        "🚪 <c>{0}</c> chce dołączyć do tej grupy korzystając z linku zaproszenia, sprawdź oczekujące prośby.\n", //
+        "🧐 Ten użytkownik nie korzysta z Ambienta.",
+      ],
+      joinedNotUser: [
+        "👋🏻 <c>{0}</c> dołączył{1} do tej grupy korzystając z linku zaproszenia.\n", //
+        "🧐 Ten użytkownik nie korzysta z Ambienta.",
+      ],
     },
     premium: [
       "{0} Możesz wesprzeć <c>Ambienta</c> dowolną kwotą wysyłając przelew pod numer telefonu <c>{1}</c> korzystając z BLIKa. Jeśli chcesz, aby ten bot w nagrodę za wsparcie uzyskał dostęp do wyjątkowych funkcji dostępnych tylko dla użytkowników wersji Premium, wyślij jednorazowo co najmniej <c>{2}</c> podając w tytule lub odbiorcy identyfikator Premium <c>{3}</c>.\n",
       "⚠ Uwaga! Ważność Premium sumuje się - każde <c>{2}</c> to dodatkowe <c>{4}</c>. Premium zostanie nadane w ciągu <c>15 minut</c> od otrzymania przelewu, w razie pytań lub problemów dołącz na <c>nasz serwer Discord</c>: {5}\n",
-      "💝 Obecny stan Premium: {6}\n",
+      "💓 Obecny stan Premium: {6}\n",
       "👑 Obecne konta Premium: <c>{7}</c>\n",
       "✨ Potrzebne dane zostały wysłane poniżej w <c>oddzielnych wiadomościach</c> w celu łatwiejszego skopiowania ich.\n",
       "🥰 Dziękujemy za wspieranie <c>Ambienta</c>!",
@@ -356,7 +370,7 @@ export default {
         "👮🏻‍♂️ Przywracanie wiadomości administracji: <c>{2}</c>",
         "📎 Załączniki jako linki: <c>{3}</c>",
         "🔒 Przywracanie w wiadomościach prywatnych do administracji: <c>{4}</c>",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
+        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
         "\n⚙ Aby zmienić ustawienia, wpisz <c>{5} zmień</c>.",
       ],
       firstSettingQuestion: [
@@ -385,7 +399,7 @@ export default {
       ],
       disabled: "📴 Funkcja przywracania usuniętych wiadomości została pomyślnie wyłączona!",
       saved: "✅ Ustawienia funkcji przywracania usuniętych wiadomości zostały pomyślnie zapisane!",
-      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
+      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💝 Ambienta Premium</c>!",
       restored: [
         "👀 <c>{0}</c> usun{1} wiadomość!", //
         "\n💡 Użyj komendy <c>{2}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
@@ -516,7 +530,7 @@ export default {
       notListeningMentioned: "❌ <c>{0}</c> niczego aktualnie nie słucha.",
       listeningLocal: "❌ <c>{0}</c> słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",
       unableToPlay: "❌ Nie udało nam się odtworzyć utworu na Twoim koncie Spotify.",
-      premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta <c>💎 Spotify Premium</c>!",
+      premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta <c>💝 Spotify Premium</c>!",
       emptyResults: "❌ Nie znaleziono żadnych pozycji pasujących do Twojego zapytania!",
       selectionTimeout: "❌ Nie wybrano żadnej pozycji w ciągu <c>{0}</c> sekund! Spróbuj ponownie.",
       trackSelectionList: [
@@ -537,7 +551,7 @@ export default {
         "🌍 Kraj: <c>{2}</c>",
         "👀 Liczba obserwujących: <c>{3}</c>",
         "🔗 Profil: {4}",
-        "💎 Spotify Premium: <c>{5}</c>",
+        "💝 Spotify Premium: <c>{5}</c>",
       ],
       nowListening: [
         "🎧 <c>{0}</c> {1} <c>Aktualnie słucha</c>",
@@ -611,9 +625,24 @@ export default {
       alreadyMember: "❌ Podany użytkownik jest już członkiem tej grupy!",
       inQueue: "❌ Podany użytkownik znajduje się już w kolejce członków do dodania!",
       groupFull: "❌ Grupa posiada już maksymalną liczbę członków!",
+      queueFull: "❌ Kolejka użytkowników do dołączenia jest już pełna!",
       unableToAdd: "❌ Ustawienia prywatności podanego użytkownika nie pozwalają na dodanie go do grupy!",
-      queued: "🚪 <c>{0}</c> został{1} dodan{2} do kolejki, prośba o dołączenie musi zostać zaakceptowana przez administratora grupy.",
-      added: "👋🏻 <c>{0}</c> został{1} pomyślnie dodan{2} do grupy!",
+      queuedUser: [
+        "🚪 <c>{0}</c> został{1} dodan{2} do kolejki, prośba o dołączenie musi zostać zaakceptowana przez administratora grupy.\n", //
+        "🤗 Ten użytkownik korzysta z Ambienta od <c>{4}</c> {3} <c>{5}</c>.",
+      ],
+      addedUser: [
+        "👋🏻 <c>{0}</c> został{1} pomyślnie dodan{2} do grupy!\n", //
+        "🤗 Ten użytkownik korzysta z Ambienta od <c>{4}</c> {3} <c>{5}</c>.",
+      ],
+      queuedNotUser: [
+        "🚪 <c>{0}</c> został{1} dodan{2} do kolejki, prośba o dołączenie musi zostać zaakceptowana przez administratora grupy.\n", //
+        "🧐 Ten użytkownik nie korzysta z Ambienta.",
+      ],
+      addedNotUser: [
+        "👋🏻 <c>{0}</c> został{1} pomyślnie dodan{2} do grupy!\n", //
+        "🧐 Ten użytkownik nie korzysta z Ambienta.",
+      ],
     },
     attachments: {
       mustReplyToAttachments: "❌ Musisz odpowiedzieć na wiadomość zawierającą załączniki!",
