@@ -304,6 +304,26 @@ export default {
         "🌇 Sunset: <c>{13}</c>",
       ],
     },
+    boobs: {
+      searching: "⏳ Searching for a photo of female boobs...",
+      done: "{0} Here is a random photo of female boobs by <c>{1}</c> from <c>{2}</c>:",
+    },
+    butt: {
+      searching: "⏳ Searching for a photo of female butt...",
+      done: "{0} Here is a random photo of female butt by <c>{1}</c> from <c>{2}</c>:",
+    },
+    dick: {
+      searching: "⏳ Searching for a photo of dick...",
+      done: "{0} Here is a random photo of dick by <c>{1}</c> from <c>{2}</c>:",
+    },
+    feet: {
+      searching: "⏳ Searching for a photo of female feet...",
+      done: "{0} Here is a random photo of female feet by <c>{1}</c> from <c>{2}</c>:",
+    },
+    pussy: {
+      searching: "⏳ Searching for a photo of pussy...",
+      done: "{0} Here is a random photo of pussy by <c>{1}</c> from <c>{2}</c>:",
+    },
     reddit: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -649,11 +669,6 @@ export default {
       done: "{0} Here is the list of attachments from the selected message:\n\n{1}",
     },
     everyone: "{0} Successfully mentioned {1} users!",
-    improve: {
-      mustReplyToPhoto: "❌ You must reply to the message containing the photo!",
-      improving: "⏳ Improving the quality of a face in a selected photo...",
-      done: "{0} Here's a photo with improved face quality:",
-    },
     kick: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -709,21 +724,6 @@ export default {
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
       done: "{0} Here is your shortened link: {1}",
-    },
-    translate: {
-      usage: [
-        "{0} Correct usage of command <c>{1}</c>:\n", //
-        "✨ <c>{1} <target language> <text to translate></c>\n",
-        "💡 Examples:",
-        "⭐ <c>{1} pl Ambient is the best</c>",
-      ],
-      done: [
-        "{0} Here is translation result:\n", //
-        "🚰 Source language: <c>{1}</c>",
-        "🎯 Target language: <c>{2}</c>",
-        "📖 Sentences count: <c>{3}</c>",
-        "🗣 Result: <c>{4}</c>",
-      ],
     },
     verify: {
       mustReplyToMessage: "❌ You must reply to the message you want to verify!",

@@ -304,6 +304,26 @@ export default {
         "🌇 Zachód słońca: <c>{13}</c>",
       ],
     },
+    boobs: {
+      searching: "⏳ Szukam zdjęcia kobiecych piersi...",
+      done: "{0} Oto losowe zdjęcie kobiecych piersi autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    butt: {
+      searching: "⏳ Szukam zdjęcia kobiecych pośladków...",
+      done: "{0} Oto losowe zdjęcie kobiecych pośladków autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    dick: {
+      searching: "⏳ Szukam zdjęcia penisa...",
+      done: "{0} Oto losowe zdjęcie penisa autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    feet: {
+      searching: "⏳ Szukam zdjęcia kobiecych stóp...",
+      done: "{0} Oto losowe zdjęcie kobiecych stóp autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    pussy: {
+      searching: "⏳ Szukam zdjęcia waginy...",
+      done: "{0} Oto losowe zdjęcie waginy autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     reddit: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -649,11 +669,6 @@ export default {
       done: "{0} Oto lista załączników z wybranej wiadomości:\n\n{1}",
     },
     everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
-    improve: {
-      mustReplyToPhoto: "❌ Musisz odpowiedzieć na wiadomość zawierającą zdjęcie!",
-      improving: "⏳ Trwa poprawianie jakości twarzy na wybranym zdjęciu...",
-      done: "{0} Oto zdjęcie z poprawioną jakością twarzy:",
-    },
     kick: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -709,21 +724,6 @@ export default {
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
       done: "{0} Oto Twój skrócony link: {1}",
-    },
-    translate: {
-      usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
-        "✨ <c>{1} <język docelowy> <tekst do przetłumaczenia></c>\n",
-        "💡 Przykłady:",
-        "⭐ <c>{1} en Ambient jest najlepszy</c>",
-      ],
-      done: [
-        "{0} Oto wynik tłumaczenia:\n", //
-        "🚰 Język źródłowy: <c>{1}</c>",
-        "🎯 Język docelowy: <c>{2}</c>",
-        "📖 Liczba zdań: <c>{3}</c>",
-        "🗣 Wynik: <c>{4}</c>",
-      ],
     },
     verify: {
       mustReplyToMessage: "❌ Musisz odpowiedzieć na wiadomość którą chcesz zweryfikować!",
