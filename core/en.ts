@@ -664,6 +664,14 @@ export default {
         "🧐 This user is not using Ambient.",
       ],
     },
+    admin: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <@user></c>",
+      ],
+      donePromoted: "{0} <c>{1}</c> has been successfully promoted to an administrator!",
+      doneDemoted: "🫥 <c>{1}</c> has been successfully demoted from an administrator!",
+    },
     attachments: {
       mustReplyToAttachments: "❌ You must reply to a message that contains attachments!",
       done: "{0} Here is the list of attachments from the selected message:\n\n{1}",

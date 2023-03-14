@@ -664,6 +664,14 @@ export default {
         "🧐 Ten użytkownik nie korzysta z Ambienta.",
       ],
     },
+    admin: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <@użytkownik></c>",
+      ],
+      donePromoted: "{0} Pomyślnie nadano <c>{1}</c> uprawnienia administratora!",
+      doneDemoted: "🫥 Pomyślnie odebrano <c>{1}</c> uprawnienia administratora!",
+    },
     attachments: {
       mustReplyToAttachments: "❌ Musisz odpowiedzieć na wiadomość zawierającą załączniki!",
       done: "{0} Oto lista załączników z wybranej wiadomości:\n\n{1}",
