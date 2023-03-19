@@ -313,6 +313,7 @@ const language = {
       stopRequest: "Rozpoczęto zatrzymywanie na żądanie użytkownika.",
       stoppedLifecycle: "Zatrzymano z powodu osiągnięcia maksymalnego czasu działania.",
       stoppedManual: "Zatrzymano na żądanie użytkownika.",
+      stoppedInactivity: "Zatrzymano z powodu braku aktywności przez długi czas.",
       stoppedError: "Zatrzymano z powodu błędu, spróbuj uruchomić bota a jeśli problem powtarza się, połącz ponownie konto.",
       threadAdded: "Dodano grupę do listy dozwolonych.",
       threadRemovedManual: "Usunięto grupę z listy dozwolonych.",

@@ -44,6 +44,7 @@ export default {
     outOfRange: "❌ Selected position does not exist! (max. <c>{0}</c>, <c>{1}</c> selected)",
     botAdminRequired: "❌ Bot must be a group admin to use this command.",
     nsfwNotAllowed: "❌ NSFW content is not available in this group, check <c>{0}</c> command.",
+    userBlacklisted: "🫨 You cannot use <c>Ambient</c> because you are <c>blacklisted</c>.",
   },
   commands: {
     alpaca: {
@@ -194,7 +195,8 @@ export default {
       "🆙 Update date: <c>{21}</c> {3} <c>{22}</c>",
       "🍒 Creation date: <c>{23}</c>",
       "😼 Author: <c>{24}</c>",
-      "🤗 Discord: {25}",
+      "\n📱 This bot was created <c>completely free</c> on {25}, you can also do it to use it on your groups!",
+      "\n🤗 Join our <c>Discord server</c> to stay up to date with <c>Ambient</c> news, as well as get help and answers to your questions: {26}",
     ],
     group: {
       collecting: "⏳ Collecting info about group...",
@@ -242,6 +244,8 @@ export default {
         "📸 Social (<c>{14}</c>): {15}\n",
         "🛠️ Tools (<c>{16}</c>): {17}\n",
         "✨ To see detailed information on the selected command, type <c>{18} <command name></c>, e.g. <c>{18} {19}</c>.",
+        "\n📱 This bot was created <c>completely free</c> on {20}, you can also do it to use it on your groups!",
+        "\n🤗 Join our <c>Discord server</c> to stay up to date with <c>Ambient</c> news, as well as get help and answers to your questions: {21}",
       ],
       about: [
         "{0} Info about command <c>{1}</c>:\n", //
@@ -250,6 +254,8 @@ export default {
         "⚓ Other names: {4}",
       ],
     },
+    instances: "{0} Info about Ambient instances:\n\n{1}",
+    nodes: "{0} Info about Ambient nodes:\n\n{1}",
     top: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
@@ -377,7 +383,7 @@ export default {
     },
     premium: [
       "{0} You can support <c>Ambient</c> by sending a transfer to the phone number <c>{1}</c> using BLIK. If you want this bot to be rewarded with access to exclusive features available only to Premium users, send at least <c>{2}</c> at a time with the Premium ID <c>{3}</c> in the title or receiver field.\n",
-      "⚠ Attention! Premium validity is cumulative - each <c>{2}</c> is an additional <c>{4}</c>. You will receive premium within <c>15 minutes</c> from receiving the transfer, if you have any questions or problems, join <c>our Discord server</c>: {5}\n",
+      "⚠ Attention! Premium validity is cumulative - each <c>{2}</c> is an additional <c>{4}</c>. You will receive premium within <c>15 minutes</c> from receiving the transfer, if you have any questions or problems, join our <c>Discord server</c>: {5}\n",
       "💓 Current Premium state: {6}\n",
       "👑 Current Premium accounts: <c>{7}</c>\n",
       "✨ The necessary data has been sent below in <c>separate messages</c> for easier copying.\n",

@@ -313,6 +313,7 @@ const language = {
       stopRequest: "Stopping due to user request.",
       stoppedLifecycle: "Stopped because bot lifecycle has been exceeded.",
       stoppedManual: "Stopped due to user request.",
+      stoppedInactivity: "Stopped due to inactivity for a long time.",
       stoppedError: "Stopped beacause of an error, try to run the bot and if the problem persists, reconnect the account.",
       threadAdded: "Added thread to the allowed list.",
       threadRemovedManual: "Removed thread from the allowed list.",

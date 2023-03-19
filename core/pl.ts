@@ -44,6 +44,7 @@ export default {
     outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
     botAdminRequired: "❌ Bot musi być administratorem grupy aby skorzystać z tej komendy.",
     nsfwNotAllowed: "❌ Treści NSFW nie są dostępne w tej grupie, sprawdź komendę <c>{0}</c>.",
+    userBlacklisted: "🫨 Nie możesz korzystać z <c>Ambienta</c>, ponieważ znajdujesz się na <c>czarnej liście</c>.",
   },
   commands: {
     alpaca: {
@@ -194,7 +195,8 @@ export default {
       "🆙 Data aktualizacji: <c>{21}</c> {3} <c>{22}</c>",
       "🍒 Data powstania: <c>{23}</c>",
       "😼 Autor: <c>{24}</c>",
-      "🤗 Discord: {25}",
+      "\n📱 Ten bot został stworzony <c>całkowicie za darmo</c> na stronie {25}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
+      "\n🤗 Dołącz na nasz <c>serwer Discord</c> aby być na bieżąco z nowościami dotyczącymi <c>Ambienta</c>, a także uzyskać pomoc i odpowiedzi na pytania: {26}",
     ],
     group: {
       collecting: "⏳ Zbieram informacje o grupie...",
@@ -242,6 +244,8 @@ export default {
         "📸 Społecznościowe (<c>{14}</c>): {15}\n",
         "🛠️ Narzędzia (<c>{16}</c>): {17}\n",
         "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{18} <nazwa komendy></c>, np. <c>{18} {19}</c>.",
+        "\n📱 Ten bot został stworzony <c>całkowicie za darmo</c> na stronie {20}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
+        "\n🤗 Dołącz na nasz <c>serwer Discord</c> aby być na bieżąco z nowościami dotyczącymi <c>Ambienta</c>, a także uzyskać pomoc i odpowiedzi na pytania: {21}",
       ],
       about: [
         "{0} Informacje o komendzie <c>{1}</c>:\n", //
@@ -250,6 +254,8 @@ export default {
         "⚓ Inne nazwy: {4}",
       ],
     },
+    instances: "{0} Informacje o instancjach Ambienta:\n\n{1}",
+    nodes: "{0} Informacje o węzłach Ambienta:\n\n{1}",
     top: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
@@ -377,7 +383,7 @@ export default {
     },
     premium: [
       "{0} Możesz wesprzeć <c>Ambienta</c> dowolną kwotą wysyłając przelew pod numer telefonu <c>{1}</c> korzystając z BLIKa. Jeśli chcesz, aby ten bot w nagrodę za wsparcie uzyskał dostęp do wyjątkowych funkcji dostępnych tylko dla użytkowników wersji Premium, wyślij jednorazowo co najmniej <c>{2}</c> podając w tytule lub odbiorcy identyfikator Premium <c>{3}</c>.\n",
-      "⚠ Uwaga! Ważność Premium sumuje się - każde <c>{2}</c> to dodatkowe <c>{4}</c>. Premium zostanie nadane w ciągu <c>15 minut</c> od otrzymania przelewu, w razie pytań lub problemów dołącz na <c>nasz serwer Discord</c>: {5}\n",
+      "⚠ Uwaga! Ważność Premium sumuje się - każde <c>{2}</c> to dodatkowe <c>{4}</c>. Premium zostanie nadane w ciągu <c>15 minut</c> od otrzymania przelewu, w razie pytań lub problemów dołącz na nasz <c>serwer Discord</c>: {5}\n",
       "💓 Obecny stan Premium: {6}\n",
       "👑 Obecne konta Premium: <c>{7}</c>\n",
       "✨ Potrzebne dane zostały wysłane poniżej w <c>oddzielnych wiadomościach</c> w celu łatwiejszego skopiowania ich.\n",
