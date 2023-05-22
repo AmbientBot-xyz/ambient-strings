@@ -641,6 +641,39 @@ export default {
         "💿 Sound: <c>{12}</c> {13} <c>{14}</c>",
       ],
     },
+    twitter: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <link to tweet with video></c>",
+      ],
+      unavailable: "❌ The tweet provided is unavailable!",
+      tooBig: "❌ Size of video from tweet is too big! (<c>{0}</c>, max. <c>{1}</c>)",
+      done: [
+        "{0} Here is your video from tweet: <c>{1}</c> {2} <c>{3}</c>\n",
+        "🫡 Author: <c>{4}</c> {2} <c>@{5}</c>",
+        "📅 Date: <c>{6}</c> {2} <c>{7}</c>",
+        "💖 Likes: <c>{8}</c>",
+        "💬 Comments: <c>{9}</c>",
+        "🏹 Shares: <c>{10}</c>",
+        "👀 Views: <c>{11}</c>",
+        "🔞 Age restrictions: <c>{12}</c>",
+      ],
+    },
+    reel: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <link to reel on Instagram></c>",
+      ],
+      unavailable: "❌ The reel provided is unavailable!",
+      tooBig: "❌ Size of the provided reel is too big! (<c>{0}</c>, max. <c>{1}</c>)",
+      done: [
+        "{0} Here is your reel from Instagram: <c>{1}</c> {2} <c>{3}</c>\n",
+        "🫡 Author: <c>{4}</c> {2} <c>@{5}</c>",
+        "📅 Date: <c>{6}</c> {2} <c>{7}</c>",
+        "💖 Likes: <c>{8}</c>",
+        "💬 Comments: <c>{9}</c>",
+      ],
+    },
     adduser: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //

@@ -641,6 +641,39 @@ export default {
         "💿 Dźwięk: <c>{12}</c> {13} <c>{14}</c>",
       ],
     },
+    twitter: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <link do tweeta z filmikiem></c>",
+      ],
+      unavailable: "❌ Podany tweet jest niedostępny!",
+      tooBig: "❌ Rozmiar filmiku z tweeta jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
+      done: [
+        "{0} Oto Twój filmik z tweeta: <c>{1}</c> {2} <c>{3}</c>\n",
+        "🫡 Autor: <c>{4}</c> {2} <c>@{5}</c>",
+        "📅 Data: <c>{6}</c> {2} <c>{7}</c>",
+        "💖 Polubienia: <c>{8}</c>",
+        "💬 Komentarze: <c>{9}</c>",
+        "🏹 Udostępnienia: <c>{10}</c>",
+        "👀 Wyświetlenia: <c>{11}</c>",
+        "🔞 Ograniczenia wiekowe: <c>{12}</c>",
+      ],
+    },
+    reel: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <link do rolki na Instagramie></c>",
+      ],
+      unavailable: "❌ Podana rolka jest niedostępna!",
+      tooBig: "❌ Rozmiar podanej rolki jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
+      done: [
+        "{0} Oto Twoja rolka z Instagrama: <c>{1}</c> {2} <c>{3}</c>\n",
+        "🫡 Autor: <c>{4}</c> {2} <c>@{5}</c>",
+        "📅 Data: <c>{6}</c> {2} <c>{7}</c>",
+        "💖 Polubienia: <c>{8}</c>",
+        "💬 Komentarze: <c>{9}</c>",
+      ],
+    },
     adduser: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
