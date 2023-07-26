@@ -253,7 +253,7 @@ const language = {
       "Zalecamy włączenie logowania dwuetapowego z użyciem kodu 2FA w ustawieniach konta, zwiększy to szansę na pomyślne połączenie bota z kontem i zmniejszy szansę na zablokowanie konta z powodu podejrzanej aktywności.",
       "Nie przechowujemy danych logowania, które podasz. Zostaną one użyte jedynie do zalogowania się na konto przez zautomatyzowane oprogramowanie, w celu próby uzyskania sesji użytkownika, która umożliwi połączenie konta z botem, następnie są one zapominane.",
       "Połączenie bota z kontem zajmie kilkanaście sekund, jeśli napotkamy jakiś problem, otrzymasz dostęp do zrzutu ekranu z etapu logowania, na którym ten wystąpił, możesz wtedy zapoznać się z nim, rozwiązać ewentualny problem z kontem i spróbować ponownie.",
-      "Podczas logowania na konto, możesz otrzymać powiadomienie o logowaniu z nowej lokalizacji w przeglądarce Chrome na urządzeniu Xiaomi Redmi Note 8 Pro, pochodzi ono z naszego systemu i należy je zignorować.",
+      "Podczas logowania na konto, możesz otrzymać powiadomienie o logowaniu z nowej lokalizacji w przeglądarce Safari na urządzeniu iPhone, pochodzi ono z naszego systemu i należy je zignorować.",
       "Możliwe, że podczas próby zalogowania pojawi się prośba o zatwierdzenie go, i podanie na przykład daty urodzenia podanej przy zakładaniu konta, należy wtedy zalogować się na konto w normalny sposób, odpowiedzieć na pytania zadane przez Facebooka, a następnie spróbować połączyć bota z kontem ponownie.",
     ],
     credentialsCardTitle: "Podaj dane logowania do konta na Facebooku:",

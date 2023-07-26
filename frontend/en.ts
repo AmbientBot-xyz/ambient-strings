@@ -253,7 +253,7 @@ const language = {
       "We recommend that you enable two-factor login using the 2FA code in your account settings, it will increase the chance of successfully connecting the bot to your account and reduce the chance of your account being blocked due to suspicious activity.",
       "We do not store the login details you provide. They will only be used to log into the account by automated software in order to try to obtain a user session to connect the account with the bot, then they are forgotten.",
       "Connecting the bot with the account will take several seconds, if we encounter a problem, you will get access to the screenshot from the login stage where this occurred, you can then review it, solve any problem with the account and try again.",
-      "When logging into your account, you may receive a login notification from a new location in the Chrome browser on Xiaomi Redmi Note 8 Pro device, it comes from our system and should be ignored.",
+      "When logging into your account, you may receive a login notification from a new location in the Safari browser on iPhone device, it comes from our system and should be ignored.",
       "It is possible that when you try to log in, you will be asked to approve it, and enter, for example, the date of birth provided when creating the account, then log in to the account as normal, answer the questions asked by Facebook, and then try to connect the bot to the account again.",
     ],
     credentialsCardTitle: "Enter Facebook account login details:",
