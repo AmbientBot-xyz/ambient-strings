@@ -644,12 +644,12 @@ export default {
     twitter: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
-        "✨ <c>{1} <link to tweet with video></c>",
+        "✨ <c>{1} <link to Twitter video></c>",
       ],
-      unavailable: "❌ The tweet provided is unavailable!",
-      tooBig: "❌ Size of video from tweet is too big! (<c>{0}</c>, max. <c>{1}</c>)",
+      unavailable: "❌ The Twitter video provided is unavailable!",
+      tooBig: "❌ Size of Twitter video is too big! (<c>{0}</c>, max. <c>{1}</c>)",
       done: [
-        "{0} Here is your video from tweet: <c>{1}</c> {2} <c>{3}</c>\n",
+        "{0} Here is your Twitter video: <c>{1}</c> {2} <c>{3}</c>\n",
         "🫡 Author: <c>{4}</c> {2} <c>@{5}</c>",
         "📅 Date: <c>{6}</c> {2} <c>{7}</c>",
         "💖 Likes: <c>{8}</c>",

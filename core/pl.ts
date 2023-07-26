@@ -644,12 +644,12 @@ export default {
     twitter: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
-        "✨ <c>{1} <link do tweeta z filmikiem></c>",
+        "✨ <c>{1} <link do filmiku z Twittera></c>",
       ],
-      unavailable: "❌ Podany tweet jest niedostępny!",
-      tooBig: "❌ Rozmiar filmiku z tweeta jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
+      unavailable: "❌ Podany filmik z Twittera jest niedostępny!",
+      tooBig: "❌ Rozmiar filmiku z Twittera jest zbyt duży! (<c>{0}</c>, maks. <c>{1}</c>)",
       done: [
-        "{0} Oto Twój filmik z tweeta: <c>{1}</c> {2} <c>{3}</c>\n",
+        "{0} Oto Twój filmik z Twittera: <c>{1}</c> {2} <c>{3}</c>\n",
         "🫡 Autor: <c>{4}</c> {2} <c>@{5}</c>",
         "📅 Data: <c>{6}</c> {2} <c>{7}</c>",
         "💖 Polubienia: <c>{8}</c>",
