@@ -3,7 +3,7 @@ const language = {
     switchLanguage: "Zmień język / Switch language",
     en: "angielski / English",
     pl: "polski / Polish",
-    currentlyChoosen: "Obecnie wybrany / Currently choosen",
+    currentlyChosen: "Obecnie wybrany / Currently chosen",
     updateAvailable: "Dostępna jest aktualizacja",
     updateAvailableMore: "Za chwilę nastąpi przeładowanie strony",
     status: "Stan",
