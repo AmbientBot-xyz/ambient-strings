@@ -107,26 +107,6 @@ export default {
       disabled: "😌 Pomyślnie wyłączono komendy NSFW w tej grupie!",
       enabled: "♨ Pomyślnie włączono komendy NSFW w tej grupie!",
     },
-    variables: {
-      usage: [
-        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
-        "✨ <c>{1} list</c>",
-        "✨ <c>{1} set <nazwa> <zawartość></c>",
-        "✨ <c>{1} del <nazwa></c>",
-        "✨ <c>{1} get <nazwa></c>",
-      ],
-      list: "{0} Lista aktualnie ustawionych zmiennych: <c>{1}</c>",
-      set: "✅ Pomyślnie zaktualizowano zmienną <c>{0}</c>!",
-      notFound: "❌ Zmienna <c>{0}</c> nie istnieje!",
-      deleted: "🗑 Pomyślnie usunięto zmienną <c>{0}</c>!",
-      about: [
-        "{0} Informacje o zmiennej:\n", //
-        "🔖 Nazwa: <c>{1}</c>",
-        "📖 Zawartość: <c>{2}</c>",
-        "🗓 Ostatnia aktualizacja: <c>{4}</c> {3} <c>{5}</c>",
-        "🤡 Zaktualizowano przez: <c>{6}</c>",
-      ],
-    },
     achievement: {
       empty: "❌ Musisz podać treść osiągnięcia! (max. <c>{0}</c> znaki)",
       mentions: "❌ Treść osiągnięcia nie może zawierać wzmianek!",

@@ -107,26 +107,6 @@ export default {
       disabled: "😌 Successfully disabled NSFW commands in this group!",
       enabled: "♨ Successfully enabled NSFW commands in this group!",
     },
-    variables: {
-      usage: [
-        "{0} Correct usage of command <c>{1}</c>:\n", //
-        "✨ <c>{1} list</c>",
-        "✨ <c>{1} set <name> <content></c>",
-        "✨ <c>{1} del <name></c>",
-        "✨ <c>{1} get <name></c>",
-      ],
-      list: "{0} List of currently set variables: <c>{1}</c>",
-      set: "✅ Successfully updated variable <c>{0}</c>!",
-      notFound: "❌ Variable <c>{0}</c> does not exist!",
-      deleted: "🗑 Successfully deleted variable <c>{0}</c>!",
-      about: [
-        "{0} Info about variable:\n", //
-        "🔖 Name: <c>{1}</c>",
-        "📖 Content: <c>{2}</c>",
-        "🗓 Last updated: <c>{4}</c> {3} <c>{5}</c>",
-        "🤡 Last updated by: <c>{6}</c>",
-      ],
-    },
     achievement: {
       empty: "❌ You must enter the text of the achievement! (max. <c>{0}</c> characters)",
       mentions: "❌ The content of the achievement must not contain any mentions!",
