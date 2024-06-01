@@ -114,7 +114,6 @@ export default {
       generating: "⏳ Generating achievement...",
       done: "{0} Here is the generated achievement:",
     },
-
     coinflip: {
       heads: "🦅 Heads",
       tails: "🪙 Tails",
