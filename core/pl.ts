@@ -234,15 +234,9 @@ export default {
     top: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n🤝🏻 <c>{1} konto</c> {2} Pokazuje top 15 użytkowników, którzy mają najstarsze konto w tej grupie",
         "\n🐒 <c>{1} oznaczenia</c> {2} Pokazuje top 15 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie",
         "\n✉ <c>{1} wiadomości</c> {2} Pokazuje top 15 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie",
         "\n🪄 <c>{1} komendy</c> {2} Pokazuje top 15 użytkowników, którzy wykonali najwięcej komend w tej grupie",
-      ],
-      account: [
-        "🤝🏻 Top 15 użytkowników, którzy mają najstarsze konto w tej grupie:", //
-        "\n{0}\n",
-        "🧮 Jesteś <c>#{1}</c> w rankingu.",
       ],
       mentions: [
         "🐒 Top 15 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
@@ -777,7 +771,6 @@ export default {
       empty: "❌ Żaden użytkownik nie znajduje się obecnie na czarnej liście!",
       list: "{0} Lista użytkowników znajdujacych się obecnie na czarnej liście (<c>{1}</c>):\n\n{2}",
     },
-    everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
     kick: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //

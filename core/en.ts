@@ -234,15 +234,9 @@ export default {
     top: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
-        "\n🤝🏻 <c>{1} account</c> {2} Shows the top 15 users who have the oldest account in this group",
         "\n🐒 <c>{1} mentions</c> {2} Shows the top 15 users who have been mentioned the most in this group",
         "\n✉ <c>{1} messages</c> {2} Shows the top 15 users who sent the most messages in this group",
         "\n🪄 <c>{1} commands</c> {2} Shows the top 15 users who executed the most commands in this group",
-      ],
-      account: [
-        "🤝🏻 Top 15 users who have the oldest account in this group:", //
-        "\n{0}\n",
-        "🧮 You're <c>#{1}</c> in the ranking.",
       ],
       mentions: [
         "🐒 Top 15 users who have been mentioned the most in this group:", //
@@ -726,7 +720,6 @@ export default {
       empty: "❌ No user is currently blacklisted!",
       list: "{0} List of users currently blacklisted (<c>{1}</c>):\n\n{2}",
     },
-    everyone: "{0} Successfully mentioned {1} users!",
     kick: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
