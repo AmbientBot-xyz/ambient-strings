@@ -83,9 +83,21 @@ export default {
       searching: "⏳ Searching for a photo of the racoon...",
       done: "{0} Here is a random photo of the racoon by <c>{1}</c> from <c>{2}</c>:",
     },
+    rat: {
+      searching: "⏳ Searching for a photo of the rat...",
+      done: "{0} Here is a random photo of the rat by <c>{1}</c> from <c>{2}</c>:",
+    },
     shiba: {
       searching: "⏳ Searching for a photo of Shiba Inu...",
-      done: "{0} Here is a random Shiba Inu photo:",
+      done: "{0} Here is a random Shiba Inu photo by <c>{1}</c> from <c>{2}</c:",
+    },
+    snake: {
+      searching: "⏳ Searching for a photo of the snake...",
+      done: "{0} Here is a random photo of the snake by <c>{1}</c> from <c>{2}</c:",
+    },
+    spider: {
+      searching: "⏳ Searching for a photo of the spider...",
+      done: "{0} Here is a random photo of the spider by <c>{1}</c> from <c>{2}</c:",
     },
     turtle: {
       searching: "⏳ Searching for a photo of a turtle...",
@@ -114,6 +126,14 @@ export default {
       generating: "⏳ Generating achievement...",
       done: "{0} Here is the generated achievement:",
     },
+    airplane: {
+      searching: "⏳ Searching for a photo of an airplane...",
+      done: "{0} Here is a random photo of an airplane by <c>{1}</c> from <c>{2}</c>:",
+    },
+    car: {
+      searching: "⏳ Searching for a photo of a car...",
+      done: "{0} Here is a random photo of a car by <c>{1}</c> from <c>{2}</c>:",
+    },
     coinflip: {
       heads: "🦅 Heads",
       tails: "🪙 Tails",
@@ -133,6 +153,10 @@ export default {
     meme: {
       searching: "⏳ Searching a random meme...",
       done: "{0} Here is a random meme by <c>{1}</c> from <c>{2}</c>:",
+    },
+    motorcycle: {
+      searching: "⏳ Searching for a photo of a motorcycle...",
+      done: "{0} Here is a random photo of a motorcycle by <c>{1}</c> from <c>{2}</c>:",
     },
     rip: {
       empty: "❌ You must enter the text of the tombstone! (max. <c>{0}</c> characters)",
@@ -443,8 +467,8 @@ export default {
         "✨ <c>{1} <username></c>\n",
         "💡 Examples:",
         "⭐ <c>{1} existencefornoreason</c>",
-        "⭐ <c>{1} kmatuszak04</c>",
-        "⭐ <c>{1} maciekkarecki</c>",
+        "⭐ <c>{1} lenosz_</c>",
+        "⭐ <c>{1} negatywny</c>",
       ],
       notFound: "❌ The given username was not found!",
       collecting: "⏳ Collecting info about user <c>@{0}</c>...",
@@ -460,6 +484,16 @@ export default {
         "🔗 Profile: {9}",
         "🚪 External link: {10}",
       ],
+    },
+    afk: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <reason></c>",
+      ],
+      tooLong: "❌ The reason for being AFK is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      disabled: "✅ Successfully disabled AFK mode!",
+      done: "✅ Succcessfully set AFK reason to <c>{0}</c>!",
+      mentioned: "{0} <c>{1}</c> is currently AFK, reason: <c>{2}</c>",
     },
     play: {
       usage: [
@@ -492,22 +526,23 @@ export default {
         "🆔 Account ID: <c>{4}</c>",
         "👗 Sex: <c>{5}</c>",
         "🔗 Profile: {6}",
-        "🏷 Nickname in group: <c>{7}</c>",
-        "🥰 Has bot in friends: <c>{8}</c>",
-        "👮🏻‍♂️ Group administrator: <c>{9}</c>",
-        "🎂 Celebrating a birthday today: <c>{10}</c>",
-        "🌍 Location: <c>{11}</c>",
-        "🤓 Uses Ambient since: <c>{13}</c> {12} <c>{14}</c>",
-        "🤖 Is bot: <c>{15}</c>",
-        "🖤 Is blacklisted: <c>{16}</c>",
-        "👑 Global administrator: <c>{17}</c>",
-        "👅 Language in Ambient: <c>{18}</c>",
-        "🎛️ Spotify connected: <c>{19}</c>",
-        "🫣 Last activity: <c>{20}</c> {12} <c>{21}</c> (in this group: <c>{22}</c>)",
-        "🐒 Mentions: <c>{23}</c> (in this group: <c>{24}</c>)",
-        "✉ Messages sent: <c>{25}</c> (in this group: <c>{26}</c>)",
-        "🪄 Commands executed: <c>{27}</c> (in this group: <c>{28}</c>)",
-        "🔄 Data updated: <c>{29}</c> {12} <c>{30}</c>",
+        "😴 AFK status: <c>{7}</c>",
+        "🏷 Nickname in group: <c>{8}</c>",
+        "🥰 Has bot in friends: <c>{9}</c>",
+        "👮🏻‍♂️ Group administrator: <c>{10}</c>",
+        "🎂 Celebrating a birthday today: <c>{11}</c>",
+        "🌍 Location: <c>{12}</c>",
+        "🤓 Uses Ambient since: <c>{14}</c> {13} <c>{15}</c>",
+        "🤖 Is bot: <c>{16}</c>",
+        "🖤 Is blacklisted: <c>{17}</c>",
+        "👑 Global administrator: <c>{18}</c>",
+        "👅 Language in Ambient: <c>{19}</c>",
+        "🎛️ Spotify connected: <c>{20}</c>",
+        "🫣 Last activity: <c>{21}</c> {13} <c>{22}</c> (in this group: <c>{23}</c>)",
+        "🐒 Mentions: <c>{24}</c> (in this group: <c>{25}</c>)",
+        "✉ Messages sent: <c>{26}</c> (in this group: <c>{27}</c>)",
+        "🪄 Commands executed: <c>{28}</c> (in this group: <c>{29}</c>)",
+        "🔄 Data updated: <c>{30}</c> {13} <c>{31}</c>",
       ],
     },
     skin: {
@@ -720,6 +755,7 @@ export default {
       empty: "❌ No user is currently blacklisted!",
       list: "{0} List of users currently blacklisted (<c>{1}</c>):\n\n{2}",
     },
+    everyone: "{0} Successfully mentioned {1} users!",
     kick: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
@@ -775,6 +811,21 @@ export default {
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
       done: "{0} Here is your shortened link: {1}",
+    },
+    translate: {
+      usage: [
+        "{0} Correct usage of command <c>{1}</c>:\n", //
+        "✨ <c>{1} <target language> <text to translate></c>\n",
+        "💡 Examples:",
+        "⭐ <c>{1} pl Ambient is the best</c>",
+      ],
+      done: [
+        "{0} Here is translation result:\n", //
+        "🚰 Source language: <c>{1}</c>",
+        "🎯 Target language: <c>{2}</c>",
+        "📖 Sentences count: <c>{3}</c>",
+        "🗣 Result: <c>{4}</c>",
+      ],
     },
     verify: {
       mustReplyToMessage: "❌ You must reply to the message you want to verify!",

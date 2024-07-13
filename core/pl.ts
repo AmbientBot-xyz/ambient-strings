@@ -83,9 +83,21 @@ export default {
       searching: "⏳ Szukam zdjęcia szopa...",
       done: "{0} Oto losowe zdjęcie szopa autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
+    rat: {
+      searching: "⏳ Szukam zdjęcia szczura...",
+      done: "{0} Oto losowe zdjęcie szczura autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     shiba: {
       searching: "⏳ Szukam zdjęcia Shiba Inu...",
-      done: "{0} Oto losowe zdjęcie Shiba Inu:",
+      done: "{0} Oto losowe zdjęcie Shiba Inu autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    snake: {
+      searching: "⏳ Szukam zdjęcia węża...",
+      done: "{0} Oto losowe zdjęcie węża autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    spider: {
+      searching: "⏳ Szukam zdjęcia pająka...",
+      done: "{0} Oto losowe zdjęcie pająka autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     turtle: {
       searching: "⏳ Szukam zdjęcia żółwia...",
@@ -114,6 +126,14 @@ export default {
       generating: "⏳ Trwa generowanie osiągnięcia...",
       done: "{0} Oto wygenerowane osiągnięcie:",
     },
+    airplane: {
+      searching: "⏳ Szukam zdjęcia samolotu...",
+      done: "{0} Oto losowe zdjęcie samolotu autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    car: {
+      searching: "⏳ Szukam zdjęcia samochodu...",
+      done: "{0} Oto losowe zdjęcie samochodu autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     coinflip: {
       heads: "🦅 Orzeł",
       tails: "🪙 Reszka",
@@ -133,6 +153,10 @@ export default {
     meme: {
       searching: "⏳ Szukam losowego mema...",
       done: "{0} Oto losowy mem autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    motorcycle: {
+      searching: "⏳ Szukam zdjęcia motocyklu...",
+      done: "{0} Oto losowe zdjęcie motocyklu autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     rip: {
       empty: "❌ Musisz podać treść nagrobka! (max. <c>{0}</c> znaków)",
@@ -494,8 +518,8 @@ export default {
         "✨ <c>{1} <nazwa użytkownika></c>\n",
         "💡 Przykłady:",
         "⭐ <c>{1} existencefornoreason</c>",
-        "⭐ <c>{1} kmatuszak04</c>",
-        "⭐ <c>{1} maciekkarecki</c>",
+        "⭐ <c>{1} lenosz_</c>",
+        "⭐ <c>{1} negatywny</c>",
       ],
       notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",
       collecting: "⏳ Zbieram informacje o użytkowniku <c>@{0}</c>...",
@@ -511,6 +535,16 @@ export default {
         "🔗 Profil: {9}",
         "🚪 Link zewnętrzny: {10}",
       ],
+    },
+    afk: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <powód></c>",
+      ],
+      tooLong: "❌ Powód AFK jest zbyt długi! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
+      disabled: "✅ Pomyślnie wyłączono tryb AFK!",
+      done: "✅ Pomyślnie ustawiono powód AFK na <c>{0}</c>!",
+      mentioned: "{0} <c>{1}</c> jest aktualnie AFK, powód: <c>{2}</c>",
     },
     play: {
       usage: [
@@ -543,22 +577,23 @@ export default {
         "🆔 ID konta: <c>{4}</c>",
         "👗 Płeć: <c>{5}</c>",
         "🔗 Profil: {6}",
-        "🏷 Nick w grupie: <c>{7}</c>",
-        "🥰 Ma bota w znajomych: <c>{8}</c>",
-        "👮🏻‍♂️ Administrator grupy: <c>{9}</c>",
-        "🎂 Obchodzi dziś urodziny: <c>{10}</c>",
-        "🌍 Lokalizacja: <c>{11}</c>",
-        "🤓 Korzysta z Ambienta od: <c>{13}</c> {12} <c>{14}</c>",
-        "🤖 Jest botem: <c>{15}</c>",
-        "🖤 Czarna lista: <c>{16}</c>",
-        "👑 Globalny administrator: <c>{17}</c>",
-        "👅 Język w Ambiencie: <c>{18}</c>",
-        "🎛️ Połączone Spotify: <c>{19}</c>",
-        "🫣 Ostatnia aktywność: <c>{20}</c> {12} <c>{21}</c> (w tej grupie: <c>{22}</c>)",
-        "🐒 Wzmianki: <c>{23}</c> (w tej grupie: <c>{24}</c>)",
-        "✉ Wysłane wiadomości: <c>{25}</c> (w tej grupie: <c>{26}</c>)",
-        "🪄 Wykonane komendy: <c>{27}</c> (w tej grupie: <c>{28}</c>)",
-        "🔄 Zaktualizowano dane: <c>{29}</c> {12} <c>{30}</c>",
+        "😴 Status AFK: <c>{7}</c>",
+        "🏷 Nick w grupie: <c>{8}</c>",
+        "🥰 Ma bota w znajomych: <c>{9}</c>",
+        "👮🏻‍♂️ Administrator grupy: <c>{10}</c>",
+        "🎂 Obchodzi dziś urodziny: <c>{11}</c>",
+        "🌍 Lokalizacja: <c>{12}</c>",
+        "🤓 Korzysta z Ambienta od: <c>{14}</c> {13} <c>{15}</c>",
+        "🤖 Jest botem: <c>{16}</c>",
+        "🖤 Czarna lista: <c>{17}</c>",
+        "👑 Globalny administrator: <c>{18}</c>",
+        "👅 Język w Ambiencie: <c>{19}</c>",
+        "🎛️ Połączone Spotify: <c>{20}</c>",
+        "🫣 Ostatnia aktywność: <c>{21}</c> {13} <c>{22}</c> (w tej grupie: <c>{23}</c>)",
+        "🐒 Wzmianki: <c>{24}</c> (w tej grupie: <c>{25}</c>)",
+        "✉ Wysłane wiadomości: <c>{26}</c> (w tej grupie: <c>{27}</c>)",
+        "🪄 Wykonane komendy: <c>{28}</c> (w tej grupie: <c>{29}</c>)",
+        "🔄 Zaktualizowano dane: <c>{30}</c> {13} <c>{31}</c>",
       ],
     },
     skin: {
@@ -771,6 +806,7 @@ export default {
       empty: "❌ Żaden użytkownik nie znajduje się obecnie na czarnej liście!",
       list: "{0} Lista użytkowników znajdujacych się obecnie na czarnej liście (<c>{1}</c>):\n\n{2}",
     },
+    everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
     kick: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
@@ -826,6 +862,21 @@ export default {
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
       done: "{0} Oto Twój skrócony link: {1}",
+    },
+    translate: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <język docelowy> <tekst do przetłumaczenia></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} en Ambient jest najlepszy</c>",
+      ],
+      done: [
+        "{0} Oto wynik tłumaczenia:\n", //
+        "🚰 Język źródłowy: <c>{1}</c>",
+        "🎯 Język docelowy: <c>{2}</c>",
+        "📖 Liczba zdań: <c>{3}</c>",
+        "🗣 Wynik: <c>{4}</c>",
+      ],
     },
     verify: {
       mustReplyToMessage: "❌ Musisz odpowiedzieć na wiadomość którą chcesz zweryfikować!",
