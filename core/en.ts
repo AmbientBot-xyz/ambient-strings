@@ -37,7 +37,7 @@ export default {
     unexpectedArgs: "❌ This command takes no arguments!",
     groupOnly: "❌ This command can only be used in group conversations!",
     groupAdminOnly: "❌ This command can only be used by group administrators!",
-    globalAdminOnly: "❌ You don't have permission to use this command!",
+    teamMemberOnly: "❌ You don't have permission to use this command!",
     premiumOnly: "❌ This command is only available in <c>💝 Ambient Premium</c>!",
     goodNight: "🥱 Good night, <c>{0}</c>! 😴",
     happyBirthday: "🎂 Happy birthday, <c>{0}</c>! 🥳",
@@ -50,6 +50,10 @@ export default {
     alpaca: {
       searching: "⏳ Searching for a photo of the alpaca...",
       done: "{0} Here is a random photo of the alpaca by <c>{1}</c> from <c>{2}</c>:",
+    },
+    beaver: {
+      searching: "⏳ Searching for a photo of a beaver...",
+      done: "{0} Here is a random photo of a beaver by <c>{1}</c> from <c>{2}</c>:",
     },
     capybara: {
       searching: "⏳ Searching for a photo of the capybara...",
@@ -89,15 +93,15 @@ export default {
     },
     shiba: {
       searching: "⏳ Searching for a photo of Shiba Inu...",
-      done: "{0} Here is a random Shiba Inu photo by <c>{1}</c> from <c>{2}</c:",
+      done: "{0} Here is a random Shiba Inu photo by <c>{1}</c> from <c>{2}</c>:",
     },
     snake: {
       searching: "⏳ Searching for a photo of the snake...",
-      done: "{0} Here is a random photo of the snake by <c>{1}</c> from <c>{2}</c:",
+      done: "{0} Here is a random photo of the snake by <c>{1}</c> from <c>{2}</c>:",
     },
     spider: {
       searching: "⏳ Searching for a photo of the spider...",
-      done: "{0} Here is a random photo of the spider by <c>{1}</c> from <c>{2}</c:",
+      done: "{0} Here is a random photo of the spider by <c>{1}</c> from <c>{2}</c>:",
     },
     turtle: {
       searching: "⏳ Searching for a photo of a turtle...",
@@ -255,6 +259,27 @@ export default {
     },
     instances: "{0} Info about Ambient instances:\n\n{1}",
     nodes: "{0} Info about Ambient nodes:\n\n{1}",
+    rules: {
+      empty: [
+        "{0} Group rules are not currently set.", //
+        "\n📝 To set the group rules, type <c>{1} <rules content></c>.",
+      ],
+      view: [
+        "{0} Here are the group rules of <c>{1}</c> set by the administration:\n", //
+        "{2}",
+        "\n📝 To change the group rules, type <c>{3} <new rules content></c>.",
+        "\n🗑 To remove the group rules, type <c>{3} remove</c>.",
+      ],
+      mentions: "❌ Group rules cannot contain mentions!",
+      removed: "✅ Group rules have been successfully removed!",
+      tooLong: "❌ Group rules are too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      updated: "✅ Group rules have been successfully updated!",
+    },
+    team: [
+      "{0} List of Ambient team members:\n",
+      "{1}",
+      "\n🤗 Would you like to join us? All you need to do is be active and helpful to other users on our <c>Discord server</c>, and we’ll reach out to you when we notice your efforts: {2}",
+    ],
     top: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
@@ -488,7 +513,7 @@ export default {
     afk: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:\n", //
-        "✨ <c>{1} <reason></c>",
+        "✨ <c>{1} <reason>/off</c>",
       ],
       tooLong: "❌ The reason for being AFK is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
       disabled: "✅ Successfully disabled AFK mode!",
@@ -535,7 +560,7 @@ export default {
         "🤓 Uses Ambient since: <c>{14}</c> {13} <c>{15}</c>",
         "🤖 Is bot: <c>{16}</c>",
         "🖤 Is blacklisted: <c>{17}</c>",
-        "👑 Global administrator: <c>{18}</c>",
+        "👑 Ambient team member: <c>{18}</c>",
         "👅 Language in Ambient: <c>{19}</c>",
         "🎛️ Spotify connected: <c>{20}</c>",
         "🫣 Last activity: <c>{21}</c> {13} <c>{22}</c> (in this group: <c>{23}</c>)",
@@ -577,6 +602,8 @@ export default {
       disconnected: "✅ Successfully disconnected Ambient from Spotify account!",
       mustReconnect: "❌ You need to reconnect Ambient to your Spotify account!",
       mustReconnectMentioned: "❌ <c>{0}</c> must reconnect Ambient to the Spotify account!",
+      statsUnavailable: "❌ Statistics for your account are unavailable, the account was likely created recently or has been inactive for a long time.",
+      statsUnavailableMentioned: "❌ Statistics for <c>{0}</c> are unavailable, the account was likely created recently or has been inactive for a long time.",
       notListening: "❌ You're not listening to anything at the moment.",
       notListeningMentioned: "❌ <c>{0}</c> is not currently listening to anything.",
       listeningLocal: "❌ <c>{0}</c> is currently listening to a local track, you cannot play it on your Spotify account.",

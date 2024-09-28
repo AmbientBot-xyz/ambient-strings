@@ -37,7 +37,7 @@ export default {
     unexpectedArgs: "❌ Ta komenda nie przyjmuje żadnych argumentów!",
     groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych!",
     groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
-    globalAdminOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
+    teamMemberOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
     premiumOnly: "❌ Ta komenda dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
     happyBirthday: "🎂 Wszystkiego najlepszego, <c>{0}</c>! 🥳",
@@ -50,6 +50,10 @@ export default {
     alpaca: {
       searching: "⏳ Szukam zdjęcia alpaki...",
       done: "{0} Oto losowe zdjęcie alpaki autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    beaver: {
+      searching: "⏳ Szukam zdjęcia bobra...",
+      done: "{0} Oto losowe zdjęcie bobra autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     capybara: {
       searching: "⏳ Szukam zdjęcia kapibary...",
@@ -255,6 +259,27 @@ export default {
     },
     instances: "{0} Informacje o instancjach Ambienta:\n\n{1}",
     nodes: "{0} Informacje o węzłach Ambienta:\n\n{1}",
+    rules: {
+      empty: [
+        "{0} Zasady grupy nie są obecnie ustawione.", //
+        "\n📝 Aby ustawić zasady grupy, wpisz <c>{1} <treść zasad></c>.",
+      ],
+      view: [
+        "{0} Oto zasady grupy <c>{1}</c> określone przez administrację:\n", //
+        "{2}",
+        "\n📝 Aby zmienić zasady grupy, wpisz <c>{3} <treść nowych zasad></c>.",
+        "\n🗑 Aby usunąć zasady grupy, wpisz <c>{3} usuń</c>.",
+      ],
+      mentions: "❌ Treść zasad grupy nie może zawierać wzmianek!",
+      removed: "✅ Pomyślnie usunięto zasady grupy!",
+      tooLong: "❌ Treść zasad grupy jest zbyt długa! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
+      updated: "✅ Pomyślnie zaktualizowano zasady grupy!",
+    },
+    team: [
+      "{0} Lista członków załogi Ambienta:\n",
+      "{1}",
+      "\n🤗 Chcesz zostać jednym z nas? Wystarczy, że wykażesz się aktywnością i pomocą dla innych użytkowników na naszym <c>serwerze Discord</c>, a odezwiemy się do Ciebie gdy zauważymy Twoje starania: {2}",
+    ],
     top: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
@@ -539,7 +564,7 @@ export default {
     afk: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
-        "✨ <c>{1} <powód></c>",
+        "✨ <c>{1} <powód>/off</c>",
       ],
       tooLong: "❌ Powód AFK jest zbyt długi! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
       disabled: "✅ Pomyślnie wyłączono tryb AFK!",
@@ -586,7 +611,7 @@ export default {
         "🤓 Korzysta z Ambienta od: <c>{14}</c> {13} <c>{15}</c>",
         "🤖 Jest botem: <c>{16}</c>",
         "🖤 Czarna lista: <c>{17}</c>",
-        "👑 Globalny administrator: <c>{18}</c>",
+        "👑 Członek załogi Ambienta: <c>{18}</c>",
         "👅 Język w Ambiencie: <c>{19}</c>",
         "🎛️ Połączone Spotify: <c>{20}</c>",
         "🫣 Ostatnia aktywność: <c>{21}</c> {13} <c>{22}</c> (w tej grupie: <c>{23}</c>)",
@@ -628,6 +653,8 @@ export default {
       disconnected: "✅ Pomyślnie odłączył{0}ś Ambienta od konta Spotify!",
       mustReconnect: "❌ Musisz ponownie połączyć Ambienta z kontem Spotify!",
       mustReconnectMentioned: "❌ <c>{0}</c> musi ponownie połączyć Ambienta z kontem Spotify!",
+      statsUnavailable: "❌ Statystyki dla Twojego konta są niedostępne, prawdopodobnie konto zostało utworzone niedawno lub było nieużywane od dłuższego czasu.",
+      statsUnavailableMentioned: "❌ Statystyki dla konta <c>{0}</c> są niedostępne, prawdopodobnie konto zostało utworzone niedawno lub było nieużywane od dłuższego czasu.",
       notListening: "❌ Niczego aktualnie nie słuchasz.",
       notListeningMentioned: "❌ <c>{0}</c> niczego aktualnie nie słucha.",
       listeningLocal: "❌ <c>{0}</c> słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",

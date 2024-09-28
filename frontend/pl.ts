@@ -235,6 +235,8 @@ const language = {
     screenshot: "Zrzut ekranu",
     screenshotModalHint:
       "Zrzut ekranu pozwala sprawdzić, dlaczego nie udało nam się zalogować przy użyciu podanych danych. Jeśli wygląda na to, że są one nieprawidłowe, popraw je i spróbuj ponownie. Podejrzewasz, że proces logowania działa nieprawidłowo? Skontaktuj się z nami na serwerze Discord, przyjrzymy się temu jak najszybciej.",
+    failedReason: "Powód",
+    failedReasonDescription: "Opis",
     connection: "Połączenie z kontem",
     connectionHint: "Połącz bota z kontem na Facebooku, aby rozpocząć korzystanie z niego. Aby skorzystać z tej opcji, bot musi być wyłączony.",
     screenshotHint: "Zrzut ekranu pozwala sprawdzić, co dokładnie poszło nie tak podczas ostatniej próby zalogowania się na konto z użyciem podanych przez Ciebie danych.",
