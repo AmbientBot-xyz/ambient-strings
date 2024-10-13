@@ -79,6 +79,14 @@ export default {
       searching: "⏳ Searching for a photo of a frog...",
       done: "{0} Here is a random photo of a frog by <c>{1}</c> from <c>{2}</c>:",
     },
+    lizard: {
+      searching: "⏳ Searching for a photo of a lizard...",
+      done: "{0} Here is a random photo of a lizard by <c>{1}</c> from <c>{2}</c>:",
+    },
+    penguin: {
+      searching: "⏳ Searching for a photo of the penguin...",
+      done: "{0} Here is a random photo of the penguin by <c>{1}</c> from <c>{2}</c>:",
+    },
     pigeon: {
       searching: "⏳ Searching for a photo of a pigeon...",
       done: "{0} Here is a random photo of a pigeon by <c>{1}</c> from <c>{2}</c>:",
@@ -106,6 +114,10 @@ export default {
     turtle: {
       searching: "⏳ Searching for a photo of a turtle...",
       done: "{0} Here is a random photo of a turtle by <c>{1}</c> from <c>{2}</c>:",
+    },
+    unicorn: {
+      searching: "⏳ Searching for a photo of a unicorn...",
+      done: "{0} Here is a random photo of a unicorn by <c>{1}</c> from <c>{2}</c>:",
     },
     interactions: {
       usage: [
@@ -168,6 +180,10 @@ export default {
       tooLong: "❌ The content of the tombstone is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
       generating: "⏳ Generating tombstone...",
       done: "{0} Here is the generated tombstone:",
+    },
+    train: {
+      searching: "⏳ Searching for a photo of a train...",
+      done: "{0} Here is a random photo of a train by <c>{1}</c> from <c>{2}</c>:",
     },
     tvp: {
       empty: "❌ You must enter the text of the bar! (max. <c>{0}</c> characters)",
@@ -491,9 +507,9 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n", //
         "✨ <c>{1} <username></c>\n",
         "💡 Examples:",
+        "⭐ <c>{1} dzejdes</c>",
         "⭐ <c>{1} existencefornoreason</c>",
         "⭐ <c>{1} lenosz_</c>",
-        "⭐ <c>{1} negatywny</c>",
       ],
       notFound: "❌ The given username was not found!",
       collecting: "⏳ Collecting info about user <c>@{0}</c>...",
@@ -821,7 +837,7 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n",
         "✨ <c>{1} <link to webpage></c>\n",
         "💡 Examples:",
-        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://facebook.com/hunterazarx</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
@@ -833,7 +849,7 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n",
         "✨ <c>{1} <link to shorten></c>\n",
         "💡 Examples:",
-        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://facebook.com/hunterazarx</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
@@ -844,7 +860,7 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n", //
         "✨ <c>{1} <target language> <text to translate></c>\n",
         "💡 Examples:",
-        "⭐ <c>{1} pl Ambient is the best</c>",
+        "⭐ <c>{1} pl This is a sample text</c>",
       ],
       done: [
         "{0} Here is translation result:\n", //

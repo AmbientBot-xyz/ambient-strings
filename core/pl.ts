@@ -79,6 +79,14 @@ export default {
       searching: "⏳ Szukam zdjęcia żaby...",
       done: "{0} Oto losowe zdjęcie żaby autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
+    lizard: {
+      searching: "⏳ Szukam zdjęcia jaszczurki...",
+      done: "{0} Oto losowe zdjęcie jaszczurki autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    penguin: {
+      searching: "⏳ Szukam zdjęcia pingwina...",
+      done: "{0} Oto losowe zdjęcie pingwina autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     pigeon: {
       searching: "⏳ Szukam zdjęcia gołębia...",
       done: "{0} Oto losowe zdjęcie gołębia autorstwa <c>{1}</c> z <c>{2}</c>:",
@@ -106,6 +114,10 @@ export default {
     turtle: {
       searching: "⏳ Szukam zdjęcia żółwia...",
       done: "{0} Oto losowe zdjęcie żółwia autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    unicorn: {
+      searching: "⏳ Szukam zdjęcia jednorożca...",
+      done: "{0} Oto losowe zdjęcie jednorożca autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     interactions: {
       usage: [
@@ -168,6 +180,10 @@ export default {
       tooLong: "❌ Treść nagrobka jest zbyt długa! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
       generating: "⏳ Trwa generowanie nagrobka...",
       done: "{0} Oto wygenerowany nagrobek:",
+    },
+    train: {
+      searching: "⏳ Szukam zdjęcia pociągu...",
+      done: "{0} Oto losowe zdjęcie pociągu autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     tvp: {
       empty: "❌ Musisz podać treść paska! (max. <c>{0}</c> znaków)",
@@ -542,9 +558,9 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
         "✨ <c>{1} <nazwa użytkownika></c>\n",
         "💡 Przykłady:",
+        "⭐ <c>{1} dzejdes</c>",
         "⭐ <c>{1} existencefornoreason</c>",
         "⭐ <c>{1} lenosz_</c>",
-        "⭐ <c>{1} negatywny</c>",
       ],
       notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",
       collecting: "⏳ Zbieram informacje o użytkowniku <c>@{0}</c>...",
@@ -872,7 +888,7 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
         "✨ <c>{1} <link do strony></c>\n",
         "💡 Przykłady:",
-        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://facebook.com/hunterazarx</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
@@ -884,7 +900,7 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
         "✨ <c>{1} <link do skrócenia></c>\n",
         "💡 Przykłady:",
-        "⭐ <c>{1} https://facebook.com/confirmed2iq</c>",
+        "⭐ <c>{1} https://facebook.com/hunterazarx</c>",
         "⭐ <c>{1} https://github.com/AmbientBot-xyz</c>",
         "⭐ <c>{1} https://reddit.com/r/linux</c>",
       ],
@@ -895,7 +911,7 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
         "✨ <c>{1} <język docelowy> <tekst do przetłumaczenia></c>\n",
         "💡 Przykłady:",
-        "⭐ <c>{1} en Ambient jest najlepszy</c>",
+        "⭐ <c>{1} en To jest przykładowy tekst</c>",
       ],
       done: [
         "{0} Oto wynik tłumaczenia:\n", //
