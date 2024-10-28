@@ -35,16 +35,23 @@ export default {
     mentionedNotUser: "❌ Oznaczony użytkownik nigdy nie skorzystał z Ambienta.",
     commandNotFound: "❌ Nie odnaleziono komendy! Wpisz <c>{0}</c> aby uzyskać listę dostępnych komend.",
     unexpectedArgs: "❌ Ta komenda nie przyjmuje żadnych argumentów!",
+    commandUnavailable:
+      "👨🏻‍🍳 Ta komenda nie jest jeszcze dostępna, dołącz na nasz <c>serwer Discord</c> aby być na bieżąco z nowościami w Ambiencie i nie pominąć momentu ukończenia prac nad tą funkcją: {0}",
     groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych!",
     groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
     teamMemberOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
-    premiumOnly: "❌ Ta komenda dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
+    premiumOnly: "❌ Ta komenda dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
     goodNight: "🥱 Dobranoc, <c>{0}</c>! 😴",
     happyBirthday: "🎂 Wszystkiego najlepszego, <c>{0}</c>! 🥳",
     outOfRange: "❌ Wybrana pozycja nie istnieje! (max. <c>{0}</c>, wybrano <c>{1}</c>)",
     botAdminRequired: "❌ Bot musi być administratorem grupy aby skorzystać z tej komendy.",
     nsfwNotAllowed: "❌ Treści NSFW nie są dostępne w tej grupie, sprawdź komendę <c>{0}</c>.",
     userBlacklisted: "🫨 Nie możesz korzystać z <c>Ambienta</c>, ponieważ znajdujesz się na <c>czarnej liście</c>.",
+    userPurplelisted: [
+      "😤 W tej grupie znajdują się osoby, które zostały dodane do fioletowej listy. Korzystanie z bota nie będzie możliwe do momentu usunięcia z konwersacji poniższych członków:\n",
+      "{0}",
+      "\n⏳ Grupa jest sprawdzana pod kątem obecności osób na fioletowej liście co <c>5 minut</c>. Kolejne sprawdzenie odbędzie się za <c>⌚ {1}</c> i <c>{2}</c>.",
+    ],
   },
   commands: {
     alpaca: {
@@ -135,6 +142,33 @@ export default {
       disabled: "😌 Pomyślnie wyłączono komendy NSFW w tej grupie!",
       enabled: "♨ Pomyślnie włączono komendy NSFW w tej grupie!",
     },
+    bet: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
+        "✨ <c>{1} <obstawiane 🪙> <przewidywana liczba></c>\n",
+        "✨ Jeśli wylosowana liczba będzie mniejsza od Twojej przewidywanej liczby, zachowasz swoje 🪙 i otrzymasz nagrodę. W przeciwnym wypadku stracisz obstawione 🪙.\n",
+        "✨ Im mniejszą liczbę wybierzesz, tym większa będzie Twoja nagroda, jeśli wygrasz.\n",
+        "✨ Przewidywana liczba nie może być mniejsza niż <c>1</c>, ani większa od <c>90</c>.\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} 420 69</c>",
+        "⭐ <c>{1} 50 1</c>",
+        "⭐ <c>{1} 1337 90</c>",
+      ],
+      notEnoughCoins: "❌ Nie posiadasz wystarczającej ilości 🪙! (potrzebne: <c>{1} 🪙</c> {0} posiadane: <c>{2} 🪙</c> {0} brakujące: <c>{3} 🪙</c>)",
+      victory: ["📈 Wygrał{0}ś <c>{1} 🪙</c>, masz teraz <c>{2} 🪙</c>.\n", "🎰 Wylosowana liczba: <c>{3}</c>"],
+      loss: ["📉 Przegrał{0}ś <c>{1} 🪙</c>, masz teraz <c>{2} 🪙</c>.\n", "🎰 Wylosowana liczba: <c>{3}</c>"],
+    },
+    daily: {
+      cooldown: "🙄 <c>{0}</c>, kolejne darmowe 🪙 będziesz {1} otrzymać za <c>⌚ {2}</c>, <c>{3}</c> i <c>{4}</c>.",
+      received: [
+        "{0} <c>{1}</c>, otrzymał{2}ś <c>{3}</c> darmowych 🪙! Posiadasz teraz <c>{4} 🪙</c>. Kolejne darmowe 🪙 będziesz {5} otrzymać za <c>⌚ 24 godziny</c>.\n",
+        "🤑 Odbieraj regularnie darmowe monety aby zyskiwać bonus za każdy kolejny dodatkowy dzień!",
+      ],
+      receivedWithBonus: [
+        "{0} <c>{1}</c>, otrzymał{2}ś <c>{3}</c> darmowych 🪙 (w tym dodatkowo <c>{4} 🪙</c> za odbieranie ich <c>{5}</c> dzień z rzędu)! Posiadasz teraz <c>{6} 🪙</c>. Kolejne darmowe 🪙 będziesz {7} otrzymać za <c>⌚ 24 godziny</c>.\n",
+        "🤑 Odbieraj regularnie darmowe monety aby zyskiwać bonus za każdy kolejny dodatkowy dzień!",
+      ],
+    },
     achievement: {
       empty: "❌ Musisz podać treść osiągnięcia! (max. <c>{0}</c> znaki)",
       mentions: "❌ Treść osiągnięcia nie może zawierać wzmianek!",
@@ -204,7 +238,7 @@ export default {
       "⏳ Czas działania: <c>{8}</c>",
       "🏓 Ping: <c>{9} ms</c>",
       "👑 Konta Premium: <c>{10}</c>",
-      "💝 Stan Premium: {11}",
+      "💎 Stan Premium: {11}",
       "🤖 Uruchomione boty: <c>{12}</c>",
       "✨ Jądro: <c>{13}</c>",
       "🔌 Klient: <c>{14}</c>",
@@ -256,15 +290,16 @@ export default {
         "{0} Lista dostępnych komend (<c>{1}</c>):\n",
         "🦊 Zwierzęta (<c>{2}</c>): {3}\n",
         "⚙️ Konfiguracja (<c>{4}</c>): {5}\n",
-        "👾 Zabawa (<c>{6}</c>): {7}\n",
-        "ℹ Informacje (<c>{8}</c>): {9}\n",
-        "🔞 NSFW (<c>{10}</c>): {11}\n",
-        "💝 Premium (<c>{12}</c>): {13}\n",
-        "📸 Społecznościowe (<c>{14}</c>): {15}\n",
-        "🛠️ Narzędzia (<c>{16}</c>): {17}\n",
-        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{18} <nazwa komendy></c>, np. <c>{18} {19}</c>.",
-        "\n📱 Ten bot został stworzony <c>całkowicie za darmo</c> na stronie {20}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
-        "\n🤗 Dołącz na nasz <c>serwer Discord</c> aby być na bieżąco z nowościami dotyczącymi <c>Ambienta</c>, a także uzyskać pomoc i odpowiedzi na pytania: {21}",
+        "🪙 Ekonomia (<c>{6}</c>): {7}\n",
+        "👾 Zabawa (<c>{8}</c>): {9}\n",
+        "ℹ Informacje (<c>{10}</c>): {11}\n",
+        "🔞 NSFW (<c>{12}</c>): {13}\n",
+        "💎 Premium (<c>{14}</c>): {15}\n",
+        "📸 Społecznościowe (<c>{16}</c>): {17}\n",
+        "🛠️ Narzędzia (<c>{18}</c>): {19}\n",
+        "✨ Aby zobaczyć szczegółowe informacje na temat wybranej komendy, wpisz <c>{20} <nazwa komendy></c>, np. <c>{20} {21}</c>.",
+        "\n📱 Ten bot został stworzony <c>całkowicie za darmo</c> na stronie {22}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
+        "\n🤗 Dołącz na nasz <c>serwer Discord</c> aby być na bieżąco z nowościami dotyczącymi <c>Ambienta</c>, a także uzyskać pomoc i odpowiedzi na pytania: {23}",
       ],
       about: [
         "{0} Informacje o komendzie <c>{1}</c>:\n", //
@@ -390,7 +425,7 @@ export default {
         "🏷 Blokada zmiany nazwy grupy: <c>{6}</c>",
         "🖼️ Blokada zmiany zdjęcia grupy: <c>{4}</c>",
         "🎨 Blokada zmiany motywu grupy: <c>{5}</c>",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
+        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
         "\n⚙ Aby zmienić ustawienia, wpisz <c>{7} zmień</c>.",
       ],
       firstSettingQuestion: [
@@ -430,14 +465,14 @@ export default {
         "\n🪄 Napisz tylko liczbę odpowiadającą wybranemu ustawieniu, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwsze ustawienie.",
       ],
       saved: "✅ Ustawienia funkcji ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków zostały pomyślnie zapisane!",
-      premiumMissing: "⚠ Uwaga! Funkcja ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków nie będzie działała, ponieważ wymaga ona posiadania <c>💝 Ambienta Premium</c>!",
+      premiumMissing: "⚠ Uwaga! Funkcja ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
     },
     invitation: {
       status: [
         "{0} Konfiguracja linku do zaproszenia do grupy:\n", //
         "🔗 Aktualny link: {1}",
         "🧮 Liczba użyć: <c>{2}</c>",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
+        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
         "\n🆔 Aby włączyć lub zmienić link do zaproszenia do grupy, wpisz <c>{3} <nowe ID zaproszenia></c>.",
         "\n🚪 Aby wyłączyć link do zaproszenia do grupy, wpisz <c>{3} off</c>.",
       ],
@@ -448,7 +483,7 @@ export default {
       saved: "✅ ID zaproszenia do grupy zostało pomyślnie ustawione na <c>{0}</c>! Aktualny link do dołączenia do grupy to {1}",
       disabled: "🚪 Funkcja zaproszeń do grupy została pomyślnie wyłączona!",
       groupAdminOnly: "❌ Ustawienia dotyczące zaproszenia do grupy mogą zostać zmienione tylko przez administratorów grupy!",
-      premiumMissing: "⚠ Uwaga! Funkcja zaproszeń do grupy nie będzie działała, ponieważ wymaga ona posiadania <c>💝 Ambienta Premium</c>!",
+      premiumMissing: "⚠ Uwaga! Funkcja zaproszeń do grupy nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
       joinRequestedUser: [
         "🚪 <c>{0}</c> chce dołączyć do tej grupy korzystając z linku zaproszenia, sprawdź oczekujące prośby.\n", //
         "🤗 Ten użytkownik korzysta z Ambienta od <c>{3}</c> {2} <c>{4}</c>.",
@@ -468,7 +503,7 @@ export default {
     },
     premium: [
       "{0} Możesz wesprzeć <c>Ambienta</c> dowolną kwotą wysyłając przelew pod numer telefonu <c>{1}</c> korzystając z BLIKa. Jeśli chcesz, aby ten bot w nagrodę za wsparcie uzyskał dostęp do wyjątkowych funkcji dostępnych tylko dla użytkowników wersji Premium, wyślij jednorazowo co najmniej <c>{2}</c> podając w tytule lub odbiorcy identyfikator Premium <c>{3}</c>.\n",
-      "⚠ Uwaga! Ważność Premium sumuje się - każde <c>{2}</c> to dodatkowe <c>{4}</c>. Premium zostanie nadane w ciągu <c>15 minut</c> od otrzymania przelewu, w razie pytań lub problemów dołącz na nasz <c>serwer Discord</c>: {5}\n",
+      "⚠ Uwaga! Ważność Premium sumuje się - każde <c>{2}</c> to dodatkowo <c>{4}</c>. Premium zostanie nadane w ciągu <c>15 minut</c> od otrzymania przelewu, w razie pytań lub problemów dołącz na nasz <c>serwer Discord</c>: {5}\n",
       "💓 Obecny stan Premium: {6}\n",
       "👑 Obecne konta Premium: <c>{7}</c>\n",
       "✨ Potrzebne dane zostały wysłane poniżej w <c>oddzielnych wiadomościach</c> w celu łatwiejszego skopiowania ich.\n",
@@ -498,7 +533,7 @@ export default {
         "👮🏻‍♂️ Przywracanie wiadomości administracji: <c>{2}</c>",
         "📎 Załączniki jako linki: <c>{3}</c>",
         "🔒 Przywracanie w wiadomościach prywatnych do administracji: <c>{4}</c>",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💝 Ambiencie Premium</c>!",
+        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w <c>💎 Ambiencie Premium</c>!",
         "\n⚙ Aby zmienić ustawienia, wpisz <c>{5} zmień</c>.",
       ],
       firstSettingQuestion: [
@@ -527,7 +562,7 @@ export default {
       ],
       disabled: "📴 Funkcja przywracania usuniętych wiadomości została pomyślnie wyłączona!",
       saved: "✅ Ustawienia funkcji przywracania usuniętych wiadomości zostały pomyślnie zapisane!",
-      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💝 Ambienta Premium</c>!",
+      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
       restored: [
         "👀 <c>{0}</c> usun{1} wiadomość!", //
         "\n💡 Użyj komendy <c>{2}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
@@ -544,6 +579,35 @@ export default {
         "🕰 Usunięto po: {8}",
         "📜 Treść wiadomości: <c>{9}</c>",
         "\n📎 Załączniki:\n{10}",
+      ],
+    },
+    roblox: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
+        "✨ <c>{1} <nazwa użytkownika></c>\n",
+        "💡 Przykłady:",
+        "⭐ <c>{1} vb4ks</c>",
+        "⭐ <c>{1} wxqa0a</c>",
+        "⭐ <c>{1} YoukiSws</c>",
+      ],
+      notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",
+      collecting: "⏳ Zbieram informacje o użytkowniku <c>@{0}</c>...",
+      done: [
+        "{0} Informacje o profilu <c>@{1}</c> w Roblox:\n",
+        "🫡 Pełna nazwa: <c>{2}</c>",
+        "🆎 Biografia: <c>{3}</c>",
+        "💎 Roblox Premium: <c>{4}</c>",
+        "🚫 Zbanowane: <c>{5}</c>",
+        "🤔 Zweryfikowane: <c>{6}</c>",
+        "🤩 Obserwujących: <c>{7}</c>",
+        "👀 Obserwowanych: <c>{8}</c>",
+        "🫂 Znajomi: <c>{9}</c>",
+        "🔗 Profil: {10}",
+        "➕ Data utworzenia konta: <c>{12}</c> {11} <c>{13}</c>",
+        "👻 Data ostatniej aktywności: <c>{14}</c> {11} <c>{15}</c>",
+        "🎭 Poprzednie nazwy: {16}",
+        "🙋🏼‍♀️ Teraz online: <c>{17}</c>",
+        "🎮 {18} aktywność: {19}",
       ],
     },
     tts: {
@@ -675,7 +739,7 @@ export default {
       notListeningMentioned: "❌ <c>{0}</c> niczego aktualnie nie słucha.",
       listeningLocal: "❌ <c>{0}</c> słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",
       unableToPlay: "❌ Nie udało nam się odtworzyć utworu na Twoim koncie Spotify.",
-      premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta <c>💝 Spotify Premium</c>!",
+      premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta <c>💎 Spotify Premium</c>!",
       emptyResults: "❌ Nie znaleziono żadnych pozycji pasujących do Twojego zapytania!",
       selectionTimeout: "❌ Nie wybrano żadnej pozycji w ciągu <c>{0}</c> sekund! Spróbuj ponownie.",
       trackSelectionList: [
@@ -696,7 +760,7 @@ export default {
         "🌍 Kraj: <c>{2}</c>",
         "👀 Liczba obserwujących: <c>{3}</c>",
         "🔗 Profil: {4}",
-        "💝 Spotify Premium: <c>{5}</c>",
+        "💎 Spotify Premium: <c>{5}</c>",
       ],
       nowListening: [
         "🎧 <c>{0}</c> {1} <c>Aktualnie słucha</c>",
@@ -883,6 +947,22 @@ export default {
       ],
       done: "{0} Oto Twoja wklejka: {1}",
     },
+    purplelist: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n👮🏼‍♂️ <c>{1} dodaj <@użytkownik, link lub ID></c> {2} Pozwala dodać użytkownika do fioletowej listy",
+        "\n🗑 <c>{1} usuń <@użytkownik, link lub ID></c> {2} Pozwala usunąć użytkownika z fioletowej listy",
+        "\n📜 <c>{1} lista</c> {2} Pokazuje listę użytkowników znajdujących się obecnie na fioletowej liście",
+      ],
+      unableToAdd: "❌ <c>{0}</c> nie może zostać dodan{1} do fioletowej listy!",
+      alreadyAdded: "❌ <c>{0}</c> znajduje się już na fioletowej liście!",
+      notFound: "❌ <c>{0}</c> nie znajduje się na fioletowej liście!",
+      jailed: "❌ Poczekaj aż obecne operacje na fioletowej liście zakończą się!",
+      added: "✅ <c>{0}</c> został{1} pomyślnie dodan{2} do fioletowej listy!",
+      removed: "✅ <c>{0}</c> został{1} pomyślnie usunięt{2} z fioletowej listy!",
+      empty: "❌ Żaden użytkownik nie znajduje się obecnie na fioletowej liście!",
+      list: "{0} Lista użytkowników znajdujacych się obecnie na fioletowej liście (<c>{1}</c>):\n\n{2}",
+    },
     screenshot: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n",
@@ -951,6 +1031,22 @@ export default {
       ],
       deleted: "🗑 Administrator <c>{0}</c> usunął <c>{1}</c> ostrzeżenie o numerze <c>{2}</c>, pozostało {3} teraz <c>{4}</c> ostrzeżeń.",
       deletedAll: "🗑 Administrator <c>{0}</c> usunął <c>{1}</c> wszystkie ostrzeżenia.",
+    },
+    yellowlist: {
+      usage: [
+        "{0} Prawidłowe użycie komendy <c>{1}</c>:",
+        "\n👮🏼‍♂️ <c>{1} dodaj <@użytkownik, link lub ID></c> {2} Pozwala dodać użytkownika do żółtej listy",
+        "\n🗑 <c>{1} usuń <@użytkownik, link lub ID></c> {2} Pozwala usunąć użytkownika z żółtej listy",
+        "\n📜 <c>{1} lista</c> {2} Pokazuje listę użytkowników znajdujących się obecnie na żółtej liście",
+      ],
+      unableToAdd: "❌ <c>{0}</c> nie może zostać dodan{1} do żółtej listy!",
+      alreadyAdded: "❌ <c>{0}</c> znajduje się już na żółtej liście!",
+      notFound: "❌ <c>{0}</c> nie znajduje się na żółtej liście!",
+      jailed: "❌ Poczekaj aż obecne operacje na żółtej liście zakończą się!",
+      added: "✅ <c>{0}</c> został{1} pomyślnie dodan{2} do żółtej listy!",
+      removed: "✅ <c>{0}</c> został{1} pomyślnie usunięt{2} z żółtej listy!",
+      empty: "❌ Żaden użytkownik nie znajduje się obecnie na żółtej liście!",
+      list: "{0} Lista użytkowników znajdujacych się obecnie na żółtej liście (<c>{1}</c>):\n\n{2}",
     },
   },
 };
