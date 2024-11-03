@@ -86,9 +86,17 @@ export default {
       searching: "⏳ Szukam zdjęcia żaby...",
       done: "{0} Oto losowe zdjęcie żaby autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
+    hamster: {
+      searching: "⏳ Szukam zdjęcia chomika...",
+      done: "{0} Oto losowe zdjęcie chomika autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
     lizard: {
       searching: "⏳ Szukam zdjęcia jaszczurki...",
       done: "{0} Oto losowe zdjęcie jaszczurki autorstwa <c>{1}</c> z <c>{2}</c>:",
+    },
+    monkey: {
+      searching: "⏳ Szukam zdjęcia małpy...",
+      done: "{0} Oto losowe zdjęcie małpy autorstwa <c>{1}</c> z <c>{2}</c>:",
     },
     penguin: {
       searching: "⏳ Szukam zdjęcia pingwina...",
@@ -334,24 +342,24 @@ export default {
     top: {
       usage: [
         "{0} Prawidłowe użycie komendy <c>{1}</c>:", //
-        "\n🐒 <c>{1} oznaczenia</c> {2} Pokazuje top 15 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie",
-        "\n✉ <c>{1} wiadomości</c> {2} Pokazuje top 15 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie",
-        "\n🪄 <c>{1} komendy</c> {2} Pokazuje top 15 użytkowników, którzy wykonali najwięcej komend w tej grupie",
+        "\n🐒 <c>{1} oznaczenia</c> {2} Pokazuje top {3} użytkowników, którzy zostali najwięcej oznaczeni w tej grupie",
+        "\n✉ <c>{1} wiadomości</c> {2} Pokazuje top {3} użytkowników, którzy wysłali najwięcej wiadomości w tej grupie",
+        "\n🪄 <c>{1} komendy</c> {2} Pokazuje top {3} użytkowników, którzy wykonali najwięcej komend w tej grupie",
       ],
       mentions: [
-        "🐒 Top 15 użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
-        "\n{0}\n",
-        "🧮 Jesteś <c>#{1}</c> w rankingu.",
+        "🐒 Top {0} użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
+        "\n{1}\n",
+        "🧮 Jesteś <c>#{2}</c> w rankingu.",
       ],
       messages: [
-        "✉ Top 15 użytkowników, którzy wysłali najwięcej wiadomości w tej grupie:", //
-        "\n{0}\n",
-        "🧮 Jesteś <c>#{1}</c> w rankingu.",
+        "✉ Top {0} użytkowników, którzy wysłali najwięcej wiadomości w tej grupie:", //
+        "\n{1}\n",
+        "🧮 Jesteś <c>#{2}</c> w rankingu.",
       ],
       commands: [
-        "🪄 Top 15 użytkowników, którzy wykonali najwięcej komend w tej grupie:", //
-        "\n{0}\n",
-        "🧮 Jesteś <c>#{1}</c> w rankingu.",
+        "🪄 Top {0} użytkowników, którzy wykonali najwięcej komend w tej grupie:", //
+        "\n{1}\n",
+        "🧮 Jesteś <c>#{2}</c> w rankingu.",
       ],
     },
     weather: {
@@ -564,21 +572,21 @@ export default {
       saved: "✅ Ustawienia funkcji przywracania usuniętych wiadomości zostały pomyślnie zapisane!",
       premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania <c>💎 Ambienta Premium</c>!",
       restored: [
-        "👀 <c>{0}</c> usun{1} wiadomość!", //
-        "\n💡 Użyj komendy <c>{2}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
-        "📨 Data wysłania: <c>{4}</c> {3} <c>{5}</c>",
-        "📮 Data usunięcia: <c>{6}</c> {3} <c>{7}</c>",
-        "🕰 Usunięto po: {8}",
-        "📜 Treść wiadomości: <c>{9}</c>",
+        "👀 <c>{0}</c> usun{1} wiadomość w grupie <c>{2}</c>!", //
+        "\n💡 Użyj komendy <c>{3}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
+        "📨 Data wysłania: <c>{5}</c> {4} <c>{6}</c>",
+        "📮 Data usunięcia: <c>{7}</c> {4} <c>{8}</c>",
+        "🕰 Usunięto po: {9}",
+        "📜 Treść wiadomości: <c>{10}</c>",
       ],
       restoredAttachments: [
-        "👀 <c>{0}</c> usun{1} wiadomość!", //
-        "\n💡 Użyj komendy <c>{2}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
-        "📨 Data wysłania: <c>{4}</c> {3} <c>{5}</c>",
-        "📮 Data usunięcia: <c>{6}</c> {3} <c>{7}</c>",
-        "🕰 Usunięto po: {8}",
-        "📜 Treść wiadomości: <c>{9}</c>",
-        "\n📎 Załączniki:\n{10}",
+        "👀 <c>{0}</c> usun{1} wiadomość w grupie <c>{2}</c>!", //
+        "\n💡 Użyj komendy <c>{3}</c> aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
+        "📨 Data wysłania: <c>{5}</c> {4} <c>{6}</c>",
+        "📮 Data usunięcia: <c>{7}</c> {4} <c>{8}</c>",
+        "🕰 Usunięto po: {9}",
+        "📜 Treść wiadomości: <c>{10}</c>",
+        "\n📎 Załączniki:\n{11}",
       ],
     },
     roblox: {
@@ -586,9 +594,9 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
         "✨ <c>{1} <nazwa użytkownika></c>\n",
         "💡 Przykłady:",
-        "⭐ <c>{1} vb4ks</c>",
+        "⭐ <c>{1} HizoreQ</c>",
+        "⭐ <c>{1} Magicznykonik11</c>",
         "⭐ <c>{1} wxqa0a</c>",
-        "⭐ <c>{1} YoukiSws</c>",
       ],
       notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",
       collecting: "⏳ Zbieram informacje o użytkowniku <c>@{0}</c>...",
@@ -622,9 +630,11 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
         "✨ <c>{1} <nazwa użytkownika></c>\n",
         "💡 Przykłady:",
-        "⭐ <c>{1} dzejdes</c>",
         "⭐ <c>{1} existencefornoreason</c>",
         "⭐ <c>{1} lenosz_</c>",
+        "⭐ <c>{1} negatywny</c>",
+        "⭐ <c>{1} szczurotolover</c>",
+        "⭐ <c>{1} yungskimmy9797</c>",
       ],
       notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",
       collecting: "⏳ Zbieram informacje o użytkowniku <c>@{0}</c>...",
@@ -903,6 +913,7 @@ export default {
         "\n👮🏼‍♂️ <c>{1} dodaj <@użytkownik, link lub ID></c> {2} Pozwala dodać użytkownika do czarnej listy",
         "\n🗑 <c>{1} usuń <@użytkownik, link lub ID></c> {2} Pozwala usunąć użytkownika z czarnej listy",
         "\n📜 <c>{1} lista</c> {2} Pokazuje listę użytkowników znajdujących się obecnie na czarnej liście",
+        "\n🏆 <c>{1} top</c> {2} Pokazuje top administratorów, którzy dodali najwięcej osób do czarnej listy",
       ],
       unableToAdd: "❌ <c>{0}</c> nie może zostać dodan{1} do czarnej listy!",
       alreadyAdded: "❌ <c>{0}</c> znajduje się już na czarnej liście!",
@@ -912,6 +923,11 @@ export default {
       removed: "✅ <c>{0}</c> został{1} pomyślnie usunięt{2} z czarnej listy!",
       empty: "❌ Żaden użytkownik nie znajduje się obecnie na czarnej liście!",
       list: "{0} Lista użytkowników znajdujacych się obecnie na czarnej liście (<c>{1}</c>):\n\n{2}",
+      top: [
+        "🏆 Top administratorzy, którzy dodali najwięcej osób do czarnej listy:", //
+        "\n{0}\n",
+        "🧮 Na czarnej liście znajduje się obecnie <c>{1}</c> użytkownik{2}, jesteś <c>#{3}</c> w rankingu.",
+      ],
     },
     everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
     kick: {
@@ -935,6 +951,7 @@ export default {
         "✨ <c>{1} <@użytkownik (opcjonalnie)> <nowy nick></c>",
       ],
       tooLong: "❌ Podany nick jest zbyt długi! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
+      same: "❌ Podany nick jest taki sam jak obecnie ustawiony!",
       doneSetOwn: "{0} Twój nick został pomyślnie ustawiony na <c>{1}</c>!",
       doneSetOther: "{0} Nick <c>{1}</c> został pomyślnie ustawiony na <c>{2}</c>!",
       doneChangedOwn: "{0} Twój nick został pomyślnie zmieniony z <c>{1}</c> na <c>{2}</c>!",

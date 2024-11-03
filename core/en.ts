@@ -86,9 +86,17 @@ export default {
       searching: "⏳ Searching for a photo of a frog...",
       done: "{0} Here is a random photo of a frog by <c>{1}</c> from <c>{2}</c>:",
     },
+    hamster: {
+      searching: "⏳ Searching for a photo of a hamster...",
+      done: "{0} Here is a random photo of a hamster by <c>{1}</c> from <c>{2}</c>:",
+    },
     lizard: {
       searching: "⏳ Searching for a photo of a lizard...",
       done: "{0} Here is a random photo of a lizard by <c>{1}</c> from <c>{2}</c>:",
+    },
+    monkey: {
+      searching: "⏳ Searching for a photo of a monkey...",
+      done: "{0} Here is a random photo of a monkey by <c>{1}</c> from <c>{2}</c>:",
     },
     penguin: {
       searching: "⏳ Searching for a photo of the penguin...",
@@ -334,24 +342,24 @@ export default {
     top: {
       usage: [
         "{0} Correct usage of command <c>{1}</c>:",
-        "\n🐒 <c>{1} mentions</c> {2} Shows the top 15 users who have been mentioned the most in this group",
-        "\n✉ <c>{1} messages</c> {2} Shows the top 15 users who sent the most messages in this group",
-        "\n🪄 <c>{1} commands</c> {2} Shows the top 15 users who executed the most commands in this group",
+        "\n🐒 <c>{1} mentions</c> {2} Shows the top {3} users who have been mentioned the most in this group",
+        "\n✉ <c>{1} messages</c> {2} Shows the top {3} users who sent the most messages in this group",
+        "\n🪄 <c>{1} commands</c> {2} Shows the top {3} users who executed the most commands in this group",
       ],
       mentions: [
-        "🐒 Top 15 users who have been mentioned the most in this group:", //
-        "\n{0}\n",
-        "🧮 You're <c>#{1}</c> in the ranking.",
+        "🐒 Top {0} users who have been mentioned the most in this group:", //
+        "\n{1}\n",
+        "🧮 You're <c>#{2}</c> in the ranking.",
       ],
       messages: [
-        "✉ Top 15 users who sent the most messages in this group:", //
-        "\n{0}\n",
-        "🧮 You're <c>#{1}</c> in the ranking.",
+        "✉ Top {0} users who sent the most messages in this group:", //
+        "\n{1}\n",
+        "🧮 You're <c>#{2}</c> in the ranking.",
       ],
       commands: [
-        "🪄 Top 15 users who executed the most commands in this group:", //
-        "\n{0}\n",
-        "🧮 You're <c>#{1}</c> in the ranking.",
+        "🪄 Top {0} users who executed the most commands in this group:", //
+        "\n{1}\n",
+        "🧮 You're <c>#{2}</c> in the ranking.",
       ],
     },
     weather: {
@@ -513,21 +521,21 @@ export default {
       saved: "✅ Restoration of deleted messages feature settings has been successfully saved!",
       premiumMissing: "⚠ Warning! Restoration of deleted messages feature will not work as it requires <c>💎 Ambient Premium</c>!",
       restored: [
-        "👀 User <c>{0}</c> deleted a message!", //
-        "\n💡 Use <c>{2}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
-        "📨 Sent on: <c>{4}</c> {3} <c>{5}</c>",
-        "📮 Deleted on: <c>{6}</c> {3} <c>{7}</c>",
-        "🕰 Deleted after: {8}",
-        "📜 Message content: <c>{9}</c>",
+        "👀 User <c>{0}</c> deleted a message in <c>{2}</c> group!", //
+        "\n💡 Use <c>{3}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
+        "📨 Sent on: <c>{5}</c> {4} <c>{6}</c>",
+        "📮 Deleted on: <c>{7}</c> {4} <c>{8}</c>",
+        "🕰 Deleted after: {9}",
+        "📜 Message content: <c>{10}</c>",
       ],
       restoredAttachments: [
-        "👀 User <c>{0}</c> deleted a message!", //
-        "\n💡 Use <c>{2}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
-        "📨 Sent on: <c>{4}</c> {3} <c>{5}</c>",
-        "📮 Deleted on: <c>{6}</c> {3} <c>{7}</c>",
-        "🕰 Deleted after: {8}",
-        "📜 Message content: <c>{9}</c>",
-        "\n📎 Attachments:\n{10}",
+        "👀 User <c>{0}</c> deleted a message in <c>{2}</c> group!", //
+        "\n💡 Use <c>{3}</c> command to see detailed information on restoration of deleted messages feature configuration.\n",
+        "📨 Sent on: <c>{5}</c> {4} <c>{6}</c>",
+        "📮 Deleted on: <c>{7}</c> {4} <c>{8}</c>",
+        "🕰 Deleted after: {9}",
+        "📜 Message content: <c>{10}</c>",
+        "\n📎 Attachments:\n{11}",
       ],
     },
     roblox: {
@@ -535,9 +543,9 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n", //
         "✨ <c>{1} <username></c>\n",
         "💡 Examples:",
-        "⭐ <c>{1} vb4ks</c>",
+        "⭐ <c>{1} HizoreQ</c>",
+        "⭐ <c>{1} Magicznykonik11</c>",
         "⭐ <c>{1} wxqa0a</c>",
-        "⭐ <c>{1} YoukiSws</c>",
       ],
       notFound: "❌ The given username was not found!",
       collecting: "⏳ Collecting info about user <c>@{0}</c>...",
@@ -571,9 +579,11 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n", //
         "✨ <c>{1} <username></c>\n",
         "💡 Examples:",
-        "⭐ <c>{1} dzejdes</c>",
         "⭐ <c>{1} existencefornoreason</c>",
         "⭐ <c>{1} lenosz_</c>",
+        "⭐ <c>{1} negatywny</c>",
+        "⭐ <c>{1} szczurotolover</c>",
+        "⭐ <c>{1} yungskimmy9797</c>",
       ],
       notFound: "❌ The given username was not found!",
       collecting: "⏳ Collecting info about user <c>@{0}</c>...",
@@ -852,6 +862,7 @@ export default {
         "\n👮🏼‍♂️ <c>{1} add <@user, link or ID></c> {2} Allows to add a user to the blacklist",
         "\n🗑 <c>{1} remove <@user, link or ID></c> {2} Allows to remove a user from the blacklist",
         "\n📜 <c>{1} list</c> {2} Shows a list of users currently on the blacklist",
+        "\n🏆 <c>{1} top</c> {2} Shows the top administrators who have added the most people to the blacklist",
       ],
       unableToAdd: "❌ <c>{0}</c> cannot be added to the blacklist!",
       alreadyAdded: "❌ <c>{0}</c> is already blacklisted!",
@@ -861,6 +872,11 @@ export default {
       removed: "✅ <c>{0}</c> has been successfully removed from the blacklist!",
       empty: "❌ No user is currently blacklisted!",
       list: "{0} List of users currently blacklisted (<c>{1}</c>):\n\n{2}",
+      top: [
+        "🏆 Top administrators who have added the most people to the blacklist:",
+        "\n{0}\n",
+        "🧮 There {1} currently <c>{2}</c> user{3} on the blacklist, you're <c>#{4}</c> in the ranking.",
+      ],
     },
     everyone: "{0} Successfully mentioned {1} users!",
     kick: {
@@ -884,6 +900,7 @@ export default {
         "✨ <c>{1} <@user (optionally)> <new nickname></c>",
       ],
       tooLong: "❌ The given nickname is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      same: "❌ The given nickname is the same as the current one!",
       doneSetOwn: "{0} Your nickname has been successfully set to <c>{1}</c>!",
       doneSetOther: "{0} Nickname of <c>{1}</c> has been successfully set to <c>{2}</c>!",
       doneChangedOwn: "{0} Your nickname has been successfully changed from <c>{1}</c> to <c>{2}</c>!",
