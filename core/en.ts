@@ -684,6 +684,7 @@ export default {
         "\n🎶 <c>{1} youtube <@user (optionally)></c> {2} Sends the track you or the user mentioned are listening to from YouTube",
       ],
       alreadyConnected: "❌ You must disconnect your current account before connecting a new one!",
+      attemptingToSend: "⏳ We are attempting to send you a private message with a link to connect your Spotify account with Ambient, this may take a few seconds...",
       urlSent: "✅ We sent you a link to connect your Spotify account with Ambient in a private message, also check the <c>others</c> folder.",
       unableToSend: "🔌 We haven't been able to send you a private message, so we need to do it here. Here is the link to connect your Spotify account to Ambient: {0}",
       connectionUrl: "🔌 Here is the link to connect your Spotify account to Ambient: {0}",
@@ -694,8 +695,9 @@ export default {
       mustReconnectMentioned: "❌ <c>{0}</c> must reconnect Ambient to the Spotify account!",
       statsUnavailable: "❌ Statistics for your account are unavailable, the account was likely created recently or has been inactive for a long time.",
       statsUnavailableMentioned: "❌ Statistics for <c>{0}</c> are unavailable, the account was likely created recently or has been inactive for a long time.",
-      notListening: "❌ You're not listening to anything at the moment.",
-      notListeningMentioned: "❌ <c>{0}</c> is not currently listening to anything.",
+      notListening:
+        "❌ You're not listening to anything at the moment. If this is not true, make sure you do not have a private session enabled and restart the Spotify app on your device.",
+      notListeningMentioned: "❌ <c>{0}</c> is not currently listening to anything or is in a private session.",
       listeningLocal: "❌ <c>{0}</c> is currently listening to a local track, you cannot play it on your Spotify account.",
       unableToPlay: "❌ We couldn't play the song on your Spotify account.",
       premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires <c>💎 Spotify Premium</c> account!",
@@ -873,9 +875,9 @@ export default {
       empty: "❌ No user is currently blacklisted!",
       list: "{0} List of users currently blacklisted (<c>{1}</c>):\n\n{2}",
       top: [
-        "🏆 Top administrators who have added the most people to the blacklist:",
+        "🏆 Top administrators who have added the most people to the blacklist:", //
         "\n{0}\n",
-        "🧮 There {1} currently <c>{2}</c> user{3} on the blacklist, you're <c>#{4}</c> in the ranking.",
+        "🧮 There {1} currently <c>{2}</c> user{3} on the blacklist.",
       ],
     },
     everyone: "{0} Successfully mentioned {1} users!",
@@ -891,6 +893,8 @@ export default {
         "{0} Correct usage of command <c>{1}</c>:\n", //
         "✨ <c>{1} <new group name></c>",
       ],
+      tooLong: "❌ The given name is too long! (max. <c>{0}</c> characters, <c>{1}</c> entered)",
+      same: "❌ The given name is the same as the current one!",
       doneSet: "{0} Successfully set group name to <c>{1}</c>!",
       doneChanged: "{0} Successfully changed group name from <c>{1}</c> to <c>{2}</c>!",
     },
@@ -919,6 +923,7 @@ export default {
         "\n👮🏼‍♂️ <c>{1} add <@user, link or ID></c> {2} Allows to add a user to the purplelist",
         "\n🗑 <c>{1} remove <@user, link or ID></c> {2} Allows to remove a user from the purplelist",
         "\n📜 <c>{1} list</c> {2} Shows a list of users currently on the purplelist",
+        "\n🏆 <c>{1} top</c> {2} Shows the top administrators who have added the most people to the purplelist",
       ],
       unableToAdd: "❌ <c>{0}</c> cannot be added to the purplelist!",
       alreadyAdded: "❌ <c>{0}</c> is already purplelisted!",
@@ -928,6 +933,11 @@ export default {
       removed: "✅ <c>{0}</c> has been successfully removed from the purplelist!",
       empty: "❌ No user is currently purplelisted!",
       list: "{0} List of users currently purplelisted (<c>{1}</c>):\n\n{2}",
+      top: [
+        "🏆 Top administrators who have added the most people to the purplelist:", //
+        "\n{0}\n",
+        "🧮 There {1} currently <c>{2}</c> user{3} on the purplelist.",
+      ],
     },
     screenshot: {
       usage: [
@@ -1004,6 +1014,7 @@ export default {
         "\n👮🏼‍♂️ <c>{1} add <@user, link or ID></c> {2} Allows to add a user to the yellowlist",
         "\n🗑 <c>{1} remove <@user, link or ID></c> {2} Allows to remove a user from the yellowlist",
         "\n📜 <c>{1} list</c> {2} Shows a list of users currently on the yellowlist",
+        "\n🏆 <c>{1} top</c> {2} Shows the top administrators who have added the most people to the yellowlist",
       ],
       unableToAdd: "❌ <c>{0}</c> cannot be added to the yellowlist!",
       alreadyAdded: "❌ <c>{0}</c> is already yellowlisted!",
@@ -1013,6 +1024,11 @@ export default {
       removed: "✅ <c>{0}</c> has been successfully removed from the yellowlist!",
       empty: "❌ No user is currently yellowlisted!",
       list: "{0} List of users currently yellowlisted (<c>{1}</c>):\n\n{2}",
+      top: [
+        "🏆 Top administrators who have added the most people to the yellowlist:", //
+        "\n{0}\n",
+        "🧮 There {1} currently <c>{2}</c> user{3} on the yellowlist.",
+      ],
     },
   },
 };

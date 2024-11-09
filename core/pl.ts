@@ -735,6 +735,7 @@ export default {
         "\n🎶 <c>{1} youtube <@użytkownik (opcjonalnie)></c> {2} Wysyła utwór którego słuchasz Ty lub oznaczony użytkownik z YouTube",
       ],
       alreadyConnected: "❌ Musisz odłączyć obecne konto przed połączeniem nowego!",
+      attemptingToSend: "⏳ Próbujemy wysłać do Ciebie wiadomość prywatną z linkiem do połączenia konta Spotify z Ambientem, może to potrwać kilka sekund...",
       urlSent: "✅ Wysłaliśmy do Ciebie link do połączenia konta Spotify z Ambientem w wiadomości prywatnej, sprawdź również folder <c>inne</c>.",
       unableToSend: "🔌 Nie udało nam się wysłać do Ciebie wiadomości prywatnej, więc musimy zrobić to tutaj. Oto link do połączenia konta Spotify z Ambientem: {0}",
       connectionUrl: "🔌 Oto link do połączenia konta Spotify z Ambientem: {0}",
@@ -745,8 +746,9 @@ export default {
       mustReconnectMentioned: "❌ <c>{0}</c> musi ponownie połączyć Ambienta z kontem Spotify!",
       statsUnavailable: "❌ Statystyki dla Twojego konta są niedostępne, prawdopodobnie konto zostało utworzone niedawno lub było nieużywane od dłuższego czasu.",
       statsUnavailableMentioned: "❌ Statystyki dla konta <c>{0}</c> są niedostępne, prawdopodobnie konto zostało utworzone niedawno lub było nieużywane od dłuższego czasu.",
-      notListening: "❌ Niczego aktualnie nie słuchasz.",
-      notListeningMentioned: "❌ <c>{0}</c> niczego aktualnie nie słucha.",
+      notListening:
+        "❌ Niczego aktualnie nie słuchasz. Jeśli to nieprawda, upewnij się, że nie masz włączonej sesji prywatnej i uruchom ponownie aplikację Spotify na swoim urządzeniu.",
+      notListeningMentioned: "❌ <c>{0}</c> niczego aktualnie nie słucha lub ma włączoną sesję prywatną.",
       listeningLocal: "❌ <c>{0}</c> słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",
       unableToPlay: "❌ Nie udało nam się odtworzyć utworu na Twoim koncie Spotify.",
       premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta <c>💎 Spotify Premium</c>!",
@@ -926,7 +928,7 @@ export default {
       top: [
         "🏆 Top administratorzy, którzy dodali najwięcej osób do czarnej listy:", //
         "\n{0}\n",
-        "🧮 Na czarnej liście znajduje się obecnie <c>{1}</c> użytkownik{2}, jesteś <c>#{3}</c> w rankingu.",
+        "🧮 Na czarnej liście znajduje się obecnie <c>{1}</c> użytkownik{2}.",
       ],
     },
     everyone: "{0} Pomyślnie oznaczono {1} użytkowników!",
@@ -942,6 +944,8 @@ export default {
         "{0} Prawidłowe użycie komendy <c>{1}</c>:\n", //
         "✨ <c>{1} <nowa nazwa grupy></c>",
       ],
+      tooLong: "❌ Podana nazwa jest zbyt długa! (max. <c>{0}</c> znaków, podano <c>{1}</c>)",
+      same: "❌ Podana nazwa jest taka sama jak obecnie ustawiona!",
       doneSet: "{0} Pomyślnie nadano grupie nazwę <c>{1}</c>!",
       doneChanged: "{0} Pomyślnie zmieniono nazwę grupy z <c>{1}</c> na <c>{2}</c>!",
     },
@@ -970,6 +974,7 @@ export default {
         "\n👮🏼‍♂️ <c>{1} dodaj <@użytkownik, link lub ID></c> {2} Pozwala dodać użytkownika do fioletowej listy",
         "\n🗑 <c>{1} usuń <@użytkownik, link lub ID></c> {2} Pozwala usunąć użytkownika z fioletowej listy",
         "\n📜 <c>{1} lista</c> {2} Pokazuje listę użytkowników znajdujących się obecnie na fioletowej liście",
+        "\n🏆 <c>{1} top</c> {2} Pokazuje top administratorów, którzy dodali najwięcej osób do fioletowej listy",
       ],
       unableToAdd: "❌ <c>{0}</c> nie może zostać dodan{1} do fioletowej listy!",
       alreadyAdded: "❌ <c>{0}</c> znajduje się już na fioletowej liście!",
@@ -979,6 +984,11 @@ export default {
       removed: "✅ <c>{0}</c> został{1} pomyślnie usunięt{2} z fioletowej listy!",
       empty: "❌ Żaden użytkownik nie znajduje się obecnie na fioletowej liście!",
       list: "{0} Lista użytkowników znajdujacych się obecnie na fioletowej liście (<c>{1}</c>):\n\n{2}",
+      top: [
+        "🏆 Top administratorzy, którzy dodali najwięcej osób do fioletowej listy:", //
+        "\n{0}\n",
+        "🧮 Na fioletowej liście znajduje się obecnie <c>{1}</c> użytkownik{2}.",
+      ],
     },
     screenshot: {
       usage: [
@@ -1055,6 +1065,7 @@ export default {
         "\n👮🏼‍♂️ <c>{1} dodaj <@użytkownik, link lub ID></c> {2} Pozwala dodać użytkownika do żółtej listy",
         "\n🗑 <c>{1} usuń <@użytkownik, link lub ID></c> {2} Pozwala usunąć użytkownika z żółtej listy",
         "\n📜 <c>{1} lista</c> {2} Pokazuje listę użytkowników znajdujących się obecnie na żółtej liście",
+        "\n🏆 <c>{1} top</c> {2} Pokazuje top administratorów, którzy dodali najwięcej osób do żółtej listy",
       ],
       unableToAdd: "❌ <c>{0}</c> nie może zostać dodan{1} do żółtej listy!",
       alreadyAdded: "❌ <c>{0}</c> znajduje się już na żółtej liście!",
@@ -1064,6 +1075,11 @@ export default {
       removed: "✅ <c>{0}</c> został{1} pomyślnie usunięt{2} z żółtej listy!",
       empty: "❌ Żaden użytkownik nie znajduje się obecnie na żółtej liście!",
       list: "{0} Lista użytkowników znajdujacych się obecnie na żółtej liście (<c>{1}</c>):\n\n{2}",
+      top: [
+        "🏆 Top administratorzy, którzy dodali najwięcej osób do żółtej listy:", //
+        "\n{0}\n",
+        "🧮 Na żółtej liście znajduje się obecnie <c>{1}</c> użytkownik{2}.",
+      ],
     },
   },
 };
