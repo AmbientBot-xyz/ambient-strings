@@ -21,6 +21,7 @@ const language = {
     loading: "Loading...",
     logout: "Log out",
     home: "Home",
+    illbient: "Illbient Privacy policy",
     join: "Invitation to the group",
     notFound: "404",
     profile: "Your profile",
