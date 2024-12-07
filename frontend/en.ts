@@ -1,4 +1,4 @@
-const language = {
+export default {
   global: {
     switchLanguage: "Switch language / Zmień język",
     en: "English / angielski",
@@ -351,5 +351,3 @@ const language = {
     },
   },
 };
-
-export default language;
