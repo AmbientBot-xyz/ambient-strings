@@ -1015,6 +1015,7 @@ export default {
         "💡 Przykłady:",
         "⭐ <c>{1} en To jest przykładowy tekst</c>",
       ],
+      invalidTargetLanguage: "❌ Podany język docelowy jest nieprawidłowy!",
       done: [
         "{0} Oto wynik tłumaczenia:\n", //
         "🚰 Język źródłowy: <c>{1}</c>",

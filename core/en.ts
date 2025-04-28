@@ -964,6 +964,7 @@ export default {
         "💡 Examples:",
         "⭐ <c>{1} pl This is a sample text</c>",
       ],
+      invalidTargetLanguage: "❌ The target language specified is invalid!",
       done: [
         "{0} Here is translation result:\n", //
         "🚰 Source language: <c>{1}</c>",
