@@ -573,7 +573,7 @@ export default {
         "✨ *{1} <username>*\n",
         "💡 Examples:",
         "⭐ *{1} existencefornoreason*",
-        "⭐ *{1} janeksniezyn*",
+        "⭐ *{1} svjdnx*",
         "⭐ *{1} yyyshuhua*",
       ],
       notFound: "❌ The given username was not found!",

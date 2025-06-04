@@ -624,7 +624,7 @@ export default {
         "✨ *{1} <nazwa użytkownika>*\n",
         "💡 Przykłady:",
         "⭐ *{1} existencefornoreason*",
-        "⭐ *{1} janeksniezyn*",
+        "⭐ *{1} svjdnx*",
         "⭐ *{1} yyyshuhua*",
       ],
       notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",
