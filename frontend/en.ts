@@ -350,4 +350,12 @@ export default {
       renamed: "Successfully changed bot name.",
     },
   },
+  help: {
+    ytTutorial: "Instructional video on YouTube",
+    ytTutorialMore:
+      "This video shows you how to quickly and easily create your own Ambient bot on Messenger. A practical step-by-step guide that walks you through the entire process.",
+    discordServer: "Our Discord server",
+    discordServerMore:
+      "Still have questions or need help? Join our Discord server to chat with the Ambient community, ask questions, report issues, and get support. We talk about everything – from ideas for new features to casual discussions. You'll also find updates, events, and information about what's coming next.",
+  },
 };

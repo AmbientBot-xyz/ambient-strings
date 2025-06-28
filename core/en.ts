@@ -31,16 +31,14 @@ export default {
       "👋🏻 Hi, *{0}*! My name is *Ambient*, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the *{1}* command.\n\n🤗 Do you have questions or need help? You will find it on our *Discord server*, where you will also learn about news related to Ambient: {2}",
     welcomeGroup:
       "👋🏻 Hi! My name is *Ambient*, I am a secure, efficient and multifunctional bot for groups on Messenger. To see what I can do, use the *{1}* command.\n\n🤗 Do you have questions or need help? You will find it on our *Discord server*, where you will also learn about news related to Ambient: {2}",
-    mentionedNotMember: "❌ Mentioned user is not a member of this group!",
+    mentionedNotMember: "❌ Mentioned user is not a member of this group.",
     mentionedNotUser: "❌ Mentioned user has never used Ambient.",
-    commandNotFound: "❌ Command not found! Type *{0}* for a list of available commands.",
-    unexpectedArgs: "❌ This command takes no arguments!",
-    commandUnavailable:
-      "👨🏻‍🍳 This command is not yet available. Join our *Discord server* to stay updated on Ambient latest features and don't miss the moment when this functionality is completed: {0}",
-    groupOnly: "❌ This command can only be used in group conversations!",
-    groupAdminOnly: "❌ This command can only be used by group administrators!",
-    teamMemberOnly: "❌ You don't have permission to use this command!",
-    premiumOnly: "❌ This command is only available in *💎 Ambient Premium*!",
+    commandNotFound: "❌ Command not found. Type *{0}* for a list of available commands.",
+    unexpectedArgs: "❌ This command takes no arguments.",
+    groupOnly: "❌ This command can only be used in group conversations.",
+    groupAdminOnly: "❌ This command can only be used by group administrators.",
+    teamMemberOnly: "❌ You don't have permission to use this command.",
+    premiumOnly: "❌ This command is only available in *💎 Ambient Premium*.",
     goodNight: "🥱 Good night, *{0}*! 😴",
     happyBirthday: "🎂 Happy birthday, *{0}*! 🥳",
     outOfRange: "❌ Selected position does not exist! (max. *{0}*, *{1}* selected)",
@@ -51,6 +49,11 @@ export default {
       "😤 This group contains users who have been added to the purplelist. Using the bot will not be possible until the following members are removed from the conversation:\n",
       "{0}",
       "\n⏳ The group is checked for the presence of purplelisted users every *5 minutes*. Next check will take place in *⌚ {1}* and *{2}*.",
+    ],
+    announcement: [
+      "📣 Announcement from Ambient team:\n", //
+      "{0}",
+      "\n🤗 Join our *Discord server* to stay up to date with *Ambient* news, as well as get help and answers to your questions: {1}",
     ],
   },
   commands: {
@@ -163,8 +166,22 @@ export default {
         "⭐ *{1} 1337 90*",
       ],
       notEnoughCoins: "❌ You do not have enough 🪙! (required: *{1} 🪙* {0} owned: *{2} 🪙* {0} missing: *{3} 🪙*)",
-      victory: ["📈 You have won *{1} 🪙*, you now have *{2} 🪙*.\n", "🎰 Drawn number: *{3}*"],
-      loss: ["📉 You have lost *{1} 🪙*, you now have *{2} 🪙*.\n", "🎰 Drawn number: *{3}*"],
+      victory: [
+        "📈 You have won *{1} 🪙*, you now have *{2} 🪙*.\n", //
+        "🎰 Drawn number: *{3}*",
+      ],
+      loss: [
+        "📉 You have lost *{1} 🪙*, you now have *{2} 🪙*.\n", //
+        "🎰 Drawn number: *{3}*",
+      ],
+    },
+    catch: {
+      missingFishingRod: "❌ You don't have an active fishing rod! Use command *{0}* to buy a new one.",
+      missingBait: "❌ You don't have an active bait! Use command *{0}* to buy a new one.",
+      escaped: "💨 The fish got away! Try again.",
+      snapped: "⛓️‍💥 The line snapped! Try again.",
+      trash: "🗑️ You fished out *{1}*! Try again.",
+      success: "{0} You caught a *🎏 {2}* weighing *{4} kg* worth *{5} 🪙*! You now have *{6} 🪙*.",
     },
     daily: {
       cooldown: "🙄 *{0}*, you will be able to receive your next free 🪙 in *⌚ {2}*, *{3}* and *{4}*.",
@@ -176,6 +193,152 @@ export default {
         "{0} *{1}*, you have received *{3}* free 🪙 (including an extra *{4} 🪙* for collecting them *{5}* days in a row)! You now have *{6} 🪙*. You will be able to receive your next free 🪙 in *⌚ 24 hours*.\n",
         "🤑 Collect your free coins regularly to earn a bonus for each additional consecutive day!",
       ],
+    },
+    inventory: {
+      usage: [
+        "{0} Correct usage of command *{1}*:\n", //
+        "✨ *{1} <@user (optionally)>*",
+      ],
+      done: [
+        "{1} Info about inventory of *{2}*:", //
+        "\n🏦 _GENERAL_:",
+        "👛 Balance: *{3} 🪙*",
+        "📅 Last daily reward: {4}",
+        "🔥 Days in a row: *{5}*",
+        "\n🐟 _FISHING_:",
+        "🎣 Fishing rod: *{6}*",
+        "⏳ Remaining fishing rod uses: *{7}*",
+        "🪝 Bait: *{8}*",
+        "♾️ Remaining bait uses: *{9}*",
+        "⚖️ Caught fish: *{10}*",
+        "\n🎰 _CASINO_:",
+        "🎲 Last bet: {11}",
+        "📈 Bet victories: *{12}*",
+        "📉 Bet losses: *{13}*",
+        "\n🥷🏼 _ROBBERIES_:",
+        "💰 Successful robberies: *{14}*",
+        "🔒 Failed robberies: *{14}*",
+        "💥 Suffered robberies: *{15}*",
+        "🛡️ Defended robberies: *{16}*",
+        "🕵️ Last robbery: {18}",
+        "🦹 Last robbed: {20}",
+        "⛓️ Arrested: {21}",
+        "🧰 Robbery defense item: *{22}*",
+        "🎒 Robbery assist item: *{23}*",
+      ],
+    },
+    rank: {
+      usage: "@TODO",
+    },
+    rob: {
+      usage: [
+        "{0} Correct usage of command *{1}*:\n", //
+        "✨ *{1} <@user>*",
+      ],
+      arrested: "👮🏼 You can't rob now because you're arrested for another *⌚ {1}* and *{2}*.",
+      cooldown: "🏴‍☠️ You will be able to rob again in *⌚ {1}* and *{2}*.",
+      nothingNothingCaught:
+        "🚨 You tried to rob *{1}*, who had no protection, of *{4} 🪙*. Unfortunately, you had no tools and were caught by the police. You paid a fine of *{6} 🪙* and were arrested for *⌚ an hour*. You now have *{8} 🪙*.",
+      nothingNothingUncaught: "{0} *{1}* had no protection and you managed to rob them of *{4} 🪙* without using any additional tools! You now have *{5} 🪙*.",
+      nothingHighProofBeerCaught:
+        "🚨 You tried to rob *{1}*, who had no security, of *{4} 🪙*. Unfortunately, you were drunk and caught by the police. You paid a double fine of *{6} 🪙* and were arrested for *⌚ an hour*. You now have *{8} 🪙*.",
+      nothingHighProofBeerUncaught: "{0} *{1}* had no protection and you managed to rob them of *{4} 🪙* under the influence of alcohol! You now have *{5} 🪙*.",
+      nothingBribeForThePoliceCaught:
+        "🚨 You tried to rob *{1}*, who had no security, of *{4} 🪙*. Unfortunately, you were caught by the police, but you avoided a fine and arrest because you gave them a bribe.",
+      nothingBribeForThePoliceUncaught:
+        "{0} *{1}* had no protection and you managed to rob them of *{4} 🪙*! You kept your bribe for the police as it was not needed. You now have *{6} 🪙*.",
+      nothingFastCarCaught:
+        "🚨 *{0}* had no protection and you managed to rob them of *{3} 🪙*! You were caught by the police, but you managed to escape with the loot thanks to a fast car. You now have *{6} 🪙*.",
+      nothingFastCarUncaught: "{0} *{1}* had no protection and you managed to rob them of *{4} 🪙*! You kept your fast car as it was not needed. You now have *{6} 🪙*.",
+      steelPadlockNothingCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were caught by the police trying to open the padlock and were arrested for *⌚ an hour*.",
+      steelPadlockNothingUncaught: "🔒 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you came across a padlock that you could not open.",
+      steelPadlockHighProofBeerCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were caught by the police trying to open the padlock and were arrested for *⌚ an hour*.",
+      steelPadlockHighProofBeerUncaught: "🔒 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you came across a padlock that you could not open.",
+      steelPadlockBribeForThePoliceCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to open the padlock, but you avoided a fine and arrest because you gave them a bribe.",
+      steelPadlockBribeForThePoliceUncaught:
+        "🔒 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you came across a padlock that you could not open. You kept your bribe for the police as it was not needed.",
+      steelPadlockFastCarCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to open the padlock, but you managed to escape thanks to a fast car.",
+      steelPadlockFastCarUncaught:
+        "🔒 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you came across a padlock that you could not open. You kept your fast car as it was not needed.",
+      aggressiveDogNothingCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were caught by the police trying to avoid an aggressive dog and were arrested for *⌚ an hour*.",
+      aggressiveDogNothingUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were injured by an aggressive dog and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
+      aggressiveDogHighProofBeerCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were caught by the police trying to avoid an aggressive dog and were arrested for *⌚ an hour*.",
+      aggressiveDogHighProofBeerUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were injured by an aggressive dog and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
+      aggressiveDogBribeForThePoliceCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to avoid an aggressive dog, but you avoided a fine and arrest because you gave them a bribe.",
+      aggressiveDogBribeForThePoliceUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were injured by an aggressive dog and had to pay *{4} 🪙* for treatment. You kept your bribe for the police as it was not needed. You now have *{5} 🪙*.",
+      aggressiveDogFastCarCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to avoid an aggressive dog, but you managed to escape thanks to a fast car.",
+      aggressiveDogFastCarUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were attacked by an aggressive dog, but you managed to escape the bite thanks to a fast car.",
+      clusterBombNothingCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were caught by the police trying to avoid a cluster bomb and were arrested for *⌚ an hour*.",
+      clusterBombNothingUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
+      clusterBombHighProofBeerCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were caught by the police trying to avoid a cluster bomb and were arrested for *⌚ an hour*.",
+      clusterBombHighProofBeerUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
+      clusterBombBribeForThePoliceCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to avoid a cluster bomb, but you avoided a fine and arrest because you gave them a bribe.",
+      clusterBombBribeForThePoliceUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You kept your bribe for the police as it was not needed. You now have *{5} 🪙*.",
+      clusterBombFastCarCaught:
+        "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to avoid a cluster bomb, but you managed to escape thanks to a fast car.",
+      clusterBombFastCarUncaught:
+        "🐶 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were attacked by a cluster bomb, but you managed to escape the explosion thanks to a fast car.",
+    },
+    shop: {
+      summary: [
+        "{0} Items and facilities available for purchase:", //
+        "\n🎣 _FISHING RODS_:",
+        "1. {2} *{3}* {1} {4} 🪙",
+        "2. {5} *{6}* {1} {7} 🪙",
+        "3. {8} *{9}* {1} {10} 🪙",
+        "\n🪝 _BAITS_:",
+        "4. {11} *{12}* {1} {13} 🪙",
+        "5. {14} *{15}* {1} {16} 🪙",
+        "6. {17} *{18}* {1} {19} 🪙",
+        "\n🛡️ _PROTECTION AGAINST THIEVES_:",
+        "7. {20} *{21}* {1} {22} 🪙",
+        "8. {23} *{24}* {1} {25} 🪙",
+        "9. {26} *{27}* {1} {28} 🪙",
+        "\n🎒 _THEFT SUPPORT_:",
+        "10. {29} *{30}* {1} {31} 🪙",
+        "11. {32} *{33}* {1} {34} 🪙",
+        "12. {35} *{36}* {1} {37} 🪙",
+        "\n💡 Type *{38} info <number>* to see details about an item, or *{38} buy <number>* to purchase it.",
+      ],
+      invalidItemNumber: "❌ The item number provided is invalid!",
+      sameTypeItemAlreadyActive: "❌ You can't buy this item because you already have an active item of the same type: *{0} {1}*",
+      bought: "✅ You bought *{1} {2}* for *{3} 🪙*! You now have *{4} 🪙*.",
+      details: [
+        "{0} Info about item *{1}*:\n", //
+        "🏷️ Description: *{2}*",
+        "📐 Characteristics: *{3}*",
+        "🛒 Price: *{4}* 🪙",
+        "\n💡 To buy this item, type *{5} buy {6}*.",
+      ],
+    },
+    tip: {
+      usage: [
+        "{0} Correct usage of command *{1}*:\n", //
+        "✨ *{1} @user <amount of 🪙>*\n",
+        "💡 Examples:",
+        "⭐ *{1} @user 69*",
+        "⭐ *{1} @user 4.20*",
+        "⭐ *{1} @user 13.37*",
+      ],
+      done: "✅ Successfully tipped *{1} 🪙* to *{2}*! You now have *{3} 🪙*.",
     },
     achievement: {
       empty: "❌ You must enter the text of the achievement! (max. *{0}* characters)",
@@ -201,13 +364,6 @@ export default {
       done: "{0} The pair of people who are best suited for each other in this group are *{1}* and *{2}* (*{3}%*) 💍",
     },
     diceroll: "{0} Result of the dice roll: *{1}*",
-    heart: {
-      empty: "❌ You must enter the text of the heart! (max. *{0}* characters)",
-      mentions: "❌ The content of the heart must not contain any mentions!",
-      tooLong: "❌ The content of the heart is too long! (max. *{0}* characters, *{1}* entered)",
-      generating: "⏳ Generating heart...",
-      done: "{0} Here is the generated heart:",
-    },
     meme: {
       searching: "⏳ Searching a random meme...",
       done: "{0} Here is a random meme by *{1}* from *{2}*:",
@@ -250,15 +406,17 @@ export default {
       "🤖 Running bots: *{12}*",
       "✨ Core: *{13}*",
       "🔌 Client: *{14}*",
-      "📦 Instance: *{15}*",
-      "🪁 Core environment: *{16}*",
-      "🧇 Client environment: *{17}*",
-      "🏷 TypeScript: *{18}*",
-      "🆙 Update date: *{19}* {3} *{20}*",
-      "🍒 Creation date: *{21}*",
-      "😼 Author: *{22}*",
-      "\n📱 This bot was created *completely free* on {23}, you can also do it to use it on your groups!",
-      "\n🤗 Join our *Discord server* to stay up to date with *Ambient* news, as well as get help and answers to your questions: {24}",
+      "🪙 Economy: *{15}*",
+      "📦 Instance: *{16}*",
+      "🪁 Core environment: *{17}*",
+      "🧇 Client environment: *{18}*",
+      "👛 Economy environment: *{19}*",
+      "🏷 TypeScript: *{20}*",
+      "🆙 Update date: *{21}* {3} *{22}*",
+      "🍒 Creation date: *{23}*",
+      "😼 Author: *{24}*",
+      "\n📱 This bot was created *completely free* on {25}, you can also do it to use it on your groups!",
+      "\n🤗 Join our *Discord server* to stay up to date with *Ambient* news, as well as get help and answers to your questions: {26}",
     ],
     group: {
       collecting: "⏳ Collecting info about group...",
@@ -286,7 +444,14 @@ export default {
       ],
     },
     help: {
-      usage: ["{0} Correct usage of command *{1}*:\n", "✨ *{1} <command name (optionally)>*\n", "💡 Examples:", "⭐ *{1}*", "⭐ *{1} {2}*", "⭐ *{1} {3}*"],
+      usage: [
+        "{0} Correct usage of command *{1}*:\n", //
+        "✨ *{1} <command name (optionally)>*\n",
+        "💡 Examples:",
+        "⭐ *{1}*",
+        "⭐ *{1} {2}*",
+        "⭐ *{1} {3}*",
+      ],
       list: [
         "{0} List of available commands (*{1}*):\n",
         "🦊 Animals (*{2}*): {3}\n",
@@ -572,7 +737,7 @@ export default {
         "{0} Correct usage of command *{1}*:\n", //
         "✨ *{1} <username>*\n",
         "💡 Examples:",
-        "⭐ *{1} existencefornoreason*",
+        "⭐ *{1} amandaismissing*",
         "⭐ *{1} svjdnx*",
         "⭐ *{1} yyyshuhua*",
       ],
@@ -671,6 +836,7 @@ export default {
         "\n⭐ *{1} toptracks <1m/6m/12m> <@user (optionally)>* {2} Allows you to check what are your or the user mentioned most listened tracks in the given time range",
         "\n🤩 *{1} topartists <1m/6m/12m> <@user (optionally)>* {2} Allows you to check what are your or the user mentioned most listened artists in the given time range",
         "\n🕰 *{1} recent <@user (optionally)>* {2} Allows you to check what you or the user mentioned have been listening to recently",
+        "\n📋 *{1} queue <song or @user>* {2} Allows you to add to your playback queue the selected song or the one that the user mentioned is listening to",
         "\n💿 *{1} play <song or @user>* {2} Allows you to play on your Spotify account the selected song or the one that the user mentioned is listening to",
         "\n🎶 *{1} youtube <@user (optionally)>* {2} Sends the track you or the user mentioned are listening to from YouTube",
       ],
@@ -688,6 +854,7 @@ export default {
       notListeningMentioned: "❌ *{0}* is not currently listening to anything or is in a private session.",
       listeningLocal: "❌ *{0}* is currently listening to a local track, you cannot play it on your Spotify account.",
       unableToPlay: "❌ We couldn't play the song on your Spotify account.",
+      unableToQueue: "❌ We were unable to add the song to your Spotify queue.",
       premiumRequired: "❌ Playing songs on your Spotify account using Ambient requires *💎 Spotify Premium* account!",
       emptyResults: "❌ No items matching your query found!",
       selectionTimeout: "❌ No item was selected within *{0}* seconds! Try again.",
@@ -697,6 +864,7 @@ export default {
         "\n🪄 Send only the number corresponding to the selected item, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first item.",
       ],
       playbackStarted: "💿 Starting playback of *{0}* {1} *{2}* from album *{3}* on device *{4} {5}*...",
+      queued: "📋 Added *{0}* {1} *{2}* from album *{3}* to the playback queue!",
       nobodyConnected: "❌ No group member has connected their Spotify account to Ambient!",
       group: [
         "🧐 What are currently members of *{0}* group listening to?\n", //
@@ -733,28 +901,6 @@ export default {
       topArtists: [
         "🤩 Most played artists of *{0}*:", //
         "\n{1}",
-      ],
-    },
-    tellonym: {
-      usage: [
-        "{0} Correct usage of command *{1}*:\n", //
-        "✨ *{1} <username> <message (optionally)>*",
-      ],
-      notFound: "❌ The given user was not found!",
-      tooFast: "❌ You send messages too fast, wait a while before sending the next one.",
-      sent: "{0} Anonymous message has been successfully sent to *@{1}*!",
-      about: [
-        "{0} Info about user *@{1}*:\n",
-        "🫡 Full name: *{2}*",
-        "🆎 Biography: *{3}*",
-        "🤩 Followers: *{4}*",
-        "🕵🏻‍♂️ Anonymous followers: *{5}*",
-        "👀 Following: *{6}*",
-        "✉ Messages: *{7}*",
-        "🌍 Country: *{8}*",
-        "📱 Active: *{9}*",
-        "🔗 Profile: {10}",
-        "\n{11}",
       ],
     },
     tiktok: {
@@ -799,7 +945,13 @@ export default {
       ],
       unavailable: "❌ The reel provided is unavailable!",
       tooBig: "❌ Size of the provided reel is too big! (*{0}*, max. *{1}*)",
-      done: ["{0} Here is your reel from Instagram: *{1}* {2} *{3}*\n", "🫡 Author: *{4}* {2} *@{5}*", "📅 Date: *{6}* {2} *{7}*", "💖 Likes: *{8}*", "💬 Comments: *{9}*"],
+      done: [
+        "{0} Here is your reel from Instagram: *{1}* {2} *{3}*\n", //
+        "🫡 Author: *{4}* {2} *@{5}*",
+        "📅 Date: *{6}* {2} *{7}*",
+        "💖 Likes: *{8}*",
+        "💬 Comments: *{9}*",
+      ],
     },
     adduser: {
       usage: [
@@ -812,7 +964,7 @@ export default {
       inQueue: "❌ The specified user is already in the queue of members to be added!",
       groupFull: "❌ The group already has the maximum number of members!",
       queueFull: "❌ The queue of users to join is already full!",
-      unableToAdd: "❌ The specified user's privacy settings do not allow him to be added to the group!",
+      unableToAdd: "❌ The specified user's privacy settings do not allow them to be added to the group!",
       queuedUser: [
         "🚪 *{0}* has been added to the queue, the request to join must be approved by the group administrator.\n", //
         "🤗 This user uses Ambient since *{4}* {3} *{5}*.",

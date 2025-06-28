@@ -350,4 +350,12 @@ export default {
       renamed: "Pomyślnie zmieniono nazwę bota.",
     },
   },
+  help: {
+    ytTutorial: "Film instruktażowy na YouTube",
+    ytTutorialMore:
+      "Z tego filmu dowiesz się, jak w prosty i szybki sposób stworzyć własnego Ambient bota na Messengerze. Praktyczny poradnik, który przeprowadzi Cię przez cały proces krok po kroku.",
+    discordServer: "Nasz serwer Discord",
+    discordServerMore:
+      "Masz jeszcze jakieś pytania lub potrzebujesz pomocy? Dołącz do naszego serwera Discord, gdzie możesz pogadać ze społecznością Ambienta, zadać pytania, zgłosić problemy i uzyskać wsparcie. Rozmawiamy tam o wszystkim – od pomysłów na nowe funkcje po luźne dyskusje. Znajdziesz też informacje o aktualizacjach, wydarzeniach i planach rozwoju.",
+  },
 };

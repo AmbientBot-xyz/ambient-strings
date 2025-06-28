@@ -31,19 +31,17 @@ export default {
       "👋🏻 Cześć, *{0}*! Nazywam się *Ambient*, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy *{1}*.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym *serwerze Discord*, gdzie również dowiesz się o nowościach związanych z Ambientem: {2}",
     welcomeGroup:
       "👋🏻 Cześć! Nazywam się *Ambient*, jestem bezpiecznym, wydajnym i wielofunkcyjnym botem dla grup na Messengerze. Aby zobaczyć co potrafię, skorzystaj z komendy *{0}*.\n\n🤗 Masz pytania lub potrzebujesz pomocy? Znajdziesz ją na naszym *serwerze Discord*, gdzie również dowiesz się o nowościach związanych z Ambientem: {1}",
-    mentionedNotMember: "❌ Oznaczony użytkownik nie jest członkiem tej grupy!",
+    mentionedNotMember: "❌ Oznaczony użytkownik nie jest członkiem tej grupy.",
     mentionedNotUser: "❌ Oznaczony użytkownik nigdy nie skorzystał z Ambienta.",
-    commandNotFound: "❌ Nie odnaleziono komendy! Wpisz *{0}* aby uzyskać listę dostępnych komend.",
-    unexpectedArgs: "❌ Ta komenda nie przyjmuje żadnych argumentów!",
-    commandUnavailable:
-      "👨🏻‍🍳 Ta komenda nie jest jeszcze dostępna, dołącz na nasz *serwer Discord* aby być na bieżąco z nowościami w Ambiencie i nie pominąć momentu ukończenia prac nad tą funkcją: {0}",
-    groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych!",
-    groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy!",
-    teamMemberOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy!",
-    premiumOnly: "❌ Ta komenda dostępna jest tylko w *💎 Ambiencie Premium*!",
+    commandNotFound: "❌ Nie odnaleziono komendy. Wpisz *{0}* aby uzyskać listę dostępnych komend.",
+    unexpectedArgs: "❌ Ta komenda nie przyjmuje żadnych argumentów.",
+    groupOnly: "❌ Z tej komendy można korzystać tylko w konwersacjach grupowych.",
+    groupAdminOnly: "❌ Z tej komendy mogą korzystać tylko administratorzy grupy.",
+    teamMemberOnly: "❌ Nie posiadasz uprawnień do korzystania z tej komendy.",
+    premiumOnly: "❌ Ta komenda dostępna jest tylko w *💎 Ambiencie Premium*.",
     goodNight: "🥱 Dobranoc, *{0}*! 😴",
     happyBirthday: "🎂 Wszystkiego najlepszego, *{0}*! 🥳",
-    outOfRange: "❌ Wybrana pozycja nie istnieje! (max. *{0}*, wybrano *{1}*)",
+    outOfRange: "❌ Wybrana pozycja nie istnieje! (maks. *{0}*, wybrano *{1}*)",
     botAdminRequired: "❌ Bot musi być administratorem grupy aby skorzystać z tej komendy.",
     nsfwNotAllowed: "❌ Treści NSFW nie są dostępne w tej grupie, sprawdź komendę *{0}*.",
     userBlacklisted: "🫨 Nie możesz korzystać z *Ambienta*, ponieważ znajdujesz się na *czarnej liście*.",
@@ -51,6 +49,11 @@ export default {
       "😤 W tej grupie znajdują się osoby, które zostały dodane do fioletowej listy. Korzystanie z bota nie będzie możliwe do momentu usunięcia z konwersacji poniższych członków:\n",
       "{0}",
       "\n⏳ Grupa jest sprawdzana pod kątem obecności osób na fioletowej liście co *5 minut*. Kolejne sprawdzenie odbędzie się za *⌚ {1}* i *{2}*.",
+    ],
+    announcement: [
+      "📣 Ogłoszenie od załogi Ambienta:\n", //
+      "{0}",
+      "\n🤗 Dołącz na nasz *serwer Discord* aby być na bieżąco z nowościami dotyczącymi *Ambienta*, a także uzyskać pomoc i odpowiedzi na pytania: {1}",
     ],
   },
   commands: {
@@ -163,8 +166,22 @@ export default {
         "⭐ *{1} 1337 90*",
       ],
       notEnoughCoins: "❌ Nie posiadasz wystarczającej ilości 🪙! (potrzebne: *{1} 🪙* {0} posiadane: *{2} 🪙* {0} brakujące: *{3} 🪙*)",
-      victory: ["📈 Wygrał{0}ś *{1} 🪙*, masz teraz *{2} 🪙*.\n", "🎰 Wylosowana liczba: *{3}*"],
-      loss: ["📉 Przegrał{0}ś *{1} 🪙*, masz teraz *{2} 🪙*.\n", "🎰 Wylosowana liczba: *{3}*"],
+      victory: [
+        "📈 Wygrał{0}ś *{1} 🪙*, masz teraz *{2} 🪙*.\n", //
+        "🎰 Wylosowana liczba: *{3}*",
+      ],
+      loss: [
+        "📉 Przegrał{0}ś *{1} 🪙*, masz teraz *{2} 🪙*.\n", //
+        "🎰 Wylosowana liczba: *{3}*",
+      ],
+    },
+    catch: {
+      missingFishingRod: "❌ Nie posiadasz aktywnej wędki! Użyj komendy *{0}* aby kupić nową.",
+      missingBait: "❌ Nie posiadasz aktywnej przynęty! Użyj komendy *{0}* aby kupić nową.",
+      escaped: "💨 Ryba uciekła! Spróbuj ponownie.",
+      snapped: "⛓️‍💥 Linka zerwała się! Spróbuj ponownie.",
+      trash: "🗑️ Złowił{0}ś *{1}*! Spróbuj ponownie.",
+      success: "{0} Złowił{1}ś *🎏 {2}* ważąc{3} *{4} kg* o wartości *{5} 🪙*! Masz teraz *{6} 🪙*.",
     },
     daily: {
       cooldown: "🙄 *{0}*, kolejne darmowe 🪙 będziesz {1} otrzymać za *⌚ {2}*, *{3}* i *{4}*.",
@@ -177,10 +194,157 @@ export default {
         "🤑 Odbieraj regularnie darmowe monety aby zyskiwać bonus za każdy kolejny dodatkowy dzień!",
       ],
     },
+    inventory: {
+      usage: [
+        "{0} Prawidłowe użycie komendy *{1}*:\n", //
+        "✨ *{1} <@użytkownik (opcjonalnie)>*",
+      ],
+      done: [
+        "{1} Informacje o ekwipunku *{2}*:", //
+        "\n🏦 _OGÓLNE_:",
+        "👛 Majątek: *{3} 🪙*",
+        "📅 Ostatnia dzienna nagroda: {4}",
+        "🔥 Dni pod rząd: *{5}*",
+        "\n🐟 _ŁOWIECTWO_:",
+        "🎣 Wędka: *{6}*",
+        "⏳ Pozostałe użycia wędki: *{7}*",
+        "🪝 Przynęta: *{8}*",
+        "♾️ Pozostałe użycia przynęty: *{9}*",
+        "⚖️ Złowione ryby: *{10}*",
+        "\n🎰 _KASYNO_:",
+        "🎲 Ostatni zakład: {11}",
+        "📈 Wygrane zakłady: *{12}*",
+        "📉 Przegrane zakłady: *{13}*",
+        "\n🥷🏼 _NAPADY_:",
+        "💰 Udane napady: *{14}*",
+        "🔒 Nieudane napady: *{15}*",
+        "💥 Doznane napady: *{16}*",
+        "🛡️ Udaremnione napady: *{17}*",
+        "🕵️ Ostatni napad: {18}",
+        "🦹 Ostatnio napadnięt{19}: {20}",
+        "⛓️ Aresztowan{19}: {21}",
+        "🧰 Ochrona przed napadem: *{22}*",
+        "🎒 Wsparcie przy napadzie: *{23}*",
+      ],
+    },
+    rank: {
+      usage: "@TODO",
+    },
+    rob: {
+      usage: [
+        "{0} Prawidłowe użycie komendy *{1}*:\n", //
+        "✨ *{1} <@użytkownik>*",
+      ],
+      arrested: "👮🏼 Nie możesz teraz wykonać napadu, ponieważ jesteś aresztowan{0} jeszcze przez *⌚ {1}* i *{2}*.",
+      cooldown: "🏴‍☠️ Kolejny napad będziesz {0} wykonać za *⌚ {1}* i *{2}*.",
+      nothingNothingCaught:
+        "🚨 Próbował{0}ś okraść *{1}*, któr{2} nie posiadał{3} żadnych zabezpieczeń z *{4} 🪙*. Niestety nie miał{0}ś żadnych pomocniczych narzędzi i został{0}ś przyłapan{5} przez policję. Zapłacił{0}ś grzywnę w wysokości *{6} 🪙* i został{7}ś aresztowan{5} na *⌚ godzinę*. Masz teraz *{8} 🪙*.",
+      nothingNothingUncaught: "{0} *{1}* nie posiadał{2} żadnego zabezpieczenia i udało Ci się okraść {3} z *{4} 🪙* bez użycia dodatkowych narzędzi! Masz teraz *{5} 🪙*.",
+      nothingHighProofBeerCaught:
+        "🚨 Próbował{0}ś okraść *{1}*, któr{2} nie posiadał{3} żadnych zabezpieczeń z *{4} 🪙*. Niestety był{0}ś pod wpływem alkoholu i został{0}ś przyłapan{5} przez policję. Zapłacił{0}ś podwójną grzywnę w wysokości *{6} 🪙* i został{7}ś aresztowan{5} na *⌚ godzinę*. Masz teraz *{8} 🪙*.",
+      nothingHighProofBeerUncaught: "{0} *{1}* nie posiadał{2} żadnego zabezpieczenia i udało Ci się okraść {3} z *{4} 🪙* pod wpływem alkoholu! Masz teraz *{5} 🪙*.",
+      nothingBribeForThePoliceCaught:
+        "🚨 Próbował{0}ś okraść *{1}*, któr{2} nie posiadał{3} żadnych zabezpieczeń z *{4} 🪙*. Niestety został{0}ś przyłapan{5} przez policję, ale ominęła Cię grzywna i aresztowanie, ponieważ wręczył{0}ś im łapówkę.",
+      nothingBribeForThePoliceUncaught:
+        "{0} *{1}* nie posiadał{2} żadnego zabezpieczenia i udało Ci się okraść {3} z *{4} 🪙*! Zachował{5}ś swoją łapówkę dla policji, ponieważ nie przydała się. Masz teraz *{6} 🪙*.",
+      nothingFastCarCaught:
+        "🚨 *{0}* nie posiadał{1} żadnego zabezpieczenia i udało Ci się okraść {2} z *{3} 🪙*! Został{4}ś przyłapan{5} przez policję, ale udało Ci się uciec z łupem dzięki szybkiemu samochodowi. Masz teraz *{6} 🪙*.",
+      nothingFastCarUncaught:
+        "{0} *{1}* nie posiadał{2} żadnego zabezpieczenia i udało Ci się okraść {3} z *{4} 🪙*! Zachował{5}ś szybki samochód, ponieważ nie przydał się. Masz teraz *{6} 🪙*.",
+      steelPadlockNothingCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙* bez żadnych pomocnicznych narzędzi. Niestety został{0}ś przyłapan{3} przez policję próbując otworzyć kłódkę i został{0}ś aresztowan{3} na *⌚ godzinę*.",
+      steelPadlockNothingUncaught: "🔒 Próbował{0}ś okraść *{1}* z *{2} 🪙* bez żadnych pomocnicznych narzędzi. Niestety napotkał{0}ś na kłódkę, której nie udało Ci się otworzyć.",
+      steelPadlockHighProofBeerCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙* pod wpływem alkoholu. Niestety został{0}ś przyłapan{3} przez policję próbując otworzyć kłódkę i został{0}ś aresztowan{3} na *⌚ godzinę*.",
+      steelPadlockHighProofBeerUncaught: "🔒 Próbował{0}ś okraść *{1}* z *{2} 🪙* pod wpływem alkoholu. Niestety napotkał{0}ś na kłódkę, której nie udało Ci się otworzyć.",
+      steelPadlockBribeForThePoliceCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś przyłapan{3} przez policję próbując otworzyć kłódkę, ale nie został{0}ś aresztowan{3}, ponieważ wręczył{0}ś im łapówkę.",
+      steelPadlockBribeForThePoliceUncaught:
+        "🔒 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety napotkał{0}ś na kłódkę, której nie udało Ci się otworzyć. Zachował{0}ś swoją łapówkę dla policji, ponieważ nie przydała się.",
+      steelPadlockFastCarCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś przyłapan{3} przez policję próbując otworzyć kłódkę, ale udało Ci się uciec dzięki szybkiemu samochodowi.",
+      steelPadlockFastCarUncaught:
+        "🔒 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety napotkał{0}ś na kłódkę, której nie udało Ci się otworzyć. Zachował{0}ś szybki samochód, ponieważ nie przydał się.",
+      aggressiveDogNothingCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙* bez żadnych pomocnicznych narzędzi. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć agresywnego psa i został{0}ś aresztowan{3} na *⌚ godzinę*.",
+      aggressiveDogNothingUncaught:
+        "🐶 Próbował{0}ś okraść *{1}* z *{2} 🪙* bez żadnych pomocnicznych narzędzi. Niestety został{0}ś zranion{3} przez agresywnego psa i musiał{0}ś zapłacić *{4} 🪙* za leczenie. Masz teraz *{5} 🪙*.",
+      aggressiveDogHighProofBeerCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙* pod wpływem alkoholu. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć agresywnego psa i został{0}ś aresztowan{3} na *⌚ godzinę*.",
+      aggressiveDogHighProofBeerUncaught:
+        "🐶 Próbował{0}ś okraść *{1}* z *{2} 🪙* pod wpływem alkoholu. Niestety został{0}ś zranion{3} przez agresywnego psa i musiał{0}ś zapłacić *{4} 🪙* za leczenie. Masz teraz *{5} 🪙*.",
+      aggressiveDogBribeForThePoliceCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć agresywnego psa, ale nie został{0}ś aresztowan{3}, ponieważ wręczył{0}ś im łapówkę.",
+      aggressiveDogBribeForThePoliceUncaught:
+        "🐶 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś zranion{3} przez agresywnego psa i musiał{0}ś zapłacić *{4} 🪙* za leczenie. Zachował{0}ś swoją łapówkę dla policji, ponieważ nie przydała się. Masz teraz *{5} 🪙*.",
+      aggressiveDogFastCarCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć agresywnego psa, ale udało Ci się uciec dzięki szybkiemu samochodowi.",
+      aggressiveDogFastCarUncaught:
+        "🐶 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś zaatakowan{3} przez agresywnego psa, ale udało Ci się uciec przed pogryzieniem dzięki szybkiemu samochodowi.",
+      clusterBombNothingCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙* bez żadnych pomocnicznych narzędzi. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć bombę kasetową i został{0}ś aresztowan{3} na *⌚ godzinę*.",
+      clusterBombNothingUncaught:
+        "💣 Próbował{0}ś okraść *{1}* z *{2} 🪙* bez żadnych pomocnicznych narzędzi. Niestety został{0}ś zranion{3} przez bombę kasetową i musiał{0}ś zapłacić *{4} 🪙* za leczenie. Masz teraz *{5} 🪙*.",
+      clusterBombHighProofBeerCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙* pod wpływem alkoholu. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć bombę kasetową i został{0}ś aresztowan{3} na *⌚ godzinę*.",
+      clusterBombHighProofBeerUncaught:
+        "💣 Próbował{0}ś okraść *{1}* z *{2} 🪙* pod wpływem alkoholu. Niestety został{0}ś zranion{3} przez bombę kasetową i musiał{0}ś zapłacić *{4} 🪙* za leczenie. Masz teraz *{5} 🪙*.",
+      clusterBombBribeForThePoliceCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć bombę kasetową, ale nie został{0}ś aresztowan{3}, ponieważ wręczył{0}ś im łapówkę.",
+      clusterBombBribeForThePoliceUncaught:
+        "💣 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś zranion{3} przez bombę kasetową i musiał{0}ś zapłacić *{4} 🪙* za leczenie. Zachował{0}ś swoją łapówkę dla policji, ponieważ nie przydała się. Masz teraz *{5} 🪙*.",
+      clusterBombFastCarCaught:
+        "🚨 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś przyłapan{3} przez policję próbując ominąć bombę kasetową, ale udało Ci się uciec dzięki szybkiemu samochodowi.",
+      clusterBombFastCarUncaught:
+        "💣 Próbował{0}ś okraść *{1}* z *{2} 🪙*. Niestety został{0}ś zaatakowan{3} przez bombę kasetową, ale udało Ci się uciec przed wybuchem dzięki szybkiemu samochodowi.",
+    },
+    shop: {
+      summary: [
+        "{0} Przedmioty i ułatwienia dostępne do zakupu:", //
+        "\n🎣 _WĘDKI_:",
+        "1. {2} *{3}* {1} {4} 🪙",
+        "2. {5} *{6}* {1} {7} 🪙",
+        "3. {8} *{9}* {1} {10} 🪙",
+        "\n🪝 _PRZYNĘTY_:",
+        "4. {11} *{12}* {1} {13} 🪙",
+        "5. {14} *{15}* {1} {16} 🪙",
+        "6. {17} *{18}* {1} {19} 🪙",
+        "\n🛡️ _OCHRONA PRZED ZŁODZIEJAMI_:",
+        "7. {20} *{21}* {1} {22} 🪙",
+        "8. {23} *{24}* {1} {25} 🪙",
+        "9. {26} *{27}* {1} {28} 🪙",
+        "\n🎒 _WSPARCIE PRZY KRADZIEŻY_:",
+        "10. {29} *{30}* {1} {31} 🪙",
+        "11. {32} *{33}* {1} {34} 🪙",
+        "12. {35} *{36}* {1} {37} 🪙",
+        "\n💡 Aby sprawdzić szczegóły przedmiotu, wpisz *{38} info <numer>*. Aby go kupić, wpisz *{38} kup <numer>*.",
+      ],
+      invalidItemNumber: "❌ Podany numer przedmiotu jest nieprawidłowy!",
+      sameTypeItemAlreadyActive: "❌ Nie możesz zakupić tej rzeczy, ponieważ posiadasz już aktywny przedmiot tego samego typu: *{0} {1}*",
+      bought: "✅ Zakupił{0}ś *{1} {2}* za *{3} 🪙*! Masz teraz *{4} 🪙*.",
+      details: [
+        "{0} Informacje o przedmiocie *{1}*:\n", //
+        "🏷️ Opis: *{2}*",
+        "📐 Charakterystyka: *{3}*",
+        "🛒 Cena: *{4}* 🪙",
+        "\n💡 Aby kupić ten przedmiot, wpisz *{5} kup {6}*.",
+      ],
+    },
+    tip: {
+      usage: [
+        "{0} Prawidłowe użycie komendy *{1}*:\n",
+        "✨ *{1} @użytkownik <liczba 🪙>*\n",
+        "💡 Przykłady:",
+        "⭐ *{1} @użytkownik 69*",
+        "⭐ *{1} @użytkownik 4.20*",
+        "⭐ *{1} @użytkownik 13.37*",
+      ],
+      done: "✅ Pomyślnie przekazał{0}ś *{1} 🪙* *{2}*! Masz teraz *{3} 🪙*.",
+    },
     achievement: {
-      empty: "❌ Musisz podać treść osiągnięcia! (max. *{0}* znaki)",
+      empty: "❌ Musisz podać treść osiągnięcia! (maks. *{0}* znaki)",
       mentions: "❌ Treść osiągnięcia nie może zawierać wzmianek!",
-      tooLong: "❌ Treść osiągnięcia jest zbyt długa! (max. *{0}* znaki, podano *{1}*)",
+      tooLong: "❌ Treść osiągnięcia jest zbyt długa! (maks. *{0}* znaki, podano *{1}*)",
       generating: "⏳ Trwa generowanie osiągnięcia...",
       done: "{0} Oto wygenerowane osiągnięcie:",
     },
@@ -201,13 +365,6 @@ export default {
       done: "{0} Para najlepiej pasujących do siebie osób w tej grupie to *{1}* i *{2}* (*{3}%*) 💍",
     },
     diceroll: "{0} Wynik rzutu kostką: *{1}*",
-    heart: {
-      empty: "❌ Musisz podać treść serca! (max. *{0}* znaków)",
-      mentions: "❌ Treść serca nie może zawierać wzmianek!",
-      tooLong: "❌ Treść serca jest zbyt długa! (max. *{0}* znaków, podano *{1}*)",
-      generating: "⏳ Trwa generowanie serca...",
-      done: "{0} Oto wygenerowane serce:",
-    },
     meme: {
       searching: "⏳ Szukam losowego mema...",
       done: "{0} Oto losowy mem autorstwa *{1}* z *{2}*:",
@@ -217,9 +374,9 @@ export default {
       done: "{0} Oto losowe zdjęcie motocyklu autorstwa *{1}* z *{2}*:",
     },
     rip: {
-      empty: "❌ Musisz podać treść nagrobka! (max. *{0}* znaków)",
+      empty: "❌ Musisz podać treść nagrobka! (maks. *{0}* znaków)",
       mentions: "❌ Treść nagrobka nie może zawierać wzmianek!",
-      tooLong: "❌ Treść nagrobka jest zbyt długa! (max. *{0}* znaków, podano *{1}*)",
+      tooLong: "❌ Treść nagrobka jest zbyt długa! (maks. *{0}* znaków, podano *{1}*)",
       generating: "⏳ Trwa generowanie nagrobka...",
       done: "{0} Oto wygenerowany nagrobek:",
     },
@@ -228,9 +385,9 @@ export default {
       done: "{0} Oto losowe zdjęcie pociągu autorstwa *{1}* z *{2}*:",
     },
     tvp: {
-      empty: "❌ Musisz podać treść paska! (max. *{0}* znaków)",
+      empty: "❌ Musisz podać treść paska! (maks. *{0}* znaków)",
       mentions: "❌ Treść paska nie może zawierać wzmianek!",
-      tooLong: "❌ Treść paska jest zbyt długa! (max. *{0}* znaków, podano *{1}*)",
+      tooLong: "❌ Treść paska jest zbyt długa! (maks. *{0}* znaków, podano *{1}*)",
       generating: "⏳ Trwa generowanie paska...",
       done: "{0} Oto wygenerowany pasek:",
     },
@@ -250,15 +407,17 @@ export default {
       "🤖 Uruchomione boty: *{12}*",
       "✨ Jądro: *{13}*",
       "🔌 Klient: *{14}*",
-      "📦 Instancja: *{15}*",
-      "🪁 Środowisko jądra: *{16}*",
-      "🧇 Środowisko klienta: *{17}*",
-      "🏷 TypeScript: *{18}*",
-      "🆙 Data aktualizacji: *{19}* {3} *{20}*",
-      "🍒 Data powstania: *{21}*",
-      "😼 Autor: *{22}*",
-      "\n📱 Ten bot został stworzony *całkowicie za darmo* na stronie {23}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
-      "\n🤗 Dołącz na nasz *serwer Discord* aby być na bieżąco z nowościami dotyczącymi *Ambienta*, a także uzyskać pomoc i odpowiedzi na pytania: {24}",
+      "🪙 Ekonomia: *{15}*",
+      "📦 Instancja: *{16}*",
+      "🪁 Środowisko jądra: *{17}*",
+      "🧇 Środowisko klienta: *{18}*",
+      "👛 Środowisko ekonomii: *{19}*",
+      "🏷 TypeScript: *{20}*",
+      "🆙 Data aktualizacji: *{21}* {3} *{22}*",
+      "🍒 Data powstania: *{23}*",
+      "😼 Autor: *{24}*",
+      "\n📱 Ten bot został stworzony *całkowicie za darmo* na stronie {25}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
+      "\n🤗 Dołącz na nasz *serwer Discord* aby być na bieżąco z nowościami dotyczącymi *Ambienta*, a także uzyskać pomoc i odpowiedzi na pytania: {26}",
     ],
     group: {
       collecting: "⏳ Zbieram informacje o grupie...",
@@ -286,7 +445,14 @@ export default {
       ],
     },
     help: {
-      usage: ["{0} Prawidłowe użycie komendy *{1}*:\n", "✨ *{1} <nazwa komendy (opcjonalnie)>*\n", "💡 Przykłady:", "⭐ *{1}*", "⭐ *{1} {2}*", "⭐ *{1} {3}*"],
+      usage: [
+        "{0} Prawidłowe użycie komendy *{1}*:\n", //
+        "✨ *{1} <nazwa komendy (opcjonalnie)>*\n",
+        "💡 Przykłady:",
+        "⭐ *{1}*",
+        "⭐ *{1} {2}*",
+        "⭐ *{1} {3}*",
+      ],
       list: [
         "{0} Lista dostępnych komend (*{1}*):\n",
         "🦊 Zwierzęta (*{2}*): {3}\n",
@@ -324,7 +490,7 @@ export default {
       ],
       mentions: "❌ Treść zasad grupy nie może zawierać wzmianek!",
       removed: "✅ Pomyślnie usunięto zasady grupy!",
-      tooLong: "❌ Treść zasad grupy jest zbyt długa! (max. *{0}* znaków, podano *{1}*)",
+      tooLong: "❌ Treść zasad grupy jest zbyt długa! (maks. *{0}* znaków, podano *{1}*)",
       updated: "✅ Pomyślnie zaktualizowano zasady grupy!",
     },
     team: [
@@ -410,9 +576,9 @@ export default {
       done: "{0} Oto losowe zdjęcie autorstwa *{1}* z *{2}*:",
     },
     rule34: {
-      empty: "❌ Musisz podać tagi! (max. *{0}* znaki)",
+      empty: "❌ Musisz podać tagi! (maks. *{0}* znaki)",
       mentions: "❌ Tagi nie mogą zawierać wzmianek!",
-      tooLong: "❌ Tagi są zbyt długie! (max. *{0}* znaki, podano *{1}*)",
+      tooLong: "❌ Tagi są zbyt długie! (maks. *{0}* znaki, podano *{1}*)",
       searching: "⏳ Szukam zdjęcia pasującego do podanych tagów...",
       notFound: "❌ Nie odnaleziono zdjęcia pasującego do podanych tagów!",
       done: "{0} Oto losowe zdjęcie autorstwa *{1}* z tagami *{2}*:",
@@ -478,7 +644,7 @@ export default {
         "\n🚪 Aby wyłączyć link do zaproszenia do grupy, wpisz *{3} off*.",
       ],
       tooShort: "❌ Podane ID zaproszenia jest zbyt krótkie! (min. *{0}* znaki, podano *{1}*)",
-      tooLong: "❌ Podane ID zaproszenia jest zbyt długie! (max. *{0}* znaki, podano *{1}*)",
+      tooLong: "❌ Podane ID zaproszenia jest zbyt długie! (maks. *{0}* znaki, podano *{1}*)",
       illegalCharacters: "❌ Podane ID zaproszenia zawiera niedozwolone znaki, możesz użyć tylko małych i dużych liter oraz cyfr.",
       alreadyUsed: "❌ Podane ID zaproszenia jest już zajęte!",
       saved: "✅ ID zaproszenia do grupy zostało pomyślnie ustawione na *{0}*! Aktualny link do dołączenia do grupy to {1}",
@@ -612,9 +778,9 @@ export default {
       ],
     },
     tts: {
-      empty: "❌ Musisz podać treść nagrania głosowego! (max. *{0}* znaków)",
+      empty: "❌ Musisz podać treść nagrania głosowego! (maks. *{0}* znaków)",
       mentions: "❌ Treść nagrania głosowego nie może zawierać wzmianek!",
-      tooLong: "❌ Treść nagrania głosowego jest zbyt długa! (max. *{0}* znaków, podano *{1}*)",
+      tooLong: "❌ Treść nagrania głosowego jest zbyt długa! (maks. *{0}* znaków, podano *{1}*)",
       generating: "⏳ Trwa generowanie nagrania głosowego...",
       done: "{0} Oto wygenerowane nagranie głosowe:",
     },
@@ -623,7 +789,7 @@ export default {
         "{0} Prawidłowe użycie komendy *{1}*:\n", //
         "✨ *{1} <nazwa użytkownika>*\n",
         "💡 Przykłady:",
-        "⭐ *{1} existencefornoreason*",
+        "⭐ *{1} amandaismissing*",
         "⭐ *{1} svjdnx*",
         "⭐ *{1} yyyshuhua*",
       ],
@@ -647,7 +813,7 @@ export default {
         "{0} Prawidłowe użycie komendy *{1}*:\n", //
         "✨ *{1} <powód>/off*",
       ],
-      tooLong: "❌ Powód AFK jest zbyt długi! (max. *{0}* znaków, podano *{1}*)",
+      tooLong: "❌ Powód AFK jest zbyt długi! (maks. *{0}* znaki, podano *{1}*)",
       disabled: "✅ Pomyślnie wyłączono tryb AFK!",
       done: "✅ Pomyślnie ustawiono powód AFK na *{0}*!",
       mentioned: "{0} *{1}* jest aktualnie AFK, powód: *{2}*",
@@ -722,6 +888,7 @@ export default {
         "\n⭐ *{1} toputwory <1m/6m/12m> <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić Twoje najczęściej słuchane utwory lub oznaczonego użytkownika w podanym zakresie czasu",
         "\n🤩 *{1} topartyści <1m/6m/12m> <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić Twoich najczęściej słuchanych artystów lub oznaczonego użytkownika w podanym zakresie czasu",
         "\n🕰 *{1} ostatnie <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić czego ostatnio słuchał{3}ś Ty lub oznaczony użytkownik",
+        "\n📋 *{1} kolejka <utwór lub @użytkownik>* {2} Pozwala dodać do Twojej kolejki odtwarzania wybrany utwór lub ten, którego słucha oznaczony użytkownik",
         "\n💿 *{1} play <utwór lub @użytkownik>* {2} Pozwala odtworzyć na Twoim koncie Spotify wybrany utwór lub ten, którego słucha oznaczony użytkownik",
         "\n🎶 *{1} youtube <@użytkownik (opcjonalnie)>* {2} Wysyła utwór którego słuchasz Ty lub oznaczony użytkownik z YouTube",
       ],
@@ -739,6 +906,7 @@ export default {
       notListeningMentioned: "❌ *{0}* niczego aktualnie nie słucha lub ma włączoną sesję prywatną.",
       listeningLocal: "❌ *{0}* słucha obecnie lokalnego utworu, nie możesz odtworzyć go na swoim koncie Spotify.",
       unableToPlay: "❌ Nie udało nam się odtworzyć utworu na Twoim koncie Spotify.",
+      unableToQueue: "❌ Nie udało nam się dodać utworu do Twojej kolejki Spotify.",
       premiumRequired: "❌ Odtwarzanie utworów na swoim koncie Spotify przy użyciu Ambienta wymaga posiadania konta *💎 Spotify Premium*!",
       emptyResults: "❌ Nie znaleziono żadnych pozycji pasujących do Twojego zapytania!",
       selectionTimeout: "❌ Nie wybrano żadnej pozycji w ciągu *{0}* sekund! Spróbuj ponownie.",
@@ -748,6 +916,7 @@ export default {
         "\n🪄 Napisz tylko liczbę odpowiadającą wybranej pozycji, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwszą pozycję.",
       ],
       playbackStarted: "💿 Rozpoczynam odtwarzanie *{0}* {1} *{2}* z albumu *{3}* na urządzeniu *{4} {5}*...",
+      queued: "📋 Dodano *{0}* {1} *{2}* z albumu *{3}* do kolejki odtwarzania!",
       nobodyConnected: "❌ Żaden członek grupy nie połączył swojego konta Spotify z Ambientem!",
       group: [
         "🧐 Czego aktualnie słuchają członkowie grupy *{0}*?\n", //
@@ -784,28 +953,6 @@ export default {
       topArtists: [
         "🤩 Najczęściej słuchani artyści *{0}*:", //
         "\n{1}",
-      ],
-    },
-    tellonym: {
-      usage: [
-        "{0} Prawidłowe użycie komendy *{1}*:\n", //
-        "✨ *{1} <nazwa użytkownika> <wiadomość (opcjonalnie)>*",
-      ],
-      notFound: "❌ Podany użytkownik nie został odnaleziony!",
-      tooFast: "❌ Wysyłasz wiadomości zbyt szybko, odczekaj chwilę przed wysłaniem kolejnej.",
-      sent: "{0} Anonimowa wiadomość została pomyślnie wysłana do użytkownika *@{1}*!",
-      about: [
-        "{0} Informacje o użytkowniku *@{1}*:\n",
-        "🫡 Pełna nazwa: *{2}*",
-        "🆎 Biografia: *{3}*",
-        "🤩 Obserwujących: *{4}*",
-        "🕵🏻‍♂️ Anonimowych obserwujących: *{5}*",
-        "👀 Obserwowanych: *{6}*",
-        "✉ Wiadomości: *{7}*",
-        "🌍 Kraj: *{8}*",
-        "📱 Aktywny/a: *{9}*",
-        "🔗 Profil: {10}",
-        "\n{11}",
       ],
     },
     tiktok: {
@@ -850,7 +997,13 @@ export default {
       ],
       unavailable: "❌ Podana rolka jest niedostępna!",
       tooBig: "❌ Rozmiar podanej rolki jest zbyt duży! (*{0}*, maks. *{1}*)",
-      done: ["{0} Oto Twoja rolka z Instagrama: *{1}* {2} *{3}*\n", "🫡 Autor: *{4}* {2} *@{5}*", "📅 Data: *{6}* {2} *{7}*", "💖 Polubienia: *{8}*", "💬 Komentarze: *{9}*"],
+      done: [
+        "{0} Oto Twoja rolka z Instagrama: *{1}* {2} *{3}*\n", //
+        "🫡 Autor: *{4}* {2} *@{5}*",
+        "📅 Data: *{6}* {2} *{7}*",
+        "💖 Polubienia: *{8}*",
+        "💬 Komentarze: *{9}*",
+      ],
     },
     adduser: {
       usage: [
@@ -928,7 +1081,7 @@ export default {
         "{0} Prawidłowe użycie komendy *{1}*:\n", //
         "✨ *{1} <nowa nazwa grupy>*",
       ],
-      tooLong: "❌ Podana nazwa jest zbyt długa! (max. *{0}* znaków, podano *{1}*)",
+      tooLong: "❌ Podana nazwa jest zbyt długa! (maks. *{0}* znaków, podano *{1}*)",
       same: "❌ Podana nazwa jest taka sama jak obecnie ustawiona!",
       doneSet: "{0} Pomyślnie nadano grupie nazwę *{1}*!",
       doneChanged: "{0} Pomyślnie zmieniono nazwę grupy z *{1}* na *{2}*!",
@@ -938,7 +1091,7 @@ export default {
         "{0} Prawidłowe użycie komendy *{1}*:\n", //
         "✨ *{1} <@użytkownik (opcjonalnie)> <nowy nick>*",
       ],
-      tooLong: "❌ Podany nick jest zbyt długi! (max. *{0}* znaków, podano *{1}*)",
+      tooLong: "❌ Podany nick jest zbyt długi! (maks. *{0}* znaków, podano *{1}*)",
       same: "❌ Podany nick jest taki sam jak obecnie ustawiony!",
       doneSetOwn: "{0} Twój nick został pomyślnie ustawiony na *{1}*!",
       doneSetOther: "{0} Nick *{1}* został pomyślnie ustawiony na *{2}*!",
@@ -1029,7 +1182,7 @@ export default {
       ],
       reasonMentions: "❌ Powód ostrzeżenia nie może zawierać wzmianek!",
       maxWarningsReached: "❌ *{0}* posiada już maksymalną liczbę ostrzeżeń (*{1}*)!",
-      reasonTooLong: "❌ Podany powód jest zbyt długi! (max. *{0}* znaków, podano *{1}*)",
+      reasonTooLong: "❌ Podany powód jest zbyt długi! (maks. *{0}* znaków, podano *{1}*)",
       jailed: "❌ Poczekaj aż obecne operacje na ostrzeżeniach zakończą się!",
       added: "{0} Administrator *{1}* nadał ostrzeżenie *{2}* z powodu *{3}*, jest to je{4} *{5}* ostrzeżenie.",
       noWarnings: "❌ Nie posiadasz jeszcze żadnych ostrzeżeń!",
