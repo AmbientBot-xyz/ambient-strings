@@ -58,32 +58,32 @@ export default {
   },
   commands: {
     alpaca: {
-      searching: "⏳ Searching for a photo of the alpaca...",
-      done: "{0} Here is a random photo of the alpaca by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of an alpaca...",
+      done: "{0} Here is a random photo of an alpaca by *{1}* from *{2}*:",
     },
     beaver: {
       searching: "⏳ Searching for a photo of a beaver...",
       done: "{0} Here is a random photo of a beaver by *{1}* from *{2}*:",
     },
     capybara: {
-      searching: "⏳ Searching for a photo of the capybara...",
-      done: "{0} Here is a random photo of the capybara by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a capybara...",
+      done: "{0} Here is a random photo of a capybara by *{1}* from *{2}*:",
     },
     cat: {
       searching: "⏳ Searching for a photo of a cat...",
-      done: "{0} Here is a random cat photo:",
+      done: "{0} Here is a random photo of a cat by *{1}* from *{2}*:",
     },
     dog: {
       searching: "⏳ Searching for a photo of a dog...",
-      done: "{0} Here is a random dog photo:",
+      done: "{0} Here is a random photo of a dog by *{1}* from *{2}*:",
     },
     duck: {
-      searching: "⏳ Searching for a photo of the duck...",
-      done: "{0} Here is a random photo of the duck by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a duck...",
+      done: "{0} Here is a random photo of a duck by *{1}* from *{2}*:",
     },
     fox: {
       searching: "⏳ Searching for a photo of a fox...",
-      done: "{0} Here is a random fox photo:",
+      done: "{0} Here is a random photo of a fox by *{1}* from *{2}*:",
     },
     frog: {
       searching: "⏳ Searching for a photo of a frog...",
@@ -102,32 +102,32 @@ export default {
       done: "{0} Here is a random photo of a monkey by *{1}* from *{2}*:",
     },
     penguin: {
-      searching: "⏳ Searching for a photo of the penguin...",
-      done: "{0} Here is a random photo of the penguin by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a penguin...",
+      done: "{0} Here is a random photo of a penguin by *{1}* from *{2}*:",
     },
     pigeon: {
       searching: "⏳ Searching for a photo of a pigeon...",
       done: "{0} Here is a random photo of a pigeon by *{1}* from *{2}*:",
     },
     racoon: {
-      searching: "⏳ Searching for a photo of the racoon...",
-      done: "{0} Here is a random photo of the racoon by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a racoon...",
+      done: "{0} Here is a random photo of a racoon by *{1}* from *{2}*:",
     },
     rat: {
-      searching: "⏳ Searching for a photo of the rat...",
-      done: "{0} Here is a random photo of the rat by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a rat...",
+      done: "{0} Here is a random photo of a rat by *{1}* from *{2}*:",
     },
     shiba: {
       searching: "⏳ Searching for a photo of Shiba Inu...",
       done: "{0} Here is a random Shiba Inu photo by *{1}* from *{2}*:",
     },
     snake: {
-      searching: "⏳ Searching for a photo of the snake...",
-      done: "{0} Here is a random photo of the snake by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a snake...",
+      done: "{0} Here is a random photo of a snake by *{1}* from *{2}*:",
     },
     spider: {
-      searching: "⏳ Searching for a photo of the spider...",
-      done: "{0} Here is a random photo of the spider by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a spider...",
+      done: "{0} Here is a random photo of a spider by *{1}* from *{2}*:",
     },
     turtle: {
       searching: "⏳ Searching for a photo of a turtle...",
@@ -283,19 +283,19 @@ export default {
       clusterBombNothingCaught:
         "🚨 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were caught by the police trying to avoid a cluster bomb and were arrested for *⌚ an hour*.",
       clusterBombNothingUncaught:
-        "🐶 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
+        "💣 You tried to rob *{1}* of *{2} 🪙* without any tools. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
       clusterBombHighProofBeerCaught:
         "🚨 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were caught by the police trying to avoid a cluster bomb and were arrested for *⌚ an hour*.",
       clusterBombHighProofBeerUncaught:
-        "🐶 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
+        "💣 You tried to rob *{1}* of *{2} 🪙* while drunk. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You now have *{5} 🪙*.",
       clusterBombBribeForThePoliceCaught:
         "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to avoid a cluster bomb, but you avoided a fine and arrest because you gave them a bribe.",
       clusterBombBribeForThePoliceUncaught:
-        "🐶 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You kept your bribe for the police as it was not needed. You now have *{5} 🪙*.",
+        "💣 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were injured by a cluster bomb and had to pay *{4} 🪙* for treatment. You kept your bribe for the police as it was not needed. You now have *{5} 🪙*.",
       clusterBombFastCarCaught:
         "🚨 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were caught by the police trying to avoid a cluster bomb, but you managed to escape thanks to a fast car.",
       clusterBombFastCarUncaught:
-        "🐶 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were attacked by a cluster bomb, but you managed to escape the explosion thanks to a fast car.",
+        "💣 You tried to rob *{1}* of *{2} 🪙*. Unfortunately, you were attacked by a cluster bomb, but you managed to escape the explosion thanks to a fast car.",
     },
     shop: {
       summary: [

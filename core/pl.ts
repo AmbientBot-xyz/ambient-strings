@@ -70,20 +70,20 @@ export default {
       done: "{0} Oto losowe zdjęcie kapibary autorstwa *{1}* z *{2}*:",
     },
     cat: {
-      searching: "⏳ Szukam zdjęcia kotka...",
-      done: "{0} Oto losowe zdjęcie kotka:",
+      searching: "⏳ Szukam zdjęcia kota...",
+      done: "{0} Oto losowe zdjęcie kota autorstwa *{1}* z *{2}*:",
     },
     dog: {
-      searching: "⏳ Szukam zdjęcia pieska...",
-      done: "{0} Oto losowe zdjęcie pieska:",
+      searching: "⏳ Szukam zdjęcia psa...",
+      done: "{0} Oto losowe zdjęcie psa autorstwa *{1}* z *{2}*:",
     },
     duck: {
       searching: "⏳ Szukam zdjęcia kaczki...",
       done: "{0} Oto losowe zdjęcie kaczki autorstwa *{1}* z *{2}*:",
     },
     fox: {
-      searching: "⏳ Szukam zdjęcia liska...",
-      done: "{0} Oto losowe zdjęcie liska:",
+      searching: "⏳ Szukam zdjęcia lisa...",
+      done: "{0} Oto losowe zdjęcie lisa autorstwa *{1}* z *{2}*:",
     },
     frog: {
       searching: "⏳ Szukam zdjęcia żaby...",
