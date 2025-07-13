@@ -17,13 +17,13 @@ export default {
     enabled: "🔘 Bot *{0}* został włączony na tej grupie, wszyscy członkowie grupy mogą z niego teraz korzystać.",
     eventError: [
       "💀 Ambient napotkał nieznany błąd podczas próby przetworzenia Twojej wiadomości, spróbuj ponownie później. Zgłoszenie zostało automatycznie wysłane na nasz serwer Discord: {0}\n",
-      "⚠️ Nazwa: *{1}*",
+      "⚠️️ Nazwa: *{1}*",
       "📜 Opis: *{2}*",
       "📎 Szczegóły: {3}",
     ],
     execError: [
       "💀 Ambient napotkał nieznany błąd podczas próby wykonania komendy, spróbuj ponownie później. Zgłoszenie zostało automatycznie wysłane na nasz serwer Discord: {0}\n",
-      "⚠️ Nazwa: *{1}*",
+      "⚠️️ Nazwa: *{1}*",
       "📜 Opis: *{2}*",
       "📎 Szczegóły: {3}",
     ],
@@ -51,7 +51,7 @@ export default {
       "\n⏳ Grupa jest sprawdzana pod kątem obecności osób na fioletowej liście co *5 minut*. Kolejne sprawdzenie odbędzie się za *⌚ {1}* i *{2}*.",
     ],
     announcement: [
-      "📣 Ogłoszenie od załogi Ambienta:\n", //
+      "📣 Ogłoszenie od załogi Ambienta:\n",
       "{0}",
       "\n🤗 Dołącz na nasz *serwer Discord* aby być na bieżąco z nowościami dotyczącymi *Ambienta*, a także uzyskać pomoc i odpowiedzi na pytania: {1}",
     ],
@@ -139,19 +139,33 @@ export default {
     },
     interactions: {
       usage: [
-        "{0} Prawidłowe użycie komendy *{1}*:\n", //
-        "✨ *{1} <on/off>*",
+        "{0} Prawidłowe użycie komendy *{1}*:\n",
+        "✨ *{1} on/off*",
+        "\n💡 Wybierz, czy Ambient ma reagować na niektóre słowa oraz automatycznie pobierać filmy z przesyłanych linków.",
+        "\n🔧 Aktualny status interakcji: *{2}*",
       ],
       disabled: "🤐 Pomyślnie wyłączono interakcje w tej grupie, Ambient nie będzie reagował na żadne wiadomości poza komendami rozpoczynającymi się znakiem *{0}*.",
       enabled: "👉🏻 Pomyślnie włączono interakcje w tej grupie, Ambient będzie reagował na niektóre wiadomości poza komendami rozpoczynającymi się znakiem *{0}*.",
     },
     nsfw: {
       usage: [
-        "{0} Prawidłowe użycie komendy *{1}*:\n", //
-        "✨ *{1} <on/off>*",
+        "{0} Prawidłowe użycie komendy *{1}*:\n",
+        "✨ *{1} on/off*",
+        "\n💡 Wybierz, czy komendy z kategorii NSFW mają być dostępne w tej grupie.",
+        "\n🔧 Aktualny status NSFW: *{2}*",
       ],
       disabled: "😌 Pomyślnie wyłączono komendy NSFW w tej grupie!",
       enabled: "♨ Pomyślnie włączono komendy NSFW w tej grupie!",
+    },
+    privacy: {
+      usage: [
+        "{0} Prawidłowe użycie komendy *{1}*:\n",
+        "✨ *{1} on/off*",
+        "\n💡 Wybierz, czy Twoje dane mają być ukryte w globalnych rankingach.",
+        "\n🔧 Aktualny status prywatności: *{2}*",
+      ],
+      disabled: "🙌🏻 Pomyślnie wyłączono tryb prywatności w globalnych rankingach!",
+      enabled: "😎 Pomyślnie włączono tryb prywatności w globalnych rankingach!",
     },
     bet: {
       usage: [
@@ -200,7 +214,7 @@ export default {
         "✨ *{1} <@użytkownik (opcjonalnie)>*",
       ],
       done: [
-        "{1} Informacje o ekwipunku *{2}*:", //
+        "{1} Informacje o ekwipunku *{2}*:",
         "\n🏦 _OGÓLNE_:",
         "👛 Majątek: *{3} 🪙*",
         "📅 Ostatnia dzienna nagroda: {4}",
@@ -228,7 +242,19 @@ export default {
       ],
     },
     rank: {
-      usage: "@TODO",
+      usage: [
+        "{0} Prawidłowe użycie komendy *{1}*:",
+        "\n🪙 *{1} monety grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy mają najwięcej monet",
+        "\n🔥 *{1} dni grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy odbierają darmowe monety najwięcej dni z rzędu",
+        "\n💰 *{1} udanenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy wykonali najwięcej udanych napadów",
+        "\n🔒 *{1} nieudanenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy wykonali najwięcej nieudanych napadów",
+        "\n💥 *{1} doznanenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy doznali najwięcej napadów",
+        "\n🛡️ *{1} udarmenionenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy obronili się przed największą ilością napadów",
+        "\n📈 *{1} wygranezakłady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy wygrali najwięcej zakładów",
+        "\n📉 *{1} przegranezakłady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy przegrali najwięcej zakładów",
+        "\n⚖️ *{1} złowioneryby grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy złowili najwięcej ryb",
+        "\n💬 Szukasz rankingu użytkowników w kontekście czatu? Sprawdź komendę *{4}*.",
+      ],
     },
     rob: {
       usage: [
@@ -300,7 +326,7 @@ export default {
     },
     shop: {
       summary: [
-        "{0} Przedmioty i ułatwienia dostępne do zakupu:", //
+        "{0} Przedmioty i ułatwienia dostępne do zakupu:",
         "\n🎣 _WĘDKI_:",
         "1. {2} *{3}* {1} {4} 🪙",
         "2. {5} *{6}* {1} {7} 🪙",
@@ -317,7 +343,8 @@ export default {
         "10. {29} *{30}* {1} {31} 🪙",
         "11. {32} *{33}* {1} {34} 🪙",
         "12. {35} *{36}* {1} {37} 🪙",
-        "\n💡 Aby sprawdzić szczegóły przedmiotu, wpisz *{38} info <numer>*. Aby go kupić, wpisz *{38} kup <numer>*.",
+        "\n👛 Twój majątek: *{38} 🪙*",
+        "\n💡 Aby sprawdzić szczegóły przedmiotu, wpisz *{39} info <numer>*. Aby go kupić, wpisz *{39} kup <numer>*.",
       ],
       invalidItemNumber: "❌ Podany numer przedmiotu jest nieprawidłowy!",
       sameTypeItemAlreadyActive: "❌ Nie możesz zakupić tej rzeczy, ponieważ posiadasz już aktywny przedmiot tego samego typu: *{0} {1}*",
@@ -332,7 +359,7 @@ export default {
     },
     tip: {
       usage: [
-        "{0} Prawidłowe użycie komendy *{1}*:\n",
+        "{0} Prawidłowe użycie komendy *{1}*:\n", //
         "✨ *{1} @użytkownik <liczba 🪙>*\n",
         "💡 Przykłady:",
         "⭐ *{1} @użytkownik 69*",
@@ -365,6 +392,17 @@ export default {
       done: "{0} Para najlepiej pasujących do siebie osób w tej grupie to *{1}* i *{2}* (*{3}%*) 💍",
     },
     diceroll: "{0} Wynik rzutu kostką: *{1}*",
+    heart: {
+      empty: "❌ Musisz podać treść serca! (maks. *{0}* znaków)",
+      mentions: "❌ Treść serca nie może zawierać wzmianek!",
+      tooLong: "❌ Treść serca jest zbyt długa! (maks. *{0}* znaków, podano *{1}*)",
+      generating: "⏳ Trwa generowanie serca...",
+      done: "{0} Oto wygenerowane serce:",
+    },
+    labubu: {
+      searching: "⏳ Szukam zdjęcia Labubu...",
+      done: "{0} Oto losowe zdjęcie Labubu autorstwa *{1}* z *{2}*:",
+    },
     meme: {
       searching: "⏳ Szukam losowego mema...",
       done: "{0} Oto losowy mem autorstwa *{1}* z *{2}*:",
@@ -434,7 +472,7 @@ export default {
         "🗃 Przetworzone wiadomości: *{10}*",
         "🤖 Wykonane komendy: *{11}*",
         "🐒 Liczba oznaczeń: *{12}*",
-        "⚠ Liczba ostrzeżeń: *{13}*",
+        "⚠️ Liczba ostrzeżeń: *{13}*",
         "🧐 Zatwierdzanie członków: *{14}*",
         "⏳ Członkowie w kolejce: *{15}*",
         "🔞 NSFW: *{16}*",
@@ -483,7 +521,7 @@ export default {
         "\n📝 Aby ustawić zasady grupy, wpisz *{1} <treść zasad>*.",
       ],
       view: [
-        "{0} Oto zasady grupy *{1}* określone przez administrację:\n", //
+        "{0} Oto zasady grupy *{1}* określone przez administrację:\n",
         "{2}",
         "\n📝 Aby zmienić zasady grupy, wpisz *{3} <treść nowych zasad>*.",
         "\n🗑 Aby usunąć zasady grupy, wpisz *{3} usuń*.",
@@ -500,25 +538,41 @@ export default {
     ],
     top: {
       usage: [
-        "{0} Prawidłowe użycie komendy *{1}*:", //
-        "\n🐒 *{1} oznaczenia* {2} Pokazuje top {3} użytkowników, którzy zostali najwięcej oznaczeni w tej grupie",
-        "\n✉ *{1} wiadomości* {2} Pokazuje top {3} użytkowników, którzy wysłali najwięcej wiadomości w tej grupie",
-        "\n🪄 *{1} komendy* {2} Pokazuje top {3} użytkowników, którzy wykonali najwięcej komend w tej grupie",
+        "{0} Prawidłowe użycie komendy *{1}*:",
+        "\n✉ *{1} wiadomości grupa/globalnie* {2} Pokazuje top {3} użytkowników, którzy wysłali najwięcej wiadomości",
+        "\n🪄 *{1} komendy grupa/globalnie* {2} Pokazuje top {3} użytkowników, którzy wykonali najwięcej komend",
+        "\n🐒 *{1} oznaczenia grupa/globalnie* {2} Pokazuje top {3} użytkowników, którzy zostali najwięcej oznaczeni",
+        "\n🪙 Szukasz top użytkowników w kontekście ekonomii? Sprawdź komendę *{4}*.",
       ],
-      mentions: [
-        "🐒 Top {0} użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
-        "\n{1}\n",
-        "🧮 Jesteś *#{2}* w rankingu.",
-      ],
-      messages: [
+      messagesGroup: [
         "✉ Top {0} użytkowników, którzy wysłali najwięcej wiadomości w tej grupie:", //
         "\n{1}\n",
         "🧮 Jesteś *#{2}* w rankingu.",
       ],
-      commands: [
+      commandsGroup: [
         "🪄 Top {0} użytkowników, którzy wykonali najwięcej komend w tej grupie:", //
         "\n{1}\n",
         "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      mentionsGroup: [
+        "🐒 Top {0} użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      messagesGlobal: [
+        "✉ Top {0} użytkowników, którzy wysłali najwięcej wiadomości globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      commandsGlobal: [
+        "🪄 Top {0} użytkowników, którzy wykonali najwięcej komend globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      mentionsGlobal: [
+        "🐒 Top {0} użytkowników, którzy zostali najwięcej oznaczeni globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
       ],
     },
     weather: {
@@ -547,12 +601,12 @@ export default {
       ],
     },
     boobs: {
-      searching: "⏳ Szukam zdjęcia kobiecych piersi...",
-      done: "{0} Oto losowe zdjęcie kobiecych piersi autorstwa *{1}* z *{2}*:",
+      searching: "⏳ Szukam zdjęcia piersi...",
+      done: "{0} Oto losowe zdjęcie piersi autorstwa *{1}* z *{2}*:",
     },
     butt: {
-      searching: "⏳ Szukam zdjęcia kobiecych pośladków...",
-      done: "{0} Oto losowe zdjęcie kobiecych pośladków autorstwa *{1}* z *{2}*:",
+      searching: "⏳ Szukam zdjęcia pośladków...",
+      done: "{0} Oto losowe zdjęcie pośladków autorstwa *{1}* z *{2}*:",
     },
     dick: {
       searching: "⏳ Szukam zdjęcia penisa...",
@@ -561,6 +615,14 @@ export default {
     feet: {
       searching: "⏳ Szukam zdjęcia kobiecych stóp...",
       done: "{0} Oto losowe zdjęcie kobiecych stóp autorstwa *{1}* z *{2}*:",
+    },
+    konachan: {
+      searching: "⏳ Szukam zdjęcia Konachan...",
+      done: "{0} Oto losowe zdjęcie Konachan:",
+    },
+    muscles: {
+      searching: "⏳ Szukam zdjęcia mięśni...",
+      done: "{0} Oto losowe zdjęcie mięśni autorstwa *{1}* z *{2}*:",
     },
     pussy: {
       searching: "⏳ Szukam zdjęcia waginy...",
@@ -583,16 +645,24 @@ export default {
       notFound: "❌ Nie odnaleziono zdjęcia pasującego do podanych tagów!",
       done: "{0} Oto losowe zdjęcie autorstwa *{1}* z tagami *{2}*:",
     },
+    veins: {
+      searching: "⏳ Szukam zdjęcia żył...",
+      done: "{0} Oto losowe zdjęcie żył autorstwa *{1}* z *{2}*:",
+    },
+    yandere: {
+      searching: "⏳ Szukam zdjęcia Yandere...",
+      done: "{0} Oto losowe zdjęcie Yandere:",
+    },
     guard: {
       status: [
-        "{0} Konfiguracja funkcji ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków:\n", //
+        "{0} Konfiguracja funkcji ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków:\n",
         "🔔 Powiadomienia o zdarzeniach dla administracji grupy: *{1}*",
         "👉🏻 Blokada zmiany nicków innych członków: *{2}*",
         "🫡 Blokada zmiany własnego nicku: *{3}*",
         "🏷 Blokada zmiany nazwy grupy: *{6}*",
         "🖼️ Blokada zmiany zdjęcia grupy: *{4}*",
         "🎨 Blokada zmiany motywu grupy: *{5}*",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w *💎 Ambiencie Premium*!",
+        "\n⚠️ Uwaga! Ta funkcja dostępna jest tylko w *💎 Ambiencie Premium*!",
         "\n⚙ Aby zmienić ustawienia, wpisz *{7} zmień*.",
       ],
       firstSettingQuestion: [
@@ -632,14 +702,14 @@ export default {
         "\n🪄 Napisz tylko liczbę odpowiadającą wybranemu ustawieniu, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwsze ustawienie.",
       ],
       saved: "✅ Ustawienia funkcji ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków zostały pomyślnie zapisane!",
-      premiumMissing: "⚠ Uwaga! Funkcja ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków nie będzie działała, ponieważ wymaga ona posiadania *💎 Ambienta Premium*!",
+      premiumMissing: "⚠️ Uwaga! Funkcja ochrony grupy przed zmianą nazwy, zdjęcia, motywu i nicków nie będzie działała, ponieważ wymaga ona posiadania *💎 Ambienta Premium*!",
     },
     invitation: {
       status: [
-        "{0} Konfiguracja linku do zaproszenia do grupy:\n", //
+        "{0} Konfiguracja linku do zaproszenia do grupy:\n",
         "🔗 Aktualny link: {1}",
         "🧮 Liczba użyć: *{2}*",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w *💎 Ambiencie Premium*!",
+        "\n⚠️ Uwaga! Ta funkcja dostępna jest tylko w *💎 Ambiencie Premium*!",
         "\n🆔 Aby włączyć lub zmienić link do zaproszenia do grupy, wpisz *{3} <nowe ID zaproszenia>*.",
         "\n🚪 Aby wyłączyć link do zaproszenia do grupy, wpisz *{3} off*.",
       ],
@@ -650,7 +720,7 @@ export default {
       saved: "✅ ID zaproszenia do grupy zostało pomyślnie ustawione na *{0}*! Aktualny link do dołączenia do grupy to {1}",
       disabled: "🚪 Funkcja zaproszeń do grupy została pomyślnie wyłączona!",
       groupAdminOnly: "❌ Ustawienia dotyczące zaproszenia do grupy mogą zostać zmienione tylko przez administratorów grupy!",
-      premiumMissing: "⚠ Uwaga! Funkcja zaproszeń do grupy nie będzie działała, ponieważ wymaga ona posiadania *💎 Ambienta Premium*!",
+      premiumMissing: "⚠️ Uwaga! Funkcja zaproszeń do grupy nie będzie działała, ponieważ wymaga ona posiadania *💎 Ambienta Premium*!",
       joinRequestedUser: [
         "🚪 *{0}* chce dołączyć do tej grupy korzystając z linku zaproszenia, sprawdź oczekujące prośby.\n", //
         "🤗 Ten użytkownik korzysta z Ambienta od *{3}* {2} *{4}*.",
@@ -670,7 +740,7 @@ export default {
     },
     premium: [
       "{0} Możesz wesprzeć *Ambienta* dowolną kwotą wysyłając przelew pod numer telefonu *{1}* korzystając z BLIKa. Jeśli chcesz, aby ten bot w nagrodę za wsparcie uzyskał dostęp do wyjątkowych funkcji dostępnych tylko dla użytkowników wersji Premium, wyślij jednorazowo co najmniej *{2}* podając w tytule lub odbiorcy identyfikator Premium *{3}*.\n",
-      "⚠ Uwaga! Ważność Premium sumuje się - każde *{2}* to dodatkowo *{4}*. Premium zostanie nadane w ciągu *15 minut* od otrzymania przelewu, w razie pytań lub problemów dołącz na nasz *serwer Discord*: {5}\n",
+      "⚠️ Uwaga! Ważność Premium sumuje się - każde *{2}* to dodatkowo *{4}*. Premium zostanie nadane w ciągu *15 minut* od otrzymania przelewu, w razie pytań lub problemów dołącz na nasz *serwer Discord*: {5}\n",
       "💓 Obecny stan Premium: {6}\n",
       "👑 Obecne konta Premium: *{7}*\n",
       "✨ Potrzebne dane zostały wysłane poniżej w *oddzielnych wiadomościach* w celu łatwiejszego skopiowania ich.\n",
@@ -695,12 +765,12 @@ export default {
     },
     restoration: {
       status: [
-        "{0} Konfiguracja funkcji przywracania usuniętych wiadomości:\n", //
+        "{0} Konfiguracja funkcji przywracania usuniętych wiadomości:\n",
         "🛡 Włączone: *{1}*",
         "👮🏻‍♂️ Przywracanie wiadomości administracji: *{2}*",
         "📎 Załączniki jako linki: *{3}*",
         "🔒 Przywracanie w wiadomościach prywatnych do administracji: *{4}*",
-        "\n⚠ Uwaga! Ta funkcja dostępna jest tylko w *💎 Ambiencie Premium*!",
+        "\n⚠️ Uwaga! Ta funkcja dostępna jest tylko w *💎 Ambiencie Premium*!",
         "\n⚙ Aby zmienić ustawienia, wpisz *{5} zmień*.",
       ],
       firstSettingQuestion: [
@@ -729,9 +799,9 @@ export default {
       ],
       disabled: "📴 Funkcja przywracania usuniętych wiadomości została pomyślnie wyłączona!",
       saved: "✅ Ustawienia funkcji przywracania usuniętych wiadomości zostały pomyślnie zapisane!",
-      premiumMissing: "⚠ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania *💎 Ambienta Premium*!",
+      premiumMissing: "⚠️ Uwaga! Funkcja przywracania usuniętych wiadomości nie będzie działała, ponieważ wymaga ona posiadania *💎 Ambienta Premium*!",
       restored: [
-        "👀 *{0}* usun{1} wiadomość w grupie *{2}*!", //
+        "👀 *{0}* usun{1} wiadomość w grupie *{2}*!",
         "\n💡 Użyj komendy *{3}* aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
         "📨 Data wysłania: *{5}* {4} *{6}*",
         "📮 Data usunięcia: *{7}* {4} *{8}*",
@@ -739,7 +809,7 @@ export default {
         "📜 Treść wiadomości: *{10}*",
       ],
       restoredAttachments: [
-        "👀 *{0}* usun{1} wiadomość w grupie *{2}*!", //
+        "👀 *{0}* usun{1} wiadomość w grupie *{2}*!",
         "\n💡 Użyj komendy *{3}* aby zobaczyć szczegółowe informacje na temat konfiguracji funkcji przywracania usuniętych wiadomości.\n",
         "📨 Data wysłania: *{5}* {4} *{6}*",
         "📮 Data usunięcia: *{7}* {4} *{8}*",
@@ -812,9 +882,11 @@ export default {
       usage: [
         "{0} Prawidłowe użycie komendy *{1}*:\n", //
         "✨ *{1} <powód>/off*",
+        "\n💡 Wybierz swój status AFK który będzie wyświetlany gdy ktoś Cię oznaczy.",
+        "\n🔧 Aktualny status AFK: *{2}*",
       ],
       tooLong: "❌ Powód AFK jest zbyt długi! (maks. *{0}* znaki, podano *{1}*)",
-      disabled: "✅ Pomyślnie wyłączono tryb AFK!",
+      disabled: "✅ Pomyślnie wyłączono status AFK!",
       done: "✅ Pomyślnie ustawiono powód AFK na *{0}*!",
       mentioned: "{0} *{1}* jest aktualnie AFK, powód: *{2}*",
     },
@@ -861,11 +933,12 @@ export default {
         "👑 Członek załogi Ambienta: *{18}*",
         "👅 Język w Ambiencie: *{19}*",
         "🎛️ Połączone Spotify: *{20}*",
-        "🫣 Ostatnia aktywność: *{21}* {13} *{22}* (w tej grupie: *{23}*)",
-        "🐒 Wzmianki: *{24}* (w tej grupie: *{25}*)",
-        "✉ Wysłane wiadomości: *{26}* (w tej grupie: *{27}*)",
-        "🪄 Wykonane komendy: *{28}* (w tej grupie: *{29}*)",
-        "🔄 Zaktualizowano dane: *{30}* {13} *{31}*",
+        "🎭 Tryb prywatności: *{21}*",
+        "🫣 Ostatnia aktywność: *{22}* {13} *{23}* (w tej grupie: *{24}*)",
+        "🐒 Wzmianki: *{25}* (w tej grupie: *{26}*)",
+        "✉ Wysłane wiadomości: *{27}* (w tej grupie: *{28}*)",
+        "🪄 Wykonane komendy: *{29}* (w tej grupie: *{30}*)",
+        "🔄 Zaktualizowano dane: *{31}* {13} *{32}*",
       ],
     },
     skin: {
@@ -885,15 +958,15 @@ export default {
         "\n🤠 *{1} profil <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić informacje o Twoim lub oznaczonego użytkownika profilu Spotify",
         "\n🧐 *{1} grupa* {2} Pozwala sprawdzić czego obecnie słuchają członkowie tej grupy",
         "\n🎧 *{1} aktualnie <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić czego obecnie słuchasz Ty lub oznaczony użytkownik",
-        "\n⭐ *{1} toputwory <1m/6m/12m> <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić Twoje najczęściej słuchane utwory lub oznaczonego użytkownika w podanym zakresie czasu",
-        "\n🤩 *{1} topartyści <1m/6m/12m> <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić Twoich najczęściej słuchanych artystów lub oznaczonego użytkownika w podanym zakresie czasu",
+        "\n⭐ *{1} toputwory 1m/6m/12m <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić Twoje najczęściej słuchane utwory lub oznaczonego użytkownika w podanym zakresie czasu",
+        "\n🤩 *{1} topartyści 1m/6m/12m <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić Twoich najczęściej słuchanych artystów lub oznaczonego użytkownika w podanym zakresie czasu",
         "\n🕰 *{1} ostatnie <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić czego ostatnio słuchał{3}ś Ty lub oznaczony użytkownik",
         "\n📋 *{1} kolejka <utwór lub @użytkownik>* {2} Pozwala dodać do Twojej kolejki odtwarzania wybrany utwór lub ten, którego słucha oznaczony użytkownik",
         "\n💿 *{1} play <utwór lub @użytkownik>* {2} Pozwala odtworzyć na Twoim koncie Spotify wybrany utwór lub ten, którego słucha oznaczony użytkownik",
         "\n🎶 *{1} youtube <@użytkownik (opcjonalnie)>* {2} Wysyła utwór którego słuchasz Ty lub oznaczony użytkownik z YouTube",
       ],
       alreadyConnected: "❌ Musisz odłączyć obecne konto przed połączeniem nowego!",
-      connectionUrl: "🔌 Oto link do połączenia konta Spotify z Ambientem: {0}",
+      connectionUrl: "🔌 Oto Twój link do połączenia konta Spotify z Ambientem: {0}",
       notConnected: "❌ Nie połączył{1}ś Ambienta z kontem Spotify!",
       notConnectedMentioned: "❌ *{0}* nie połączył{1} Ambienta z kontem Spotify!",
       disconnected: "✅ Pomyślnie odłączył{0}ś Ambienta od konta Spotify!",
@@ -919,7 +992,7 @@ export default {
       queued: "📋 Dodano *{0}* {1} *{2}* z albumu *{3}* do kolejki odtwarzania!",
       nobodyConnected: "❌ Żaden członek grupy nie połączył swojego konta Spotify z Ambientem!",
       group: [
-        "🧐 Czego aktualnie słuchają członkowie grupy *{0}*?\n", //
+        "🧐 Czego aktualnie słuchają członkowie grupy *{0}*?\n",
         "{1}",
         "\n🧮 *{2}* z *{3}* członków tej grupy połączyło swoje konto Spotify z Ambientem, *{4}* z nich aktualnie słucha muzyki.",
       ],

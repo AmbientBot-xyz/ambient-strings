@@ -17,13 +17,13 @@ export default {
     enabled: "🔘 Bot *{0}* has been enabled on this group, all members of the group can now use it.",
     eventError: [
       "💀 Ambient encountered an unknown error while trying to process your message, please try again later. It has been automatically reported to our Discord server: {0}\n",
-      "⚠️ Name: *{1}*",
+      "⚠️️ Name: *{1}*",
       "📜 Description: *{2}*",
       "📎 Details: {3}",
     ],
     execError: [
       "💀 Ambient encountered an unknown error while trying to execute command, please try again later. It has been automatically reported to our Discord server: {0}\n",
-      "⚠️ Name: *{1}*",
+      "⚠️️ Name: *{1}*",
       "📜 Description: *{2}*",
       "📎 Details: {3}",
     ],
@@ -51,7 +51,7 @@ export default {
       "\n⏳ The group is checked for the presence of purplelisted users every *5 minutes*. Next check will take place in *⌚ {1}* and *{2}*.",
     ],
     announcement: [
-      "📣 Announcement from Ambient team:\n", //
+      "📣 Announcement from Ambient team:\n",
       "{0}",
       "\n🤗 Join our *Discord server* to stay up to date with *Ambient* news, as well as get help and answers to your questions: {1}",
     ],
@@ -139,19 +139,33 @@ export default {
     },
     interactions: {
       usage: [
-        "{0} Correct usage of command *{1}*:\n", //
-        "✨ *{1} <on/off>*",
+        "{0} Correct usage of command *{1}*:\n",
+        "✨ *{1} on/off*",
+        "\n💡 Choose whether Ambient should react to certain words and automatically download videos from sent links.",
+        "\n🔧 Current interactions status: *{2}*",
       ],
       disabled: "🤐 Successfully disabled interactions in this group, Ambient will not respond to any messages except for commands starting with *{0}*.",
       enabled: "👉🏻 Successfully enabled interactions in this group, Ambient will respond to some messages in addition to commands starting with *{0}*.",
     },
     nsfw: {
       usage: [
-        "{0} Correct usage of command *{1}*:\n", //
-        "✨ *{1} <on/off>*",
+        "{0} Correct usage of command *{1}*:\n",
+        "✨ *{1} on/off*",
+        "\n💡 Choose whether NSFW commands should be available in this group.",
+        "\n🔧 Current NSFW status: *{2}*",
       ],
       disabled: "😌 Successfully disabled NSFW commands in this group!",
       enabled: "♨ Successfully enabled NSFW commands in this group!",
+    },
+    privacy: {
+      usage: [
+        "{0} Correct usage of command *{1}*:\n",
+        "✨ *{1} on/off*",
+        "\n💡 Choose whether your data should be hidden in global rankings.",
+        "\n🔧 Current privacy status: *{2}*",
+      ],
+      disabled: "🙌🏻 Successfully disabled privacy mode in global rankings!",
+      enabled: "😎 Successfully enabled privacy mode in global rankings!",
     },
     bet: {
       usage: [
@@ -200,7 +214,7 @@ export default {
         "✨ *{1} <@user (optionally)>*",
       ],
       done: [
-        "{1} Info about inventory of *{2}*:", //
+        "{1} Info about inventory of *{2}*:",
         "\n🏦 _GENERAL_:",
         "👛 Balance: *{3} 🪙*",
         "📅 Last daily reward: {4}",
@@ -228,7 +242,19 @@ export default {
       ],
     },
     rank: {
-      usage: "@TODO",
+      usage: [
+        "{0} Correct usage of command *{1}*:",
+        "\n🪙 *{1} coins group/global* {2} Shows the ranking of {3} users who have the most coins",
+        "\n🔥 *{1} streak group/global* {2} Shows the ranking of {3} users who claim free coins the most days in a row",
+        "\n💰 *{1} successfulrobberies group/global* {2} Shows the ranking of the {3} users who performed the most successful robberies",
+        "\n🔒 *{1} failedrobberies group/global* {2} Shows the ranking of the {3} users who performed the most unsuccessful robberies",
+        "\n💥 *{1} sufferedrobberies group/global* {2} Shows the ranking of the {3} users who experienced the most robberies",
+        "\n🛡️ *{1} defendedrobberies group/global* {2} Shows the ranking of {3} users who defended themselves against the most robberies",
+        "\n📈 *{1} betvictories group/global* {2} Shows the ranking of the {3} users who won the most bets",
+        "\n📉 *{1} betlosses group/global* {2} Shows the ranking of {3} users who lost the most bets",
+        "\n⚖️ *{1} caughtfish group/global* {2} Shows the ranking of the {3} users who caught the most fish",
+        "\n💬 Looking for user rankings in the context of chat? Check out the *{4}* command.",
+      ],
     },
     rob: {
       usage: [
@@ -299,7 +325,7 @@ export default {
     },
     shop: {
       summary: [
-        "{0} Items and facilities available for purchase:", //
+        "{0} Items and facilities available for purchase:",
         "\n🎣 _FISHING RODS_:",
         "1. {2} *{3}* {1} {4} 🪙",
         "2. {5} *{6}* {1} {7} 🪙",
@@ -316,7 +342,8 @@ export default {
         "10. {29} *{30}* {1} {31} 🪙",
         "11. {32} *{33}* {1} {34} 🪙",
         "12. {35} *{36}* {1} {37} 🪙",
-        "\n💡 Type *{38} info <number>* to see details about an item, or *{38} buy <number>* to purchase it.",
+        "\n👛 Your balance: *{38} 🪙*",
+        "\n💡 Type *{39} info <number>* to see details about an item, or *{39} buy <number>* to purchase it.",
       ],
       invalidItemNumber: "❌ The item number provided is invalid!",
       sameTypeItemAlreadyActive: "❌ You can't buy this item because you already have an active item of the same type: *{0} {1}*",
@@ -364,6 +391,17 @@ export default {
       done: "{0} The pair of people who are best suited for each other in this group are *{1}* and *{2}* (*{3}%*) 💍",
     },
     diceroll: "{0} Result of the dice roll: *{1}*",
+    heart: {
+      empty: "❌ You must enter the text of the heart! (max. *{0}* characters)",
+      mentions: "❌ The content of the heart must not contain any mentions!",
+      tooLong: "❌ The content of the heart is too long! (max. *{0}* characters, *{1}* entered)",
+      generating: "⏳ Generating heart...",
+      done: "{0} Here is the generated heart:",
+    },
+    labubu: {
+      searching: "⏳ Searching for a photo of Labubu...",
+      done: "{0} Here is a random photo of Labubu by *{1}* from *{2}*:",
+    },
     meme: {
       searching: "⏳ Searching a random meme...",
       done: "{0} Here is a random meme by *{1}* from *{2}*:",
@@ -433,7 +471,7 @@ export default {
         "🗃 Processed messages: *{10}*",
         "🤖 Executed commands: *{11}*",
         "🐒 Mentions count: *{12}*",
-        "⚠ Warnings count: *{13}*",
+        "⚠️ Warnings count: *{13}*",
         "🧐 Members approval: *{14}*",
         "⏳ Members in queue: *{15}*",
         "🔞 NSFW: *{16}*",
@@ -482,7 +520,7 @@ export default {
         "\n📝 To set the group rules, type *{1} <rules content>*.",
       ],
       view: [
-        "{0} Here are the group rules of *{1}* set by the administration:\n", //
+        "{0} Here are the group rules of *{1}* set by the administration:\n",
         "{2}",
         "\n📝 To change the group rules, type *{3} <new rules content>*.",
         "\n🗑 To remove the group rules, type *{3} remove*.",
@@ -500,24 +538,40 @@ export default {
     top: {
       usage: [
         "{0} Correct usage of command *{1}*:",
-        "\n🐒 *{1} mentions* {2} Shows the top {3} users who have been mentioned the most in this group",
-        "\n✉ *{1} messages* {2} Shows the top {3} users who sent the most messages in this group",
-        "\n🪄 *{1} commands* {2} Shows the top {3} users who executed the most commands in this group",
+        "\n✉ *{1} messages group/global* {2} Shows the top {3} users who sent the most messages",
+        "\n🪄 *{1} commands group/global* {2} Shows the top {3} users who executed the most commands",
+        "\n🐒 *{1} mentions group/global* {2} Shows the top {3} users who have been mentioned the most",
+        "\n🪙 Looking for top users in the context of economy? Check out the *{4}* command.",
       ],
-      mentions: [
-        "🐒 Top {0} users who have been mentioned the most in this group:", //
-        "\n{1}\n",
-        "🧮 You're *#{2}* in the ranking.",
-      ],
-      messages: [
+      messagesGroup: [
         "✉ Top {0} users who sent the most messages in this group:", //
         "\n{1}\n",
         "🧮 You're *#{2}* in the ranking.",
       ],
-      commands: [
+      commandsGroup: [
         "🪄 Top {0} users who executed the most commands in this group:", //
         "\n{1}\n",
         "🧮 You're *#{2}* in the ranking.",
+      ],
+      mentionsGroup: [
+        "🐒 Top {0} users who have been mentioned the most in this group:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      messagesGlobal: [
+        "✉ Top {0} users who sent the most messages globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      commandsGlobal: [
+        "🪄 Top {0} users who executed the most commands globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      mentionsGlobal: [
+        "🐒 Top {0} users who have been mentioned the most globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
       ],
     },
     weather: {
@@ -546,24 +600,32 @@ export default {
       ],
     },
     boobs: {
-      searching: "⏳ Searching for a photo of female boobs...",
-      done: "{0} Here is a random photo of female boobs by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of boobs...",
+      done: "{0} Here is a random photo of boobs by *{1}* from *{2}*:",
     },
     butt: {
-      searching: "⏳ Searching for a photo of female butt...",
-      done: "{0} Here is a random photo of female butt by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a butt...",
+      done: "{0} Here is a random photo of a butt by *{1}* from *{2}*:",
     },
     dick: {
-      searching: "⏳ Searching for a photo of dick...",
-      done: "{0} Here is a random photo of dick by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a dick...",
+      done: "{0} Here is a random photo of a dick by *{1}* from *{2}*:",
     },
     feet: {
       searching: "⏳ Searching for a photo of female feet...",
       done: "{0} Here is a random photo of female feet by *{1}* from *{2}*:",
     },
+    konachan: {
+      searching: "⏳ Searching for Konachan photo...",
+      done: "{0} Here is a random Konachan photo:",
+    },
+    muscles: {
+      searching: "⏳ Searching for a photo of muscles...",
+      done: "{0} Here is a random photo of muscles by *{1}* from *{2}*:",
+    },
     pussy: {
-      searching: "⏳ Searching for a photo of pussy...",
-      done: "{0} Here is a random photo of pussy by *{1}* from *{2}*:",
+      searching: "⏳ Searching for a photo of a pussy...",
+      done: "{0} Here is a random photo of a pussy by *{1}* from *{2}*:",
     },
     reddit: {
       usage: [
@@ -582,12 +644,20 @@ export default {
       notFound: "❌ No photo found matching the given tags!",
       done: "{0} Here is a random photo by *{1}* with tags *{2}*:",
     },
+    veins: {
+      searching: "⏳ Searching for a photo of veins...",
+      done: "{0} Here is a random photo of veins by *{1}* from *{2}*:",
+    },
+    yandere: {
+      searching: "⏳ Searching for Yandere photo...",
+      done: "{0} Here is a random Yandere photo:",
+    },
     invitation: {
       status: [
-        "{0} Configuration of the group invitation link:\n", //
+        "{0} Configuration of the group invitation link:\n",
         "🔗 Current link: {1}",
         "🧮 Usages count: *{2}*",
-        "\n⚠ Warning! This feature is only available in *💎 Ambient Premium*!",
+        "\n⚠️ Warning! This feature is only available in *💎 Ambient Premium*!",
         "\n🆔 To enable or change the group invitation link, type *{3} <new invitation ID>*.",
         "\n🚪 To disable the group invitation link, type *{3} off*.",
       ],
@@ -598,7 +668,7 @@ export default {
       saved: "✅ The group invitation ID has been successfully set to *{0}*! The current link to join the group is {1}",
       disabled: "🚪 The group invitation link feature has been successfully disabled!",
       groupAdminOnly: "❌ Group invitation link settings can only be changed by group administrators!",
-      premiumMissing: "⚠ Warning! Group invitation link feature will not work as it requires *💎 Ambient Premium*!",
+      premiumMissing: "⚠️ Warning! Group invitation link feature will not work as it requires *💎 Ambient Premium*!",
       joinRequestedUser: [
         "🚪 *{0}* wants to join this group using the invitation link, check pending requests.\n", //
         "🤗 This user uses Ambient since *{3}* {2} *{4}*.",
@@ -618,7 +688,7 @@ export default {
     },
     premium: [
       "{0} You can support *Ambient* by sending a transfer to the phone number *{1}* using BLIK. If you want this bot to be rewarded with access to exclusive features available only to Premium users, send at least *{2}* at a time with the Premium ID *{3}* in the title or receiver field.\n",
-      "⚠ Attention! Premium validity is cumulative - each *{2}* is an additional *{4}*. You will receive premium within *15 minutes* from receiving the transfer, if you have any questions or problems, join our *Discord server*: {5}\n",
+      "⚠️ Attention! Premium validity is cumulative - each *{2}* is an additional *{4}*. You will receive premium within *15 minutes* from receiving the transfer, if you have any questions or problems, join our *Discord server*: {5}\n",
       "💓 Current Premium state: {6}\n",
       "👑 Current Premium accounts: *{7}*\n",
       "✨ The necessary data has been sent below in *separate messages* for easier copying.\n",
@@ -643,12 +713,12 @@ export default {
     },
     restoration: {
       status: [
-        "{0} Restoration of deleted messages feature configuration:\n", //
+        "{0} Restoration of deleted messages feature configuration:\n",
         "🛡 Enabled: *{1}*",
         "👮🏻‍♂️ Restore administrator messages: *{2}*",
         "📎 Attachments as links: *{3}*",
         "🔒 Restore in private messages to administrators: *{4}*",
-        "\n⚠ Warning! This feature is only available in *💎 Ambient Premium*!",
+        "\n⚠️ Warning! This feature is only available in *💎 Ambient Premium*!",
         "\n⚙ To change settings, type *{5} change*.",
       ],
       firstSettingQuestion: [
@@ -677,9 +747,9 @@ export default {
       ],
       disabled: "📴 Restoration of deleted messages feature has been successfully disabled!",
       saved: "✅ Restoration of deleted messages feature settings has been successfully saved!",
-      premiumMissing: "⚠ Warning! Restoration of deleted messages feature will not work as it requires *💎 Ambient Premium*!",
+      premiumMissing: "⚠️ Warning! Restoration of deleted messages feature will not work as it requires *💎 Ambient Premium*!",
       restored: [
-        "👀 User *{0}* deleted a message in *{2}* group!", //
+        "👀 User *{0}* deleted a message in *{2}* group!",
         "\n💡 Use *{3}* command to see detailed information on restoration of deleted messages feature configuration.\n",
         "📨 Sent on: *{5}* {4} *{6}*",
         "📮 Deleted on: *{7}* {4} *{8}*",
@@ -687,7 +757,7 @@ export default {
         "📜 Message content: *{10}*",
       ],
       restoredAttachments: [
-        "👀 User *{0}* deleted a message in *{2}* group!", //
+        "👀 User *{0}* deleted a message in *{2}* group!",
         "\n💡 Use *{3}* command to see detailed information on restoration of deleted messages feature configuration.\n",
         "📨 Sent on: *{5}* {4} *{6}*",
         "📮 Deleted on: *{7}* {4} *{8}*",
@@ -760,9 +830,11 @@ export default {
       usage: [
         "{0} Correct usage of command *{1}*:\n", //
         "✨ *{1} <reason>/off*",
+        "\n💡 Choose your AFK status which will be displayed when someone mentions you.",
+        "\n🔧 Current AFK status: *{2}*",
       ],
       tooLong: "❌ The reason for being AFK is too long! (max. *{0}* characters, *{1}* entered)",
-      disabled: "✅ Successfully disabled AFK mode!",
+      disabled: "✅ Successfully disabled AFK status!",
       done: "✅ Succcessfully set AFK reason to *{0}*!",
       mentioned: "{0} *{1}* is currently AFK, reason: *{2}*",
     },
@@ -809,11 +881,12 @@ export default {
         "👑 Ambient team member: *{18}*",
         "👅 Language in Ambient: *{19}*",
         "🎛️ Spotify connected: *{20}*",
-        "🫣 Last activity: *{21}* {13} *{22}* (in this group: *{23}*)",
-        "🐒 Mentions: *{24}* (in this group: *{25}*)",
-        "✉ Messages sent: *{26}* (in this group: *{27}*)",
-        "🪄 Commands executed: *{28}* (in this group: *{29}*)",
-        "🔄 Data updated: *{30}* {13} *{31}*",
+        "🎭 Privacy mode: *{21}*",
+        "🫣 Last activity: *{22}* {13} *{23}* (in this group: *{24}*)",
+        "🐒 Mentions: *{25}* (in this group: *{26}*)",
+        "✉ Messages sent: *{27}* (in this group: *{28}*)",
+        "🪄 Commands executed: *{29}* (in this group: *{30}*)",
+        "🔄 Data updated: *{31}* {13} *{32}*",
       ],
     },
     skin: {
@@ -833,15 +906,15 @@ export default {
         "\n🤠 *{1} profile <@user (optionally)>* {2} Allows you to check info about your or the mentioned user Spotify profile",
         "\n🧐 *{1} group* {2} Allows you to check what are members of this group currently listening to",
         "\n🎧 *{1} nowplaying <@user (optionally)>* {2} Allows you to check what are you or the user mentioned listening to now",
-        "\n⭐ *{1} toptracks <1m/6m/12m> <@user (optionally)>* {2} Allows you to check what are your or the user mentioned most listened tracks in the given time range",
-        "\n🤩 *{1} topartists <1m/6m/12m> <@user (optionally)>* {2} Allows you to check what are your or the user mentioned most listened artists in the given time range",
+        "\n⭐ *{1} toptracks 1m/6m/12m <@user (optionally)>* {2} Allows you to check what are your or the user mentioned most listened tracks in the given time range",
+        "\n🤩 *{1} topartists 1m/6m/12m <@user (optionally)>* {2} Allows you to check what are your or the user mentioned most listened artists in the given time range",
         "\n🕰 *{1} recent <@user (optionally)>* {2} Allows you to check what you or the user mentioned have been listening to recently",
         "\n📋 *{1} queue <song or @user>* {2} Allows you to add to your playback queue the selected song or the one that the user mentioned is listening to",
         "\n💿 *{1} play <song or @user>* {2} Allows you to play on your Spotify account the selected song or the one that the user mentioned is listening to",
         "\n🎶 *{1} youtube <@user (optionally)>* {2} Sends the track you or the user mentioned are listening to from YouTube",
       ],
       alreadyConnected: "❌ You must disconnect your current account before connecting a new one!",
-      connectionUrl: "🔌 Here is the link to connect your Spotify account to Ambient: {0}",
+      connectionUrl: "🔌 Here is your link to connect Spotify account with Ambient: {0}",
       notConnected: "❌ You haven't connected Ambient to your Spotify account!",
       notConnectedMentioned: "❌ *{0}* has not connected Ambient to Spotify account!",
       disconnected: "✅ Successfully disconnected Ambient from Spotify account!",
@@ -867,7 +940,7 @@ export default {
       queued: "📋 Added *{0}* {1} *{2}* from album *{3}* to the playback queue!",
       nobodyConnected: "❌ No group member has connected their Spotify account to Ambient!",
       group: [
-        "🧐 What are currently members of *{0}* group listening to?\n", //
+        "🧐 What are currently members of *{0}* group listening to?\n",
         "{1}",
         "\n🧮 *{2}* out of *{3}* members of this group connected Spotify accounts with Ambient, *{4}* of them are currently listening.",
       ],
