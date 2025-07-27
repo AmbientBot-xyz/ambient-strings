@@ -1,7 +1,7 @@
 export default {
   global: {
     notEnabled:
-      "It looks like you are trying to use the bot on a group that has not been added to the allowed list in the *Ambient management panel*. Ask bot administrator to add a group or create your own bot completely free on {0}",
+      "It looks like you are trying to use Ambient on a group that has not been added to the allowed list in the *management panel*. Ask bot administrator to add a group or create your own bot completely free on {0}",
     properBotIssues: [
       "It looks like you are trying to use a bot that is not working properly. Information about the bot enabled on this group:\n",
       "🤖 Bot name: *{0}*",
@@ -44,9 +44,12 @@ export default {
     outOfRange: "❌ Selected position does not exist! (max. *{0}*, *{1}* selected)",
     botAdminRequired: "❌ Bot must be a group admin to use this command.",
     nsfwNotAllowed: "❌ NSFW content is not available in this group, check *{0}* command.",
-    userBlacklisted: "🫨 You cannot use *Ambient* because you are *blacklisted*.",
+    userBlacklisted: [
+      "🫨 You can't use *Ambient* because you're *blacklisted*.\n",
+      "🤨 Do you think this is a mistake? Join our *Discord server* and submit an appeal - we'll review your case: {0}",
+    ],
     userPurplelisted: [
-      "😤 This group contains users who have been added to the purplelist. Using the bot will not be possible until the following members are removed from the conversation:\n",
+      "😤 This group contains users who have been added to the purplelist. Using Ambient will not be possible until the following members are removed from the conversation:\n",
       "{0}",
       "\n⏳ The group is checked for the presence of purplelisted users every *5 minutes*. Next check will take place in *⌚ {1}* and *{2}*.",
     ],
@@ -73,6 +76,10 @@ export default {
       searching: "⏳ Searching for a photo of a cat...",
       done: "{0} Here is a random photo of a cat by *{1}* from *{2}*:",
     },
+    cow: {
+      searching: "⏳ Searching for a photo of a cow...",
+      done: "{0} Here is a random photo of a cow by *{1}* from *{2}*:",
+    },
     dog: {
       searching: "⏳ Searching for a photo of a dog...",
       done: "{0} Here is a random photo of a dog by *{1}* from *{2}*:",
@@ -93,6 +100,14 @@ export default {
       searching: "⏳ Searching for a photo of a hamster...",
       done: "{0} Here is a random photo of a hamster by *{1}* from *{2}*:",
     },
+    hedgehog: {
+      searching: "⏳ Searching for a photo of a hedgehog...",
+      done: "{0} Here is a random photo of a hedgehog by *{1}* from *{2}*:",
+    },
+    horse: {
+      searching: "⏳ Searching for a photo of a horse...",
+      done: "{0} Here is a random photo of a horse by *{1}* from *{2}*:",
+    },
     lizard: {
       searching: "⏳ Searching for a photo of a lizard...",
       done: "{0} Here is a random photo of a lizard by *{1}* from *{2}*:",
@@ -108,6 +123,10 @@ export default {
     pigeon: {
       searching: "⏳ Searching for a photo of a pigeon...",
       done: "{0} Here is a random photo of a pigeon by *{1}* from *{2}*:",
+    },
+    rabbit: {
+      searching: "⏳ Searching for a photo of a rabbit...",
+      done: "{0} Here is a random photo of a rabbit by *{1}* from *{2}*:",
     },
     racoon: {
       searching: "⏳ Searching for a photo of a racoon...",
@@ -215,21 +234,21 @@ export default {
       ],
       done: [
         "{1} Info about inventory of *{2}*:",
-        "\n🏦 _GENERAL_:",
+        "\n🏦 _*GENERAL*_:",
         "👛 Balance: *{3} 🪙*",
         "📅 Last daily reward: {4}",
         "🔥 Days in a row: *{5}*",
-        "\n🐟 _FISHING_:",
+        "\n🐟 _*FISHING*_:",
         "🎣 Fishing rod: *{6}*",
         "⏳ Remaining fishing rod uses: *{7}*",
         "🪝 Bait: *{8}*",
         "♾️ Remaining bait uses: *{9}*",
         "⚖️ Caught fish: *{10}*",
-        "\n🎰 _CASINO_:",
+        "\n🎰 _*CASINO*_:",
         "🎲 Last bet: {11}",
         "📈 Bet victories: *{12}*",
         "📉 Bet losses: *{13}*",
-        "\n🥷🏼 _ROBBERIES_:",
+        "\n🥷🏼 _*ROBBERIES*_:",
         "💰 Successful robberies: *{14}*",
         "🔒 Failed robberies: *{14}*",
         "💥 Suffered robberies: *{15}*",
@@ -244,16 +263,106 @@ export default {
     rank: {
       usage: [
         "{0} Correct usage of command *{1}*:",
-        "\n🪙 *{1} coins group/global* {2} Shows the ranking of {3} users who have the most coins",
-        "\n🔥 *{1} streak group/global* {2} Shows the ranking of {3} users who claim free coins the most days in a row",
-        "\n💰 *{1} successfulrobberies group/global* {2} Shows the ranking of the {3} users who performed the most successful robberies",
-        "\n🔒 *{1} failedrobberies group/global* {2} Shows the ranking of the {3} users who performed the most unsuccessful robberies",
-        "\n💥 *{1} sufferedrobberies group/global* {2} Shows the ranking of the {3} users who experienced the most robberies",
-        "\n🛡️ *{1} defendedrobberies group/global* {2} Shows the ranking of {3} users who defended themselves against the most robberies",
-        "\n📈 *{1} betvictories group/global* {2} Shows the ranking of the {3} users who won the most bets",
-        "\n📉 *{1} betlosses group/global* {2} Shows the ranking of {3} users who lost the most bets",
-        "\n⚖️ *{1} caughtfish group/global* {2} Shows the ranking of the {3} users who caught the most fish",
+        "\n🪙 *{1} coins globally/groupglobally* {2} Shows the ranking of {3} users who have the most coins",
+        "\n🔥 *{1} streak globally/groupglobally* {2} Shows the ranking of {3} users who claim free coins the most days in a row",
+        "\n💰 *{1} successfulrobberies globally/groupglobally* {2} Shows the ranking of the {3} users who performed the most successful robberies",
+        "\n🔒 *{1} failedrobberies globally/groupglobally* {2} Shows the ranking of the {3} users who performed the most unsuccessful robberies",
+        "\n💥 *{1} sufferedrobberies globally/groupglobally* {2} Shows the ranking of the {3} users who experienced the most robberies",
+        "\n🛡️ *{1} defendedrobberies globally/groupglobally* {2} Shows the ranking of {3} users who defended themselves against the most robberies",
+        "\n📈 *{1} betvictories globally/groupglobally* {2} Shows the ranking of the {3} users who won the most bets",
+        "\n📉 *{1} betlosses globally/groupglobally* {2} Shows the ranking of {3} users who lost the most bets",
+        "\n⚖️ *{1} caughtfish globally/groupglobally* {2} Shows the ranking of the {3} users who caught the most fish",
         "\n💬 Looking for user rankings in the context of chat? Check out the *{4}* command.",
+      ],
+      coinsGlobal: [
+        "🪙 Top {0} users who have the most coins globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      streakGlobal: [
+        "🔥 Top {0} users who claim free coins the most days in a row globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      successfulRobberiesGlobal: [
+        "💰 Top {0} users who performed the most successful robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      failedRobberiesGlobal: [
+        "🔒 Top {0} users who performed the most unsuccessful robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      sufferedRobberiesGlobal: [
+        "💥 Top {0} users who experienced the most robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      defendedRobberiesGlobal: [
+        "🛡️ Top {0} users who defended themselves against the most robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      betVictoriesGlobal: [
+        "📈 Top {0} users who won the most bets globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      betLossesGlobal: [
+        "📉 Top {0} users who lost the most bets globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      caughtFishGlobal: [
+        "⚖️ Top {0} users who caught the most fish globally:", //
+        "\n{1}\n",
+        "🧮 You're {2} in the ranking.",
+      ],
+      coinsGroupGlobal: [
+        "🪙 Top {0} members who have the most coins globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      streakGroupGlobal: [
+        "🔥 Top {0} members who claim free coins the most days in a row globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      successfulRobberiesGroupGlobal: [
+        "💰 Top {0} members who performed the most successful robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      failedRobberiesGroupGlobal: [
+        "🔒 Top {0} members who performed the most unsuccessful robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      sufferedRobberiesGroupGlobal: [
+        "💥 Top {0} members who experienced the most robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      defendedRobberiesGroupGlobal: [
+        "🛡️ Top {0} members who defended themselves against the most robberies globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      betVictoriesGroupGlobal: [
+        "📈 Top {0} members who won the most bets globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      betLossesGroupGlobal: [
+        "📉 Top {0} members who lost the most bets globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      caughtFishGroupGlobal: [
+        "⚖️ Top {0} members who caught the most fish globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
       ],
     },
     rob: {
@@ -326,19 +435,19 @@ export default {
     shop: {
       summary: [
         "{0} Items and facilities available for purchase:",
-        "\n🎣 _FISHING RODS_:",
+        "\n🎣 _*FISHING RODS*_:",
         "1. {2} *{3}* {1} {4} 🪙",
         "2. {5} *{6}* {1} {7} 🪙",
         "3. {8} *{9}* {1} {10} 🪙",
-        "\n🪝 _BAITS_:",
+        "\n🪝 _*BAITS*_:",
         "4. {11} *{12}* {1} {13} 🪙",
         "5. {14} *{15}* {1} {16} 🪙",
         "6. {17} *{18}* {1} {19} 🪙",
-        "\n🛡️ _PROTECTION AGAINST THIEVES_:",
+        "\n🛡️ _*PROTECTION AGAINST THIEVES*_:",
         "7. {20} *{21}* {1} {22} 🪙",
         "8. {23} *{24}* {1} {25} 🪙",
         "9. {26} *{27}* {1} {28} 🪙",
-        "\n🎒 _THEFT SUPPORT_:",
+        "\n🎒 _*THEFT SUPPORT*_:",
         "10. {29} *{30}* {1} {31} 🪙",
         "11. {32} *{33}* {1} {34} 🪙",
         "12. {35} *{36}* {1} {37} 🪙",
@@ -434,27 +543,35 @@ export default {
       done: "{0} Here is an Astronomy Picture of the Day named *{1}*:",
     },
     bot: [
-      "{0} Ambient info:\n",
+      "{0} Ambient info:",
+      "\n📝 _*GENERAL*_:",
       "☯ RAM: *{1}/{2} GiB* {3} *{4}%*",
       "💾 Disk: *{5}/{6} GiB* {3} *{7}%*",
-      "⏳ Uptime: *{8}*",
-      "🏓 Ping: *{9} ms*",
-      "👑 Premium accounts: *{10}*",
-      "💎 Premium state: {11}",
-      "🤖 Running bots: *{12}*",
-      "✨ Core: *{13}*",
-      "🔌 Client: *{14}*",
-      "🪙 Economy: *{15}*",
-      "📦 Instance: *{16}*",
-      "🪁 Core environment: *{17}*",
-      "🧇 Client environment: *{18}*",
-      "👛 Economy environment: *{19}*",
-      "🏷 TypeScript: *{20}*",
-      "🆙 Update date: *{21}* {3} *{22}*",
-      "🍒 Creation date: *{23}*",
-      "😼 Author: *{24}*",
-      "\n📱 This bot was created *completely free* on {25}, you can also do it to use it on your groups!",
-      "\n🤗 Join our *Discord server* to stay up to date with *Ambient* news, as well as get help and answers to your questions: {26}",
+      "🏓 Ping: *{8} ms*",
+      "📦 Instance: *{9}*",
+      "🤖 Running bots: *{10}*",
+      "🌡️ Average CPU temperature: *{11}°C*",
+      "👑 Premium accounts: *{12}*",
+      "💎 Premium state: {13}",
+      "🍒 Creation date: *{14}*",
+      "😼 Author: *{15}*",
+      "\n🫀 _*CORE*_:",
+      "✨ Version: *{16}*",
+      "🌱 Environment: *{17}*",
+      "⏳ Uptime: *{18}*",
+      "🆙 Update date: *{19}* {3} *{20}*",
+      "\n🔌 _*CLIENT*_:",
+      "✨ Version: *{21}*",
+      "🌱 Environment: *{22}*",
+      "⏳ Uptime: *{23}*",
+      "🆙 Update date: *{24}* {3} *{25}*",
+      "\n🪙 _*ECONOMY*_:",
+      "✨ Version: *{26}*",
+      "🌱 Environment: *{27}*",
+      "⏳ Uptime: *{28}*",
+      "🆙 Update date: *{29}* {3} *{30}*",
+      "\n📱 This bot was created *completely free* on {31}, you can also do it to use it on your groups!",
+      "\n🤗 Join our *Discord server* to stay up to date with *Ambient* news, as well as get help and answers to your questions: {32}",
     ],
     group: {
       collecting: "⏳ Collecting info about group...",
@@ -463,8 +580,8 @@ export default {
         "🆔 ID: *{2}*",
         "👥 Participants: *{3}*",
         "👮🏻‍♂️ Administrators: *{4}*",
-        "♂️ Males: *{5}*",
-        "♀️ Females: *{6}*",
+        "👨🏻 Males: *{5}*",
+        "👩🏼 Females: *{6}*",
         "🤗 Ambient users: *{7}*",
         "🎨 Theme name: *{8}*",
         "🗂 Visible messages: *{9}*",
@@ -496,7 +613,7 @@ export default {
         "⚙️ Configuration (*{4}*): {5}\n",
         "🪙 Economy (*{6}*): {7}\n",
         "👾 Fun (*{8}*): {9}\n",
-        "ℹ Info (*{10}*): {11}\n",
+        "ℹ️ Info (*{10}*): {11}\n",
         "🔞 NSFW (*{12}*): {13}\n",
         "💎 Premium (*{14}*): {15}\n",
         "📸 Social (*{16}*): {17}\n",
@@ -538,23 +655,23 @@ export default {
     top: {
       usage: [
         "{0} Correct usage of command *{1}*:",
-        "\n✉ *{1} messages group/global* {2} Shows the top {3} users who sent the most messages",
-        "\n🪄 *{1} commands group/global* {2} Shows the top {3} users who executed the most commands",
-        "\n🐒 *{1} mentions group/global* {2} Shows the top {3} users who have been mentioned the most",
+        "\n✉ *{1} messages group/globally/groupglobally* {2} Shows the top {3} users who sent the most messages",
+        "\n🪄 *{1} commands group/globally/groupglobally* {2} Shows the top {3} users who executed the most commands",
+        "\n🐒 *{1} mentions group/globally/groupglobally* {2} Shows the top {3} users who have been mentioned the most",
         "\n🪙 Looking for top users in the context of economy? Check out the *{4}* command.",
       ],
       messagesGroup: [
-        "✉ Top {0} users who sent the most messages in this group:", //
+        "✉ Top {0} members who sent the most messages in this group:", //
         "\n{1}\n",
         "🧮 You're *#{2}* in the ranking.",
       ],
       commandsGroup: [
-        "🪄 Top {0} users who executed the most commands in this group:", //
+        "🪄 Top {0} members who executed the most commands in this group:", //
         "\n{1}\n",
         "🧮 You're *#{2}* in the ranking.",
       ],
       mentionsGroup: [
-        "🐒 Top {0} users who have been mentioned the most in this group:", //
+        "🐒 Top {0} members who have been mentioned the most in this group:", //
         "\n{1}\n",
         "🧮 You're *#{2}* in the ranking.",
       ],
@@ -572,6 +689,21 @@ export default {
         "🐒 Top {0} users who have been mentioned the most globally:", //
         "\n{1}\n",
         "🧮 You're {2} in the ranking.",
+      ],
+      messagesGroupGlobal: [
+        "✉ Top {0} members who sent the most messages globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      commandsGroupGlobal: [
+        "🪄 Top {0} members who executed the most commands globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
+      ],
+      mentionsGroupGlobal: [
+        "🐒 Top {0} members who have been mentioned the most globally:", //
+        "\n{1}\n",
+        "🧮 You're *#{2}* in the ranking.",
       ],
     },
     weather: {
@@ -650,7 +782,7 @@ export default {
     },
     yandere: {
       searching: "⏳ Searching for Yandere photo...",
-      done: "{0} Here is a random Yandere photo:",
+      done: "{0} Here is a random Yandere photo by *{1}* from *{2}*:",
     },
     invitation: {
       status: [
@@ -701,7 +833,7 @@ export default {
       ],
       nothingToPurge: "❌ All group members have been active for the last *{1}* day{2}!",
       confirmation: [
-        "ℹ This group currently has *{0}* users, after purging it from *{1}* member{2} which {4} inactive for at least *{6}* day{7}, there will be *{8}* of them. Do you want to continue?\n",
+        "ℹ️ This group currently has *{0}* users, after purging it from *{1}* member{2} which {4} inactive for at least *{6}* day{7}, there will be *{8}* of them. Do you want to continue?\n",
         "1. *✅ yes*",
         "2. *❌ no*",
         "\n🪄 Send only the number corresponding to the selected option, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first option.",

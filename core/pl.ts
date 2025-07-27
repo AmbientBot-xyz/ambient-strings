@@ -1,7 +1,7 @@
 export default {
   global: {
     notEnabled:
-      "Wygląda na to, że próbujesz skorzystać z bota na grupie która nie została dodana do listy dozwolonych w *panelu zarządzania Ambientem*. Poproś administratora bota o dodanie grupy lub stwórz własnego bota całkowicie za darmo na {0}",
+      "Wygląda na to, że próbujesz skorzystać z Ambienta na grupie która nie została dodana do listy dozwolonych w *panelu zarządzania*. Poproś administratora bota o dodanie grupy lub stwórz własnego bota całkowicie za darmo na {0}",
     properBotIssues: [
       "Wygląda na to, że próbujesz skorzystać z bota który nie działa prawidłowo. Informacje o bocie włączonym na tej grupie:\n",
       "🤖 Nazwa bota: *{0}*",
@@ -44,9 +44,12 @@ export default {
     outOfRange: "❌ Wybrana pozycja nie istnieje! (maks. *{0}*, wybrano *{1}*)",
     botAdminRequired: "❌ Bot musi być administratorem grupy aby skorzystać z tej komendy.",
     nsfwNotAllowed: "❌ Treści NSFW nie są dostępne w tej grupie, sprawdź komendę *{0}*.",
-    userBlacklisted: "🫨 Nie możesz korzystać z *Ambienta*, ponieważ znajdujesz się na *czarnej liście*.",
+    userBlacklisted: [
+      "🫨 Nie możesz korzystać z *Ambienta*, ponieważ znajdujesz się na *czarnej liście*.\n",
+      "🤨 Uważasz że to pomyłka? Dołącz na nasz *serwer Discord* i złóż odwołanie - przyjryzmy się Twojej sprawie: {0}",
+    ],
     userPurplelisted: [
-      "😤 W tej grupie znajdują się osoby, które zostały dodane do fioletowej listy. Korzystanie z bota nie będzie możliwe do momentu usunięcia z konwersacji poniższych członków:\n",
+      "😤 W tej grupie znajdują się osoby, które zostały dodane do fioletowej listy. Korzystanie z Ambienta nie będzie możliwe do momentu usunięcia z konwersacji poniższych członków:\n",
       "{0}",
       "\n⏳ Grupa jest sprawdzana pod kątem obecności osób na fioletowej liście co *5 minut*. Kolejne sprawdzenie odbędzie się za *⌚ {1}* i *{2}*.",
     ],
@@ -73,6 +76,10 @@ export default {
       searching: "⏳ Szukam zdjęcia kota...",
       done: "{0} Oto losowe zdjęcie kota autorstwa *{1}* z *{2}*:",
     },
+    cow: {
+      searching: "⏳ Szukam zdjęcia krowy...",
+      done: "{0} Oto losowe zdjęcie krowy autorstwa *{1}* z *{2}*:",
+    },
     dog: {
       searching: "⏳ Szukam zdjęcia psa...",
       done: "{0} Oto losowe zdjęcie psa autorstwa *{1}* z *{2}*:",
@@ -93,6 +100,14 @@ export default {
       searching: "⏳ Szukam zdjęcia chomika...",
       done: "{0} Oto losowe zdjęcie chomika autorstwa *{1}* z *{2}*:",
     },
+    hedgehog: {
+      searching: "⏳ Szukam zdjęcia jeża...",
+      done: "{0} Oto losowe zdjęcie jeża autorstwa *{1}* z *{2}*:",
+    },
+    horse: {
+      searching: "⏳ Szukam zdjęcia konia...",
+      done: "{0} Oto losowe zdjęcie konia autorstwa *{1}* z *{2}*:",
+    },
     lizard: {
       searching: "⏳ Szukam zdjęcia jaszczurki...",
       done: "{0} Oto losowe zdjęcie jaszczurki autorstwa *{1}* z *{2}*:",
@@ -108,6 +123,10 @@ export default {
     pigeon: {
       searching: "⏳ Szukam zdjęcia gołębia...",
       done: "{0} Oto losowe zdjęcie gołębia autorstwa *{1}* z *{2}*:",
+    },
+    rabbit: {
+      searching: "⏳ Szukam zdjęcia królika...",
+      done: "{0} Oto losowe zdjęcie królika autorstwa *{1}* z *{2}*:",
     },
     racoon: {
       searching: "⏳ Szukam zdjęcia szopa...",
@@ -215,21 +234,21 @@ export default {
       ],
       done: [
         "{1} Informacje o ekwipunku *{2}*:",
-        "\n🏦 _OGÓLNE_:",
+        "\n🏦 _*OGÓLNE*_:",
         "👛 Majątek: *{3} 🪙*",
         "📅 Ostatnia dzienna nagroda: {4}",
         "🔥 Dni pod rząd: *{5}*",
-        "\n🐟 _ŁOWIECTWO_:",
+        "\n🐟 _*ŁOWIECTWO*_:",
         "🎣 Wędka: *{6}*",
         "⏳ Pozostałe użycia wędki: *{7}*",
         "🪝 Przynęta: *{8}*",
         "♾️ Pozostałe użycia przynęty: *{9}*",
         "⚖️ Złowione ryby: *{10}*",
-        "\n🎰 _KASYNO_:",
+        "\n🎰 _*KASYNO*_:",
         "🎲 Ostatni zakład: {11}",
         "📈 Wygrane zakłady: *{12}*",
         "📉 Przegrane zakłady: *{13}*",
-        "\n🥷🏼 _NAPADY_:",
+        "\n🥷🏼 _*NAPADY*_:",
         "💰 Udane napady: *{14}*",
         "🔒 Nieudane napady: *{15}*",
         "💥 Doznane napady: *{16}*",
@@ -244,16 +263,106 @@ export default {
     rank: {
       usage: [
         "{0} Prawidłowe użycie komendy *{1}*:",
-        "\n🪙 *{1} monety grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy mają najwięcej monet",
-        "\n🔥 *{1} dni grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy odbierają darmowe monety najwięcej dni z rzędu",
-        "\n💰 *{1} udanenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy wykonali najwięcej udanych napadów",
-        "\n🔒 *{1} nieudanenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy wykonali najwięcej nieudanych napadów",
-        "\n💥 *{1} doznanenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy doznali najwięcej napadów",
-        "\n🛡️ *{1} udarmenionenapady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy obronili się przed największą ilością napadów",
-        "\n📈 *{1} wygranezakłady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy wygrali najwięcej zakładów",
-        "\n📉 *{1} przegranezakłady grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy przegrali najwięcej zakładów",
-        "\n⚖️ *{1} złowioneryby grupa/globalnie* {2} Pokazuje ranking {3} użytkowników, którzy złowili najwięcej ryb",
+        "\n🪙 *{1} monety globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy mają najwięcej monet",
+        "\n🔥 *{1} dni globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy odbierają darmowe monety najwięcej dni z rzędu",
+        "\n💰 *{1} udanenapady globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy wykonali najwięcej udanych napadów",
+        "\n🔒 *{1} nieudanenapady globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy wykonali najwięcej nieudanych napadów",
+        "\n💥 *{1} doznanenapady globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy doznali najwięcej napadów",
+        "\n🛡️ *{1} udaremnionenapady globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy obronili się przed największą ilością napadów",
+        "\n📈 *{1} wygranezakłady globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy wygrali najwięcej zakładów",
+        "\n📉 *{1} przegranezakłady globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy przegrali najwięcej zakładów",
+        "\n⚖️ *{1} złowioneryby globalnie/grupaglobalnie* {2} Pokazuje ranking {3} użytkowników, którzy złowili najwięcej ryb",
         "\n💬 Szukasz rankingu użytkowników w kontekście czatu? Sprawdź komendę *{4}*.",
+      ],
+      coinsGlobal: [
+        "🪙 Top {0} użytkowników, którzy mają najwięcej monet globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      streakGlobal: [
+        "🔥 Top {0} użytkowników, którzy odbierają darmowe monety najwięcej dni z rzędu globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      successfulRobberiesGlobal: [
+        "💰 Top {0} użytkowników, którzy wykonali najwięcej udanych napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      failedRobberiesGlobal: [
+        "🔒 Top {0} użytkowników, którzy wykonali najwięcej nieudanych napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      sufferedRobberiesGlobal: [
+        "💥 Top {0} użytkowników, którzy doznali najwięcej napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      defendedRobberiesGlobal: [
+        "🛡️ Top {0} użytkowników, którzy obronili się przed największą ilością napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      betVictoriesGlobal: [
+        "📈 Top {0} użytkowników, którzy wygrali najwięcej zakładów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      betLossesGlobal: [
+        "📉 Top {0} użytkowników, którzy przegrali najwięcej zakładów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      caughtFishGlobal: [
+        "⚖️ Top {0} użytkowników, którzy złowili najwięcej ryb globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś {2} w rankingu.",
+      ],
+      coinsGroupGlobal: [
+        "🪙 Top {0} członków, którzy mają najwięcej monet globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      streakGroupGlobal: [
+        "🔥 Top {0} członków, którzy odbierają darmowe monety najwięcej dni z rzędu globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      successfulRobberiesGroupGlobal: [
+        "💰 Top {0} członków, którzy wykonali najwięcej udanych napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      failedRobberiesGroupGlobal: [
+        "🔒 Top {0} członków, którzy wykonali najwięcej nieudanych napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      sufferedRobberiesGroupGlobal: [
+        "💥 Top {0} członków, którzy doznali najwięcej napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      defendedRobberiesGroupGlobal: [
+        "🛡️ Top {0} członków, którzy obronili się przed największą ilością napadów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      betVictoriesGroupGlobal: [
+        "📈 Top {0} członków, którzy wygrali najwięcej zakładów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      betLossesGroupGlobal: [
+        "📉 Top {0} członków, którzy przegrali najwięcej zakładów globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      caughtFishGroupGlobal: [
+        "⚖️ Top {0} członków, którzy złowili najwięcej ryb globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
       ],
     },
     rob: {
@@ -327,19 +436,19 @@ export default {
     shop: {
       summary: [
         "{0} Przedmioty i ułatwienia dostępne do zakupu:",
-        "\n🎣 _WĘDKI_:",
+        "\n🎣 _*WĘDKI*_:",
         "1. {2} *{3}* {1} {4} 🪙",
         "2. {5} *{6}* {1} {7} 🪙",
         "3. {8} *{9}* {1} {10} 🪙",
-        "\n🪝 _PRZYNĘTY_:",
+        "\n🪝 _*PRZYNĘTY*_:",
         "4. {11} *{12}* {1} {13} 🪙",
         "5. {14} *{15}* {1} {16} 🪙",
         "6. {17} *{18}* {1} {19} 🪙",
-        "\n🛡️ _OCHRONA PRZED ZŁODZIEJAMI_:",
+        "\n🛡️ _*OCHRONA PRZED ZŁODZIEJAMI*_:",
         "7. {20} *{21}* {1} {22} 🪙",
         "8. {23} *{24}* {1} {25} 🪙",
         "9. {26} *{27}* {1} {28} 🪙",
-        "\n🎒 _WSPARCIE PRZY KRADZIEŻY_:",
+        "\n🎒 _*WSPARCIE PRZY KRADZIEŻY*_:",
         "10. {29} *{30}* {1} {31} 🪙",
         "11. {32} *{33}* {1} {34} 🪙",
         "12. {35} *{36}* {1} {37} 🪙",
@@ -435,27 +544,35 @@ export default {
       done: "{0} Oto astronomiczne zdjęcie dnia pod tytułem *{1}*:",
     },
     bot: [
-      "{0} Informacje o Ambiencie:\n",
+      "{0} Informacje o Ambiencie:",
+      "\n📝 _*OGÓLNE*_:",
       "☯ RAM: *{1}/{2} GiB* {3} *{4}%*",
       "💾 Dysk: *{5}/{6} GiB* {3} *{7}%*",
-      "⏳ Czas działania: *{8}*",
-      "🏓 Ping: *{9} ms*",
-      "👑 Konta Premium: *{10}*",
-      "💎 Stan Premium: {11}",
-      "🤖 Uruchomione boty: *{12}*",
-      "✨ Jądro: *{13}*",
-      "🔌 Klient: *{14}*",
-      "🪙 Ekonomia: *{15}*",
-      "📦 Instancja: *{16}*",
-      "🪁 Środowisko jądra: *{17}*",
-      "🧇 Środowisko klienta: *{18}*",
-      "👛 Środowisko ekonomii: *{19}*",
-      "🏷 TypeScript: *{20}*",
-      "🆙 Data aktualizacji: *{21}* {3} *{22}*",
-      "🍒 Data powstania: *{23}*",
-      "😼 Autor: *{24}*",
-      "\n📱 Ten bot został stworzony *całkowicie za darmo* na stronie {25}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
-      "\n🤗 Dołącz na nasz *serwer Discord* aby być na bieżąco z nowościami dotyczącymi *Ambienta*, a także uzyskać pomoc i odpowiedzi na pytania: {26}",
+      "🏓 Ping: *{8} ms*",
+      "📦 Instancja: *{9}*",
+      "🤖 Uruchomione boty: *{10}*",
+      "🌡️ Średnia temperatura CPU: *{11}°C*",
+      "👑 Konta Premium: *{12}*",
+      "💎 Stan Premium: {13}",
+      "🍒 Data powstania: *{14}*",
+      "😼 Autor: *{15}*",
+      "\n🫀 _*JĄDRO*_:",
+      "✨ Wersja: *{16}*",
+      "🌱 Środowisko: *{17}*",
+      "⏳ Czas działania: *{18}*",
+      "🆙 Data aktualizacji: *{19}* {3} *{20}*",
+      "\n🔌 _*KLIENT*_:",
+      "✨ Wersja: *{21}*",
+      "🌱 Środowisko: *{22}*",
+      "⏳ Czas działania: *{23}*",
+      "🆙 Data aktualizacji: *{24}* {3} *{25}*",
+      "\n🪙 _*EKONOMIA*_:",
+      "✨ Wersja: *{26}*",
+      "🌱 Środowisko: *{27}*",
+      "⏳ Czas działania: *{28}*",
+      "🆙 Data aktualizacji: *{29}* {3} *{30}*",
+      "\n📱 Ten bot został stworzony *całkowicie za darmo* na stronie {31}, Ty również możesz to zrobić aby korzystać z niego na swoich grupach!",
+      "\n🤗 Dołącz na nasz *serwer Discord* aby być na bieżąco z nowościami dotyczącymi *Ambienta*, a także uzyskać pomoc i odpowiedzi na pytania: {32}",
     ],
     group: {
       collecting: "⏳ Zbieram informacje o grupie...",
@@ -464,8 +581,8 @@ export default {
         "🆔 ID: *{2}*",
         "👥 Członkowie: *{3}*",
         "👮🏻‍♂️ Administratorzy: *{4}*",
-        "♂️ Mężczyźni: *{5}*",
-        "♀️ Kobiety: *{6}*",
+        "👨🏻 Mężczyźni: *{5}*",
+        "👩🏼 Kobiety: *{6}*",
         "🤗 Użytkownicy Ambienta: *{7}*",
         "🎨 Nazwa motywu: *{8}*",
         "🗂 Widoczne wiadomości: *{9}*",
@@ -497,7 +614,7 @@ export default {
         "⚙️ Konfiguracja (*{4}*): {5}\n",
         "🪙 Ekonomia (*{6}*): {7}\n",
         "👾 Zabawa (*{8}*): {9}\n",
-        "ℹ Informacje (*{10}*): {11}\n",
+        "ℹ️ Informacje (*{10}*): {11}\n",
         "🔞 NSFW (*{12}*): {13}\n",
         "💎 Premium (*{14}*): {15}\n",
         "📸 Społecznościowe (*{16}*): {17}\n",
@@ -539,23 +656,23 @@ export default {
     top: {
       usage: [
         "{0} Prawidłowe użycie komendy *{1}*:",
-        "\n✉ *{1} wiadomości grupa/globalnie* {2} Pokazuje top {3} użytkowników, którzy wysłali najwięcej wiadomości",
-        "\n🪄 *{1} komendy grupa/globalnie* {2} Pokazuje top {3} użytkowników, którzy wykonali najwięcej komend",
-        "\n🐒 *{1} oznaczenia grupa/globalnie* {2} Pokazuje top {3} użytkowników, którzy zostali najwięcej oznaczeni",
+        "\n✉ *{1} wiadomości grupa/globalnie/grupaglobalnie* {2} Pokazuje top {3} użytkowników, którzy wysłali najwięcej wiadomości",
+        "\n🪄 *{1} komendy grupa/globalnie/grupaglobalnie* {2} Pokazuje top {3} użytkowników, którzy wykonali najwięcej komend",
+        "\n🐒 *{1} oznaczenia grupa/globalnie/grupaglobalnie* {2} Pokazuje top {3} użytkowników, którzy zostali najwięcej oznaczeni",
         "\n🪙 Szukasz top użytkowników w kontekście ekonomii? Sprawdź komendę *{4}*.",
       ],
       messagesGroup: [
-        "✉ Top {0} użytkowników, którzy wysłali najwięcej wiadomości w tej grupie:", //
+        "✉ Top {0} członków, którzy wysłali najwięcej wiadomości w tej grupie:", //
         "\n{1}\n",
         "🧮 Jesteś *#{2}* w rankingu.",
       ],
       commandsGroup: [
-        "🪄 Top {0} użytkowników, którzy wykonali najwięcej komend w tej grupie:", //
+        "🪄 Top {0} członków, którzy wykonali najwięcej komend w tej grupie:", //
         "\n{1}\n",
         "🧮 Jesteś *#{2}* w rankingu.",
       ],
       mentionsGroup: [
-        "🐒 Top {0} użytkowników, którzy zostali najwięcej oznaczeni w tej grupie:", //
+        "🐒 Top {0} członków, którzy zostali najwięcej oznaczeni w tej grupie:", //
         "\n{1}\n",
         "🧮 Jesteś *#{2}* w rankingu.",
       ],
@@ -573,6 +690,21 @@ export default {
         "🐒 Top {0} użytkowników, którzy zostali najwięcej oznaczeni globalnie:", //
         "\n{1}\n",
         "🧮 Jesteś {2} w rankingu.",
+      ],
+      messagesGroupGlobal: [
+        "✉ Top {0} członków, którzy wysłali najwięcej wiadomości globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      commandsGroupGlobal: [
+        "🪄 Top {0} członków, którzy wykonali najwięcej komend globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
+      ],
+      mentionsGroupGlobal: [
+        "🐒 Top {0} członków, którzy zostali najwięcej oznaczeni globalnie:", //
+        "\n{1}\n",
+        "🧮 Jesteś *#{2}* w rankingu.",
       ],
     },
     weather: {
@@ -651,7 +783,7 @@ export default {
     },
     yandere: {
       searching: "⏳ Szukam zdjęcia Yandere...",
-      done: "{0} Oto losowe zdjęcie Yandere:",
+      done: "{0} Oto losowe zdjęcie Yandere autorstwa *{1}* z *{2}*:",
     },
     guard: {
       status: [
@@ -753,7 +885,7 @@ export default {
       ],
       nothingToPurge: "❌ Wszyscy członkowie grupy byli aktywni przez ostatni{0} *{1}* {2}!",
       confirmation: [
-        "ℹ W tej grupie znajduje się obecnie *{0}* użytkowników, po oczyszczeniu jej z *{1}* członk{2} któr{3}y by{4} nieaktywn{5} od co najmniej *{6}* {7}, zostanie ich *{8}*. Czy chcesz kontynuować?\n",
+        "ℹ️ W tej grupie znajduje się obecnie *{0}* użytkowników, po oczyszczeniu jej z *{1}* członk{2} któr{3}y by{4} nieaktywn{5} od co najmniej *{6}* {7}, zostanie ich *{8}*. Czy chcesz kontynuować?\n",
         "1. *✅ tak*",
         "2. *❌ nie*",
         "\n🪄 Napisz tylko liczbę odpowiadającą wybranej opcji, możesz także zareagować na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) aby wybrać pierwszą opcję.",
