@@ -986,8 +986,8 @@ export default {
         "{0} Prawidłowe użycie komendy *{1}*:\n", //
         "✨ *{1} <nazwa użytkownika>*\n",
         "💡 Przykłady:",
-        "⭐ *{1} HizoreQ*",
-        "⭐ *{1} Magicznykonik11*",
+        "⭐ *{1} dxmqa_Ok*",
+        "⭐ *{1} Wolfpaq*",
         "⭐ *{1} wxqa0a*",
       ],
       notFound: "❌ Podana nazwa użytkownika nie została odnaleziona!",

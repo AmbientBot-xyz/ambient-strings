@@ -889,7 +889,7 @@ export default {
         "\n⚙ To change settings, type *{5} change*.",
       ],
       firstSettingQuestion: [
-        "🛡 Do you want to enable the restoration of deleted messages feature ?\n",
+        "🛡 Do you want to enable the restoration of deleted messages feature?\n",
         "1. *❌ no*",
         "2. *✅ yes*",
         "\n🪄 Send only the number corresponding to the selected setting, you can also react to this message by using 👍🏼 (variant irrelevant) to select the first setting.",
@@ -936,8 +936,8 @@ export default {
         "{0} Correct usage of command *{1}*:\n", //
         "✨ *{1} <username>*\n",
         "💡 Examples:",
-        "⭐ *{1} HizoreQ*",
-        "⭐ *{1} Magicznykonik11*",
+        "⭐ *{1} dxmqa_Ok*",
+        "⭐ *{1} Wolfpaq*",
         "⭐ *{1} wxqa0a*",
       ],
       notFound: "❌ The given username was not found!",
