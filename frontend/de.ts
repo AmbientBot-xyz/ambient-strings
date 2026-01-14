@@ -91,7 +91,7 @@ export default {
     email: "E-mail",
     password: "Password",
     passwordRepeat: "Repeat password",
-    loginButton: "Sign in",
+    loginButton: "Anmelden",
     forgotPassword: "Forgot password?",
     forgotPasswordModalHint:
       "Enter the email address associated with your account to receive a link to log in without a password. After logging in, you will be able to set a new password in the your profile tab.",
