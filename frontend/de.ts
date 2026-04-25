@@ -142,7 +142,7 @@ export default {
     faqContent4: "Aktives Premium funktioniert bei allen Bots, die im Ambient-System erstellt wurden, und in allen Gruppen. Du kannst alle Funktionen ohne Einschränkungen überall nutzen.",
     faqTitle5: "Wie funktioniert das Gruppen-Boosten?",
     faqContent5:
-      "With active Premium, you can boost up to 2 groups. This allows all members of those groups to use all Ambient features without restrictions, even if they don't have active Premium themselves. You can transfer your boosts to other groups at any time.",
+      "Mit aktivem Premium kannst du bis zu 2 Gruppen boosten. Dadurch können alle Mitglieder dieser Gruppen alle Ambient-Funktionen ohne Einschränkungen nutzen, auch wenn sie selbst kein aktives Premium haben. Du kannst deine Boosts jederzeit auf andere Gruppen übertragen.",
   },
   auth: {
     loginCardTitle: "Bereits Ambient nutzen? Anmelden:",
@@ -414,11 +414,11 @@ export default {
     },
   },
   help: {
-    ytTutorial: "Instructional video on YouTube",
+    ytTutorial: "Anleitungsvideo auf YouTube",
     ytTutorialMore:
-      "This video shows you how to quickly and easily create your own Ambient bot on Messenger. A practical step-by-step guide that walks you through the entire process.",
-    discordServer: "Our Discord server",
+      "In diesem Video wird Dir gezeigt, wie du schnell und einfach deinen eigenen Ambient-Bot auf Messenger erstellst. Eine praktische Schritt-für-Schritt-Anleitung, die dich durch den gesamten Prozess führt.",
+    discordServer: "Unser Discord-Server",
     discordServerMore:
-      "Still have questions or need help? Join our Discord server to chat with the Ambient community, ask questions, report issues, and get support. We talk about everything – from ideas for new features to casual discussions. You'll also find updates, events, and information about what's coming next.",
+      "Hast du noch Fragen oder brauchst du Hilfe? Tritt unserem Discord-Server bei, um mit der Ambient-Community zu chatten, Fragen zu stellen, Probleme zu melden und Unterstützung zu erhalten. Wir sprechen über alles – von Ideen für neue Funktionen bis hin zu lockeren Gesprächen. Du findest dort auch Updates, Events und Informationen darüber, was als Nächstes kommt.",
   },
 };
