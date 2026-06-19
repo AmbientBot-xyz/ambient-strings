@@ -291,7 +291,7 @@ export default {
     done: "Done",
     screenshot: "Screenshot",
     screenshotModalHint:
-      "Sscreenshot allows you to see why we were unable to log in with the provided credentials. If they appear to be incorrect, correct them and try again. You suspect that the login process is malfunctioning? Contact us on the Discord server, we'll look into it asap.",
+      "Screenshot allows you to see why we were unable to log in with the provided credentials. If they appear to be incorrect, correct them and try again. You suspect that the login process is malfunctioning? Contact us on the Discord server, we'll look into it asap.",
     failedReason: "Reason",
     failedReasonDescription: "Description",
     connection: "Account connection",
