@@ -99,7 +99,7 @@ export default {
     copiedSuccessfullyMore: "Thank you for supporting Ambient.",
     tip: "You can support Ambient at any time and extend your Premium membership. To do so, select the amount of your support below and the number of Premium months you'd like to receive.",
     transferPartOne: "Make a phone transfer using",
-    transferPartTwo: "with the following details:",
+    transferPartTwo: "providing the following details:",
     perMonth: "per month",
     cheaperBy: "cheaper by",
     rulesPartOne: "By making a transfer, you accept contents of the",

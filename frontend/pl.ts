@@ -99,7 +99,7 @@ export default {
     copiedSuccessfullyMore: "Dziękujemy za wspieranie Ambienta.",
     tip: "Możesz w dowolnym momencie wesprzeć Ambienta i przedłużyć ważność swojego Premium. Aby to zrobić, wybierz poniżej kwotę wsparcia, oraz ilość miesięcy Premium jaką chcesz otrzymać.",
     transferPartOne: "Wykonaj przelew na telefon przy użyciu",
-    transferPartTwo: "korzystając z poniższych danych:",
+    transferPartTwo: "podając poniższe dane:",
     perMonth: "za miesiąc",
     cheaperBy: "taniej o",
     rulesPartOne: "Wykonując przelew akceptujesz treść",
