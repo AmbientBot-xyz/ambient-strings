@@ -66,6 +66,30 @@ export default {
       "\n✨ Aby zarządzać swoimi ulepszeniami grup, skorzystaj z komendy *{3}*.",
       "\n🫶🏻 Dziękujemy za wspieranie *Ambienta*!",
     ],
+    authenticationPrompt: [
+      "🔑 {0}, czy to Ty próbujesz właśnie powiązać swój profil w Ambiencie z zewnętrznym serwisem?\n",
+      "🤝🏼 Serwis: *{1}*",
+      "🆔 ID: *{2}*",
+      "🕵🏼 Urządzenie: *{3}*",
+      "⏱️ Data rozpoczęcia: *{4}*",
+      "\n🟢 Zareaguj na tę wiadomość używając 👍🏼 (odcień nie ma znaczenia) lub ✅ w ciągu *{5} sekund* TYLKO, jeśli powyższe informacje zgadzają się i chcesz uwierzytelnić to żądanie.",
+      "\n🔴 Zignoruj tę wiadomość, jeśli to nie Ty lub powyższe informacje nie zgadzają się. Możesz także zareagować używając 👎🏼 (odcień nie ma znaczenia) lub ❌, aby odrzucić żądanie natychmiast.",
+      "\n🟡 Aby zarządzać swoim powiązaniem z serwisem *{1}*, skorzystaj z komendy *{6}*.",
+      "\n🤗 Masz pytania lub potrzebujesz pomocy? Dołącz na nasz *serwer Discord*: {7}",
+    ],
+    unauthorizedAuthenticationPromptResponseAttempt: "🚫 {0}, nie możesz odpowiedzieć na żądanie, które nie jest kierowane do Ciebie.",
+    authenticationPromptAuthorized: [
+      "✅ {0}, żądanie *{1}* zostało przez Ciebie uwierzytelnione. Możesz teraz wrócić pod swój link: {2}\n",
+      "⌚ Masz od teraz kolejne *{3} minut* aby dokończyć łączenie konta.",
+    ],
+    authenticationPromptRejected: "⛔️ {0}, żądanie *{1}* zostało przez Ciebie odrzucone.",
+    authenticationPromptTimeout: "⌛ {0}, czas na uwierzytelnienie żądania *{1}* minął. Zostało ono automatycznie odrzucone.",
+    authenticationPromptSuperseded: "🔄 {0}, żądanie *{1}* zostało automatycznie odrzucone, ponieważ zostało przez Ciebie uwierzytelnione inne żądanie dla tego serwisu.",
+    connectionUrl: [
+      "🔗 Oto Twój link do powiązania profilu w Ambiencie z serwisem *{0}*: {1}\n",
+      "⌚ Link jest ważny przez *{2} minut* lub do momentu pierwszego uwierzytelnienia żądania.",
+    ],
+    connectedSuccessfully: "🎊 {0}, Twój profil w Ambiencie został pomyślnie powiązany z serwisem *{1}*! Możesz teraz korzystać z funkcji dostępnych pod komendą *{2}*.",
   },
   commands: {
     alpaca: {
@@ -1013,6 +1037,15 @@ export default {
       generating: "⏳ Trwa generowanie nagrania głosowego...",
       done: "{0} Oto wygenerowane nagranie głosowe:",
     },
+    discord: {
+      usage: [
+        "{0} Prawidłowe użycie komendy *{1}*:", //
+        "\n🔌 *{1} połącz* {2} Pozwala połączyć Twój profil w Ambiencie z kontem Discord",
+        "\n🔥 *{1} odłącz* {2} Pozwala odłączyć Twój profil w Ambiencie od konta Discord",
+      ],
+      notConnected: "❌ Nie połączył{1}ś profilu w Ambiencie z kontem Discord!",
+      disconnected: "✅ Pomyślnie odłączył{0}ś profil w Ambiencie od konta Discord!",
+    },
     instagram: {
       usage: [
         "{0} Prawidłowe użycie komendy *{1}*:\n", //
@@ -1114,8 +1147,8 @@ export default {
     spotify: {
       usage: [
         "{0} Prawidłowe użycie komendy *{1}*:",
-        "\n🔌 *{1} połącz* {2} Pozwala połączyć Ambienta z kontem Spotify",
-        "\n🔥 *{1} odłącz* {2} Pozwala odłączyć Ambienta od konta Spotify",
+        "\n🔌 *{1} połącz* {2} Pozwala połączyć Twój profil w Ambiencie z kontem Spotify",
+        "\n🔥 *{1} odłącz* {2} Pozwala odłączyć Twój profil w Ambiencie od konta Spotify",
         "\n🤠 *{1} profil <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić informacje o Twoim lub oznaczonego użytkownika profilu Spotify",
         "\n🧐 *{1} grupa* {2} Pozwala sprawdzić czego obecnie słuchają członkowie tej grupy",
         "\n🎧 *{1} aktualnie <@użytkownik (opcjonalnie)>* {2} Pozwala sprawdzić czego obecnie słuchasz Ty lub oznaczony użytkownik",
@@ -1135,14 +1168,22 @@ export default {
       ],
       incognitoDisabled: "🎼 Pomyślnie wyłączono tryb incognito w statystykach Spotify!",
       incognitoEnabled: "👓 Pomyślnie włączono tryb incognito w statystykach Spotify!",
-      alreadyConnected: "❌ Musisz odłączyć obecne konto przed połączeniem nowego!",
-      connectionUrl: "🔗 Oto Twój link do połączenia konta Spotify z Ambientem: {0}",
       userIncognito: "❌ *{0}* posiada włączony tryb incognito, tylko {1} może zobaczyć swoje statystyki Spotify.",
-      notConnected: "❌ Nie połączył{1}ś Ambienta z kontem Spotify!",
-      notConnectedMentioned: "❌ *{0}* nie połączył{1} Ambienta z kontem Spotify!",
-      disconnected: "✅ Pomyślnie odłączył{0}ś Ambienta od konta Spotify!",
-      mustReconnect: "❌ Musisz ponownie połączyć Ambienta z kontem Spotify!",
-      mustReconnectMentioned: "❌ *{0}* musi ponownie połączyć Ambienta z kontem Spotify!",
+      notConnected: "❌ Nie połączył{1}ś profilu w Ambiencie z kontem Spotify!",
+      notConnectedMentioned: "❌ *{0}* nie połączył{1} profilu w Ambiencie z kontem Spotify!",
+      disconnected: "✅ Pomyślnie odłączył{0}ś profil w Ambiencie od konta Spotify!",
+      expired: [
+        "❌ Twoje połączenie profilu w Ambiencie z serwisem Spotify wygasło! Skorzystaj z komendy *{0} połącz*.\n",
+        "💡 Od *20 lipca 2026 roku* Spotify wymaga, aby wszystkie połączenia z zewnętrznymi aplikacjami były odnawiane co *6 miesięcy*.",
+      ],
+      expiredMentioned: [
+        "❌ Połączenie profilu *{0}* w Ambiencie z serwisem Spotify wygasło! Informacje nie będą dostępne do momentu ponownego połączenia.\n",
+        "💡 Od *20 lipca 2026 roku* Spotify wymaga, aby wszystkie połączenia z zewnętrznymi aplikacjami były odnawiane co *6 miesięcy*.",
+      ],
+      expiringSoon: [
+        "🔔 {0}, Twoje połączenie profilu w Ambiencie z serwisem Spotify wkrótce wygaśnie! Połącz ponownie teraz przy użyciu komendy *{1} połącz* aby korzystać z integracji bez przerwy.\n",
+        "💡 Od *20 lipca 2026 roku* Spotify wymaga, aby wszystkie połączenia z zewnętrznymi aplikacjami były odnawiane co *6 miesięcy*.",
+      ],
       statsUnavailable: "❌ Statystyki dla Twojego konta są niedostępne, prawdopodobnie konto zostało utworzone niedawno lub było nieużywane od dłuższego czasu.",
       statsUnavailableMentioned: "❌ Statystyki dla konta *{0}* są niedostępne, prawdopodobnie konto zostało utworzone niedawno lub było nieużywane od dłuższego czasu.",
       notListening:
@@ -1429,7 +1470,7 @@ export default {
       mustReplyToMessage: "❌ Musisz odpowiedzieć na wiadomość którą chcesz zweryfikować!",
       success: "{0} Ta wiadomość została wysłana przez Ambienta!",
       failed:
-        "❓ Ta wiadomość nie została wysłana przez Ambienta!\n\nℹ️ Jeśli ta wiadomość została wysłana z konta które jest używane przez Ambienta, najprawdopodobniej oznacza to, że właściciel tego konta sam wysłał tę wiadomość ręcznie, lub została ona wysłana przez inne oprogramowanie.",
+        "❓ Ta wiadomość nie została wysłana przez Ambienta!\n\nℹ️ Jeśli ta wiadomość została wysłana z konta które jest używane przez Ambienta, najprawdopodobniej oznacza to, że właściciel tego konta sam wysłał tę wiadomość ręcznie lub została ona wysłana przez inne oprogramowanie.",
     },
     warning: {
       usage: [

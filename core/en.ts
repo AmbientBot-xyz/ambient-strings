@@ -66,6 +66,30 @@ export default {
       "\n✨ To manage your group boosts, use *{3}* command.",
       "\n🫶🏻 Thank you for supporting *Ambient*!",
     ],
+    authenticationPrompt: [
+      "🔑 {0}, are you trying to connect your Ambient profile with an external service right now?\n",
+      "🤝🏼 Service: *{1}*",
+      "🆔 ID: *{2}*",
+      "🕵🏼 Device: *{3}*",
+      "⏱️ Start date: *{4}*",
+      "\n🟢 React to this message using 👍🏼 (variant irrelevant) or ✅ within *{5} seconds* ONLY if the details above are correct and you wish to authorize this request.",
+      "\n🔴 Ignore this message if this is not you or the details above do not match. You can also react using 👎🏼 (variant irrelevant) or ❌ to decline the request immediately.",
+      "\n🟡 To manage your connection with the *{1}* service, use the *{6}* command.",
+      "\n🤗 Have questions or need help? Join our *Discord server*: {7}",
+    ],
+    unauthorizedAuthenticationPromptResponseAttempt: "🚫 {0}, you cannot respond to a request that is not addressed to you.",
+    authenticationPromptAuthorized: [
+      "✅ {0}, the request *{1}* has been authorized by you. You can now return to your link: {2}\n",
+      "⌚ You now have another *{3} minutes* to complete connecting your account.",
+    ],
+    authenticationPromptRejected: "⛔️ {0}, the request *{1}* has been rejected by you.",
+    authenticationPromptTimeout: "⌛ {0}, time to authorize the request *{1}* has expired. It has been automatically rejected.",
+    authenticationPromptSuperseded: "🔄 {0}, the request *{1}* was automatically rejected because you authorized another request for this service.",
+    connectionUrl: [
+      "🔗 Here is your link to connect your Ambient profile with the *{0}* service: {1}\n",
+      "⌚ The link is valid for *{2} minutes* or until first request authorization.",
+    ],
+    connectedSuccessfully: "🎊 {0}, your Ambient profile has been successfully connected to the service *{1}*! You can now use the features available via the *{2}* command.",
   },
   commands: {
     alpaca: {
@@ -963,6 +987,15 @@ export default {
       generating: "⏳ Generating a voice message...",
       done: "{0} Here is the generated voice message:",
     },
+    discord: {
+      usage: [
+        "{0} Correct usage of command *{1}*:",
+        "\n🔌 *{1} connect* {2} Allows you to connect your Ambient profile to Discord account",
+        "\n🔥 *{1} disconnect* {2} Allows you to disconnect your Ambient profile from Discord account",
+      ],
+      notConnected: "❌ You haven't connected your Ambient profile to Discord account!",
+      disconnected: "✅ Successfully disconnected your Ambient profile from Discord account!",
+    },
     instagram: {
       usage: [
         "{0} Correct usage of command *{1}*:\n", //
@@ -1064,8 +1097,8 @@ export default {
     spotify: {
       usage: [
         "{0} Correct usage of command *{1}*:",
-        "\n🔌 *{1} connect* {2} Allows you to connect Ambient with your Spotify account",
-        "\n🔥 *{1} disconnect* {2} Allows you to disconnect Ambient from your Spotify account",
+        "\n🔌 *{1} connect* {2} Allows you to connect your Ambient profile to Spotify account",
+        "\n🔥 *{1} disconnect* {2} Allows you to disconnect your Ambient profile from Spotify account",
         "\n🤠 *{1} profile <@user (optionally)>* {2} Allows you to check info about your or the mentioned user Spotify profile",
         "\n🧐 *{1} group* {2} Allows you to check what are members of this group currently listening to",
         "\n🎧 *{1} nowplaying <@user (optionally)>* {2} Allows you to check what are you or the user mentioned listening to now",
@@ -1085,14 +1118,22 @@ export default {
       ],
       incognitoDisabled: "🎼 Successfully disabled incognito mode in Spotify statistics!",
       incognitoEnabled: "👓 Successfully enabled incognito mode in Spotify statistics!",
-      alreadyConnected: "❌ You must disconnect your current account before connecting a new one!",
-      connectionUrl: "🔗 Here is your link to connect Spotify account with Ambient: {0}",
       userIncognito: "❌ *{0}* has incognito mode enabled, only {1} can see {2} Spotify statistics.",
-      notConnected: "❌ You haven't connected Ambient to your Spotify account!",
-      notConnectedMentioned: "❌ *{0}* has not connected Ambient to Spotify account!",
-      disconnected: "✅ Successfully disconnected Ambient from Spotify account!",
-      mustReconnect: "❌ You need to reconnect Ambient to your Spotify account!",
-      mustReconnectMentioned: "❌ *{0}* must reconnect Ambient to the Spotify account!",
+      notConnected: "❌ You haven't connected your Ambient profile to Spotify account!",
+      notConnectedMentioned: "❌ *{0}* has not connected Ambient profile to Spotify account!",
+      disconnected: "✅ Successfully disconnected your Ambient profile from Spotify account!",
+      expired: [
+        "❌ Your Ambient profile connection with Spotify has expired! Use command *{0} connect*.\n",
+        "💡 As of *20 July 2026*, Spotify requires all connections with external applications to be renewed every *6 months*.",
+      ],
+      expiredMentioned: [
+        "❌ Ambient profile connection with Spotify for *{0}* has expired! The information will not be available until reconnection.\n",
+        "💡 As of *20 July 2026*, Spotify requires all connections with external applications to be renewed every *6 months*.",
+      ],
+      expiringSoon: [
+        "🔔 {0}, your Ambient profile connection with Spotify will expire soon! Reconnect now using command *{1} connect* to continue using the integration without interruption.\n",
+        "💡 As of *20 July 2026*, Spotify requires all connections with external applications to be renewed every *6 months*.",
+      ],
       statsUnavailable: "❌ Statistics for your account are unavailable, the account was likely created recently or has been inactive for a long time.",
       statsUnavailableMentioned: "❌ Statistics for *{0}* are unavailable, the account was likely created recently or has been inactive for a long time.",
       notListening:
@@ -1379,7 +1420,7 @@ export default {
       mustReplyToMessage: "❌ You must reply to the message you want to verify!",
       success: "{0} This message was sent by Ambient!",
       failed:
-        "❓ This message was not sent by Ambient!\n\nℹ️ If this message was sent from an account that is used by Ambient, it most likely means that the owner of that account sent the message manually, or it was sent by other software.",
+        "❓ This message was not sent by Ambient!\n\nℹ️ If this message was sent from an account that is used by Ambient, it most likely means that the owner of that account sent the message manually or it was sent by other software.",
     },
     warning: {
       usage: [
