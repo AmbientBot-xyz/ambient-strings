@@ -133,8 +133,10 @@ export default {
     faqContent1: "Wystarczy, że wypełnisz jedynie pole które jest dostępne.",
     faqTitle2: "Po jakim czasie otrzymam dostęp do Premium?",
     faqContent2: "Zazwyczaj w ciągu kilku minut, w nielicznych przypadkach może to potrwać dłużej. W razie problemów poinformuj nas na naszym serwerze Discord.",
-    faqTitle3: "Czy można wesprzeć inną metodą niż przelew na telefon?",
-    faqContent3: "Nie.",
+    faqTitle3: "Czy można wesprzeć inną metodą niż przelew na telefon lub w innej walucie?",
+    faqContent3: "Tak, możesz skorzystać również z Revoluta lub użyć między innymi Apple Pay, nawet jeśli nie posiadasz konta Revolut:",
+    faqNote3:
+      "Pamiętaj o podaniu powyższego identyfikatora w polu z notatką. Jeśli chcesz użyć innej waluty, zwróć uwagę, aby wybrana kwota nie była niższa niż wybrany próg według aktualnego kursu walut.",
     faqTitle4: "W jakich botach i na jakich grupach będzie działało moje Premium?",
     faqContent4:
       "Aktywne Premium obowiązuje we wszystkich botach stworzonych w systemie Ambienta i na wszystkich grupach. Możesz korzystać ze wszystkich funkcji bez ograniczeń w dowolnym miejscu.",
@@ -219,7 +221,7 @@ export default {
     service: "Serwis",
     awaiting: "Potwierdź, że to Ty",
     awaitingMore:
-      "Na ostatnio używaną grupę zostało wysłane powiadomienie z prośbą o zaakceptowanie żądania. Zweryfikuj poprawność informacji które się w nim znajdują, a następnie potwierdź lub odrzuć żądanie w ciągu {0} sekund.",
+      "Na ostatnio używaną grupę zostało wysłane powiadomienie z prośbą o zaakceptowanie żądania. Zweryfikuj poprawność informacji które się w nim znajdują, a następnie potwierdź lub odrzuć żądanie w ciągu {0} sekund. Możesz bezpiecznie zamknąć tę stronę na czas uwierzytelniania.",
     authorized: "Uwierzytelniono żądanie",
     authorizedMore:
       "Żądanie zostało przez Ciebie uwierzytelnione. Możesz teraz przejść na stronę zewnętrznego serwisu, po pomyślnym zalogowaniu nastąpi przekierowanie z powrotem do naszej aplikacji w celu finalizacji połączenia.",

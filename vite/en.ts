@@ -133,8 +133,10 @@ export default {
     faqContent1: "Just fill in the field that is available.",
     faqTitle2: "How long will it take to get access to Premium?",
     faqContent2: "Usually within a few minutes, though in rare cases it may take longer. If you encounter any issues, contact us on our Discord server.",
-    faqTitle3: "Can I support using a method other than phone transfer?",
-    faqContent3: "No.",
+    faqTitle3: "Can I support using a method other than phone transfer or different currency?",
+    faqContent3: "Yes, you can also use Revolut or other options like Apple Pay, even if you don't have a Revolut account:",
+    faqNote3:
+      "Please remember to include the above identifier in the note field. If you wish to use a different currency, make sure the amount meets or exceeds the selected tier threshold based on the current exchange rate.",
     faqTitle4: "Which bots and groups will my Premium work on?",
     faqContent4: "Active Premium works on all bots created within the Ambient system and on all groups. You can use all features without limitations anywhere.",
     faqTitle5: "How does group boosting work?",
@@ -218,7 +220,7 @@ export default {
     service: "Service",
     awaiting: "Confirm it's you",
     awaitingMore:
-      "A prompt has been sent to your recently used group asking to accept the request. Please verify that the details in it are correct, then authorize or reject the request within {0} seconds.",
+      "A prompt has been sent to your recently used group asking to accept the request. Please verify that the details in it are correct, then authorize or reject the request within {0} seconds. You can safely close this page while authentication takes place.",
     authorized: "Request authorized",
     authorizedMore:
       "You have authorized the request. You may now proceed to the external service page, after successful login you will be redirected back to our app to finalize the connection.",
