@@ -89,7 +89,8 @@ export default {
     authenticationPromptSuperseded: "🔄 {0}, the request *{1}* from device {2} *{3}* was automatically rejected because you authorized another request for this service.",
     connectionUrl: [
       "🔗 Here is your link to connect your Ambient profile with the *{0}* service: {1}\n",
-      "⌚ The link is valid for *{2} minutes* or until first request authorization.",
+      "⌚ The link is valid for *{2} minutes* or until first request authorization.\n",
+      "🎥 Need help? See how to connect your profile in *45 seconds*: https://youtu.be/HGzguY7H3n0",
     ],
     connectedSuccessfully: "🎊 {0}, your Ambient profile has been successfully connected to the service *{1}*! You can now use the features available via the *{2}* command.",
   },

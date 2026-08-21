@@ -90,7 +90,8 @@ export default {
       "🔄 {0}, żądanie *{1}* z urządzenia {2} *{3}* zostało automatycznie odrzucone, ponieważ zostało przez Ciebie uwierzytelnione inne żądanie dla tego serwisu.",
     connectionUrl: [
       "🔗 Oto Twój link do powiązania profilu w Ambiencie z serwisem *{0}*: {1}\n",
-      "⌚ Link jest ważny przez *{2} minut* lub do momentu pierwszego uwierzytelnienia żądania.",
+      "⌚ Link jest ważny przez *{2} minut* lub do momentu pierwszego uwierzytelnienia żądania.\n",
+      "🎥 Potrzebujesz pomocy? Zobacz jak połączyć swój profil w *45 sekund*: https://youtu.be/HGzguY7H3n0",
     ],
     connectedSuccessfully: "🎊 {0}, Twój profil w Ambiencie został pomyślnie powiązany z serwisem *{1}*! Możesz teraz korzystać z funkcji dostępnych pod komendą *{2}*.",
   },
