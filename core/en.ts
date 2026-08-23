@@ -654,8 +654,9 @@ export default {
         "🔞 NSFW: *{16}*",
         "🤐 Interactions: *{17}*",
         "👀 Messages restoration: *{18}*",
-        "🔗 Invitation link: {19}",
-        "🤓 First Ambient usage: *{21}* {20} *{22}*",
+        "🔗 Invitation link (Ambient): {19}",
+        "♾️ Invitation link (Meta): {20}",
+        "🤓 First Ambient usage: *{22}* {21} *{23}*",
       ],
     },
     help: {
@@ -1346,6 +1347,9 @@ export default {
       ],
       tooLong: "❌ The given nickname is too long! (max. *{0}* characters, *{1}* entered)",
       same: "❌ The given nickname is the same as the current one!",
+      invitationUrlActive:
+        "❌ Ambient cannot change the nicknames of group members when the invitation link (Meta) is active and at the same time the bot is not the group administrator.",
+      unableToChangeOthers: "❌ Only group administrators can change nicknames of other members!",
       doneSetOwn: "{0} Your nickname has been successfully set to *{1}*!",
       doneSetOther: "{0} Nickname of *{1}* has been successfully set to *{2}*!",
       doneChangedOwn: "{0} Your nickname has been successfully changed from *{1}* to *{2}*!",
