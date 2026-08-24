@@ -15,13 +15,13 @@ export default {
     disabledManual: "🛑 Bot *{0}* has been disabled on this group by the administrator!",
     disabledAuto: "🖇️ Bot *{0}* has been disabled on this group because it has been added to allowed groups in another bot.",
     enabled: "⚡ Bot *{0}* has been enabled on this group, all members of the group can now use it.",
-    eventError: [
+    unhandledEventException: [
       "🥀 Ambient encountered an unhandled exception while processing an event, please try again later. It has been automatically reported to our Discord server: {0}\n",
       "📦 Class: *{1}*",
       "💬 Reason: *{2}*",
       "🪜 Trace: {3}",
     ],
-    execError: [
+    unhandledCommandException: [
       "🥀 Ambient encountered an unhandled exception while executing a command, please try again later. It has been automatically reported to our Discord server: {0}\n",
       "📦 Class: *{1}*",
       "💬 Reason: *{2}*",

@@ -15,13 +15,13 @@ export default {
     disabledManual: "🛑 Bot *{0}* został wyłączony na tej grupie przez administratora!",
     disabledAuto: "🖇️ Bot *{0}* został wyłączony na tej grupie, ponieważ została ona dodana do dozwolonych grup w innym bocie.",
     enabled: "⚡ Bot *{0}* został włączony na tej grupie, wszyscy członkowie grupy mogą z niego teraz korzystać.",
-    eventError: [
+    unhandledEventException: [
       "🥀 Ambient napotkał nieobsłużony wyjątek podczas przetwarzania zdarzenia, spróbuj ponownie później. Zgłoszenie zostało automatycznie wysłane na nasz serwer Discord: {0}\n",
       "📦 Klasa: *{1}*",
       "💬 Powód: *{2}*",
       "🪜 Ścieżka: {3}",
     ],
-    execError: [
+    unhandledCommandException: [
       "🥀 Ambient napotkał nieobsłużony wyjątek podczas wykonywania komendy, spróbuj ponownie później. Zgłoszenie zostało automatycznie wysłane na nasz serwer Discord: {0}\n",
       "📦 Klasa: *{1}*",
       "💬 Powód: *{2}*",
