@@ -112,7 +112,7 @@ export default {
     tileTitle1: "Global benefits",
     tileContent1: "Your Premium includes all bots created in the Ambient system and works in all groups",
     tileTitle2: "Groups boosting",
-    tileContent2: "You can boost up to 2 groups, so all their members also have no restrictions",
+    tileContent2: "You can boost up to 3 groups, so all their members also have no restrictions",
     tileTitle3: "Stand out from the crowd",
     tileContent3: "Your Premium status is visible in your profile information, showing that you support Ambient",
     tileTitle4: "Priority help",
@@ -141,7 +141,7 @@ export default {
     faqContent4: "Active Premium works on all bots created within the Ambient system and on all groups. You can use all features without limitations anywhere.",
     faqTitle5: "How does group boosting work?",
     faqContent5:
-      "With active Premium, you can boost up to 2 groups. This allows all members of those groups to use all Ambient features without restrictions, even if they don't have active Premium themselves. You can transfer your boosts to other groups at any time.",
+      "With active Premium, you can boost up to 3 groups. This allows all members of those groups to use all Ambient features without restrictions, even if they don't have active Premium themselves. You can transfer your boosts to other groups at any time.",
   },
   auth: {
     loginCardTitle: "Already using Ambient? Sign in:",

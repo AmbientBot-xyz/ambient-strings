@@ -112,7 +112,7 @@ export default {
     tileTitle1: "Globalne korzyści",
     tileContent1: "Twoje Premium obejmuje wszystkie boty stworzone w systemie Ambienta i działa we wszystkich grupach",
     tileTitle2: "Ulepszanie grup",
-    tileContent2: "Możesz ulepszyć do 2 grup, dzięki czemu wszyscy ich członkowie również nie mają żadnych ograniczeń",
+    tileContent2: "Możesz ulepszyć do 3 grup, dzięki czemu wszyscy ich członkowie również nie mają żadnych ograniczeń",
     tileTitle3: "Wyróżnij się w tłumie",
     tileContent3: "Twój status Premium jest widoczny w informacjach o profilu, pokazując że wspierasz Ambienta",
     tileTitle4: "Priorytetowa pomoc",
@@ -142,7 +142,7 @@ export default {
       "Aktywne Premium obowiązuje we wszystkich botach stworzonych w systemie Ambienta i na wszystkich grupach. Możesz korzystać ze wszystkich funkcji bez ograniczeń w dowolnym miejscu.",
     faqTitle5: "Jak działa ulepszanie grup?",
     faqContent5:
-      "Posiadając aktywne Premium możesz ulepszyć do 2 grup. Dzięki temu wszyscy ich członkowie będą mogli korzystać w nich ze wszystkich funkcji Ambienta bez ograniczeń, niezależnie od tego, czy posiadają aktywne Premium. W dowolnym momencie możesz przenieść swoje ulepszenia na inne grupy.",
+      "Posiadając aktywne Premium możesz ulepszyć do 3 grup. Dzięki temu wszyscy ich członkowie będą mogli korzystać w nich ze wszystkich funkcji Ambienta bez ograniczeń, niezależnie od tego, czy posiadają aktywne Premium. W dowolnym momencie możesz przenieść swoje ulepszenia na inne grupy.",
   },
   auth: {
     loginCardTitle: "Korzystasz już z Ambienta? Zaloguj się:",
